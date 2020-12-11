@@ -1,8 +1,8 @@
-import React, { ButtonHTMLAttributes } from 'react';
-import './Button.scss';
+import React, { ButtonHTMLAttributes } from "react";
+import "./Button.scss";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: 'min' | 'big';
+  size?: "min" | "big";
 }
 
 const Button: React.FC<IButtonProps> = ({
