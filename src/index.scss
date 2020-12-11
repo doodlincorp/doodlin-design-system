@@ -1,3 +1,272 @@
-body {
+// RESET
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Default setting for using REM
+// html {
+//   font-size: 62.5%;
+// }
+
+/////////////////* Color Variables */////////////////
+
+// Main Color
+$main-blue0: #339af0;
+
+// Gray Color
+$gray0: #f8f9fa;
+$gray1: #f1f3f5;
+$gray2: #e9ecef;
+$gray3: #dee2e6; // horizontal line
+$gray4: #ced4da; // border
+$gray5: #adb5bd; // placeholder text
+$gray6: #868e96;
+$gray7: #495057; // ui, buttons text
+$gray8: #343a40; // primary text
+$gray9: #212529;
+
+// System Color
+$red0: #e03131; // caution, error alert
+$green0: #40c057; // success
+$yellow0: #fab005; // warning
+$blue0: #228be5; // information
+
+/////////////////* Fonts */////////////////
+
+// Font-family
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+$font: 'Spoqa Han Sans Neo', 'sans-serif';
+
+// Letter-spacing
+$korean-letter-spacing: -0.096rem;
+
+// Font-weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 600;
+
+// Font-size for landing & login & careers site
+// title font
+@mixin tit-3xl-text($color: $gray8, $weight: $bold) {
+  font-size: 4.8rem;
+  font-weight: $weight;
+  line-height: 7.2rem;
+  color: $color;
+}
+
+@mixin tit-2xl-text($color: $gray8, $weight: $bold) {
+  font-size: 3.6rem;
+  font-weight: $weight;
+  line-height: 5.4rem;
+  color: $color;
+}
+
+@mixin tit-xl-text($color: $gray8, $weight: $bold) {
+  font-size: 2.4rem;
+  font-weight: $weight;
+  line-height: 3.6rem;
+  color: $color;
+}
+
+@mixin tit-lg-text($color: $gray8, $weight: $bold) {
+  font-size: 2.1rem;
+  font-weight: $weight;
+  line-height: 3.2rem;
+  color: $color;
+}
+
+@mixin tit-md-text($color: $gray8, $weight: $bold) {
+  font-size: 1.8rem;
+  font-weight: $weight;
+  line-height: 2.8rem;
+  color: $color;
+}
+
+// ui, buttons font
+@mixin ui-lg-text($color: $gray7, $weight: $regular) {
+  font-size: 1.8rem;
+  font-weight: $weight;
+  line-height: 2.8rem;
+  color: $color;
+}
+
+@mixin ui-md-text($color: $gray7, $weight: $regular) {
+  font-size: 1.6rem;
+  font-weight: $weight;
+  line-height: 2.4rem;
+  color: $color;
+}
+
+@mixin ui-sm-text($color: $gray7, $weight: $regular) {
+  font-size: 1.4rem;
+  font-weight: $weight;
+  line-height: 2rem;
+  color: $color;
+}
+
+@mixin ui-xs-text($color: $gray7, $weight: $regular) {
+  font-size: 1.2rem;
+  font-weight: $weight;
+  line-height: 1.8rem;
+  color: $color;
+}
+
+// description font
+@mixin desc-lg-text($color: $gray7, $weight: $light) {
+  font-size: 1.8rem;
+  font-weight: $weight;
+  line-height: 3.2rem;
+  color: $color;
+}
+
+@mixin desc-md-text($color: $gray7, $weight: $light) {
+  font-size: 1.6rem;
+  font-weight: $weight;
+  line-height: 2.8rem;
+  color: $color;
+}
+
+@mixin desc-sm-text($color: $gray7, $weight: $light) {
+  font-size: 1.4rem;
+  font-weight: $weight;
+  line-height: 2.6rem;
+  color: $color;
+}
+@mixin desc-xs-text($color: $gray7, $weight: $light) {
+  font-size: 1.2rem;
+  font-weight: $weight;
+  line-height: 2.2rem;
+  color: $color;
+}
+
+// Container
+$login-container-width: 77.2rem;
+
+// Transition Variables
+$button-hover-transition: ease-in-out 0.2s;
+
+// Size Variables
+
+// Footer
