@@ -12,7 +12,7 @@ export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   ref?: MutableRefObject<HTMLInputElement | null>;
 }
 
-const Input = forwardRef<{ value: string }, IInputProps>(
+const Input = forwardRef<unknown, IInputProps>(
   ({ middleCheck, ...props }, ref) => {
     const [value, setValue] = useState("");
     useImperativeHandle(ref, () => ({ value }), [value]);

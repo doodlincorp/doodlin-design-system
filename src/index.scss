@@ -23,6 +23,7 @@ big,
 cite,
 code,
 del,
+button,
 dfn,
 em,
 img,
@@ -116,18 +117,13 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-// Default setting for using REM
-// html {
-//   font-size: 62.5%;
-// }
 
 /////////////////* Color Variables */////////////////
 
@@ -156,7 +152,7 @@ $blue0: #228be5; // information
 
 // Font-family
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-$font: 'Spoqa Han Sans Neo', 'sans-serif';
+$font: "Spoqa Han Sans Neo", "sans-serif";
 
 // Letter-spacing
 $korean-letter-spacing: -0.096rem;
@@ -270,3 +266,8 @@ $button-hover-transition: ease-in-out 0.2s;
 // Size Variables
 
 // Footer
+
+html {
+  // font-size: 62.5%; // Default setting for using REM
+  font-family: $font;
+}

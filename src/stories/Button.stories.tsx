@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 export default {
   title: "Text",
-  component: Text,
+  component: Button,
 };
 
 export const Default = () => <Button>기본</Button>;

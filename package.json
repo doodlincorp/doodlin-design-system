@@ -6,8 +6,7 @@
   "module": "build/index.es.js",
   "scss": "src/index.scss",
   "files": [
-    "build",
-    "src/index.scss"
+    "build"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -34,6 +33,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "rollup": "^2.34.2",
+    "rollup-plugin-copy-assets": "^2.0.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-static-files": "^0.1.0",
@@ -41,7 +41,5 @@
     "sass-loader": "^10.1.0",
     "typescript": "^4.1.2"
   },
-  "dependencies": {
-    "rollup-plugin-copy-assets": "^2.0.3"
-  }
+  "dependencies": {}
 }
