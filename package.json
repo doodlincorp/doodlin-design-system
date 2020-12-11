@@ -1,12 +1,13 @@
 {
   "name": "doodlin-design-system",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "scss": "src/index.scss",
   "files": [
-    "build"
+    "build",
+    "src/index.scss"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
