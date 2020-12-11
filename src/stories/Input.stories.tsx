@@ -7,10 +7,10 @@ export default {
   component: Input,
 };
 
-export const Default = () => <Input />;
+export const Default = () => <Input changeValue={() => {}} />;
 
-export const Red = () => <Input />;
+export const Red = () => <Input changeValue={() => {}} />;
 
-export const Green = () => <Input />;
+export const Green = () => <Input changeValue={() => {}} />;
 
-export const Blue = () => <Input />;
+export const Blue = () => <Input changeValue={() => {}} />;

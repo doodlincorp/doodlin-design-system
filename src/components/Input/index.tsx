@@ -1,32 +1,27 @@
-import React, {
-  forwardRef,
-  InputHTMLAttributes,
-  MutableRefObject,
-  useImperativeHandle,
-  useState,
-} from "react";
+import React, { InputHTMLAttributes } from "react";
+import cn from "classnames";
 import "./Input.scss";
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  middleCheck?: (e: React.ChangeEvent<HTMLInputElement>) => boolean;
-  ref?: MutableRefObject<HTMLInputElement | null>;
+  changeValue: (value: string | boolean | number) => void;
+  checkEvent?: (e: React.ChangeEvent<HTMLInputElement>) => boolean;
 }
 
-const Input = forwardRef<unknown, IInputProps>(
-  ({ middleCheck, ...props }, ref) => {
-    const [value, setValue] = useState("");
-    useImperativeHandle(ref, () => ({ value }), [value]);
-
-    return (
-      <input
-        value={value}
-        onChange={(e) => {
-          if (!middleCheck || middleCheck(e)) setValue(e.target.value);
-        }}
-        {...props}
-      />
-    );
-  }
-);
+export const Input: React.FC<IInputProps> = ({
+  changeValue,
+  checkEvent,
+  className,
+  ...props
+}) => {
+  return (
+    <input
+      className={cn("_INPUT_", className)}
+      onChange={(e) => {
+        if (!checkEvent || checkEvent(e)) changeValue(e.currentTarget.value);
+      }}
+      {...props}
+    />
+  );
+};
 
 export default Input;

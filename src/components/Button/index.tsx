@@ -1,4 +1,5 @@
 import React, { ButtonHTMLAttributes } from "react";
+import cn from "classnames";
 import "./Button.scss";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -6,13 +7,13 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: React.FC<IButtonProps> = ({
-  size,
   className,
   children,
+  size,
   ...props
 }) => {
   return (
-    <button className={`_BUTTON_ ${className} ${size}`} {...props}>
+    <button className={cn(`_BUTTON_`, className, size)} {...props}>
       {children}
     </button>
   );
