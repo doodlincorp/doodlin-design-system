@@ -4,20 +4,25 @@ import './Button.scss';
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
-  type?: 'ghost' | 'text';
+  variant?: 'ghost' | 'text';
+  fullWidth?: boolean;
 }
 
 const Button: React.FC<IButtonProps> = ({
   className,
   children,
   size,
-  type,
+  variant,
   disabled,
+  fullWidth,
   ...props
 }) => {
   return (
     <button
-      className={cn(`_BUTTON_`, className, size, type, disabled)}
+      className={cn(`_BUTTON_`, className, size, variant, {
+        dis: disabled,
+        fw: fullWidth,
+      })}
       {...props}
     >
       {children}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Color from '../Color';
+import Color from '../styleguide/Color';
 import '../reset.scss';
 
 export default {
@@ -7,4 +7,6 @@ export default {
   component: Color,
 };
 
-export const Default: React.VFC<{}> = () => <Color></Color>;
+export const Color = () => {
+  const Palette = ({ name, color }) => <div></div>;
+};

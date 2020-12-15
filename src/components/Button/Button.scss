@@ -4,11 +4,19 @@ $bgc: $gray8;
 
 ._BUTTON_ {
   position: relative;
-  padding: 0;
   outline: none;
   border: none;
   background-color: $bgc;
-  color: white;
+  font-family: $font;
+
+  height: 4rem;
+  @include ui-sm-text(white, $medium);
+  padding: 0 1.6rem;
+  border-radius: 0.4rem;
+
+  &:first-child {
+    display: none;
+  }
 
   cursor: pointer;
   transition: 0.2s ease-out;
@@ -18,6 +26,11 @@ $bgc: $gray8;
   }
   &:active {
     background-color: darken($color: $bgc, $amount: 10%);
+  }
+
+  & + & {
+    margin-left: 2rem;
+    margin-top: 2rem;
   }
 
   // BUTTON SIZE
@@ -74,14 +87,10 @@ $bgc: $gray8;
     height: 5.6rem;
     @include ui-md-text(white, $medium);
     padding: 0 3.2rem;
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
   }
 
-  & + & {
-    margin-left: 2rem;
-  }
-
-  // GHOST TYPE BUTTON
+  // VARIANT (ghost, text)
   & + .ghost {
     background: none;
     border: 1px solid $bgc;
@@ -95,7 +104,6 @@ $bgc: $gray8;
     }
   }
 
-  // TEXT TYPE BUTTON
   & + .text {
     background: none;
     color: $bgc;
@@ -108,7 +116,6 @@ $bgc: $gray8;
       left: 50%;
       background: $bgc;
       transition: width 0.25s ease 0s, left 0.25s ease 0s;
-      transform: translateY(-0.3rem);
     }
     &:hover::after {
       width: 100%;
@@ -117,5 +124,17 @@ $bgc: $gray8;
     &:active {
       color: darken($color: $bgc, $amount: 20%);
     }
+  }
+
+  // DISABLED
+  & + .dis {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  // FULLWIDTH
+  & + .fw {
+    width: 100%;
+    margin: 1rem auto;
   }
 }
