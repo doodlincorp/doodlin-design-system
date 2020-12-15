@@ -11,7 +11,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<IButtonProps> = ({
   className,
   children,
-  size,
+  size = 'md',
   variant,
   disabled,
   fullWidth,

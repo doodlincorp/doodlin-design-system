@@ -8,7 +8,7 @@ export default {
 };
 
 export const Default = () => (
-  <div>
+  <div style={{ padding: 10 }}>
     <Button>NULL</Button>
     <Button>기본 버튼</Button>
   </div>

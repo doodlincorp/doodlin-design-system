@@ -14,12 +14,13 @@ $bgc: $gray8;
   padding: 0 1.6rem;
   border-radius: 0.4rem;
 
+  cursor: pointer;
+  transition: 0.2s ease-out;
+  box-sizing: border-box;
+
   &:first-child {
     display: none;
   }
-
-  cursor: pointer;
-  transition: 0.2s ease-out;
 
   &:hover {
     background-color: lighten($color: $bgc, $amount: 10%);
@@ -30,10 +31,9 @@ $bgc: $gray8;
 
   & + & {
     margin-left: 2rem;
-    margin-top: 2rem;
   }
 
-  // BUTTON SIZE
+  // SIZE
   & + .xxs {
     height: 2.8rem;
     @include ui-xs-text(white, $medium);
