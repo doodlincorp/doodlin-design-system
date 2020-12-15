@@ -1,24 +1,14 @@
-// Main Color
-$main-blue0: #339af0;
+/////////////////* Fonts */////////////////
 
-// Gray Color
-$gray0: #f8f9fa;
-$gray1: #f1f3f5;
-$gray2: #e9ecef;
-$gray3: #dee2e6; // horizontal line
-$gray4: #ced4da; // border
-$gray5: #adb5bd; // placeholder text
-$gray6: #868e96;
-$gray7: #495057; // ui, buttons text
-$gray8: #343a40; // primary text
-$gray9: #212529;
+// Font-family
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+$font: 'Spoqa Han Sans Neo', 'sans-serif';
 
-// System Color
-$red0: #e03131; // caution, error alert
-$green0: #40c057; // success
-$yellow0: #fab005; // warning
-$blue0: #228be5; // information
+html {
+  font-size: 62.5%;
+}
 
+// Letter-spacing
 $korean-letter-spacing: -0.096rem;
 
 // Font-weight
@@ -27,7 +17,6 @@ $regular: 400;
 $medium: 500;
 $bold: 600;
 
-// Font-size for landing & login & careers site
 // title font
 @mixin tit-3xl-text($color: $gray8, $weight: $bold) {
   font-size: 4.8rem;
@@ -120,6 +109,29 @@ $bold: 600;
   line-height: 2.2rem;
   color: $color;
 }
+
+/////////////////* Color */////////////////
+
+// Main Color
+$main-blue0: #339af0;
+
+// Gray Color
+$gray0: #f8f9fa;
+$gray1: #f1f3f5;
+$gray2: #e9ecef;
+$gray3: #dee2e6; // horizontal line
+$gray4: #ced4da; // border
+$gray5: #adb5bd; // placeholder text
+$gray6: #868e96;
+$gray7: #495057; // ui, buttons text
+$gray8: #343a40; // primary text
+$gray9: #212529;
+
+// System Color
+$red0: #e03131; // caution, error alert
+$green0: #40c057; // success
+$yellow0: #fab005; // warning
+$blue0: #228be5; // information
 
 // Container
 $login-container-width: 77.2rem;

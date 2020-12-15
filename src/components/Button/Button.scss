@@ -1,6 +1,121 @@
-@import "../../index.scss";
+@import '../../index.scss';
+
+$bgc: $gray8;
 
 ._BUTTON_ {
-  margin: 0;
-  background-color: $gray3;
+  position: relative;
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: $bgc;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.2s ease-out;
+
+  &:hover {
+    background-color: lighten($color: $bgc, $amount: 10%);
+  }
+  &:active {
+    background-color: darken($color: $bgc, $amount: 10%);
+  }
+
+  // BUTTON SIZE
+  & + .xxs {
+    height: 2.8rem;
+    @include ui-xs-text(white, $medium);
+    padding: 0 0.8rem;
+    border-radius: 0.4rem;
+  }
+
+  & + .xs {
+    height: 3.2rem;
+    @include ui-xs-text(white, $medium);
+    padding: 0 0.8rem;
+    border-radius: 0.4rem;
+  }
+
+  & + .sm {
+    height: 3.6rem;
+    @include ui-xs-text(white, $medium);
+    padding: 0 1.2rem;
+    border-radius: 0.4rem;
+  }
+
+  & + .md {
+    height: 4rem;
+    @include ui-sm-text(white, $medium);
+    padding: 0 1.6rem;
+    border-radius: 0.4rem;
+  }
+
+  & + .lg {
+    height: 4.4rem;
+    @include ui-sm-text(white, $medium);
+    padding: 0 2rem;
+    border-radius: 0.6rem;
+  }
+
+  & + .xl {
+    height: 4.8rem;
+    @include ui-sm-text(white, $medium);
+    padding: 0 2.4rem;
+    border-radius: 0.6rem;
+  }
+
+  & + .xxl {
+    height: 5.2rem;
+    @include ui-sm-text(white, $medium);
+    padding: 0 2.8rem;
+    border-radius: 0.6rem;
+  }
+
+  & + .xxxl {
+    height: 5.6rem;
+    @include ui-md-text(white, $medium);
+    padding: 0 3.2rem;
+    border-radius: 0.6rem;
+  }
+
+  & + & {
+    margin-left: 2rem;
+  }
+
+  // GHOST TYPE BUTTON
+  & + .ghost {
+    background: none;
+    border: 1px solid $bgc;
+    color: $bgc;
+    &:hover {
+      background: $bgc;
+      color: white;
+    }
+    &:active {
+      background: darken($color: $bgc, $amount: 20%);
+    }
+  }
+
+  // TEXT TYPE BUTTON
+  & + .text {
+    background: none;
+    color: $bgc;
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      height: 1px;
+      width: 0;
+      left: 50%;
+      background: $bgc;
+      transition: width 0.25s ease 0s, left 0.25s ease 0s;
+      transform: translateY(-0.3rem);
+    }
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    &:active {
+      color: darken($color: $bgc, $amount: 20%);
+    }
+  }
 }

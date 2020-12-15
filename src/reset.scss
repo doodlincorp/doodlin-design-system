@@ -116,29 +116,10 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-/////////////////* Color Variables */////////////////
-
-/////////////////* Fonts */////////////////
-
-// Font-family
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-$font: "Spoqa Han Sans Neo", "sans-serif";
-
-// Letter-spacing
-
-// Size Variables
-
-// Footer
-
-html {
-  // font-size: 62.5%; // Default setting for using REM
-  font-family: $font;
 }
