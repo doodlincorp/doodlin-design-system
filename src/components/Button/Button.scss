@@ -3,6 +3,9 @@
 $bgc: $gray8;
 
 ._BUTTON_ {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   outline: none;
   border: none;
@@ -17,6 +20,10 @@ $bgc: $gray8;
   cursor: pointer;
   transition: 0.2s ease-out;
   box-sizing: border-box;
+
+  span {
+    padding: 0 0.4rem;
+  }
 
   &:first-child {
     display: none;
@@ -85,7 +92,7 @@ $bgc: $gray8;
 
   & + .xxxl {
     height: 5.6rem;
-    @include ui-md-text(white, $medium);
+    @include ui-lg-text(white, $medium);
     padding: 0 3.2rem;
     border-radius: 0.8rem;
   }
@@ -107,19 +114,8 @@ $bgc: $gray8;
   & + .text {
     background: none;
     color: $bgc;
-    &::after {
-      position: absolute;
-      display: block;
-      content: '';
-      height: 1px;
-      width: 0;
-      left: 50%;
-      background: $bgc;
-      transition: width 0.25s ease 0s, left 0.25s ease 0s;
-    }
-    &:hover::after {
-      width: 100%;
-      left: 0;
+    &:hover {
+      text-decoration: underline;
     }
     &:active {
       color: darken($color: $bgc, $amount: 20%);

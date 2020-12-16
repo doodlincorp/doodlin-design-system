@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../components/Button/Button';
 import '../reset.scss';
+import { BsCheck } from 'react-icons/bs';
 
 export default {
   title: 'Component/Button',
@@ -92,13 +93,11 @@ export const Text = () => (
 export const Disabled = () => (
   <div style={{ padding: 10 }}>
     <Button>NULL</Button>
-    <Button size='md' disabled>
+    <Button disabled>비활성화</Button>
+    <Button variant='ghost' disabled>
       비활성화
     </Button>
-    <Button size='md' variant='ghost' disabled>
-      비활성화
-    </Button>
-    <Button size='md' variant='text' disabled>
+    <Button variant='text' disabled>
       비활성화
     </Button>
   </div>
@@ -134,15 +133,21 @@ export const FullWidth = () => (
   </div>
 );
 
+// Q. component 사이에 다른 태그 끼우니까 component 속성이 사라져버림
 export const WithIcon = () => (
   <div style={{ padding: 10 }}>
     <Button>NULL</Button>
-    <Button size='md'>버튼</Button>
-    <Button size='md' variant='ghost'>
-      버튼
+    <Button>
+      <BsCheck />
+      <span>버튼</span>
     </Button>
-    <Button size='md' variant='text'>
-      버튼
+    <Button size='xxxl' variant='ghost'>
+      <span>버튼</span>
+      <BsCheck />
+    </Button>
+    <Button variant='text'>버튼</Button>
+    <Button>
+      <BsCheck />
     </Button>
   </div>
 );
