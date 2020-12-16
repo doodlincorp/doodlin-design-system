@@ -9,14 +9,14 @@ export default {
 
 export const Default = () => (
   <div style={{ padding: 10, maxWidth: 500 }}>
-    <Input placeholder='내용을 입력하세요' />
+    <Input placeholder='NULL' />
     <Input placeholder='내용을 입력하세요' />
   </div>
 );
 
 export const Size = () => (
   <div style={{ padding: 10, maxWidth: 500 }}>
-    <Input size='xxs' placeholder='내용을 입력하세요' />
+    <Input placeholder='NULL' />
     <Input size='xxs' placeholder='내용을 입력하세요' />
     <Input size='sm' placeholder='내용을 입력하세요' />
     <Input size='md' placeholder='내용을 입력하세요' />
@@ -27,11 +27,18 @@ export const Size = () => (
 
 export const Disabled = () => (
   <div style={{ padding: 10, maxWidth: 500 }}>
-    <Input size='xxs' placeholder='비활성화 되었습니다' disabled />
-    <Input size='xxs' placeholder='비활성화 되었습니다' disabled />
-    <Input size='sm' placeholder='비활성화 되었습니다' disabled />
-    <Input size='md' placeholder='비활성화 되었습니다' disabled />
-    <Input size='lg' placeholder='비활성화 되었습니다' disabled />
-    <Input size='xxxl' placeholder='비활성화 되었습니다' disabled />
+    <Input placeholder='NULL' />
+    <Input placeholder='비활성화 되었습니다' disabled />
+    <Input borderType='underline' placeholder='비활성화 되었습니다' disabled />
+    <Input borderType='none' placeholder='비활성화 되었습니다' disabled />
+  </div>
+);
+
+export const BorderType = () => (
+  <div style={{ padding: 10, maxWidth: 500 }}>
+    <Input placeholder='NULL' />
+    <Input placeholder='내용을 입력하세요' />
+    <Input borderType='underline' placeholder='내용을 입력하세요' />
+    <Input borderType='none' placeholder='내용을 입력하세요' />
   </div>
 );
