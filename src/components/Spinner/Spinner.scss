@@ -1,0 +1,78 @@
+@import '../../index.scss';
+
+// Mixin
+// * $WH: Width, height value (e.g. 160px)
+// * $Bsize: border-size value (e.g. 3px)
+// * $Bcolor0: border-color value (e.g. #fff)
+// * $Bcolor1: border-background-color value (e.g #ffffff33)
+@mixin SpinSize(
+  $WH: 1.6rem,
+  $Bsize: 0.3rem,
+  $Bcolor0: #fff,
+  $Bcolor1: rgba(255, 255, 255, 0.2)
+) {
+  width: $WH;
+  height: $WH;
+  border: $Bsize solid $Bcolor0;
+  margin: 0;
+  content: ' ';
+  display: block;
+  border-radius: 50%;
+  border-color: $Bcolor0 $Bcolor1 $Bcolor1 $Bcolor1;
+  animation: spin 1.15s cubic-bezier(0.31, 0.63, 0.8, 0.73) infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// Spinner
+._SPINNER_ {
+  @include SpinSize($Bcolor0: $gray7, $Bcolor1: $gray2);
+
+  // Size
+  & + .xxs {
+    @include SpinSize(1.2rem, 0.2rem, $gray7, $gray2);
+  }
+
+  & + .xs {
+    @include SpinSize(1.4rem, 0.2rem, $gray7, $gray2);
+  }
+
+  & + .sm {
+    @include SpinSize(1.6rem, 0.3rem, $gray7, $gray2);
+  }
+
+  & + .md {
+    @include SpinSize(1.8rem, 0.3rem, $gray7, $gray2);
+  }
+
+  & + .lg {
+    @include SpinSize(2.4rem, 0.3rem, $gray7, $gray2);
+  }
+
+  & + .xl {
+    @include SpinSize(2.8rem, 0.3rem, $gray7, $gray2);
+  }
+
+  & + .xxl {
+    @include SpinSize(3.6rem, 0.4rem, $gray7, $gray2);
+  }
+
+  & + .xxxl {
+    @include SpinSize(4rem, 0.4rem, $gray7, $gray2);
+  }
+
+  &:first-child {
+    display: none;
+  }
+
+  & + & {
+    margin-top: 2rem;
+  }
+}

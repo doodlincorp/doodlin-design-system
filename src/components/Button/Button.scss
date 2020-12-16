@@ -1,8 +1,12 @@
 @import '../../index.scss';
+@import '../Spinner/Spinner.scss';
 
+// Variable
 $bgc: $gray8;
 
 ._BUTTON_ {
+  font-family: $font;
+
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +14,6 @@ $bgc: $gray8;
   outline: none;
   border: none;
   background-color: $bgc;
-  font-family: $font;
 
   height: 4rem;
   @include ui-sm-text(white, $medium);
@@ -40,64 +43,64 @@ $bgc: $gray8;
     margin-left: 2rem;
   }
 
-  // SIZE
+  // Size
   & + .xxs {
     height: 2.8rem;
     @include ui-xs-text(white, $medium);
-    padding: 0 0.8rem;
+    padding: 0 0.4rem;
     border-radius: 0.4rem;
   }
 
   & + .xs {
     height: 3.2rem;
     @include ui-xs-text(white, $medium);
-    padding: 0 0.8rem;
+    padding: 0 0.4rem;
     border-radius: 0.4rem;
   }
 
   & + .sm {
     height: 3.6rem;
     @include ui-xs-text(white, $medium);
-    padding: 0 1.2rem;
+    padding: 0 0.8rem;
     border-radius: 0.4rem;
   }
 
   & + .md {
     height: 4rem;
     @include ui-sm-text(white, $medium);
-    padding: 0 1.6rem;
+    padding: 0 1.2rem;
     border-radius: 0.4rem;
   }
 
   & + .lg {
     height: 4.4rem;
     @include ui-sm-text(white, $medium);
-    padding: 0 2rem;
+    padding: 0 1.6rem;
     border-radius: 0.6rem;
   }
 
   & + .xl {
     height: 4.8rem;
     @include ui-sm-text(white, $medium);
-    padding: 0 2.4rem;
+    padding: 0 2rem;
     border-radius: 0.6rem;
   }
 
   & + .xxl {
     height: 5.2rem;
     @include ui-sm-text(white, $medium);
-    padding: 0 2.8rem;
+    padding: 0 2.4rem;
     border-radius: 0.6rem;
   }
 
   & + .xxxl {
     height: 5.6rem;
     @include ui-lg-text(white, $medium);
-    padding: 0 3.2rem;
+    padding: 0 2.8rem;
     border-radius: 0.8rem;
   }
 
-  // VARIANT (ghost, text)
+  // Variant (ghost, text)
   & + .ghost {
     background: none;
     border: 1px solid $bgc;
@@ -122,15 +125,26 @@ $bgc: $gray8;
     }
   }
 
-  // DISABLED
+  // Disabled
   & + .dis {
     opacity: 0.2;
     pointer-events: none;
   }
 
-  // FULLWIDTH
+  // Fullwidth
   & + .fw {
     width: 100%;
     margin: 1rem auto;
+  }
+
+  // Loading
+  & + .spin-sm::before {
+    @include SpinSize(1.2rem, 0.2rem);
+  }
+  & + .spin-md::before {
+    @include SpinSize(1.4rem, 0.3rem);
+  }
+  & + .spin-lg::before {
+    @include SpinSize(1.8rem, 0.3rem);
   }
 }

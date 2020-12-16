@@ -15,17 +15,36 @@ export const Default = () => (
   </div>
 );
 
+// Problem) div 바로 다음 오는 태그는 스타일이 무시되는 것 같음.
+// ㄴ> 일단 차선책으로 scss에서 Button의 first-child는 display:none으로 숨겨놓음.
+
 export const Size = () => (
   <div style={{ padding: 10 }}>
     <Button>NULL</Button>
-    <Button size='xxs'>2XSMALL</Button>
-    <Button size='xs'>XSMALL</Button>
-    <Button size='sm'>SMALL</Button>
-    <Button size='md'>MEDIUM</Button>
-    <Button size='lg'>LARGE</Button>
-    <Button size='xl'>XLARGE</Button>
-    <Button size='xxl'>2XLARGE</Button>
-    <Button size='xxxl'>3XLARGE</Button>
+    <Button size='xxs'>
+      <span>2XSMALL</span>
+    </Button>
+    <Button size='xs'>
+      <span>XSMALL</span>
+    </Button>
+    <Button size='sm'>
+      <span>SMALL</span>
+    </Button>
+    <Button size='md'>
+      <span>MEDIUM</span>
+    </Button>
+    <Button size='lg'>
+      <span>LARGE</span>
+    </Button>
+    <Button size='xl'>
+      <span>XLARGE</span>
+    </Button>
+    <Button size='xxl'>
+      <span>2XLARGE</span>
+    </Button>
+    <Button size='xxxl'>
+      <span>3XLARGE</span>
+    </Button>
   </div>
 );
 
@@ -33,28 +52,28 @@ export const Ghost = () => (
   <div style={{ padding: 10 }}>
     <Button>NULL</Button>
     <Button size='xxs' variant='ghost'>
-      2XSMALL
+      <span>2XSMALL</span>
     </Button>
     <Button size='xs' variant='ghost'>
-      XSMALL
+      <span>XSMALL</span>
     </Button>
     <Button size='sm' variant='ghost'>
-      SMALL
+      <span>SMALL</span>
     </Button>
     <Button size='md' variant='ghost'>
-      MEDIUM
+      <span>MEDIUM</span>
     </Button>
     <Button size='lg' variant='ghost'>
-      LARGE
+      <span>LARGE</span>
     </Button>
     <Button size='xl' variant='ghost'>
-      XLARGE
+      <span>XLARGE</span>
     </Button>
     <Button size='xxl' variant='ghost'>
-      2XLARGE
+      <span>2XLARGE</span>
     </Button>
     <Button size='xxxl' variant='ghost'>
-      3XLARGE
+      <span>3XLARGE</span>
     </Button>
   </div>
 );
@@ -63,42 +82,43 @@ export const Text = () => (
   <div style={{ padding: 10 }}>
     <Button>NULL</Button>
     <Button size='xxs' variant='text'>
-      2XSMALL
+      <span>2XSMALL</span>
     </Button>
     <Button size='xs' variant='text'>
-      XSMALL
+      <span>XSMALL</span>
     </Button>
     <Button size='sm' variant='text'>
-      SMALL
+      <span>SMALL</span>
     </Button>
     <Button size='md' variant='text'>
-      MEDIUM
+      <span>MEDIUM</span>
     </Button>
     <Button size='lg' variant='text'>
-      LARGE
+      <span>LARGE</span>
     </Button>
     <Button size='xl' variant='text'>
-      XLARGE
+      <span>XLARGE</span>
     </Button>
     <Button size='xxl' variant='text'>
-      2XLARGE
+      <span>2XLARGE</span>
     </Button>
     <Button size='xxxl' variant='text'>
-      3XLARGE
+      <span>3XLARGE</span>
     </Button>
   </div>
 );
 
-// Q. div 바로 다음 오는 태그는 스타일이 무시됨. 왜지?
 export const Disabled = () => (
   <div style={{ padding: 10 }}>
     <Button>NULL</Button>
-    <Button disabled>비활성화</Button>
+    <Button disabled>
+      <span>비활성화</span>
+    </Button>
     <Button variant='ghost' disabled>
-      비활성화
+      <span>비활성화</span>
     </Button>
     <Button variant='text' disabled>
-      비활성화
+      <span>비활성화</span>
     </Button>
   </div>
 );
@@ -107,33 +127,33 @@ export const FullWidth = () => (
   <div style={{ padding: 10 }}>
     <Button>NULL</Button>
     <Button size='xxs' fullWidth>
-      2XSMALL
+      <span>2XSMALL</span>
     </Button>
     <Button size='xs' fullWidth>
-      XSMALL
+      <span>XSMALL</span>
     </Button>
     <Button size='sm' fullWidth>
-      SMALL
+      <span>SMALL</span>
     </Button>
     <Button size='md' fullWidth>
-      MEDIUM
+      <span>MEDIUM</span>
     </Button>
     <Button size='lg' fullWidth>
-      LARGE
+      <span>LARGE</span>
     </Button>
     <Button size='xl' fullWidth>
-      XLARGE
+      <span>XLARGE</span>
     </Button>
     <Button size='xxl' fullWidth>
-      2XLARGE
+      <span>2XLARGE</span>
     </Button>
     <Button size='xxxl' fullWidth>
-      3XLARGE
+      <span>3XLARGE</span>
     </Button>
   </div>
 );
 
-// Q. component 사이에 다른 태그 끼우니까 component 속성이 사라져버림
+// P) component 사이에 다른 태그 끼우니까 component 속성이 사라져버림.
 export const WithIcon = () => (
   <div style={{ padding: 10 }}>
     <Button>NULL</Button>
@@ -145,9 +165,43 @@ export const WithIcon = () => (
       <span>버튼</span>
       <BsCheck />
     </Button>
-    <Button variant='text'>버튼</Button>
+    <Button variant='text'>
+      <span>버튼</span>
+    </Button>
     <Button>
       <BsCheck />
+    </Button>
+  </div>
+);
+
+// Q. Button component에 loading 속성을 넣는 것만으로 span의 내용을 loading이 대체할 수 있게 하는 방법이 있을까?
+// Q. Button component의 size 속성을 loading도 같이 받게 할 수는 없나?
+export const Loading = () => (
+  <div style={{ padding: 10 }}>
+    <Button>NULL</Button>
+    <Button size='xxs' loading='spin-sm'>
+      <span>2XSMALL</span>
+    </Button>
+    <Button size='xs' loading='spin-sm'>
+      <span>XSMALL</span>
+    </Button>
+    <Button size='sm' loading='spin-sm'>
+      <span>SMALL</span>
+    </Button>
+    <Button size='md' loading='spin-md'>
+      <span>MEDIUM</span>
+    </Button>
+    <Button size='lg' loading='spin-md'>
+      <span>LARGE</span>
+    </Button>
+    <Button size='xl' loading='spin-md'>
+      <span>XLARGE</span>
+    </Button>
+    <Button size='xxl' loading='spin-md'>
+      <span>2XLARGE</span>
+    </Button>
+    <Button size='xxxl' loading='spin-lg'>
+      <span>3XLARGE</span>
     </Button>
   </div>
 );
