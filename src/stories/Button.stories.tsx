@@ -174,8 +174,6 @@ export const WithIcon = () => (
   </div>
 );
 
-// Q. Button component에 loading 속성을 넣는 것만으로 span의 내용을 loading이 대체할 수 있게 하는 방법이 있을까?
-// Q. Button component의 size 속성을 loading도 같이 받게 할 수는 없나?
 export const Loading = () => (
   <div style={{ padding: 10 }}>
     <Button>NULL</Button>

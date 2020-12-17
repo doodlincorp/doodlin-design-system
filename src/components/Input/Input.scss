@@ -58,18 +58,6 @@
     font-size: 1.8rem;
   }
 
-  // Disabled
-  $border: 1px;
-
-  & + .dis {
-    background: $gray1;
-    border: $border solid $gray1;
-    pointer-events: none;
-    &::placeholder {
-      opacity: 0.7;
-    }
-  }
-
   // BorderType (underline, none)
   & + .underline {
     border: none;
@@ -90,6 +78,16 @@
     &:active,
     &:focus {
       box-shadow: none;
+    }
+  }
+
+  // Disabled
+  & + .dis {
+    background: $gray1;
+    border: none;
+    pointer-events: none;
+    &::placeholder {
+      opacity: 0.7;
     }
   }
 }
