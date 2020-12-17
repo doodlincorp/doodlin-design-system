@@ -16,7 +16,11 @@ export const Input: React.FC<IInputProps> = ({
 }) => {
   return (
     <input
-      className={cn('_INPUT_', className, size, borderType, { dis: disabled })}
+      className={cn('_INPUT_', className, size, borderType, {
+        dis: disabled,
+        'dis-underline': borderType === 'underline' && disabled,
+        'dis-none': borderType === 'none' && disabled,
+      })}
       {...props}
     />
   );

@@ -90,4 +90,13 @@
       opacity: 0.7;
     }
   }
+
+  & + .dis-underline {
+    background: none;
+    border-bottom: 1px solid $gray4;
+  }
+
+  & + .dis-none {
+    background: none;
+  }
 }
