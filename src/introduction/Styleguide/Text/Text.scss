@@ -1,12 +1,17 @@
 @import '../../../index.scss';
 
 ._TEXT_ {
-  letter-spacing: $korean-letter-spacing;
   font-family: $font;
+  letter-spacing: $korean-letter-spacing;
 
   // Display
   & + .block {
     display: block;
+  }
+
+  // nonKorean *(e.g. english, number, ...)
+  & + .nK {
+    letter-spacing: 0;
   }
 
   // Variant

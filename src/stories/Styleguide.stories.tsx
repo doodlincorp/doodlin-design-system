@@ -11,72 +11,105 @@ export default {
 
 export const Typography = () => (
   <div style={{ padding: 20 }}>
-    <Text></Text>
-    <Text variant='tit-xxxl' block>
-      <span>타이틀 - 48pt</span>
-    </Text>
-    <Text variant='tit-xxl' block>
-      <span>타이틀 - 36pt</span>
-    </Text>
-    <Text variant='tit-xl' block>
-      <span>타이틀 - 24pt</span>
-    </Text>
-    <Text variant='tit-lg' block>
-      <span>타이틀 - 21pt</span>
-    </Text>
-    <Text variant='tit-md' block>
-      <span>타이틀 - 18pt</span>
-    </Text>
+    <div style={{ marginBottom: 40 }}>
+      <Text></Text>
+      <Text variant='ui-lg' block nonKorean>
+        <span>Title</span>
+      </Text>
+      <Text variant='tit-xxxl' block>
+        <span>타이틀 - 48pt</span>
+      </Text>
+      <Text variant='tit-xxl' block>
+        <span>타이틀 - 36pt</span>
+      </Text>
+      <Text variant='tit-xl' block>
+        <span>타이틀 - 24pt</span>
+      </Text>
+      <Text variant='tit-lg' block>
+        <span>타이틀 - 21pt</span>
+      </Text>
+      <Text variant='tit-md' block>
+        <span>타이틀 - 18pt</span>
+      </Text>
+    </div>
 
-    <Text variant='ui-lg' block>
-      <span>UI, 버튼 - 18pt</span>
-    </Text>
-    <Text variant='ui-md' block>
-      <span>UI, 버튼 - 16pt</span>
-    </Text>
-    <Text variant='ui-sm' block>
-      <span>UI, 버튼 - 14pt</span>
-    </Text>
-    <Text variant='ui-xs' block>
-      <span>UI, 버튼 - 12pt</span>
-    </Text>
+    <div style={{ marginBottom: 40 }}>
+      <Text></Text>
+      <Text variant='ui-lg' block nonKorean>
+        <span>UI, Button</span>
+      </Text>
+      <div style={{ marginTop: 10 }}>
+        <Text></Text>
+        <Text variant='ui-lg' block>
+          <span>UI, 버튼 - 18pt</span>
+        </Text>
+        <Text variant='ui-md' block>
+          <span>UI, 버튼 - 16pt</span>
+        </Text>
+        <Text variant='ui-sm' block>
+          <span>UI, 버튼 - 14pt</span>
+        </Text>
+        <Text variant='ui-xs' block>
+          <span>UI, 버튼 - 12pt</span>
+        </Text>
+      </div>
+    </div>
 
-    <Text variant='desc-lg' block>
-      <div style={{ maxWidth: 500, wordBreak: 'break-word' }}>
-        <span>
-          소학교 내 하나의 마리아 있습니다. 무덤 가득 별 듯합니다. 계집애들의 말
-          딴은 언덕 오면 듯합니다. 애기 피어나듯이 별들을 시인의 듯합니다. -
-          18pt
-        </span>
-      </div>
-    </Text>
-    <Text variant='desc-md' block>
-      <div style={{ maxWidth: 500, wordBreak: 'break-word' }}>
-        <span>
-          소학교 내 하나의 마리아 있습니다. 무덤 가득 별 듯합니다. 계집애들의 말
-          딴은 언덕 오면 듯합니다. 애기 피어나듯이 별들을 시인의 듯합니다. -
-          16pt
-        </span>
-      </div>
-    </Text>
-    <Text variant='desc-sm' block>
-      <div style={{ maxWidth: 500, wordBreak: 'break-word' }}>
-        <span>
-          소학교 내 하나의 마리아 있습니다. 무덤 가득 별 듯합니다. 계집애들의 말
-          딴은 언덕 오면 듯합니다. 애기 피어나듯이 별들을 시인의 듯합니다. -
-          14pt
-        </span>
-      </div>
-    </Text>
-    <Text variant='desc-xs' block>
-      <div style={{ maxWidth: 500, wordBreak: 'break-word' }}>
-        <span>
-          소학교 내 하나의 마리아 있습니다. 무덤 가득 별 듯합니다. 계집애들의 말
-          딴은 언덕 오면 듯합니다. 애기 피어나듯이 별들을 시인의 듯합니다. -
-          12pt
-        </span>
-      </div>
-    </Text>
+    <div>
+      <Text></Text>
+      <Text variant='ui-lg' block nonKorean>
+        <span>Description</span>
+      </Text>
+      <Text variant='desc-lg' block>
+        <div
+          style={{
+            maxWidth: 500,
+            wordBreak: 'break-word',
+            marginTop: 10,
+            marginBottom: 10,
+          }}
+        >
+          <span>
+            소학교 내 하나의 마리아 있습니다. 무덤 가득 별 듯합니다. 계집애들의
+            말 딴은 언덕 오면 듯합니다. 애기 피어나듯이 별들을 시인의 듯합니다.
+            - 18pt
+          </span>
+        </div>
+      </Text>
+      <Text variant='desc-md' block>
+        <div
+          style={{ maxWidth: 500, wordBreak: 'break-word', marginBottom: 10 }}
+        >
+          <span>
+            소학교 내 하나의 마리아 있습니다. 무덤 가득 별 듯합니다. 계집애들의
+            말 딴은 언덕 오면 듯합니다. 애기 피어나듯이 별들을 시인의 듯합니다.
+            - 16pt
+          </span>
+        </div>
+      </Text>
+      <Text variant='desc-sm' block>
+        <div
+          style={{ maxWidth: 500, wordBreak: 'break-word', marginBottom: 10 }}
+        >
+          <span>
+            소학교 내 하나의 마리아 있습니다. 무덤 가득 별 듯합니다. 계집애들의
+            말 딴은 언덕 오면 듯합니다. 애기 피어나듯이 별들을 시인의 듯합니다.
+            - 14pt
+          </span>
+        </div>
+      </Text>
+      <Text variant='desc-xs' block>
+        <div
+          style={{ maxWidth: 500, wordBreak: 'break-word', marginBottom: 10 }}
+        >
+          <span>
+            소학교 내 하나의 마리아 있습니다. 무덤 가득 별 듯합니다. 계집애들의
+            말 딴은 언덕 오면 듯합니다. 애기 피어나듯이 별들을 시인의 듯합니다.
+            - 12pt
+          </span>
+        </div>
+      </Text>
+    </div>
   </div>
 );
 
@@ -102,13 +135,14 @@ export const Color = () => {
           width: '100%',
           height: 130,
           backgroundColor: color,
-          marginBottom: 10,
+          marginBottom: 6,
         }}
       />
-      <Text block variant='ui-lg'>
+      <Text></Text>
+      <Text block variant='ui-md' nonKorean>
         <span style={{ fontWeight: 500 }}>{name}</span>
       </Text>
-      <Text block variant='ui-xs'>
+      <Text block variant='ui-xs' nonKorean>
         <span style={{ fontWeight: 300 }}>{color}</span>
       </Text>
     </div>
@@ -116,7 +150,7 @@ export const Color = () => {
   return (
     <div style={{ padding: 20 }}>
       <Text></Text>
-      <Text variant='ui-lg' block>
+      <Text variant='ui-lg' block nonKorean>
         <span>Yellow</span>
       </Text>
       <div style={{ marginBottom: 30 }}>
@@ -132,7 +166,7 @@ export const Color = () => {
         <Palette name='Yellow9' color='#e67700' />
       </div>
       <Text></Text>
-      <Text variant='ui-lg' block>
+      <Text variant='ui-lg' block nonKorean>
         <span>Gray</span>
       </Text>
       <div style={{ marginBottom: 30 }}>

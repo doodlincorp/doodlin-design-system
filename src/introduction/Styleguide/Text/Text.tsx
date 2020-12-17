@@ -5,6 +5,7 @@ import './Text.scss';
 export interface ITextProps {
   className?: string;
   block?: boolean;
+  nonKorean?: boolean;
   variant?:
     | 'tit-xxxl'
     | 'tit-xxl'
@@ -25,12 +26,16 @@ export const Text: React.FC<ITextProps> = ({
   className,
   children,
   block,
+  nonKorean,
   variant,
   ...props
 }) => {
   return (
     <span
-      className={cn('_TEXT_', className, variant, { block: block })}
+      className={cn('_TEXT_', className, variant, {
+        block: block,
+        nK: nonKorean,
+      })}
       {...props}
     >
       {children}
