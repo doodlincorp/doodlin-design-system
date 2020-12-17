@@ -17,15 +17,15 @@ $regular: 400;
 $medium: 500;
 $bold: 600;
 
-// title font
-@mixin tit-3xl-text($color: $gray8, $weight: $bold) {
+// Title font
+@mixin tit-xxxl-text($color: $gray8, $weight: $bold) {
   font-size: 4.8rem;
   font-weight: $weight;
   line-height: 7.2rem;
   color: $color;
 }
 
-@mixin tit-2xl-text($color: $gray8, $weight: $bold) {
+@mixin tit-xxl-text($color: $gray8, $weight: $bold) {
   font-size: 3.6rem;
   font-weight: $weight;
   line-height: 5.4rem;
@@ -53,7 +53,7 @@ $bold: 600;
   color: $color;
 }
 
-// ui, buttons font
+// UI, Buttons font
 @mixin ui-lg-text($color: $gray7, $weight: $regular) {
   font-size: 1.8rem;
   font-weight: $weight;
@@ -82,7 +82,7 @@ $bold: 600;
   color: $color;
 }
 
-// description font
+// Description font
 @mixin desc-lg-text($color: $gray7, $weight: $light) {
   font-size: 1.8rem;
   font-weight: $weight;

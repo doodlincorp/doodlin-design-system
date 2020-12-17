@@ -1,0 +1,60 @@
+@import '../../../index.scss';
+
+._TEXT_ {
+  letter-spacing: $korean-letter-spacing;
+  font-family: $font;
+
+  &:first-child {
+    display: none;
+  }
+  // Spacer
+  & + .block {
+    display: block;
+  }
+
+  // Variant
+  // *title font
+  & + .tit-xxxl {
+    @include tit-xxxl-text;
+  }
+  & + .tit-xxl {
+    @include tit-xxl-text;
+  }
+  & + .tit-xl {
+    @include tit-xl-text;
+  }
+  & + .tit-lg {
+    @include tit-lg-text;
+  }
+  & + .tit-md {
+    @include tit-md-text;
+  }
+
+  // *UI, Button font
+  & + .ui-lg {
+    @include ui-lg-text;
+  }
+  & + .ui-md {
+    @include ui-md-text;
+  }
+  & + .ui-sm {
+    @include ui-sm-text;
+  }
+  & + .ui-xs {
+    @include ui-xs-text;
+  }
+
+  // *description font
+  & + .desc-lg {
+    @include desc-lg-text;
+  }
+  & + .desc-md {
+    @include desc-md-text;
+  }
+  & + .desc-sm {
+    @include desc-sm-text;
+  }
+  & + .desc-xs {
+    @include desc-xs-text;
+  }
+}
