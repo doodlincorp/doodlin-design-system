@@ -1,5 +1,7 @@
 import React from 'react';
 import Text from '../introduction/Styleguide/Text/Text';
+import Palette from '../introduction/Styleguide/Color/Palette';
+import '../index.scss';
 import '../reset.scss';
 
 export default {
@@ -9,7 +11,7 @@ export default {
 
 export const Typography = () => (
   <div style={{ padding: 20 }}>
-    <Text>NULL</Text>
+    <Text></Text>
     <Text variant='tit-xxxl' block>
       <span>타이틀 - 48pt</span>
     </Text>
@@ -78,7 +80,76 @@ export const Typography = () => (
   </div>
 );
 
-export const Color = () => <div>【ツ】</div>;
+export const Color = () => {
+  const Palette = ({ name, color }: any) => (
+    <div
+      style={{
+        display: 'inline-block',
+        width: 150,
+        height: 190,
+        marginTop: 8,
+        marginRight: 10,
+        textAlign: 'center',
+        borderRadius: 4,
+        backgroundColor: '#fff',
+        border: '1px solid #ced4da',
+        overflow: 'hidden',
+        fontSize: 12,
+      }}
+    >
+      <div
+        style={{
+          width: '100%',
+          height: 130,
+          backgroundColor: color,
+          marginBottom: 10,
+        }}
+      />
+      <Text block variant='ui-lg'>
+        <span style={{ fontWeight: 500 }}>{name}</span>
+      </Text>
+      <Text block variant='ui-xs'>
+        <span style={{ fontWeight: 300 }}>{color}</span>
+      </Text>
+    </div>
+  );
+  return (
+    <div style={{ padding: 20 }}>
+      <Text></Text>
+      <Text variant='ui-lg' block>
+        <span>Yellow</span>
+      </Text>
+      <div style={{ marginBottom: 30 }}>
+        <Palette name='Yellow0' color='#fff9db' />
+        <Palette name='Yellow1' color='#fff3bf' />
+        <Palette name='Yellow2' color='#ffec99' />
+        <Palette name='Yellow3' color='#ffe066' />
+        <Palette name='Yellow4' color='#ffd43b' />
+        <Palette name='Yellow5' color='#fcc419' />
+        <Palette name='Yellow6' color='#fab005' />
+        <Palette name='Yellow7' color='#f59f00' />
+        <Palette name='Yellow8' color='#f08c00' />
+        <Palette name='Yellow9' color='#e67700' />
+      </div>
+      <Text></Text>
+      <Text variant='ui-lg' block>
+        <span>Gray</span>
+      </Text>
+      <div style={{ marginBottom: 30 }}>
+        <Palette name='Gray0' color='#f8f9fa' />
+        <Palette name='Gray1' color='#f1f3f5' />
+        <Palette name='Gray2' color='#e9ecef' />
+        <Palette name='Gray3' color='#dee2e6' />
+        <Palette name='Gray4' color='#ced4da' />
+        <Palette name='Gray5' color='#adb5bd' />
+        <Palette name='Gray6' color='#868e96' />
+        <Palette name='Gray7' color='#495057' />
+        <Palette name='Gray8' color='#343a40' />
+        <Palette name='Gray9' color='#212529' />
+      </div>
+    </div>
+  );
+};
 
 export const Icon = () => <div>【ツ】</div>;
 

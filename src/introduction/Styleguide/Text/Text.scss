@@ -4,10 +4,7 @@
   letter-spacing: $korean-letter-spacing;
   font-family: $font;
 
-  &:first-child {
-    display: none;
-  }
-  // Spacer
+  // Display
   & + .block {
     display: block;
   }
