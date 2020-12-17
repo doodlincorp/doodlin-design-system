@@ -1,6 +1,5 @@
 import React from 'react';
 import Text from '../introduction/Styleguide/Text/Text';
-import Palette from '../introduction/Styleguide/Color/Palette';
 import '../index.scss';
 import '../reset.scss';
 
