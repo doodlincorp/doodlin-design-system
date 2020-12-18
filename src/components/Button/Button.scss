@@ -1,8 +1,7 @@
 @import '../../index.scss';
 @import '../Spinner/Spinner.scss';
 
-// Variable
-$bgc: $gray8;
+$bgc: $gray7;
 
 ._BUTTON_ {
   font-family: $font;
@@ -13,7 +12,7 @@ $bgc: $gray8;
   position: relative;
   outline: none;
   border: none;
-  background-color: $bgc;
+  background: $bgc;
 
   height: 4rem;
   @include ui-sm-text(white, $medium);
@@ -33,10 +32,10 @@ $bgc: $gray8;
   }
 
   &:hover {
-    background-color: lighten($color: $bgc, $amount: 10%);
+    background: lighten($color: $bgc, $amount: 10%);
   }
   &:active {
-    background-color: darken($color: $bgc, $amount: 10%);
+    background: darken($color: $bgc, $amount: 10%);
   }
 
   & + & {

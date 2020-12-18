@@ -15,7 +15,7 @@ export const Default = () => (
   </div>
 );
 
-// Problem) div 바로 다음 오는 태그는 스타일이 무시되는 것 같음.
+// Problem) 첫 컴포넌트는 스타일이 무시되는 것 같음.
 // ㄴ> 일단 차선책으로 scss에서 Button의 first-child는 display:none으로 숨겨놓음.
 
 export const Size = () => (
