@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
 import cn from 'classnames';
 import './Input.scss';
 
@@ -25,5 +25,29 @@ export const Input: React.FC<IInputProps> = ({
     />
   );
 };
+
+export interface ITextareaProps
+  extends TextareaHTMLAttributes<HTMLInputElement> {
+  borderType?: 'box' | 'single-line' | 'underline';
+  areaType?: 'scroll' | 'autosize';
+}
+export const Textarea: React.FC<ITextareaProps> = ({
+  className,
+  children,
+  borderType = 'box',
+  disabled,
+  ...props
+}) => (
+  <textarea
+    className={cn('_TEXTAREA_', className, borderType, {
+      dis: disabled,
+      'dis-single-line': borderType === 'single-line' && disabled,
+      'dis-underline': borderType === 'underline' && disabled,
+    })}
+    {...props}
+  >
+    {children}
+  </textarea>
+);
 
 export default Input;
