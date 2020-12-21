@@ -40,7 +40,7 @@ export const InputTextarea = () => {
     <div style={{ padding: 10, maxWidth: 500 }}>
       <Textarea
         placeholder='높이를 넘어가면 스크롤이 생기는 입력창입니다'
-        rows={4}
+        rows={3}
       ></Textarea>
       <Textarea
         placeholder='높이를 넘어가면 자동으로 늘어나고 싶은 입력창입니다'

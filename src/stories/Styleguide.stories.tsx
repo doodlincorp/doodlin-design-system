@@ -166,19 +166,35 @@ export const Color = () => {
       </div>
       <Text></Text>
       <Text variant='ui-lg' block nonKorean>
-        <span>Gray</span>
+        <span>Warm Gray</span>
       </Text>
       <div style={{ marginBottom: 30 }}>
-        <Palette name='Gray0' color='#f8f9fa' />
-        <Palette name='Gray1' color='#f1f3f5' />
-        <Palette name='Gray2' color='#e9ecef' />
-        <Palette name='Gray3' color='#dee2e6' />
-        <Palette name='Gray4' color='#ced4da' />
-        <Palette name='Gray5' color='#adb5bd' />
-        <Palette name='Gray6' color='#868e96' />
-        <Palette name='Gray7' color='#495057' />
-        <Palette name='Gray8' color='#343a40' />
-        <Palette name='Gray9' color='#212529' />
+        <Palette name='Gray0' color='#f8f8f8' />
+        <Palette name='Gray1' color='#f1f1f1' />
+        <Palette name='Gray2' color='#e9e9e9' />
+        <Palette name='Gray3' color='#e0e0e0' />
+        <Palette name='Gray4' color='#d0d0d0' />
+        <Palette name='Gray5' color='#b0b0b0' />
+        <Palette name='Gray6' color='#8b8b8b' />
+        <Palette name='Gray7' color='#555555' />
+        <Palette name='Gray8' color='#333333' />
+        <Palette name='Gray9' color='#111111' />
+      </div>
+      <Text></Text>
+      <Text variant='ui-lg' block nonKorean>
+        <span>Cool Gray</span>
+      </Text>
+      <div style={{ marginBottom: 30 }}>
+        <Palette name='CGray0' color='#f8f9fa' />
+        <Palette name='CGray1' color='#f1f3f5' />
+        <Palette name='CGray2' color='#e9ecef' />
+        <Palette name='CGray3' color='#dee2e6' />
+        <Palette name='CGray4' color='#ced4da' />
+        <Palette name='CGray5' color='#adb5bd' />
+        <Palette name='CGray6' color='#868e96' />
+        <Palette name='CGray7' color='#495057' />
+        <Palette name='CGray8' color='#343a40' />
+        <Palette name='CGray9' color='#212529' />
       </div>
     </div>
   );

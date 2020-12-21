@@ -125,16 +125,29 @@ $yellow8: #f08c00;
 $yellow9: #e67700;
 
 // Gray Color
-$gray0: #f8f9fa;
-$gray1: #f1f3f5;
-$gray2: #e9ecef;
-$gray3: #dee2e6; // horizontal line
-$gray4: #ced4da; // border
-$gray5: #adb5bd; // placeholder text
-$gray6: #868e96;
-$gray7: #495057;
-$gray8: #343a40; // primary text, ui, buttons text
-$gray9: #212529;
+// *Warm gray
+$gray0: #f8f8f8; // bg0
+$gray1: #f1f1f1; // bg1, hover
+$gray2: #e9e9e9; // ghost && disabled button border
+$gray3: #e0e0e0; // primary border
+$gray4: #d0d0d0; // input, button border, disabled text
+$gray5: #b0b0b0;
+$gray6: #8b8b8b; // sub icon, text
+$gray7: #555555; // primary icon
+$gray8: #333333; // primary text
+$gray9: #111111; // title text
+
+// *Cool gray
+$cgray0: #f8f9fa;
+$cgray1: #f1f3f5;
+$cgray2: #e9ecef;
+$cgray3: #dee2e6; // horizontal line
+$cgray4: #ced4da; // border
+$cgray5: #adb5bd; // placeholder text
+$cgray6: #868e96;
+$cgray7: #495057;
+$cgray8: #343a40; // primary text, ui, buttons text
+$cgray9: #212529;
 
 // System Color
 $red0: #e03131; // caution, error alert
@@ -148,6 +161,7 @@ $shadow-md0: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.12);
 $shadow-md1: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.8);
 $shadow-lg0: 0 1.5rem 3rem rgba(0, 0, 0, 0.12);
 $shadow-lg1: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+
 // Container
 $login-container-width: 77.2rem;
 

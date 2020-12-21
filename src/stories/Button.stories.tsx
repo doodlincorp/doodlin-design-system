@@ -168,8 +168,8 @@ export const WithIcon = () => (
     <Button variant='text'>
       <span>버튼</span>
     </Button>
-    <Button>
-      <BsCheck />
+    <Button size='sm'>
+      <BsCheck fontSize={20} />
     </Button>
   </div>
 );
