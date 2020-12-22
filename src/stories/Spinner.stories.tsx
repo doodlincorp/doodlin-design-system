@@ -1,5 +1,5 @@
 import React from 'react';
-import Spinner from '../components/Spinner/Spinner';
+import Spinner from '../components/Spinner';
 import '../reset.scss';
 
 export default {
@@ -9,14 +9,12 @@ export default {
 
 export const Default = () => (
   <div style={{ padding: 10 }}>
-    <Spinner>NULL</Spinner>
     <Spinner></Spinner>
   </div>
 );
 
 export const Size = () => (
   <div style={{ padding: 10 }}>
-    <Spinner>NULL</Spinner>
     <Spinner size='xxs'></Spinner>
     <Spinner size='xs'></Spinner>
     <Spinner size='sm'></Spinner>

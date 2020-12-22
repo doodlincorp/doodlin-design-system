@@ -1,0 +1,83 @@
+@import '../../index.scss';
+
+._TEXTAREA_ {
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  @include desc-sm-text;
+  border-radius: 0.4rem;
+  border: 1px solid $gray4;
+
+  transition: all 0.2s ease-out;
+  box-sizing: border-box;
+  resize: none;
+
+  // Scrollbar
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: $gray1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.4rem;
+    background-color: $gray4;
+  }
+
+  &::placeholder {
+    color: $gray5;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid $gray6;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: $shadow-sm;
+  }
+
+  & + & {
+    margin-top: 2rem;
+  }
+
+  // Underline
+  &.underline {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $gray4;
+    overflow-y: hidden;
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $gray6;
+      box-shadow: none;
+    }
+    &.dis-underline {
+      background: transparent;
+      pointer-events: none;
+      border-bottom: 1px solid $gray4;
+    }
+  }
+
+  // Single-line
+  &.single-line {
+    width: 100%;
+    overflow-y: hidden;
+  }
+
+  // Disabled
+  &.dis {
+    background: $gray1;
+    border: none;
+    pointer-events: none;
+    &::placeholder {
+      opacity: 0.7;
+    }
+  }
+
+  &.dis-single-line {
+    pointer-events: none;
+  }
+}

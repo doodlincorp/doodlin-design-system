@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from '../introduction/Styleguide/Text/Text';
+import Text from '../introduction/Styleguide/Text/';
 import '../index.scss';
 import '../reset.scss';
 
@@ -11,55 +11,51 @@ export default {
 export const Typography = () => (
   <div style={{ padding: 20 }}>
     <div style={{ marginBottom: 40 }}>
-      <Text></Text>
-      <Text variant='ui-lg' block nonKorean>
-        <span>Title</span>
+      <Text size='tit-md' block nonKorean>
+        Title
       </Text>
-      <Text variant='tit-xxxl' block>
-        <span>타이틀 - 48pt</span>
+      <Text size='tit-xxxl' block>
+        타이틀 - 48pt
       </Text>
-      <Text variant='tit-xxl' block>
-        <span>타이틀 - 36pt</span>
+      <Text size='tit-xxl' block>
+        타이틀 - 36pt
       </Text>
-      <Text variant='tit-xl' block>
-        <span>타이틀 - 24pt</span>
+      <Text size='tit-xl' block>
+        타이틀 - 24pt
       </Text>
-      <Text variant='tit-lg' block>
-        <span>타이틀 - 21pt</span>
+      <Text size='tit-lg' block>
+        타이틀 - 21pt
       </Text>
-      <Text variant='tit-md' block>
-        <span>타이틀 - 18pt</span>
+      <Text size='tit-md' block>
+        타이틀 - 18pt
       </Text>
     </div>
 
     <div style={{ marginBottom: 40 }}>
-      <Text></Text>
-      <Text variant='ui-lg' block nonKorean>
-        <span>UI, Button</span>
+      <Text size='tit-md' block nonKorean>
+        UI, Button
       </Text>
       <div style={{ marginTop: 10 }}>
-        <Text></Text>
-        <Text variant='ui-lg' block>
-          <span>UI, 버튼 - 18pt</span>
+        <Text size='ui-lg' block>
+          UI, 버튼 - 18pt
         </Text>
-        <Text variant='ui-md' block>
-          <span>UI, 버튼 - 16pt</span>
+        <Text size='ui-md' block>
+          UI, 버튼 - 16pt
         </Text>
-        <Text variant='ui-sm' block>
-          <span>UI, 버튼 - 14pt</span>
+        <Text size='ui-sm' block>
+          UI, 버튼 - 14pt
         </Text>
-        <Text variant='ui-xs' block>
-          <span>UI, 버튼 - 12pt</span>
+        <Text size='ui-xs' block>
+          UI, 버튼 - 12pt
         </Text>
       </div>
     </div>
 
     <div>
-      <Text></Text>
-      <Text variant='ui-lg' block nonKorean>
-        <span>Description</span>
+      <Text size='tit-md' block nonKorean>
+        Description
       </Text>
-      <Text variant='desc-lg' block>
+      <Text size='desc-lg' block>
         <div
           style={{
             maxWidth: 500,
@@ -75,7 +71,7 @@ export const Typography = () => (
           </span>
         </div>
       </Text>
-      <Text variant='desc-md' block>
+      <Text size='desc-md' block>
         <div
           style={{ maxWidth: 500, wordBreak: 'break-word', marginBottom: 10 }}
         >
@@ -86,7 +82,7 @@ export const Typography = () => (
           </span>
         </div>
       </Text>
-      <Text variant='desc-sm' block>
+      <Text size='desc-sm' block>
         <div
           style={{ maxWidth: 500, wordBreak: 'break-word', marginBottom: 10 }}
         >
@@ -97,7 +93,7 @@ export const Typography = () => (
           </span>
         </div>
       </Text>
-      <Text variant='desc-xs' block>
+      <Text size='desc-xs' block>
         <div
           style={{ maxWidth: 500, wordBreak: 'break-word', marginBottom: 10 }}
         >
@@ -137,20 +133,19 @@ export const Color = () => {
           marginBottom: 6,
         }}
       />
-      <Text></Text>
-      <Text block variant='ui-md' nonKorean>
+
+      <Text block size='ui-md' nonKorean>
         <span style={{ fontWeight: 500 }}>{name}</span>
       </Text>
-      <Text block variant='ui-xs' nonKorean>
+      <Text block size='ui-xs' nonKorean>
         <span style={{ fontWeight: 300 }}>{color}</span>
       </Text>
     </div>
   );
   return (
     <div style={{ padding: 20 }}>
-      <Text></Text>
-      <Text variant='ui-lg' block nonKorean>
-        <span>Yellow</span>
+      <Text size='tit-md' block nonKorean>
+        Yellow
       </Text>
       <div style={{ marginBottom: 30 }}>
         <Palette name='Yellow0' color='#fff9db' />
@@ -164,9 +159,9 @@ export const Color = () => {
         <Palette name='Yellow8' color='#f08c00' />
         <Palette name='Yellow9' color='#e67700' />
       </div>
-      <Text></Text>
-      <Text variant='ui-lg' block nonKorean>
-        <span>Warm Gray</span>
+
+      <Text size='tit-md' block nonKorean>
+        Warm Gray
       </Text>
       <div style={{ marginBottom: 30 }}>
         <Palette name='Gray0' color='#f8f8f8' />
@@ -180,9 +175,9 @@ export const Color = () => {
         <Palette name='Gray8' color='#333333' />
         <Palette name='Gray9' color='#111111' />
       </div>
-      <Text></Text>
-      <Text variant='ui-lg' block nonKorean>
-        <span>Cool Gray</span>
+
+      <Text size='tit-md' block nonKorean>
+        Cool Gray
       </Text>
       <div style={{ marginBottom: 30 }}>
         <Palette name='CGray0' color='#f8f9fa' />

@@ -1,0 +1,116 @@
+@import '../../index.scss';
+
+._BUTTON_ {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  outline: none;
+  border: none;
+
+  height: 4rem;
+  padding: 0 1.6rem;
+  border-radius: 0.4rem;
+
+  cursor: pointer;
+  transition: 0.2s ease-out;
+  box-sizing: border-box;
+
+  span {
+    padding: 0 0.4rem;
+  }
+
+  & + & {
+    margin-left: 2rem;
+  }
+
+  // Size
+  &.xxs {
+    height: 2.8rem;
+    padding: 0 0.4rem;
+    border-radius: 0.4rem;
+    @include ui-xs-text(inherit, $medium);
+    @include button-color();
+  }
+
+  &.xs {
+    height: 3.2rem;
+    padding: 0 0.4rem;
+    border-radius: 0.4rem;
+    @include ui-xs-text(inherit, $medium);
+    @include button-color();
+  }
+
+  &.sm {
+    height: 3.6rem;
+    padding: 0 0.8rem;
+    border-radius: 0.4rem;
+    @include ui-xs-text(inherit, $medium);
+    @include button-color();
+  }
+
+  &.md {
+    height: 4rem;
+    padding: 0 1.2rem;
+    border-radius: 0.4rem;
+    @include ui-sm-text(inherit, $medium);
+    @include button-color();
+  }
+
+  &.lg {
+    height: 4.4rem;
+    padding: 0 1.6rem;
+    border-radius: 0.6rem;
+    @include ui-sm-text(inherit, $medium);
+    @include button-color();
+  }
+
+  &.xl {
+    height: 4.8rem;
+    padding: 0 2rem;
+    border-radius: 0.6rem;
+    @include ui-sm-text(inherit, $medium);
+    @include button-color();
+  }
+
+  &.xxl {
+    height: 5.2rem;
+    padding: 0 2.4rem;
+    border-radius: 0.6rem;
+    @include ui-sm-text(inherit, $medium);
+    @include button-color();
+  }
+
+  &.xxxl {
+    height: 5.6rem;
+    padding: 0 2.8rem;
+    border-radius: 0.8rem;
+    @include ui-lg-text(inherit, $medium);
+    @include button-color();
+  }
+
+  .none {
+    opacity: 0;
+  }
+
+  // Fullwidth
+  &.fw {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  // Loading
+  &.spin::before {
+    position: absolute;
+    margin: 0 auto;
+    &::before {
+      @include SpinSize(1.2rem, 0.2rem);
+    }
+  }
+  &.spin-md::before {
+    @include SpinSize(1.4rem, 0.3rem);
+  }
+  &.spin-lg::before {
+    @include SpinSize(1.8rem, 0.3rem);
+  }
+}

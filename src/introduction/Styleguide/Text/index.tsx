@@ -1,12 +1,12 @@
 import React from 'react';
 import cn from 'classnames';
-import './Text.scss';
+import './index.scss';
 
 export interface ITextProps {
   className?: string;
   block?: boolean;
   nonKorean?: boolean;
-  variant?:
+  size?:
     | 'tit-xxxl'
     | 'tit-xxl'
     | 'tit-xl'
@@ -27,12 +27,12 @@ export const Text: React.FC<ITextProps> = ({
   children,
   block,
   nonKorean,
-  variant,
+  size,
   ...props
 }) => {
   return (
     <span
-      className={cn('_TEXT_', className, variant, {
+      className={cn('_TEXT_', className, size, {
         block: block,
         nK: nonKorean,
       })}

@@ -1,10 +1,11 @@
 import React from 'react';
 import cn from 'classnames';
-import './Spinner.scss';
+import './index.scss';
+import { TDefaultSize } from '../..';
 
 export interface ISpinnerProps {
   className?: string;
-  size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
+  size?: TDefaultSize;
 }
 
 export const Spinner: React.FC<ISpinnerProps> = ({

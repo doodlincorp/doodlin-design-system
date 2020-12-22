@@ -1,12 +1,9 @@
+// 모든 함수, 변수 모음집
+
 /////////////////* Fonts */////////////////
 
 // Font-family
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 $font: 'Spoqa Han Sans Neo', 'sans-serif';
-
-html {
-  font-size: 62.5%;
-}
 
 // Letter-spacing
 $korean-letter-spacing: -0.096rem;
@@ -167,3 +164,95 @@ $login-container-width: 77.2rem;
 
 // Transition Variables
 $button-hover-transition: ease-in-out 0.2s;
+
+// Mixin
+// * $WH: Width, height value (e.g. 160px)
+// * $Bsize: border-size value (e.g. 3px)
+// * $Bc0: border-color value (e.g. #fff)
+// * $Bc1: border-background-color value (e.g. #ffffff33)
+@mixin SpinSize(
+  $WH: 1.6rem,
+  $Bsize: 0.3rem,
+  $Bc0: #fff,
+  $Bc1: rgba(255, 255, 255, 0.2)
+) {
+  width: $WH;
+  height: $WH;
+  border: $Bsize solid $Bc0;
+  margin: 0;
+  content: ' ';
+  display: block;
+  border-radius: 50%;
+  border-color: $Bc0 $Bc1 $Bc1 $Bc1;
+  animation: spin 1.15s cubic-bezier(0.31, 0.63, 0.8, 0.73) infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// * $bgc: background-color (e.g. #fff)
+// * $fc: font-color (e.g. #111)
+// * $dis-bgc: disabled background-color
+// * $dis-fc: disabled font-color
+@mixin button-color(
+  $bgc: $gray8,
+  $fc: white,
+  $dis-bgc: $gray2,
+  $dis-fc: $gray4
+) {
+  background: $bgc;
+  color: $fc;
+  &:hover {
+    background: lighten($bgc, 10%);
+  }
+  &:active {
+    background: darken($bgc, 10%);
+  }
+
+  // Variant (ghost, text)
+  &.ghost {
+    background: none;
+    border: 1px solid $bgc;
+    color: $bgc;
+    &:hover {
+      background: $bgc;
+      color: $fc;
+    }
+    &:active {
+      background: darken($bgc, 20%);
+    }
+  }
+
+  &.text {
+    background: none;
+    color: $bgc;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:active {
+      color: darken($bgc, 20%);
+    }
+  }
+
+  // Disabled
+  &.dis {
+    background: $dis-bgc;
+    color: $dis-fc;
+    pointer-events: none;
+  }
+  &.dis-ghost {
+    background: transparent;
+    border: 1px solid $dis-bgc;
+    pointer-events: none;
+  }
+  &.dis-text {
+    background: transparent;
+    border: transparent;
+  }
+}

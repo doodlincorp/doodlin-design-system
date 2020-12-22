@@ -1,7 +1,8 @@
 import React from 'react';
-import Button from '../components/Button/Button';
+import Button from '../components/Button';
 import '../reset.scss';
 import { BsCheck } from 'react-icons/bs';
+import Text from '../introduction/Styleguide/Text';
 
 export default {
   title: 'Component/Button',
@@ -10,196 +11,203 @@ export default {
 
 export const Default = () => (
   <div style={{ padding: 10 }}>
-    <Button>NULL</Button>
     <Button>기본 버튼</Button>
   </div>
 );
 
-// Problem) 첫 컴포넌트는 스타일이 무시되는 것 같음.
-// ㄴ> 일단 차선책으로 scss에서 Button의 first-child는 display:none으로 숨겨놓음.
-
 export const Size = () => (
   <div style={{ padding: 10 }}>
-    <Button>NULL</Button>
-    <Button size='xxs'>
-      <span>2XSMALL</span>
-    </Button>
-    <Button size='xs'>
-      <span>XSMALL</span>
-    </Button>
-    <Button size='sm'>
-      <span>SMALL</span>
-    </Button>
-    <Button size='md'>
-      <span>MEDIUM</span>
-    </Button>
-    <Button size='lg'>
-      <span>LARGE</span>
-    </Button>
-    <Button size='xl'>
-      <span>XLARGE</span>
-    </Button>
-    <Button size='xxl'>
-      <span>2XLARGE</span>
-    </Button>
-    <Button size='xxxl'>
-      <span>3XLARGE</span>
-    </Button>
+    <Button size='xxs'>2XSMALL</Button>
+    <Button size='xs'>XSMALL</Button>
+    <Button size='sm'>SMALL</Button>
+    <Button size='md'>MEDIUM</Button>
+    <Button size='lg'>LARGE</Button>
+    <Button size='xl'>XLARGE</Button>
+    <Button size='xxl'>2XLARGE</Button>
+    <Button size='xxxl'>3XLARGE</Button>
   </div>
 );
 
 export const Ghost = () => (
   <div style={{ padding: 10 }}>
-    <Button>NULL</Button>
     <Button size='xxs' variant='ghost'>
-      <span>2XSMALL</span>
+      2XSMALL
     </Button>
     <Button size='xs' variant='ghost'>
-      <span>XSMALL</span>
+      XSMALL
     </Button>
     <Button size='sm' variant='ghost'>
-      <span>SMALL</span>
+      SMALL
     </Button>
     <Button size='md' variant='ghost'>
-      <span>MEDIUM</span>
+      MEDIUM
     </Button>
     <Button size='lg' variant='ghost'>
-      <span>LARGE</span>
+      LARGE
     </Button>
     <Button size='xl' variant='ghost'>
-      <span>XLARGE</span>
+      XLARGE
     </Button>
     <Button size='xxl' variant='ghost'>
-      <span>2XLARGE</span>
+      2XLARGE
     </Button>
     <Button size='xxxl' variant='ghost'>
-      <span>3XLARGE</span>
+      3XLARGE
     </Button>
   </div>
 );
 
-export const Text = () => (
+export const TextOnly = () => (
   <div style={{ padding: 10 }}>
-    <Button>NULL</Button>
     <Button size='xxs' variant='text'>
-      <span>2XSMALL</span>
+      2XSMALL
     </Button>
     <Button size='xs' variant='text'>
-      <span>XSMALL</span>
+      XSMALL
     </Button>
     <Button size='sm' variant='text'>
-      <span>SMALL</span>
+      SMALL
     </Button>
     <Button size='md' variant='text'>
-      <span>MEDIUM</span>
+      MEDIUM
     </Button>
     <Button size='lg' variant='text'>
-      <span>LARGE</span>
+      LARGE
     </Button>
     <Button size='xl' variant='text'>
-      <span>XLARGE</span>
+      XLARGE
     </Button>
     <Button size='xxl' variant='text'>
-      <span>2XLARGE</span>
+      2XLARGE
     </Button>
     <Button size='xxxl' variant='text'>
-      <span>3XLARGE</span>
+      3XLARGE
     </Button>
   </div>
 );
 
 export const Disabled = () => (
   <div style={{ padding: 10 }}>
-    <Button>NULL</Button>
-    <Button disabled>
-      <span>비활성화</span>
-    </Button>
-    <Button variant='ghost' disabled>
-      <span>비활성화</span>
-    </Button>
-    <Button variant='text' disabled>
-      <span>비활성화</span>
-    </Button>
+    <div style={{ marginBottom: 30 }}>
+      <Text size='tit-md' block nonKorean>
+        Default Button
+      </Text>
+      <Button style={{ marginTop: 10 }} disabled>
+        비활성화
+      </Button>
+    </div>
+    <div style={{ marginBottom: 30 }}>
+      <Text size='tit-md' block nonKorean>
+        Ghost Button
+      </Text>
+      <Button style={{ marginTop: 10 }} variant='ghost' disabled>
+        비활성화
+      </Button>
+    </div>
+    <div style={{ marginBottom: 30 }}>
+      <Text size='tit-md' block nonKorean>
+        Text-only Button
+      </Text>
+      <Button style={{ marginTop: 10 }} variant='text' disabled>
+        비활성화
+      </Button>
+    </div>
   </div>
 );
 
 export const FullWidth = () => (
   <div style={{ padding: 10 }}>
-    <Button>NULL</Button>
     <Button size='xxs' fullWidth>
-      <span>2XSMALL</span>
+      2XSMALL
     </Button>
     <Button size='xs' fullWidth>
-      <span>XSMALL</span>
+      XSMALL
     </Button>
     <Button size='sm' fullWidth>
-      <span>SMALL</span>
+      SMALL
     </Button>
     <Button size='md' fullWidth>
-      <span>MEDIUM</span>
+      MEDIUM
     </Button>
     <Button size='lg' fullWidth>
-      <span>LARGE</span>
+      LARGE
     </Button>
     <Button size='xl' fullWidth>
-      <span>XLARGE</span>
+      XLARGE
     </Button>
     <Button size='xxl' fullWidth>
-      <span>2XLARGE</span>
+      2XLARGE
     </Button>
     <Button size='xxxl' fullWidth>
-      <span>3XLARGE</span>
+      3XLARGE
     </Button>
   </div>
 );
 
-// P) component 사이에 다른 태그 끼우니까 component 속성이 사라져버림.
 export const WithIcon = () => (
   <div style={{ padding: 10 }}>
-    <Button>NULL</Button>
-    <Button>
-      <BsCheck />
-      <span>버튼</span>
-    </Button>
-    <Button size='xxxl' variant='ghost'>
-      <span>버튼</span>
-      <BsCheck />
-    </Button>
-    <Button variant='text'>
-      <span>버튼</span>
-    </Button>
-    <Button size='sm'>
-      <BsCheck fontSize={20} />
-    </Button>
+    <div style={{ marginBottom: 30 }}>
+      <Text size='tit-md' block nonKorean>
+        Leading-icon
+      </Text>
+      <Button style={{ marginTop: 10 }}>
+        <BsCheck />
+        버튼
+      </Button>
+    </div>
+    <div style={{ marginBottom: 30 }}>
+      <Text size='tit-md' block nonKorean>
+        Tailing-icon
+      </Text>
+      <Button style={{ marginTop: 10 }} variant='ghost'>
+        버튼
+        <BsCheck />
+      </Button>
+    </div>
+    <div style={{ marginBottom: 30 }}>
+      <Text size='tit-md' block nonKorean>
+        Text-only
+      </Text>
+      <Button style={{ marginTop: 10 }} variant='text'>
+        버튼
+      </Button>
+    </div>
+    <div style={{ marginBottom: 30 }}>
+      <Text size='tit-md' block nonKorean>
+        Icon-only
+      </Text>
+      <Button style={{ marginTop: 10 }}>
+        <BsCheck fontSize={24} />
+      </Button>
+    </div>
   </div>
 );
 
 export const Loading = () => (
   <div style={{ padding: 10 }}>
-    <Button>NULL</Button>
-    <Button size='xxs' loading='spin-sm'>
-      <span>2XSMALL</span>
+    <Button size='xxs' loading='spin'>
+      2XSMALL
     </Button>
-    <Button size='xs' loading='spin-sm'>
-      <span>XSMALL</span>
+    <Button size='xs' loading='spin'>
+      XSMALL
     </Button>
-    <Button size='sm' loading='spin-sm'>
-      <span>SMALL</span>
+    <Button size='sm' loading='spin'>
+      SMALL
     </Button>
-    <Button size='md' loading='spin-md'>
-      <span>MEDIUM</span>
+    <Button size='md' loading='spin'>
+      MEDIUM
     </Button>
-    <Button size='lg' loading='spin-md'>
-      <span>LARGE</span>
+    <Button size='lg' loading='spin'>
+      LARGE
     </Button>
-    <Button size='xl' loading='spin-md'>
-      <span>XLARGE</span>
+    <Button size='xl' loading='spin'>
+      XLARGE
     </Button>
-    <Button size='xxl' loading='spin-md'>
-      <span>2XLARGE</span>
+    <Button size='xxl' loading='spin'>
+      2XLARGE
     </Button>
-    <Button size='xxxl' loading='spin-lg'>
-      <span>3XLARGE</span>
+    <Button size='xxxl' loading='spin'>
+      3XLARGE
     </Button>
   </div>
 );
