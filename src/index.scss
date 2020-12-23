@@ -15,35 +15,35 @@ $medium: 500;
 $bold: 600;
 
 // Title font
-@mixin tit-xxxl-text($color: $gray8, $weight: $bold) {
+@mixin tit-xxxl-text($color: $gray_9, $weight: $bold) {
   font-size: 4.8rem;
   font-weight: $weight;
   line-height: 7.2rem;
   color: $color;
 }
 
-@mixin tit-xxl-text($color: $gray8, $weight: $bold) {
+@mixin tit-xxl-text($color: $gray_9, $weight: $bold) {
   font-size: 3.6rem;
   font-weight: $weight;
   line-height: 5.4rem;
   color: $color;
 }
 
-@mixin tit-xl-text($color: $gray8, $weight: $bold) {
+@mixin tit-xl-text($color: $gray_9, $weight: $bold) {
   font-size: 2.4rem;
   font-weight: $weight;
   line-height: 3.6rem;
   color: $color;
 }
 
-@mixin tit-lg-text($color: $gray8, $weight: $bold) {
+@mixin tit-lg-text($color: $gray_9, $weight: $bold) {
   font-size: 2.1rem;
   font-weight: $weight;
   line-height: 3.2rem;
   color: $color;
 }
 
-@mixin tit-md-text($color: $gray8, $weight: $bold) {
+@mixin tit-md-text($color: $gray_9, $weight: $bold) {
   font-size: 1.8rem;
   font-weight: $weight;
   line-height: 2.8rem;
@@ -51,28 +51,28 @@ $bold: 600;
 }
 
 // UI, Buttons font
-@mixin ui-lg-text($color: $gray7, $weight: $regular) {
+@mixin ui-lg-text($color: $gray_8, $weight: $regular) {
   font-size: 1.8rem;
   font-weight: $weight;
   line-height: 2.8rem;
   color: $color;
 }
 
-@mixin ui-md-text($color: $gray7, $weight: $regular) {
+@mixin ui-md-text($color: $gray_8, $weight: $regular) {
   font-size: 1.6rem;
   font-weight: $weight;
   line-height: 2.4rem;
   color: $color;
 }
 
-@mixin ui-sm-text($color: $gray7, $weight: $regular) {
+@mixin ui-sm-text($color: $gray_8, $weight: $regular) {
   font-size: 1.4rem;
   font-weight: $weight;
   line-height: 2rem;
   color: $color;
 }
 
-@mixin ui-xs-text($color: $gray7, $weight: $regular) {
+@mixin ui-xs-text($color: $gray_8, $weight: $regular) {
   font-size: 1.2rem;
   font-weight: $weight;
   line-height: 1.8rem;
@@ -80,27 +80,27 @@ $bold: 600;
 }
 
 // Description font
-@mixin desc-lg-text($color: $gray7, $weight: $light) {
+@mixin desc-lg-text($color: $gray_8, $weight: $light) {
   font-size: 1.8rem;
   font-weight: $weight;
   line-height: 3.2rem;
   color: $color;
 }
 
-@mixin desc-md-text($color: $gray7, $weight: $light) {
+@mixin desc-md-text($color: $gray_8, $weight: $light) {
   font-size: 1.6rem;
   font-weight: $weight;
   line-height: 2.8rem;
   color: $color;
 }
 
-@mixin desc-sm-text($color: $gray7, $weight: $light) {
+@mixin desc-sm-text($color: $gray_8, $weight: $light) {
   font-size: 1.4rem;
   font-weight: $weight;
   line-height: 2.6rem;
   color: $color;
 }
-@mixin desc-xs-text($color: $gray7, $weight: $light) {
+@mixin desc-xs-text($color: $gray_8, $weight: $light) {
   font-size: 1.2rem;
   font-weight: $weight;
   line-height: 2.2rem;
@@ -109,48 +109,51 @@ $bold: 600;
 
 /////////////////* Color */////////////////
 
-// Main Color
-$yellow0: #fff9db;
-$yellow1: #fff3bf;
-$yellow2: #ffec99;
-$yellow3: #ffe066;
-$yellow4: #ffd43b; // Primary
-$yellow5: #fcc419;
-$yellow6: #fab005; // Primary
-$yellow7: #f59f00;
-$yellow8: #f08c00;
-$yellow9: #e67700;
+// Primary Color
+$yellow_0: #fff9db;
+$yellow_1: #fff3bf;
+$yellow_2: #ffec99;
+$yellow_3: #ffe066;
+$yellow_4: #ffd43b; // Primary
+$yellow_5: #fcc419;
+$yellow_6: #fab005; // Primary
+$yellow_7: #f59f00;
+$yellow_8: #f08c00;
+$yellow_9: #e67700;
+
+// Secondary Color
+$blue_2: #a5d8ff;
+$blue_4: #4dabf7;
+$blue_6: #228be5;
+$blue_7: #1c7ed6;
+$blue_9: #1864ab;
+$blue_10: #0a467f;
+
+// Kanban Color
+$gray_4: #d0d0d0;
+$blue_2: #a5d8ff;
+$blue_4: #4dabf7;
+$blue_6: #228be5;
+$teal_4: #38d9a9;
+$teal_6: #12b886;
 
 // Gray Color
-// *Warm gray
-$gray0: #f8f8f8; // bg0
-$gray1: #f1f1f1; // bg1, hover
-$gray2: #e9e9e9; // ghost && disabled button border
-$gray3: #e0e0e0; // primary border
-$gray4: #d0d0d0; // input, button border, disabled text
-$gray5: #b0b0b0;
-$gray6: #8b8b8b; // sub icon, text
-$gray7: #555555; // primary icon
-$gray8: #333333; // primary text
-$gray9: #111111; // title text
-
-// *Cool gray
-$cgray0: #f8f9fa;
-$cgray1: #f1f3f5;
-$cgray2: #e9ecef;
-$cgray3: #dee2e6; // horizontal line
-$cgray4: #ced4da; // border
-$cgray5: #adb5bd; // placeholder text
-$cgray6: #868e96;
-$cgray7: #495057;
-$cgray8: #343a40; // primary text, ui, buttons text
-$cgray9: #212529;
+$gray_0: #f8f8f8; // bg0
+$gray_1: #f1f1f1; // bg1, hover
+$gray_2: #e9e9e9; // ghost && disabled button border
+$gray_3: #e0e0e0; // primary border
+$gray_4: #d0d0d0; // input, button border, disabled text
+$gray_5: #b0b0b0;
+$gray_6: #8b8b8b; // sub icon, text
+$gray_7: #555555; // primary icon
+$gray_8: #333333; // primary text
+$gray_9: #111111; // title text
 
 // System Color
-$red0: #e03131; // caution, error alert
-$green0: #40c057; // success
-$yellow0: #fab005; // warning
-$blue0: #228be5; // information
+$red_8: #e03131; // caution, error alert
+$green_6: #40c057; // success
+$yellow_6: #fab005; // warning
+$blue_6: #228be5; // information
 
 // Shadow
 $shadow-sm: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
@@ -201,10 +204,10 @@ $button-hover-transition: ease-in-out 0.2s;
 // * $dis-bgc: disabled background-color
 // * $dis-fc: disabled font-color
 @mixin button-color(
-  $bgc: $gray8,
+  $bgc: $gray_8,
   $fc: white,
-  $dis-bgc: $gray2,
-  $dis-fc: $gray4
+  $dis-bgc: $gray_2,
+  $dis-fc: $gray_4
 ) {
   background: $bgc;
   color: $fc;
