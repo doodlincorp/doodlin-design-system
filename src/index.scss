@@ -14,6 +14,14 @@ $regular: 400;
 $medium: 500;
 $bold: 600;
 
+// Spacing
+$spacing_0: 0.4rem;
+$spacing_1: 0.8rem;
+$spacing_2: 1.6rem;
+$spacing_3: 2rem;
+$spacing_4: 4rem;
+$spacing_5: 6rem;
+
 // Title font
 @mixin tit-xxxl-text($color: $gray_9, $weight: $bold) {
   font-size: 4.8rem;
