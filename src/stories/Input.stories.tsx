@@ -1,8 +1,8 @@
 import React from 'react';
-import Input from '../components/Input';
-import '../components/Input';
+import Input from '../component/Input';
+import '../component/Input';
 import '../reset.scss';
-import Textarea from '../components/Textarea';
+import Textarea from '../component/Textarea';
 
 export default {
   title: 'Component/Input',

@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from '../introduction/Styleguide/Text/';
+import Text from '../component/Text';
 import '../index.scss';
 import '../reset.scss';
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../components/Button';
+import Button from '../component/Button';
 import '../reset.scss';
 import { BsCheck } from 'react-icons/bs';
-import Text from '../introduction/Styleguide/Text';
+import Text from '../component/Text';
 
 export default {
   title: 'Component/Button',
