@@ -35,10 +35,10 @@ export const BorderType = () => (
 
 export const InputTextarea = () => {
   return (
-    <div style={{ padding: 10, maxWidth: 500 }}>
+    <div style={{ padding: 10, maxWidth: 800 }}>
       <Textarea
         placeholder="높이를 넘어가면 스크롤이 생기는 입력창입니다"
-        rows={3}
+        rows={8}
       ></Textarea>
       <Textarea
         placeholder="높이를 넘어가면 자동으로 늘어나고 싶은 입력창입니다"
