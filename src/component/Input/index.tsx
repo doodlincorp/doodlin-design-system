@@ -1,16 +1,10 @@
 import React, { InputHTMLAttributes } from 'react';
 import cn from 'classnames';
 import './index.scss';
-import { TDefaultSize } from '../..';
-
-interface MutableRefObject<T> {
-  current: T;
-}
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  inputSize?: TDefaultSize;
+  inputSize?: 'xxs' | 'sm' | 'md' | 'lg' | 'xxxl';
   borderType?: 'border' | 'underline' | 'none';
-  ref?: MutableRefObject<HTMLInputElement | null>;
 }
 
 export const Input: React.FC<IInputProps> = ({
@@ -18,7 +12,7 @@ export const Input: React.FC<IInputProps> = ({
   inputSize = 'md',
   borderType = 'border',
   disabled,
-  ref,
+  spellCheck = false,
   ...props
 }) => {
   return (
