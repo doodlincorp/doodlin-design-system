@@ -235,7 +235,7 @@ $button-hover-transition: ease-in-out 0.2s;
     background: transparent;
     border: 1px solid $bgc;
     @if $bgc == $gray_4 {
-      color: $gray_8;
+      color: $fc;
     } @else {
       color: $bgc;
     }
@@ -243,7 +243,7 @@ $button-hover-transition: ease-in-out 0.2s;
       @if $bgc == $gray_4 {
         background: $gray_1;
         border: 1px solid $gray_4;
-        color: $gray_8;
+        color: $fc;
       } @else {
         background: $bgc;
         color: $fc;
