@@ -7,6 +7,7 @@
   position: relative;
   outline: none;
   border: none;
+  letter-spacing: 0;
 
   height: 4rem;
   padding: 0 1.6rem;
@@ -27,66 +28,90 @@
   // Size
   &.xxs {
     height: 2.8rem;
-    padding: 0 0.4rem;
+    padding: 0 0.8rem;
     border-radius: 0.4rem;
-    @include ui-xs-text(inherit, $medium);
+    @include ui-sm-text(inherit, $medium);
     @include button-color();
+    &.round {
+      border-radius: calc(2.8rem / 2);
+    }
   }
 
   &.xs {
     height: 3.2rem;
-    padding: 0 0.4rem;
+    padding: 0 0.8rem;
     border-radius: 0.4rem;
-    @include ui-xs-text(inherit, $medium);
+    @include ui-sm-text(inherit, $medium);
     @include button-color();
+    &.round {
+      border-radius: calc(3.2rem / 2);
+    }
   }
 
   &.sm {
     height: 3.6rem;
-    padding: 0 0.8rem;
+    padding: 0 1.2rem;
     border-radius: 0.4rem;
-    @include ui-xs-text(inherit, $medium);
+    @include ui-md-text(inherit, $medium);
     @include button-color();
+    &.round {
+      border-radius: calc(3.6rem / 2);
+    }
   }
 
   &.md {
     height: 4rem;
-    padding: 0 1.2rem;
+    padding: 0 1.6rem;
     border-radius: 0.4rem;
-    @include ui-sm-text(inherit, $medium);
+    @include ui-md-text(inherit, $medium);
     @include button-color();
+    &.round {
+      border-radius: calc(4rem / 2);
+    }
   }
 
   &.lg {
     height: 4.4rem;
-    padding: 0 1.6rem;
+    padding: 0 2rem;
     border-radius: 0.6rem;
-    @include ui-sm-text(inherit, $medium);
+    @include ui-md-text(inherit, $medium);
     @include button-color();
+    &.round {
+      border-radius: calc(4.4rem / 2);
+    }
   }
 
   &.xl {
     height: 4.8rem;
-    padding: 0 2rem;
+    padding: 0 2.4rem;
     border-radius: 0.6rem;
-    @include ui-sm-text(inherit, $medium);
+    @include ui-md-text(inherit, $medium);
     @include button-color();
+    &.round {
+      border-radius: calc(4.8rem / 2);
+    }
   }
 
   &.xxl {
     height: 5.2rem;
-    padding: 0 2.4rem;
+    padding: 0 2.8rem;
     border-radius: 0.6rem;
-    @include ui-sm-text(inherit, $medium);
+    @include ui-md-text(inherit, $medium);
     @include button-color();
+    &.round {
+      border-radius: calc(5.2rem / 2);
+    }
   }
 
   &.xxxl {
     height: 5.6rem;
-    padding: 0 2.8rem;
+    padding: 0 3.2rem;
     border-radius: 0.8rem;
     @include ui-lg-text(inherit, $medium);
     @include button-color();
+    &.round {
+      border-radius: calc(5.6rem / 2);
+    }
   }
 
   .none {

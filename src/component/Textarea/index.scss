@@ -3,9 +3,9 @@
 ._TEXTAREA_ {
   width: 100%;
   padding: 1.2rem 1.6rem;
-  @include desc-sm-text;
+  @include desc-md-text;
   border-radius: 0.4rem;
-  border: 1px solid $gray4;
+  border: 1px solid $gray_4;
 
   transition: all 0.2s ease-out;
   box-sizing: border-box;
@@ -14,22 +14,23 @@
   // Scrollbar
   &::-webkit-scrollbar {
     width: 0.8rem;
-    background-color: $gray1;
+    background-color: $gray_1;
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 0.4rem;
-    background-color: $gray4;
+    background-color: $gray_4;
   }
 
   &::placeholder {
-    color: $gray5;
+    color: $gray_5;
+    font-weight: $regular;
   }
 
   &:hover,
   &:active,
   &:focus {
-    border: 1px solid $gray6;
+    border: 1px solid $gray_6;
   }
   &:focus {
     outline: none;
@@ -46,18 +47,18 @@
     background: transparent;
     border: none;
     border-radius: 0;
-    border-bottom: 1px solid $gray4;
+    border-bottom: 1px solid $gray_4;
     overflow-y: hidden;
     &:hover,
     &:active,
     &:focus {
-      border-color: $gray6;
+      border-color: $gray_6;
       box-shadow: none;
     }
     &.dis-underline {
       background: transparent;
       pointer-events: none;
-      border-bottom: 1px solid $gray4;
+      border-bottom: 1px solid $gray_4;
     }
   }
 
@@ -69,7 +70,7 @@
 
   // Disabled
   &.dis {
-    background: $gray1;
+    background: $gray_1;
     border: none;
     pointer-events: none;
     &::placeholder {

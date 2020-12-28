@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../components/Button';
+import Button from '../component/Button';
 import '../reset.scss';
 import { BsCheck } from 'react-icons/bs';
-import Text from '../introduction/Styleguide/Text';
+import Text from '../component/Text';
 
 export default {
   title: 'Component/Button',
@@ -17,41 +17,41 @@ export const Default = () => (
 
 export const Size = () => (
   <div style={{ padding: 10 }}>
-    <Button size='xxs'>2XSMALL</Button>
-    <Button size='xs'>XSMALL</Button>
-    <Button size='sm'>SMALL</Button>
-    <Button size='md'>MEDIUM</Button>
-    <Button size='lg'>LARGE</Button>
-    <Button size='xl'>XLARGE</Button>
-    <Button size='xxl'>2XLARGE</Button>
-    <Button size='xxxl'>3XLARGE</Button>
+    <Button size="xxs">2XSMALL</Button>
+    <Button size="xs">XSMALL</Button>
+    <Button size="sm">SMALL</Button>
+    <Button size="md">MEDIUM</Button>
+    <Button size="lg">LARGE</Button>
+    <Button size="xl">XLARGE</Button>
+    <Button size="xxl">2XLARGE</Button>
+    <Button size="xxxl">3XLARGE</Button>
   </div>
 );
 
 export const Ghost = () => (
   <div style={{ padding: 10 }}>
-    <Button size='xxs' variant='ghost'>
+    <Button size="xxs" variant="ghost">
       2XSMALL
     </Button>
-    <Button size='xs' variant='ghost'>
+    <Button size="xs" variant="ghost">
       XSMALL
     </Button>
-    <Button size='sm' variant='ghost'>
+    <Button size="sm" variant="ghost">
       SMALL
     </Button>
-    <Button size='md' variant='ghost'>
+    <Button size="md" variant="ghost">
       MEDIUM
     </Button>
-    <Button size='lg' variant='ghost'>
+    <Button size="lg" variant="ghost">
       LARGE
     </Button>
-    <Button size='xl' variant='ghost'>
+    <Button size="xl" variant="ghost">
       XLARGE
     </Button>
-    <Button size='xxl' variant='ghost'>
+    <Button size="xxl" variant="ghost">
       2XLARGE
     </Button>
-    <Button size='xxxl' variant='ghost'>
+    <Button size="xxxl" variant="ghost">
       3XLARGE
     </Button>
   </div>
@@ -59,37 +59,58 @@ export const Ghost = () => (
 
 export const TextOnly = () => (
   <div style={{ padding: 10 }}>
-    <Button size='xxs' variant='text'>
+    <Button size="xxs" variant="text">
       2XSMALL
     </Button>
-    <Button size='xs' variant='text'>
+    <Button size="xs" variant="text">
       XSMALL
     </Button>
-    <Button size='sm' variant='text'>
+    <Button size="sm" variant="text">
       SMALL
     </Button>
-    <Button size='md' variant='text'>
+    <Button size="md" variant="text">
       MEDIUM
     </Button>
-    <Button size='lg' variant='text'>
+    <Button size="lg" variant="text">
       LARGE
     </Button>
-    <Button size='xl' variant='text'>
+    <Button size="xl" variant="text">
       XLARGE
     </Button>
-    <Button size='xxl' variant='text'>
+    <Button size="xxl" variant="text">
       2XLARGE
     </Button>
-    <Button size='xxxl' variant='text'>
+    <Button size="xxxl" variant="text">
       3XLARGE
     </Button>
+  </div>
+);
+
+export const Rounded = () => (
+  <div style={{ padding: 10 }}>
+    <div style={{ marginBottom: 30 }}>
+      <Text size="tit-md" block nonKorean>
+        Default Button
+      </Text>
+      <Button style={{ marginTop: 10 }} rounded>
+        둥근 버튼
+      </Button>
+    </div>
+    <div style={{ marginBottom: 30 }}>
+      <Text size="tit-md" block nonKorean>
+        Ghost Button
+      </Text>
+      <Button style={{ marginTop: 10 }} variant="ghost" rounded>
+        둥근 버튼
+      </Button>
+    </div>
   </div>
 );
 
 export const Disabled = () => (
   <div style={{ padding: 10 }}>
     <div style={{ marginBottom: 30 }}>
-      <Text size='tit-md' block nonKorean>
+      <Text size="tit-md" block nonKorean>
         Default Button
       </Text>
       <Button style={{ marginTop: 10 }} disabled>
@@ -97,18 +118,18 @@ export const Disabled = () => (
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size='tit-md' block nonKorean>
+      <Text size="tit-md" block nonKorean>
         Ghost Button
       </Text>
-      <Button style={{ marginTop: 10 }} variant='ghost' disabled>
+      <Button style={{ marginTop: 10 }} variant="ghost" disabled>
         비활성화
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size='tit-md' block nonKorean>
+      <Text size="tit-md" block nonKorean>
         Text-only Button
       </Text>
-      <Button style={{ marginTop: 10 }} variant='text' disabled>
+      <Button style={{ marginTop: 10 }} variant="text" disabled>
         비활성화
       </Button>
     </div>
@@ -117,28 +138,28 @@ export const Disabled = () => (
 
 export const FullWidth = () => (
   <div style={{ padding: 10 }}>
-    <Button size='xxs' fullWidth>
+    <Button size="xxs" fullWidth>
       2XSMALL
     </Button>
-    <Button size='xs' fullWidth>
+    <Button size="xs" fullWidth>
       XSMALL
     </Button>
-    <Button size='sm' fullWidth>
+    <Button size="sm" fullWidth>
       SMALL
     </Button>
-    <Button size='md' fullWidth>
+    <Button size="md" fullWidth>
       MEDIUM
     </Button>
-    <Button size='lg' fullWidth>
+    <Button size="lg" fullWidth>
       LARGE
     </Button>
-    <Button size='xl' fullWidth>
+    <Button size="xl" fullWidth>
       XLARGE
     </Button>
-    <Button size='xxl' fullWidth>
+    <Button size="xxl" fullWidth>
       2XLARGE
     </Button>
-    <Button size='xxxl' fullWidth>
+    <Button size="xxxl" fullWidth>
       3XLARGE
     </Button>
   </div>
@@ -147,7 +168,7 @@ export const FullWidth = () => (
 export const WithIcon = () => (
   <div style={{ padding: 10 }}>
     <div style={{ marginBottom: 30 }}>
-      <Text size='tit-md' block nonKorean>
+      <Text size="tit-md" block nonKorean>
         Leading-icon
       </Text>
       <Button style={{ marginTop: 10 }}>
@@ -156,24 +177,24 @@ export const WithIcon = () => (
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size='tit-md' block nonKorean>
+      <Text size="tit-md" block nonKorean>
         Tailing-icon
       </Text>
-      <Button style={{ marginTop: 10 }} variant='ghost'>
+      <Button style={{ marginTop: 10 }} variant="ghost">
         버튼
         <BsCheck />
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size='tit-md' block nonKorean>
+      <Text size="tit-md" block nonKorean>
         Text-only
       </Text>
-      <Button style={{ marginTop: 10 }} variant='text'>
+      <Button style={{ marginTop: 10 }} variant="text">
         버튼
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size='tit-md' block nonKorean>
+      <Text size="tit-md" block nonKorean>
         Icon-only
       </Text>
       <Button style={{ marginTop: 10 }}>
@@ -185,28 +206,28 @@ export const WithIcon = () => (
 
 export const Loading = () => (
   <div style={{ padding: 10 }}>
-    <Button size='xxs' loading='spin'>
+    <Button size="xxs" loading="spin">
       2XSMALL
     </Button>
-    <Button size='xs' loading='spin'>
+    <Button size="xs" loading="spin">
       XSMALL
     </Button>
-    <Button size='sm' loading='spin'>
+    <Button size="sm" loading="spin">
       SMALL
     </Button>
-    <Button size='md' loading='spin'>
+    <Button size="md" loading="spin">
       MEDIUM
     </Button>
-    <Button size='lg' loading='spin'>
+    <Button size="lg" loading="spin">
       LARGE
     </Button>
-    <Button size='xl' loading='spin'>
+    <Button size="xl" loading="spin">
       XLARGE
     </Button>
-    <Button size='xxl' loading='spin'>
+    <Button size="xxl" loading="spin">
       2XLARGE
     </Button>
-    <Button size='xxxl' loading='spin'>
+    <Button size="xxxl" loading="spin">
       3XLARGE
     </Button>
   </div>

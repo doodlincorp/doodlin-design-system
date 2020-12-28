@@ -1,5 +1,5 @@
 import React from 'react';
-import Spinner from '../components/Spinner';
+import Spinner from '../component/Spinner';
 import '../reset.scss';
 
 export default {

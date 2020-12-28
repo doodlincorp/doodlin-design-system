@@ -8,6 +8,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'ghost' | 'text';
   fullWidth?: boolean;
   loading?: 'spin';
+  rounded?: boolean;
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -18,6 +19,7 @@ const Button: React.FC<IButtonProps> = ({
   disabled,
   fullWidth,
   loading,
+  rounded,
   ...props
 }) => {
   return (
@@ -25,6 +27,7 @@ const Button: React.FC<IButtonProps> = ({
       className={cn(`_BUTTON_`, className, size, variant, loading, {
         spin: loading,
         dis: disabled,
+        round: rounded,
         'dis-ghost': variant === 'ghost' && disabled,
         'dis-text': variant === 'text' && disabled,
         fw: fullWidth,

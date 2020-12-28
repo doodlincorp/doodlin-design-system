@@ -1,6 +1,9 @@
 import './reset.scss';
-export { default as Input } from './components/Input';
-export { default as Button } from './components/Button';
+export { default as Button } from './component/Button';
+export { default as Input } from './component/Input';
+export { default as Spinner } from './component/Spinner';
+export { default as Text } from './component/Text';
+export { default as Textarea } from './component/Textarea';
 
 export type TDefaultSize =
   | 'xxs'
