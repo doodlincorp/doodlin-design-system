@@ -2,6 +2,7 @@ import React from 'react';
 import Spinner from '../component/Spinner';
 import '../reset.scss';
 
+
 export default {
   title: 'Component/Spinner',
   component: Spinner,

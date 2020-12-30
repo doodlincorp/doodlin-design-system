@@ -1,7 +1,8 @@
 import React from 'react';
 import Input from '../component/Input';
-import '../reset.scss';
 import '../component/Input';
+import '../reset.scss';
+
 import Textarea from '../component/Textarea';
 
 export default {

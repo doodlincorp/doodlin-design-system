@@ -1,6 +1,7 @@
 import React from 'react';
 import Text from '../component/Text';
 import '../reset.scss';
+
 import '../index.scss';
 
 export default {
