@@ -6,38 +6,38 @@
 
   // Size
   &.xxs {
-    @include SpinSize(1.2rem, 0.2rem, $gray_7, $gray_2);
+    @include SpinSize(12px, 2px, $gray_7, $gray_2);
   }
 
   &.xs {
-    @include SpinSize(1.4rem, 0.2rem, $gray_7, $gray_2);
+    @include SpinSize(14px, 2px, $gray_7, $gray_2);
   }
 
   &.sm {
-    @include SpinSize(1.6rem, 0.3rem, $gray_7, $gray_2);
+    @include SpinSize(16px, 3px, $gray_7, $gray_2);
   }
 
   &.md {
-    @include SpinSize(1.8rem, 0.3rem, $gray_7, $gray_2);
+    @include SpinSize(18px, 3px, $gray_7, $gray_2);
   }
 
   &.lg {
-    @include SpinSize(2.4rem, 0.3rem, $gray_7, $gray_2);
+    @include SpinSize(24px, 3px, $gray_7, $gray_2);
   }
 
   &.xl {
-    @include SpinSize(2.8rem, 0.3rem, $gray_7, $gray_2);
+    @include SpinSize(28px, 3px, $gray_7, $gray_2);
   }
 
   &.xxl {
-    @include SpinSize(3.6rem, 0.4rem, $gray_7, $gray_2);
+    @include SpinSize(36px, 4px, $gray_7, $gray_2);
   }
 
   &.xxxl {
-    @include SpinSize(4rem, 0.4rem, $gray_7, $gray_2);
+    @include SpinSize(40px, 4px, $gray_7, $gray_2);
   }
 
   & + & {
-    margin-top: 2rem;
+    margin-top: 20px;
   }
 }

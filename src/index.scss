@@ -6,7 +6,7 @@
 $font: 'Spoqa Han Sans Neo', 'sans-serif';
 
 // Letter-spacing
-$korean-letter-spacing: -0.096rem;
+$korean-letter-spacing: -0.96px;
 
 // Font-weight
 $light: 300;
@@ -15,103 +15,103 @@ $medium: 500;
 $bold: 600;
 
 // Spacing
-$spacing_0: 0.4rem;
-$spacing_1: 0.8rem;
-$spacing_2: 1.6rem;
-$spacing_3: 2rem;
-$spacing_4: 4rem;
-$spacing_5: 6rem;
+$spacing_0: 0.4px;
+$spacing_1: 0.8px;
+$spacing_2: 1.6px;
+$spacing_3: 2px;
+$spacing_4: 4px;
+$spacing_5: 6px;
 
 // Title font
 @mixin tit-xxxl-text($color: $gray_9, $weight: $medium) {
-  font-size: 4.8rem;
+  font-size: 48px;
   font-weight: $weight;
-  line-height: 7.2rem;
+  line-height: 72px;
   color: $color;
 }
 
 @mixin tit-xxl-text($color: $gray_9, $weight: $medium) {
-  font-size: 3.6rem;
+  font-size: 36px;
   font-weight: $weight;
-  line-height: 5.4rem;
+  line-height: 54px;
   color: $color;
 }
 
 @mixin tit-xl-text($color: $gray_9, $weight: $medium) {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: $weight;
-  line-height: 3.6rem;
+  line-height: 36px;
   color: $color;
 }
 
 @mixin tit-lg-text($color: $gray_9, $weight: $medium) {
-  font-size: 2.1rem;
+  font-size: 21px;
   font-weight: $weight;
-  line-height: 3.2rem;
+  line-height: 32px;
   color: $color;
 }
 
 @mixin tit-md-text($color: $gray_9, $weight: $medium) {
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: $weight;
-  line-height: 2.8rem;
+  line-height: 28px;
   color: $color;
 }
 
 // UI, Buttons font
 @mixin ui-lg-text($color: $gray_8, $weight: $regular) {
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: $weight;
-  line-height: 2.8rem;
+  line-height: 28px;
   color: $color;
 }
 
 @mixin ui-md-text($color: $gray_8, $weight: $regular) {
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: $weight;
-  line-height: 2.4rem;
+  line-height: 24px;
   color: $color;
 }
 
 @mixin ui-sm-text($color: $gray_8, $weight: $regular) {
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: $weight;
-  line-height: 2rem;
+  line-height: 20px;
   color: $color;
 }
 
 @mixin ui-xs-text($color: $gray_8, $weight: $regular) {
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: $weight;
-  line-height: 1.8rem;
+  line-height: 18px;
   color: $color;
 }
 
 // Description font
 @mixin desc-lg-text($color: $gray_8, $weight: $light) {
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: $weight;
-  line-height: 3.2rem;
+  line-height: 32px;
   color: $color;
 }
 
 @mixin desc-md-text($color: $gray_8, $weight: $light) {
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: $weight;
-  line-height: 2.8rem;
+  line-height: 28px;
   color: $color;
 }
 
 @mixin desc-sm-text($color: $gray_8, $weight: $light) {
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: $weight;
-  line-height: 2.6rem;
+  line-height: 26px;
   color: $color;
 }
 @mixin desc-xs-text($color: $gray_8, $weight: $light) {
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: $weight;
-  line-height: 2.2rem;
+  line-height: 22px;
   color: $color;
 }
 
@@ -164,14 +164,14 @@ $yellow_6: #fab005; // warning
 $blue_6: #228be5; // information
 
 // Shadow
-$shadow-sm: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
-$shadow-md0: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.12);
-$shadow-md1: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.8);
-$shadow-lg0: 0 1.5rem 3rem rgba(0, 0, 0, 0.12);
-$shadow-lg1: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md0: 0 4px 8px rgba(0, 0, 0, 0.12);
+$shadow-md1: 0 2px 4px rgba(0, 0, 0, 0.8);
+$shadow-lg0: 0 5px 30px rgba(0, 0, 0, 0.12);
+$shadow-lg1: 0 5px 15px rgba(0, 0, 0, 0.8);
 
 // Container
-$login-container-width: 77.2rem;
+$login-container-width: 772px;
 
 // Transition Variables
 $button-hover-transition: ease-in-out 0.2s;
@@ -182,8 +182,8 @@ $button-hover-transition: ease-in-out 0.2s;
 // * $Bc0: border-color value (e.g. #fff)
 // * $Bc1: border-background-color value (e.g. #ffffff33)
 @mixin SpinSize(
-  $WH: 1.6rem,
-  $Bsize: 0.3rem,
+  $WH: 16px,
+  $Bsize: 3px,
   $Bc0: #fff,
   $Bc1: rgba(255, 255, 255, 0.2)
 ) {
@@ -254,7 +254,7 @@ $button-hover-transition: ease-in-out 0.2s;
         background: $gray_3;
         border: 1px solid $gray_4;
       } @else {
-        background: darken($bgc, 20%);
+        background: darken($bgc, 10%);
       }
     }
   }
@@ -266,7 +266,7 @@ $button-hover-transition: ease-in-out 0.2s;
       text-decoration: underline;
     }
     &:active {
-      color: darken($bgc, 20%);
+      color: darken($bgc, 10%);
     }
   }
 

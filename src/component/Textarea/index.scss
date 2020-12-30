@@ -2,9 +2,9 @@
 
 ._TEXTAREA_ {
   width: 100%;
-  padding: 1.2rem 1.6rem;
+  padding: 12px 16px;
   @include desc-md-text;
-  border-radius: 0.4rem;
+  border-radius: 4px;
   border: 1px solid $gray_4;
 
   transition: all 0.2s ease-out;
@@ -13,12 +13,12 @@
 
   // Scrollbar
   &::-webkit-scrollbar {
-    width: 0.8rem;
+    width: 8px;
     background-color: $gray_1;
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 0.4rem;
+    border-radius: 4px;
     background-color: $gray_4;
   }
 
@@ -38,7 +38,7 @@
   }
 
   & + & {
-    margin-top: 2rem;
+    margin-top: 20px;
   }
 
   // Underline
