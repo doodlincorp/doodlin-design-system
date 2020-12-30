@@ -1,6 +1,5 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-// RESET
 html,
 body,
 div,
@@ -87,52 +86,13 @@ video {
   border: 0;
   font: inherit;
   font-size: 100%;
-  //vertical-align: baseline;
+  vertical-align: baseline;
 }
-
-/* HTML5 display-role reset for older browsers */
-/*
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-*/
 
 html {
   font-size: 100%;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  letter-spacing: -0.96px;
+  letter-spacing: -0.096em;
 }
 
 a {
@@ -147,5 +107,3 @@ a {
     outline: 0;
   }
 }
-
-

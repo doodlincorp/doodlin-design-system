@@ -34,11 +34,13 @@ const Button: React.FC<IButtonProps> = ({
       })}
       {...props}
     >
-      
-        
-      
+      <span
+        className={cn({
+          none: loading,
+        })}
+      >
         {children}
-    
+      </span>
     </button>
   );
 };
