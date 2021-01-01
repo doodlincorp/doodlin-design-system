@@ -1,10 +1,7 @@
 @import '../../index.scss';
 
 ._TEXT_ {
-  // Display
-  &.block {
-    display: block;
-  }
+  display: block;
 
   // nonKorean *(e.g. english, number, ...)
   &.nK {

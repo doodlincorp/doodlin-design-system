@@ -12,24 +12,14 @@ export default {
 export const Typography = () => (
   <div style={{ padding: 20 }}>
     <div style={{ marginBottom: 40 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Title
       </Text>
-      <Text size="tit-xxxl" block>
-        타이틀 - 48pt
-      </Text>
-      <Text size="tit-xxl" block>
-        타이틀 - 36pt
-      </Text>
-      <Text size="tit-xl" block>
-        타이틀 - 24pt
-      </Text>
-      <Text size="tit-lg" block>
-        타이틀 - 21pt
-      </Text>
-      <Text size="tit-md" block>
-        타이틀 - 18pt
-      </Text>
+      <Text size="tit-xxxl">타이틀 - 48pt</Text>
+      <Text size="tit-xxl">타이틀 - 36pt</Text>
+      <Text size="tit-xl">타이틀 - 24pt</Text>
+      <Text size="tit-lg">타이틀 - 21pt</Text>
+      <Text size="tit-md">타이틀 - 18pt</Text>
     </div>
 
     <div style={{ marginBottom: 40 }}>
