@@ -128,10 +128,15 @@ $yellow_8: #f08c00;
 $yellow_9: #e67700;
 
 // Secondary Color
+$blue_0: #e7f5ff;
+$blue_1: #d0ebff;
 $blue_2: #a5d8ff;
+$blue_3: #74c0fc;
 $blue_4: #4dabf7;
+$blue_5: #339af0;
 $blue_6: #228be5;
 $blue_7: #1c7ed6;
+$blue_8: #1971c2;
 $blue_9: #1864ab;
 $blue_10: #0a467f;
 
@@ -164,9 +169,9 @@ $blue_6: #228be5; // information
 // Shadow
 $shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
 $shadow-md0: 0 4px 8px rgba(0, 0, 0, 0.12);
-$shadow-md1: 0 2px 4px rgba(0, 0, 0, 0.8);
+$shadow-md1: 0 2px 4px rgba(0, 0, 0, 0.08);
 $shadow-lg0: 0 5px 30px rgba(0, 0, 0, 0.12);
-$shadow-lg1: 0 5px 15px rgba(0, 0, 0, 0.8);
+$shadow-lg1: 0 5px 15px rgba(0, 0, 0, 0.08);
 
 // Container
 $login-container-width: 772px;
@@ -286,5 +291,14 @@ $button-hover-transition: ease-in-out 0.2s;
   &.dis-text {
     background: transparent;
     border: transparent;
+  }
+}
+
+// Fitple Style
+
+html {
+  color: $gray_8;
+  ::selection {
+    background: $gray_1;
   }
 }
