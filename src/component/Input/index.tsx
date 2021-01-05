@@ -12,7 +12,7 @@ export const Input: React.FC<IInputProps> = ({
   inputSize = 'md',
   borderType = 'border',
   disabled,
-  spellCheck = false,
+  spellCheck = 'false',
   ...props
 }) => {
   return (

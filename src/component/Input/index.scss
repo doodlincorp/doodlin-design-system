@@ -3,7 +3,6 @@
 ._INPUT_ {
   width: 100%;
   padding: 0 16px;
-  @include ui-md-text;
   border-radius: 6px;
   border: 1px solid $gray_4;
 
@@ -12,8 +11,8 @@
 
   &::placeholder {
     color: $gray_5;
-    font-weight: $regular;
   }
+
   &:hover,
   &:active,
   &:focus {
