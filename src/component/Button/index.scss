@@ -35,7 +35,8 @@
     height: 28px;
     padding: 0 8px;
     border-radius: 4px;
-    @include ui-sm-text(inherit, $medium);
+    font-size: 14px;
+    font-weight: $medium;
     @include button-color();
     &.round {
       border-radius: calc(28px / 2);
@@ -46,7 +47,8 @@
     height: 32px;
     padding: 0 8px;
     border-radius: 4px;
-    @include ui-sm-text(inherit, $medium);
+    font-size: 14px;
+    font-weight: $medium;
     @include button-color();
     &.round {
       border-radius: calc(32px / 2);
@@ -57,7 +59,8 @@
     height: 36px;
     padding: 0 12px;
     border-radius: 4px;
-    @include ui-md-text(inherit, $medium);
+    font-size: 16px;
+    font-weight: $medium;
     @include button-color();
     &.round {
       border-radius: calc(36px / 2);
@@ -68,7 +71,8 @@
     height: 40px;
     padding: 0 16px;
     border-radius: 4px;
-    @include ui-md-text(inherit, $medium);
+    font-size: 16px;
+    font-weight: $medium;
     @include button-color();
     &.round {
       border-radius: calc(40px / 2);
@@ -79,7 +83,8 @@
     height: 44px;
     padding: 0 20px;
     border-radius: 6px;
-    @include ui-md-text(inherit, $medium);
+    font-size: 16px;
+    font-weight: $medium;
     @include button-color();
     &.round {
       border-radius: calc(44px / 2);
@@ -90,7 +95,8 @@
     height: 48px;
     padding: 0 24px;
     border-radius: 6px;
-    @include ui-md-text(inherit, $medium);
+    font-size: 16px;
+    font-weight: $medium;
     @include button-color();
     &.round {
       border-radius: calc(48px / 2);
@@ -101,7 +107,8 @@
     height: 52px;
     padding: 0 28px;
     border-radius: 6px;
-    @include ui-md-text(inherit, $medium);
+    font-size: 16px;
+    font-weight: $medium;
     @include button-color();
     &.round {
       border-radius: calc(52px / 2);
@@ -112,7 +119,8 @@
     height: 56px;
     padding: 0 32px;
     border-radius: 8px;
-    @include ui-lg-text(inherit, $medium);
+    font-size: 18px;
+    font-weight: $medium;
     @include button-color();
     &.round {
       border-radius: calc(56px / 2);
