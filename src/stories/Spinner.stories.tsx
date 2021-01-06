@@ -2,7 +2,6 @@ import React from 'react';
 import Spinner from '../component/Spinner';
 import '../reset.scss';
 
-
 export default {
   title: 'Component/Spinner',
   component: Spinner,
@@ -10,19 +9,19 @@ export default {
 
 export const Default = () => (
   <div style={{ padding: 10 }}>
-    <Spinner></Spinner>
+    <Spinner />
   </div>
 );
 
 export const Size = () => (
   <div style={{ padding: 10 }}>
-    <Spinner size='xxs'></Spinner>
-    <Spinner size='xs'></Spinner>
-    <Spinner size='sm'></Spinner>
-    <Spinner size='md'></Spinner>
-    <Spinner size='lg'></Spinner>
-    <Spinner size='xl'></Spinner>
-    <Spinner size='xxl'></Spinner>
-    <Spinner size='xxxl'></Spinner>
+    <Spinner size="xxs" />
+    <Spinner size="xs" />
+    <Spinner size="sm" />
+    <Spinner size="md" />
+    <Spinner size="lg" />
+    <Spinner size="xl" />
+    <Spinner size="xxl" />
+    <Spinner size="xxxl" />
   </div>
 );
