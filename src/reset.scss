@@ -94,7 +94,7 @@ video {
 html {
   font-size: 100%;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  letter-spacing: -0.096em;
+  letter-spacing: -0.96px;
 }
 
 a {
@@ -108,4 +108,16 @@ a {
     color: inherit;
     outline: 0;
   }
+}
+
+// 브라우저에서 디폴트로 제공하는 스타일 제거
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select,
+button {
+  font: inherit;
 }
