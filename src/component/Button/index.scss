@@ -17,6 +17,7 @@
   cursor: pointer;
   transition: 0.2s ease-out;
   box-sizing: border-box;
+  @include button-color();
 
   &:active {
     transition: none;
@@ -37,7 +38,6 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: $medium;
-    @include button-color();
     &.round {
       border-radius: calc(28px / 2);
     }
@@ -49,7 +49,6 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: $medium;
-    @include button-color();
     &.round {
       border-radius: calc(32px / 2);
     }
@@ -61,7 +60,6 @@
     border-radius: 4px;
     font-size: 16px;
     font-weight: $medium;
-    @include button-color();
     &.round {
       border-radius: calc(36px / 2);
     }
@@ -73,7 +71,6 @@
     border-radius: 4px;
     font-size: 16px;
     font-weight: $medium;
-    @include button-color();
     &.round {
       border-radius: calc(40px / 2);
     }
@@ -85,7 +82,6 @@
     border-radius: 6px;
     font-size: 16px;
     font-weight: $medium;
-    @include button-color();
     &.round {
       border-radius: calc(44px / 2);
     }
@@ -109,7 +105,6 @@
     border-radius: 6px;
     font-size: 16px;
     font-weight: $medium;
-    @include button-color();
     &.round {
       border-radius: calc(52px / 2);
     }
@@ -121,7 +116,6 @@
     border-radius: 8px;
     font-size: 18px;
     font-weight: $medium;
-    @include button-color();
     &.round {
       border-radius: calc(56px / 2);
     }
