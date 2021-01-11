@@ -94,7 +94,6 @@
     border-radius: 6px;
     font-size: 16px;
     font-weight: $medium;
-    @include button-color();
     &.round {
       border-radius: calc(48px / 2);
     }
@@ -136,14 +135,30 @@
   &.spin::before {
     position: absolute;
     margin: 0 auto;
-    &::before {
-      @include SpinSize(12px, 2px);
-    }
+    @include SpinSize(12px, 2px);
   }
-  &.spin-md::before {
-    @include SpinSize(14px, 3px);
+  &.spin.xxs::before {
+    @include SpinSize(12px, 2px);
   }
-  &.spin-lg::before {
+  &.spin.xs::before {
+    @include SpinSize(14px, 2px);
+  }
+  &.spin.sm::before {
+    @include SpinSize(16px, 3px);
+  }
+  &.spin.md::before {
+    @include SpinSize(18px, 3px);
+  }
+  &.spin.lg::before {
+    @include SpinSize(18px, 3px);
+  }
+  &.spin.xl::before {
+    @include SpinSize(18px, 3px);
+  }
+  &.spin.xxl::before {
+    @include SpinSize(18px, 3px);
+  }
+  &.spin.xxxl::before {
     @include SpinSize(18px, 3px);
   }
 }

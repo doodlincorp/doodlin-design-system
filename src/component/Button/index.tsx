@@ -2,6 +2,7 @@ import React, { ButtonHTMLAttributes } from 'react';
 import cn from 'classnames';
 import './index.scss';
 import { TDefaultSize } from '../..';
+import Spinner from '../Spinner';
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: TDefaultSize;
