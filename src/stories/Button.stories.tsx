@@ -89,7 +89,7 @@ export const TextOnly = () => (
 export const Rounded = () => (
   <div style={{ padding: 10 }}>
     <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Default Button
       </Text>
       <Button style={{ marginTop: 10 }} rounded>
@@ -97,7 +97,7 @@ export const Rounded = () => (
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Ghost Button
       </Text>
       <Button style={{ marginTop: 10 }} variant="ghost" rounded>
@@ -110,7 +110,7 @@ export const Rounded = () => (
 export const Disabled = () => (
   <div style={{ padding: 10 }}>
     <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Default Button
       </Text>
       <Button style={{ marginTop: 10 }} disabled>
@@ -118,7 +118,7 @@ export const Disabled = () => (
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Ghost Button
       </Text>
       <Button style={{ marginTop: 10 }} variant="ghost" disabled>
@@ -126,7 +126,7 @@ export const Disabled = () => (
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Text-only Button
       </Text>
       <Button style={{ marginTop: 10 }} variant="text" disabled>
@@ -168,7 +168,7 @@ export const FullWidth = () => (
 export const WithIcon = () => (
   <div style={{ padding: 10 }}>
     <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Leading-icon
       </Text>
       <Button style={{ marginTop: 10 }}>
@@ -177,7 +177,7 @@ export const WithIcon = () => (
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Tailing-icon
       </Text>
       <Button style={{ marginTop: 10 }} variant="ghost">
@@ -186,7 +186,7 @@ export const WithIcon = () => (
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Text-only
       </Text>
       <Button style={{ marginTop: 10 }} variant="text">
@@ -194,7 +194,7 @@ export const WithIcon = () => (
       </Button>
     </div>
     <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" block nonKorean>
+      <Text size="tit-md" nonKorean>
         Icon-only
       </Text>
       <Button style={{ marginTop: 10 }}>

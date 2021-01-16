@@ -281,24 +281,31 @@ $button-hover-transition: ease-in-out 0.2s;
   &.dis {
     background: $dis-bgc;
     color: $dis-fc;
-    pointer-events: none;
+    cursor: default;
+    &:hover {
+      background: $dis-bgc;
+      color: $dis-fc;
+    }
   }
   &.dis-ghost {
     background: transparent;
     border: 1px solid $dis-bgc;
-    pointer-events: none;
+    &:hover,
+    &:active {
+      background: transparent;
+      border: 1px solid $dis-bgc;
+      color: $dis-fc;
+    }
   }
   &.dis-text {
     background: transparent;
     border: transparent;
-  }
-}
-
-// Fitple Style
-
-html {
-  color: $gray_8;
-  ::selection {
-    background: $gray_1;
+    &:hover {
+      background: transparent;
+      text-decoration: none;
+    }
+    &:active {
+      color: $dis-fc;
+    }
   }
 }

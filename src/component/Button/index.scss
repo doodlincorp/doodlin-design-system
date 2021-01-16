@@ -15,8 +15,10 @@
   border-radius: 4px;
 
   cursor: pointer;
+  user-select: none;
   transition: 0.2s ease-out;
   box-sizing: border-box;
+  @include button-color();
 
   @include button-color;
 
@@ -39,7 +41,6 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: $medium;
-    // @include button-color();
     &.round {
       border-radius: calc(28px / 2);
     }
@@ -51,7 +52,6 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: $medium;
-    // @include button-color();
     &.round {
       border-radius: calc(32px / 2);
     }
@@ -63,7 +63,6 @@
     border-radius: 4px;
     font-size: 16px;
     font-weight: $medium;
-    // @include button-color();
     &.round {
       border-radius: calc(36px / 2);
     }
@@ -75,7 +74,6 @@
     border-radius: 4px;
     font-size: 16px;
     font-weight: $medium;
-    // @include button-color();
     &.round {
       border-radius: calc(40px / 2);
     }
@@ -87,7 +85,6 @@
     border-radius: 6px;
     font-size: 16px;
     font-weight: $medium;
-    // @include button-color();
     &.round {
       border-radius: calc(44px / 2);
     }
@@ -99,7 +96,6 @@
     border-radius: 6px;
     font-size: 16px;
     font-weight: $medium;
-    // @include button-color();
     &.round {
       border-radius: calc(48px / 2);
     }
@@ -111,7 +107,6 @@
     border-radius: 6px;
     font-size: 16px;
     font-weight: $medium;
-    // @include button-color();
     &.round {
       border-radius: calc(52px / 2);
     }
@@ -123,7 +118,6 @@
     border-radius: 8px;
     font-size: 18px;
     font-weight: $medium;
-    // @include button-color();
     &.round {
       border-radius: calc(56px / 2);
     }
@@ -143,14 +137,30 @@
   &.spin::before {
     position: absolute;
     margin: 0 auto;
-    &::before {
-      @include SpinSize(12px, 2px);
-    }
+    @include SpinSize(12px, 2px);
   }
-  &.spin-md::before {
-    @include SpinSize(14px, 3px);
+  &.spin.xxs::before {
+    @include SpinSize(12px, 2px);
   }
-  &.spin-lg::before {
+  &.spin.xs::before {
+    @include SpinSize(14px, 2px);
+  }
+  &.spin.sm::before {
+    @include SpinSize(16px, 3px);
+  }
+  &.spin.md::before {
+    @include SpinSize(18px, 3px);
+  }
+  &.spin.lg::before {
+    @include SpinSize(18px, 3px);
+  }
+  &.spin.xl::before {
+    @include SpinSize(18px, 3px);
+  }
+  &.spin.xxl::before {
+    @include SpinSize(18px, 3px);
+  }
+  &.spin.xxxl::before {
     @include SpinSize(18px, 3px);
   }
 }
