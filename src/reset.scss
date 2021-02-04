@@ -93,7 +93,7 @@ video {
 
 html {
   font-size: 100%;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
   letter-spacing: -0.96px;
 }
 
@@ -120,4 +120,13 @@ select {
 select,
 button {
   font: inherit;
+  color: inherit;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
 }
