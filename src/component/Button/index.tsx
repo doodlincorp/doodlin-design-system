@@ -1,21 +1,20 @@
-import React, { ButtonHTMLAttributes } from 'react';
-import cn from 'classnames';
-import './index.scss';
-import { TDefaultSize } from '../..';
-import Spinner from '../Spinner';
+import React, { ButtonHTMLAttributes } from "react";
+import cn from "classnames";
+import "./index.scss";
+import { TDefaultSize } from "../..";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: TDefaultSize;
-  variant?: 'ghost' | 'text';
+  variant?: "ghost" | "text";
   fullWidth?: boolean;
-  loading?: 'spin';
+  loading?: "spin";
   rounded?: boolean;
 }
 
 const Button: React.FC<IButtonProps> = ({
   className,
   children,
-  size = 'md',
+  size = "md",
   variant,
   disabled,
   fullWidth,
@@ -29,8 +28,8 @@ const Button: React.FC<IButtonProps> = ({
         spin: loading,
         dis: disabled,
         round: rounded,
-        'dis-ghost': variant === 'ghost' && disabled,
-        'dis-text': variant === 'text' && disabled,
+        "dis-ghost": variant === "ghost" && disabled,
+        "dis-text": variant === "text" && disabled,
         fw: fullWidth,
       })}
       {...props}
