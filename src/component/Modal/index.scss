@@ -11,11 +11,12 @@
   height: 100vh;
   z-index: 1300;
   background-color: rgba($gray_9, 0.7);
-
+  user-select: none;
   cursor: default;
   .modal-content-box {
     position: relative;
     width: 464px;
+    min-width: 464px;
     height: max-content;
     max-height: calc(100vh - 96px);
     border-radius: 6px;
