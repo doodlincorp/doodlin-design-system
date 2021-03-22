@@ -2,10 +2,10 @@ import React from "react";
 import cn from "classnames";
 import "./index.scss";
 import { ModalCloseIcon } from "../../asset/ModalCloseIcon";
-import { useState } from "@storybook/addons";
 
 export interface IModalProps {
   className?: string;
+  closeBtn?: () => void;
   header?: {
     Text?: string;
   };
@@ -21,22 +21,23 @@ const Modal: React.FC<IModalProps> = ({
   children,
   header,
   footer,
+  closeBtn,
 }) => {
   return (
     <div className={cn("_MODAL_", className)}>
       <div className="modal-content-box">
-        <div className="close-btn">
-          <ModalCloseIcon />
-        </div>
-        {header ? <div className="modal-header">{header.Text}</div> : ""}
+        {closeBtn && (
+          <div className="close-btn" onClick={closeBtn}>
+            <ModalCloseIcon />
+          </div>
+        )}
+        {header && <div className="modal-header">{header.Text}</div>}
         <div className="modal-content">{children}</div>
-        {footer ? (
+        {footer && (
           <div className={cn("modal-btn-area", footer.footerStyle || "end")}>
             {footer.cancelBtn}
             {footer.submitBtn}
           </div>
-        ) : (
-          ""
         )}
       </div>
     </div>
