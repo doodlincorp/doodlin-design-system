@@ -25,11 +25,8 @@
   }
 
   span {
-    padding: 0 4px;
-  }
-
-  & + & {
-    margin-left: 8px;
+    display: flex;
+    align-items: center;
   }
 
   // Size
@@ -128,7 +125,7 @@
   // Fullwidth
   &.fw {
     width: 100%;
-    margin: 10px auto;
+    margin: 0;
   }
 
   // Loading

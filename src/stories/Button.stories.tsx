@@ -1,11 +1,11 @@
-import React from 'react';
-import Button from '../component/Button';
-import '../reset.scss';
-import { BsCheck } from 'react-icons/bs';
-import Text from '../component/Text';
+import React from "react";
+import Button from "../component/Button";
+import "../reset.scss";
+import { BsCheck } from "react-icons/bs";
+import Text from "../component/Text";
 
 export default {
-  title: 'Component/Button',
+  title: "Component/Button",
   component: Button,
 };
 
@@ -17,14 +17,30 @@ export const Default = () => (
 
 export const Size = () => (
   <div style={{ padding: 10 }}>
-    <Button size="xxs">2XSMALL</Button>
-    <Button size="xs">XSMALL</Button>
-    <Button size="sm">SMALL</Button>
-    <Button size="md">MEDIUM</Button>
-    <Button size="lg">LARGE</Button>
-    <Button size="xl">XLARGE</Button>
-    <Button size="xxl">2XLARGE</Button>
-    <Button size="xxxl">3XLARGE</Button>
+    <Button size="xxs" style={{ margin: 4 }}>
+      2XSMALL
+    </Button>
+    <Button size="xs" style={{ margin: 4 }}>
+      XSMALL
+    </Button>
+    <Button size="sm" style={{ margin: 4 }}>
+      SMALL
+    </Button>
+    <Button size="md" style={{ margin: 4 }}>
+      MEDIUM
+    </Button>
+    <Button size="lg" style={{ margin: 4 }}>
+      LARGE
+    </Button>
+    <Button size="xl" style={{ margin: 4 }}>
+      XLARGE
+    </Button>
+    <Button size="xxl" style={{ margin: 4 }}>
+      2XLARGE
+    </Button>
+    <Button size="xxxl" style={{ margin: 4 }}>
+      3XLARGE
+    </Button>
   </div>
 );
 
@@ -198,7 +214,7 @@ export const WithIcon = () => (
         Icon-only
       </Text>
       <Button style={{ marginTop: 10 }}>
-        <BsCheck fontSize={24} />
+        <BsCheck fontSize={16} />
       </Button>
     </div>
   </div>
