@@ -24,8 +24,8 @@ const Modal: React.FC<IModalProps> = ({
   closeBtn,
 }) => {
   return (
-    <div className={cn("_MODAL_", className)}>
-      <div className="modal-content-box">
+    <div className="_MODAL_">
+      <div className={cn("modal-content-box", className)}>
         {closeBtn && (
           <div className="close-btn" onClick={closeBtn}>
             <ModalCloseIcon />
