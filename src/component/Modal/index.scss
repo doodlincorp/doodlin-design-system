@@ -38,39 +38,39 @@
       right: -40px;
       cursor: pointer;
     }
-    .modal-header {
-      font-size: 14px;
-      font-weight: $medium;
-      padding: 12px 20px;
-      border-bottom: 1px solid $gray_3;
+  }
+  .modal-header {
+    font-size: 14px;
+    font-weight: $medium;
+    padding: 12px 20px;
+    border-bottom: 1px solid $gray_3;
+  }
+  .modal-content {
+    padding: 28px 32px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  .modal-btn-area {
+    display: flex;
+    padding: 12px 20px;
+    border-top: 1px solid $gray_3;
+    button ~ button {
+      margin-left: 8px;
     }
-    .modal-content {
-      padding: 28px 32px;
-      overflow-y: auto;
-      box-sizing: border-box;
+    &.start {
+      justify-content: flex-start;
     }
-    .modal-btn-area {
-      display: flex;
-      padding: 12px 20px;
-      border-top: 1px solid $gray_3;
-      button ~ button {
-        margin-left: 8px;
-      }
-      &.start {
-        justify-content: flex-start;
-      }
-      &.center {
-        justify-content: center;
-      }
-      &.end {
-        justify-content: flex-end;
-      }
-      .cancel-btn {
-        @include button-color($gray_4, $gray_8);
-      }
-      .submit-btn {
-        @include button-color($yellow_6);
-      }
+    &.center {
+      justify-content: center;
+    }
+    &.end {
+      justify-content: flex-end;
+    }
+    .cancel-btn {
+      @include button-color($gray_4, $gray_8);
+    }
+    .submit-btn {
+      @include button-color($yellow_6);
     }
   }
 }
