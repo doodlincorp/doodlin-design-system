@@ -1,12 +1,12 @@
-import React from 'react';
-import Input from '../component/Input';
-import '../component/Input';
-import '../reset.scss';
+import React from "react";
+import Input from "../component/Input";
+import "../component/Input";
+import "../reset.scss";
 
-import Textarea from '../component/Textarea';
+import Textarea from "../component/Textarea";
 
 export default {
-  title: 'Component/Input',
+  title: "Component/Input",
   component: Input,
 };
 
@@ -37,10 +37,7 @@ export const BorderType = () => (
 export const InputTextarea = () => {
   return (
     <div style={{ padding: 10, maxWidth: 800 }}>
-      <Textarea
-        placeholder="높이를 넘어가면 스크롤이 생기는 입력창입니다"
-        rows={8}
-      ></Textarea>
+      <Textarea placeholder="높이를 넘어가면 스크롤이 생기는 입력창입니다"></Textarea>
       <Textarea
         placeholder="높이를 넘어가면 자동으로 늘어나고 싶은 입력창입니다"
         borderType="single-line"

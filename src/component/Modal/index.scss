@@ -52,6 +52,8 @@
   }
   .modal-btn-area {
     display: flex;
+    background-color: #fff;
+    border-radius: 0 0 6px 6px;
     padding: 12px 20px;
     border-top: 1px solid $gray_3;
     button ~ button {
