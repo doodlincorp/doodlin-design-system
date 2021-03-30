@@ -5,6 +5,7 @@ export { default as Spinner } from "./component/Spinner";
 export { default as Text } from "./component/Text";
 export { default as Textarea } from "./component/Textarea";
 export { default as Modal } from "./component/Modal";
+export { default as Tooltip } from "./component/Tooltip";
 
 export type TDefaultSize =
   | "xxs"

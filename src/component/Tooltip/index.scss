@@ -1,0 +1,77 @@
+@import "../../index.scss";
+
+._TOOLTIP_ {
+  display: inline-block;
+  .target {
+    position: relative;
+    .tooltip-box {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      z-index: 1;
+      top: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: max-content;
+      padding: 2px 8px;
+      background-color: $gray_8;
+      color: #fff;
+      font-size: 12px;
+      line-height: 18px;
+      border-radius: 4px;
+      white-space: pre-wrap;
+      transition: 0.1s ease-out;
+      transition-delay: 0.2s;
+      pointer-events: none;
+      user-select: none;
+      opacity: 0;
+    }
+    &:hover {
+      .tooltip-box {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+._TOOLTIP_.tail {
+  .target {
+    .tooltip-box {
+      top: calc(100% + 4px);
+      background: $gray_8 url("../../asset/info-mark-icon-blue.svg") no-repeat
+        left 12px top 12px;
+      font-weight: $light;
+      padding: 12px;
+      padding-left: 36px;
+      transition: 0.2s ease-out;
+      transition-delay: 0.2s;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 6px solid $gray_8;
+        pointer-events: none;
+
+        transition: 0.2s ease-out;
+        transition-delay: 0.2s;
+        opacity: 0;
+      }
+    }
+    &:hover {
+      .tooltip-box {
+        top: calc(100% + 12px);
+        opacity: 1;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
