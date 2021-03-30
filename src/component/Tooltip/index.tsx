@@ -1,7 +1,6 @@
 import React from "react";
 import cn from "classnames";
 import "./index.scss";
-import { useState } from "@storybook/addons";
 
 export interface ITooltipProps {
   className?: string;
