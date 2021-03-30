@@ -1,6 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import "./index.scss";
+import { InfoMarkIcon } from "../../asset/InfoMarkIcon";
 
 export interface ITooltipProps {
   className?: string;
@@ -21,7 +22,10 @@ const Tooltip: React.FC<ITooltipProps> = ({
       <div className="target">
         {children}
 
-        <div className="tooltip-box">{tooltipText.Text}</div>
+        <div className="tooltip-box">
+          {variant === "tail" && <InfoMarkIcon className="icon" />}
+          {tooltipText.Text}
+        </div>
       </div>
     </div>
   );

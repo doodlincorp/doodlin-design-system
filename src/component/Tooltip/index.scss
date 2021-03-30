@@ -37,14 +37,12 @@
 ._TOOLTIP_.tail {
   .target {
     .tooltip-box {
+      align-items: flex-start;
       top: calc(100% + 4px);
-      background: $gray_8 url("../../asset/info-mark-icon-blue.svg") no-repeat
-        left 12px top 12px;
       line-height: 18px;
-      padding: 12px;
-      padding-left: 36px;
+      padding: 8px 12px;
       transition: 0.2s ease-out;
-      transition-delay: 0.2s;
+      transition-delay: 0.3s;
       &::before {
         position: absolute;
         content: "";
@@ -62,6 +60,9 @@
         transition: 0.2s ease-out;
         transition-delay: 0.2s;
         opacity: 0;
+      }
+      .icon {
+        margin-right: 8px;
       }
     }
     &:hover {
