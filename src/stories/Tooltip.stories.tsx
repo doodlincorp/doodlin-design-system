@@ -41,3 +41,40 @@ export const variant = () => {
     </div>
   );
 };
+
+export const placement = () => {
+  return (
+    <div style={{ paddingLeft: 120, paddingTop: 20 }}>
+      <span style={{ marginLeft: 20 }}>
+        <Tooltip
+          tooltipText={{
+            Text: "【ツ】",
+          }}
+          placement="left"
+        >
+          <Button>left</Button>
+        </Tooltip>
+      </span>
+      <span style={{ marginLeft: 20 }}>
+        <Tooltip
+          tooltipText={{
+            Text: "【ツ】",
+          }}
+          placement="center"
+        >
+          <Button>center</Button>
+        </Tooltip>
+      </span>
+      <span style={{ marginLeft: 20 }}>
+        <Tooltip
+          tooltipText={{
+            Text: "【ツ】",
+          }}
+          placement="right"
+        >
+          <Button>right</Button>
+        </Tooltip>
+      </span>
+    </div>
+  );
+};

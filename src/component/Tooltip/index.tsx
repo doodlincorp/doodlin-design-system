@@ -7,6 +7,7 @@ export interface ITooltipProps {
   className?: string;
   variant?: "box" | "tail";
   tooltipText: { Text: string };
+  placement?: "left" | "center" | "right";
   //trigger?: "hover" | "click";
 }
 
@@ -15,10 +16,17 @@ const Tooltip: React.FC<ITooltipProps> = ({
   children,
   variant = "box",
   tooltipText,
+  placement = "center",
   //trigger = "hover",
 }) => {
   return (
-    <div className={cn("_TOOLTIP_", className, { tail: variant === "tail" })}>
+    <div
+      className={cn("_TOOLTIP_", className, {
+        tail: variant === "tail",
+        left: placement === "left",
+        right: placement === "right",
+      })}
+    >
       <div className="target">
         {children}
 
