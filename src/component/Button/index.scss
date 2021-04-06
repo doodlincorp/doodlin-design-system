@@ -27,10 +27,10 @@
   }
 
   span {
-    padding: 0 4px;
+    display: flex;
+    align-items: center;
   }
-
-  & + & {
+  & ~ & {
     margin-left: 8px;
   }
 
@@ -48,8 +48,8 @@
 
   &.xs {
     height: 32px;
-    padding: 0 8px;
-    border-radius: 4px;
+    padding: 0 12px;
+    border-radius: 6px;
     font-size: 14px;
     font-weight: $medium;
     &.round {
@@ -60,8 +60,8 @@
   &.sm {
     height: 36px;
     padding: 0 12px;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: $medium;
     &.round {
       border-radius: calc(36px / 2);
@@ -71,7 +71,7 @@
   &.md {
     height: 40px;
     padding: 0 16px;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     font-weight: $medium;
     &.round {
@@ -130,7 +130,7 @@
   // Fullwidth
   &.fw {
     width: 100%;
-    margin: 10px auto;
+    margin: 0;
   }
 
   // Loading

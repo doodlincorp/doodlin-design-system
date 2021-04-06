@@ -1,0 +1,78 @@
+@import "../../index.scss";
+
+._MODAL_ {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1300;
+  background-color: rgba($gray_9, 0.7);
+  user-select: none;
+  cursor: default;
+  .modal-content-box {
+    position: relative;
+    width: 464px;
+    min-width: 464px;
+    height: max-content;
+    max-height: calc(100vh - 96px);
+    border-radius: 6px;
+    background: #fff;
+    box-sizing: border-box;
+    .close-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      background: none;
+      outline: none;
+      border: none;
+
+      width: 28px;
+      height: 28px;
+
+      top: 8px;
+      right: -40px;
+      cursor: pointer;
+    }
+  }
+  .modal-header {
+    font-size: 14px;
+    font-weight: $medium;
+    padding: 12px 20px;
+    border-bottom: 1px solid $gray_3;
+  }
+  .modal-content {
+    padding: 40px 32px;
+    overflow-y: visible;
+    box-sizing: border-box;
+  }
+  .modal-btn-area {
+    display: flex;
+    background-color: #fff;
+    border-radius: 0 0 6px 6px;
+    padding: 12px 20px;
+    border-top: 1px solid $gray_3;
+    button ~ button {
+      margin-left: 8px;
+    }
+    &.start {
+      justify-content: flex-start;
+    }
+    &.center {
+      justify-content: center;
+    }
+    &.end {
+      justify-content: flex-end;
+    }
+    .cancel-btn {
+      @include button-color($gray_4, $gray_8);
+    }
+    .submit-btn {
+      @include button-color($yellow_6);
+    }
+  }
+}
