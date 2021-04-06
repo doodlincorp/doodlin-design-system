@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "..";
 import CustomSelect from "../component/CustomSelect";
 import "../reset.scss";
@@ -9,13 +9,37 @@ export default {
 };
 
 export const Default = () => {
+  const [selectNum, setSelectNum] = useState<number>(0);
   return (
     <div style={{ padding: 20 }}>
       <CustomSelect<number>
         options={[0, 1, 2, 3]}
-        value={0}
+        value={selectNum}
         getCurrentViewFunc={(o) => <div className="current-item">{o}</div>}
-        getOptionViewFunc={(o) => <div className="current-item">{o}</div>}
+        getOptionViewFunc={(o) => (
+          <div className="current-item" onClick={() => setSelectNum(o)}>
+            {o}
+          </div>
+        )}
+      />
+    </div>
+  );
+};
+
+export const Double = () => {
+  const [selectNum, setSelectNum] = useState<number>(0);
+  return (
+    <div style={{ padding: 20 }}>
+      <CustomSelect<number>
+        options={[0, 1, 2, 3]}
+        arrowIconVariant="double"
+        value={selectNum}
+        getCurrentViewFunc={(o) => <div className="current-item">{o}</div>}
+        getOptionViewFunc={(o) => (
+          <div className="current-item" onClick={() => setSelectNum(o)}>
+            {o}
+          </div>
+        )}
       />
     </div>
   );

@@ -5,6 +5,7 @@
   .current {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border: 1px solid $gray_4;
     border-radius: 4px;
     height: 32px;
@@ -15,8 +16,6 @@
 
     cursor: pointer;
     appearance: none;
-    background: url("../../asset/select-arrow-gray.svg") no-repeat right 6px
-      center;
     outline: none;
     transition: all 0.1s ease-out;
     user-select: none;
@@ -24,7 +23,10 @@
     &:hover,
     &.selected {
       border: 1px solid $gray_6;
-      background: url("../../asset/select-arrow.svg") no-repeat right 6px center;
+      #select-arrow-icon__color {
+        fill: $gray_8;
+        transition: 0.1s ease-out;
+      }
     }
   }
   .options {
@@ -32,7 +34,7 @@
     width: 100%;
     border: 1px solid $gray_6;
     border-radius: 4px;
-    top: 36px;
+    top: calc(100% + 4px);
     z-index: 10;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
@@ -41,13 +43,9 @@
     user-select: none;
 
     .option {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
       font-size: 14px;
       font-weight: normal;
       height: 32px;
-      padding: 0 12px;
       border-radius: 4px;
       &:hover {
         background-color: $gray_1;
@@ -56,7 +54,12 @@
         background-color: $gray_3;
       }
       & > div {
+        padding: 0 12px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
         width: 100%;
+        height: 100%;
       }
     }
   }
