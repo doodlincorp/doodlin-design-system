@@ -24,7 +24,26 @@ export default {
   plugins: [
     peerDepsExternal(),
     resolve(),
-    commonjs(),
+    commonjs({
+      include: ["node_modules/**"],
+      namedExports: {
+        "node_modules/react/react.js": [
+          "Children",
+          "Component",
+          "PropTypes",
+          "createElement",
+        ],
+        "node_modules/react/index.js": [
+          "useState",
+          "useEffect",
+          "useLayoutEffect",
+          "useCallback",
+          "useRef",
+          "RefObject",
+        ],
+        "node_modules/react-dom/index.js": ["render"],
+      },
+    }),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss(),
     copy({
@@ -36,4 +55,5 @@ export default {
       ],
     }),
   ],
+  external: ["react", "react-dom"],
 };
