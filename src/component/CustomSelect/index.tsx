@@ -1,5 +1,5 @@
-import { useOutsideClick } from "dhoonjang-s-hooks";
-import React, { useRef, useState } from "react";
+import { useToggle } from "dhoonjang-s-hooks";
+import React, { useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
 import SelectArrowIcon from "../../asset/SelectArrowIcon";
@@ -24,7 +24,7 @@ const CustomSelect: <T>(
   getCurrentViewFunc,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [optionOpen, setOptionOpen] = useState<boolean>(false);
+  const [optionOpen, setOptionOpen] = useToggle(ref);
 
   const optionsView = options.map((o, i) => (
     <div
@@ -41,14 +41,12 @@ const CustomSelect: <T>(
     </div>
   ));
 
-  useOutsideClick(() => setOptionOpen(false), ref);
-
   return (
     <div className={cn("_CUSTOM_SELECT_", className)} ref={ref}>
       <div
         className={cn("current", { selected: optionOpen })}
         onClick={(e) => {
-          setOptionOpen(!optionOpen);
+          setOptionOpen();
           e.stopPropagation();
         }}
       >
