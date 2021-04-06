@@ -49,7 +49,7 @@ export default {
     copy({
       targets: [
         {
-          src: ["src/reset.scss", "src/variable.scss"],
+          src: ["src/reset.scss", "src/index.scss"],
           dest: "build/style",
         },
       ],
