@@ -47,6 +47,7 @@
     "@storybook/addons": "^6.1.21",
     "@types/classnames": "^2.2.11",
     "classnames": "^2.2.6",
+    "dhoonjang-s-hooks": "^0.1.1",
     "react-icons": "^4.1.0",
     "ts-node": "^9.1.1"
   }
