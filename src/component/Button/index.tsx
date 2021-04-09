@@ -1,11 +1,12 @@
 import React, { ButtonHTMLAttributes } from "react";
 import cn from "classnames";
 import "./index.scss";
-import { TDefaultSize } from "../..";
+//import { TDefaultSize } from "../..";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: TDefaultSize;
-  variant?: "ghost" | "text";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
+  variant?: "ghost" | "solid" | "quiet";
+  buttonType?: "basic" | "light" | "core" | "danger";
   fullWidth?: boolean;
   loading?: "spin";
   rounded?: boolean;
@@ -14,22 +15,23 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<IButtonProps> = ({
   className,
   children,
-  size = "md",
-  variant,
+  size = "xs",
+  variant = "solid",
   disabled,
   fullWidth,
   loading,
   rounded,
+  buttonType = "basic",
   ...props
 }) => {
   return (
     <button
-      className={cn(`_BUTTON_`, className, size, variant, loading, {
+      className={cn(`_BUTTON_`, className, size, variant, loading, buttonType, {
         spin: loading,
         dis: disabled,
         round: rounded,
         "dis-ghost": variant === "ghost" && disabled,
-        "dis-text": variant === "text" && disabled,
+        "dis-quiet": variant === "quiet" && disabled,
         fw: fullWidth,
       })}
       {...props}

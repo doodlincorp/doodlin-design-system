@@ -9,18 +9,13 @@
   border: none;
   letter-spacing: 0;
   font: inherit;
-
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 4px;
+  text-align: center;
 
   cursor: pointer;
   user-select: none;
-  transition: 0.2s ease-out;
+  transition: 0.1s ease-out;
   box-sizing: border-box;
   @include button-color();
-
-  @include button-color;
 
   &:active {
     transition: none;
@@ -35,89 +30,51 @@
   }
 
   // Size
-  &.xxs {
+  &.xs {
     height: 28px;
     padding: 0 8px;
     border-radius: 4px;
     font-size: 14px;
-    font-weight: $medium;
     &.round {
       border-radius: calc(28px / 2);
     }
   }
 
-  &.xs {
+  &.sm {
     height: 32px;
     padding: 0 12px;
     border-radius: 6px;
     font-size: 14px;
-    font-weight: $medium;
     &.round {
       border-radius: calc(32px / 2);
     }
   }
 
-  &.sm {
+  &.md {
     height: 36px;
     padding: 0 12px;
     border-radius: 6px;
     font-size: 14px;
-    font-weight: $medium;
     &.round {
       border-radius: calc(36px / 2);
     }
   }
 
-  &.md {
+  &.lg {
     height: 40px;
     padding: 0 16px;
     border-radius: 6px;
     font-size: 16px;
-    font-weight: $medium;
     &.round {
       border-radius: calc(40px / 2);
     }
   }
 
-  &.lg {
-    height: 44px;
-    padding: 0 20px;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: $medium;
-    &.round {
-      border-radius: calc(44px / 2);
-    }
-  }
-
   &.xl {
-    height: 48px;
-    padding: 0 24px;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: $medium;
-    &.round {
-      border-radius: calc(48px / 2);
-    }
-  }
-
-  &.xxl {
-    height: 52px;
-    padding: 0 28px;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: $medium;
-    &.round {
-      border-radius: calc(52px / 2);
-    }
-  }
-
-  &.xxxl {
     height: 56px;
     padding: 0 32px;
     border-radius: 8px;
     font-size: 18px;
-    font-weight: $medium;
     &.round {
       border-radius: calc(56px / 2);
     }
@@ -127,10 +84,29 @@
     opacity: 0;
   }
 
+  // Variant
+  &.solid {
+    @include button-color();
+  }
+
+  // ButtonType
+  &.core {
+    @include button-color($yellow_6);
+  }
+  &.danger {
+    @include button-color($red_7);
+  }
+  &.light {
+    @include button-color($gray_4, $gray_8);
+  }
+
   // Fullwidth
   &.fw {
     width: 100%;
     margin: 0;
+    & ~ & {
+      margin-top: 8px;
+    }
   }
 
   // Loading
