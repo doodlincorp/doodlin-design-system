@@ -8,12 +8,4 @@ export { default as Modal } from "./component/Modal";
 export { default as Tooltip } from "./component/Tooltip";
 export { default as CustomSelect } from "./component/CustomSelect";
 
-export type TDefaultSize =
-  | "xxs"
-  | "xs"
-  | "sm"
-  | "md"
-  | "lg"
-  | "xl"
-  | "xxl"
-  | "xxxl";
+export type TDefaultSize = "xs" | "sm" | "md" | "lg" | "xl";

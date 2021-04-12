@@ -217,7 +217,7 @@ $button-hover-transition: ease-in-out 0.2s;
 // * $Bsize: border-size value (e.g. 3px)
 // * $Bc0: border-color value (e.g. #fff)
 // * $Bc1: border-background-color value (e.g. #ffffff33)
-@mixin SpinSize(
+@mixin CustomSpin(
   $WH: 16px,
   $Bsize: 3px,
   $Bc0: #fff,
@@ -266,7 +266,7 @@ $button-hover-transition: ease-in-out 0.2s;
   $bgc: $gray_8,
   $fc: white,
   $dis-bgc: $gray_2,
-  $dis-fc: $gray_4
+  $dis-fc: $gray_5
 ) {
   background: $bgc;
   color: $fc;
@@ -352,6 +352,13 @@ $button-hover-transition: ease-in-out 0.2s;
     &:hover {
       background: $dis-bgc;
       color: $dis-fc;
+    }
+    &.iconType {
+      ._BUTTON_icon {
+        svg {
+          opacity: 0.4;
+        }
+      }
     }
   }
   &.dis-ghost {

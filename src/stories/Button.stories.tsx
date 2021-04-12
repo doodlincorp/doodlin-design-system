@@ -1,8 +1,8 @@
 import React from "react";
+import { PenIcon } from "../asset/PenIcon";
 import Button from "../component/Button";
+import IconList from "../component/Icon/IconList";
 import "../reset.scss";
-import { BsCheck } from "react-icons/bs";
-import Text from "../component/Text";
 
 export default {
   title: "Component/Button",
@@ -11,51 +11,56 @@ export default {
 
 export const Default = () => (
   <div style={{ padding: 20 }}>
-    <Button>기본 버튼</Button>
+    <Button label={{ labelText: "기본 버튼" }} />
   </div>
 );
 
 export const Size = () => (
   <div style={{ padding: 20 }}>
-    <Button size="xs">tiny</Button>
-    <Button size="sm">small</Button>
-    <Button size="md">medium</Button>
-    <Button size="lg">large</Button>
-    <Button size="xl">extra-large</Button>
+    <Button size="xs" label={{ labelText: "tiny" }} />
+    <Button size="sm" label={{ labelText: "small" }} />
+    <Button size="md" label={{ labelText: "medium" }} />
+    <Button size="lg" label={{ labelText: "large" }} />
+    <Button size="xl" label={{ labelText: "extra-large" }} />
   </div>
 );
 
 export const Type = () => (
   <div style={{ padding: 20 }}>
-    <Button size="md" buttonType="light">
-      light
-    </Button>
-    <Button size="md" buttonType="basic">
-      basic
-    </Button>
-    <Button size="md" buttonType="core">
-      core
-    </Button>
-    <Button size="md" buttonType="danger">
-      danger
-    </Button>
+    <Button
+      size="md"
+      variant="ghost"
+      buttonType="light"
+      label={{ labelText: "light" }}
+    />
+    <Button size="md" buttonType="basic" label={{ labelText: "basic" }} />
+    <Button size="md" buttonType="core" label={{ labelText: "core" }} />
+    <Button size="md" buttonType="danger" label={{ labelText: "danger" }} />
   </div>
 );
 
 export const Rounded = () => (
   <div style={{ padding: 20 }}>
-    <Button size="md" buttonType="light" rounded>
-      light
-    </Button>
-    <Button size="md" buttonType="basic" rounded>
-      basic
-    </Button>
-    <Button size="md" buttonType="core" rounded>
-      core
-    </Button>
-    <Button size="md" buttonType="danger" rounded>
-      danger
-    </Button>
+    <Button
+      size="md"
+      variant="ghost"
+      buttonType="light"
+      rounded
+      label={{ labelText: "light" }}
+    />
+    <Button
+      size="md"
+      buttonType="basic"
+      rounded
+      label={{ labelText: "basic" }}
+    />
+    <Button size="md" buttonType="core" rounded label={{ labelText: "core" }} />
+    <Button
+      size="md"
+      buttonType="danger"
+      rounded
+      label={{ labelText: "danger" }}
+    />
   </div>
 );
 
@@ -63,49 +68,163 @@ export const Variant = () => (
   <div style={{ padding: 20 }}>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Solid</h1>
-      <Button size="md" buttonType="light" variant="solid">
-        light
-      </Button>
-      <Button size="md" buttonType="basic" variant="solid">
-        basic
-      </Button>
-      <Button size="md" buttonType="core" variant="solid">
-        core
-      </Button>
-      <Button size="md" buttonType="danger" variant="solid">
-        danger
-      </Button>
+      <Button size="md" buttonType="basic" label={{ labelText: "basic" }} />
+      <Button size="md" buttonType="core" label={{ labelText: "core" }} />
+      <Button size="md" buttonType="danger" label={{ labelText: "danger" }} />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Ghost</h1>
-      <Button size="md" buttonType="light" variant="ghost">
-        light
-      </Button>
-      <Button size="md" buttonType="basic" variant="ghost">
-        basic
-      </Button>
-      <Button size="md" buttonType="core" variant="ghost">
-        core
-      </Button>
-      <Button size="md" buttonType="danger" variant="ghost">
-        danger
-      </Button>
+      <Button
+        size="md"
+        variant="ghost"
+        buttonType="light"
+        label={{ labelText: "light" }}
+      />
+      <Button
+        size="md"
+        variant="ghost"
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+      />
+      <Button
+        size="md"
+        variant="ghost"
+        buttonType="core"
+        label={{ labelText: "core" }}
+      />
+      <Button
+        size="md"
+        variant="ghost"
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+      />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Quiet</h1>
-      <Button size="md" buttonType="light" variant="quiet">
-        light
-      </Button>
-      <Button size="md" buttonType="basic" variant="quiet">
-        basic
-      </Button>
-      <Button size="md" buttonType="core" variant="quiet">
-        core
-      </Button>
-      <Button size="md" buttonType="danger" variant="quiet">
-        danger
-      </Button>
+      <Button
+        size="md"
+        variant="quiet"
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+      />
+      <Button
+        size="md"
+        variant="quiet"
+        buttonType="core"
+        label={{ labelText: "core" }}
+      />
+      <Button
+        size="md"
+        variant="quiet"
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+      />
     </div>
+  </div>
+);
+
+export const Loading = () => (
+  <div style={{ padding: 20 }}>
+    <div className="article" style={{ marginBottom: 28 }}>
+      <h1 style={{ marginBottom: 12 }}>Solid</h1>
+      <Button
+        size="md"
+        loading
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+      />
+      <Button
+        size="md"
+        loading
+        buttonType="core"
+        label={{ labelText: "core" }}
+      />
+      <Button
+        size="md"
+        loading
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+      />
+    </div>
+    <div className="article" style={{ marginBottom: 28 }}>
+      <h1 style={{ marginBottom: 12 }}>Ghost</h1>
+      <Button
+        size="md"
+        variant="ghost"
+        buttonType="light"
+        label={{ labelText: "light" }}
+        loading
+      />
+      <Button
+        size="md"
+        variant="ghost"
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+        loading
+      />
+      <Button
+        size="md"
+        variant="ghost"
+        buttonType="core"
+        label={{ labelText: "core" }}
+        loading
+      />
+      <Button
+        size="md"
+        variant="ghost"
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+        loading
+      />
+    </div>
+    <div className="article" style={{ marginBottom: 28 }}>
+      <h1 style={{ marginBottom: 12 }}>Quiet</h1>
+      <Button
+        size="md"
+        loading
+        variant="quiet"
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+      />
+      <Button
+        size="md"
+        loading
+        variant="quiet"
+        buttonType="core"
+        label={{ labelText: "core" }}
+      />
+      <Button
+        size="md"
+        loading
+        variant="quiet"
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+      />
+    </div>
+  </div>
+);
+
+export const FullWidth = () => (
+  <div style={{ padding: 20 }}>
+    <Button
+      size="md"
+      buttonType="basic"
+      fullWidth
+      label={{ labelText: "basic" }}
+    />
+    <Button
+      size="md"
+      buttonType="core"
+      fullWidth
+      label={{ labelText: "core" }}
+    />
+    <Button
+      size="md"
+      buttonType="danger"
+      fullWidth
+      icon={{ iconType: <PenIcon color="white" /> }}
+      label={{ labelText: "danger" }}
+    />
   </div>
 );
 
@@ -113,106 +232,179 @@ export const Disabled = () => (
   <div style={{ padding: 20 }}>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Solid</h1>
-      <Button size="md" buttonType="light" variant="solid" disabled>
-        light
-      </Button>
-      <Button size="md" buttonType="basic" variant="solid" disabled>
-        basic
-      </Button>
-      <Button size="md" buttonType="core" variant="solid" disabled>
-        core
-      </Button>
-      <Button size="md" buttonType="danger" variant="solid" disabled>
-        danger
-      </Button>
+      <Button
+        size="md"
+        disabled
+        buttonType="light"
+        label={{ labelText: "light" }}
+      />
+      <Button
+        size="md"
+        disabled
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+      />
+      <Button
+        size="md"
+        disabled
+        buttonType="core"
+        label={{ labelText: "core" }}
+      />
+      <Button
+        size="md"
+        disabled
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+      />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Ghost</h1>
-      <Button size="md" buttonType="light" variant="ghost" disabled>
-        light
-      </Button>
-      <Button size="md" buttonType="basic" variant="ghost" disabled>
-        basic
-      </Button>
-      <Button size="md" buttonType="core" variant="ghost" disabled>
-        core
-      </Button>
-      <Button size="md" buttonType="danger" variant="ghost" disabled>
-        danger
-      </Button>
+      <Button
+        size="md"
+        variant="ghost"
+        disabled
+        buttonType="light"
+        label={{ labelText: "light" }}
+      />
+      <Button
+        size="md"
+        variant="ghost"
+        disabled
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+      />
+      <Button
+        size="md"
+        variant="ghost"
+        disabled
+        buttonType="core"
+        label={{ labelText: "core" }}
+      />
+      <Button
+        size="md"
+        variant="ghost"
+        disabled
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+      />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Quiet</h1>
-      <Button size="md" buttonType="light" variant="quiet" disabled>
-        light
-      </Button>
-      <Button size="md" buttonType="basic" variant="quiet" disabled>
-        basic
-      </Button>
-      <Button size="md" buttonType="core" variant="quiet" disabled>
-        core
-      </Button>
-      <Button size="md" buttonType="danger" variant="quiet" disabled>
-        danger
-      </Button>
+      <Button
+        size="md"
+        variant="quiet"
+        disabled
+        buttonType="light"
+        label={{ labelText: "light" }}
+      />
+      <Button
+        size="md"
+        variant="quiet"
+        disabled
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+      />
+      <Button
+        size="md"
+        variant="quiet"
+        disabled
+        buttonType="core"
+        label={{ labelText: "core" }}
+      />
+      <Button
+        size="md"
+        variant="quiet"
+        disabled
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+      />
     </div>
-  </div>
-);
-
-export const FullWidth = () => (
-  <div style={{ padding: 20 }}>
-    <Button size="md" buttonType="light" fullWidth>
-      light
-    </Button>
-    <Button size="md" buttonType="basic" fullWidth>
-      basic
-    </Button>
-    <Button size="md" buttonType="core" fullWidth>
-      core
-    </Button>
-    <Button size="md" buttonType="danger" fullWidth>
-      danger
-    </Button>
   </div>
 );
 
 export const WithIcon = () => (
   <div style={{ padding: 10 }}>
-    <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" nonKorean>
-        Leading-icon
-      </Text>
-      <Button style={{ marginTop: 10 }}>
-        <BsCheck />
-        버튼
-      </Button>
+    <div className="article" style={{ marginBottom: 20 }}>
+      <h1>Icon + Text</h1>
+      <div
+        className="buttons"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="xs"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+          label={{ labelText: "수정" }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="sm"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+          label={{ labelText: "수정" }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="md"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+          label={{ labelText: "수정" }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="lg"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+          label={{ labelText: "수정" }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="xl"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+          label={{ labelText: "수정" }}
+        />
+      </div>
     </div>
-    <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" nonKorean>
-        Tailing-icon
-      </Text>
-      <Button style={{ marginTop: 10 }} variant="ghost">
-        버튼
-        <BsCheck />
-      </Button>
-    </div>
-    <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" nonKorean>
-        Text-only
-      </Text>
-      <Button style={{ marginTop: 10 }} variant="text">
-        버튼
-      </Button>
-    </div>
-    <div style={{ marginBottom: 30 }}>
-      <Text size="tit-md" nonKorean>
-        Icon-only
-      </Text>
-      <Button style={{ marginTop: 10 }}>
-        <BsCheck fontSize={16} />
-      </Button>
+
+    <div className="article">
+      <h1>Only Icon</h1>
+      <div
+        className="buttons"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="xs"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="sm"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="md"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="lg"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="light"
+          size="xl"
+          icon={{ iconType: <PenIcon color="gray_7" /> }}
+        />
+      </div>
     </div>
   </div>
 );
-
-export const Loading = () => <div style={{ padding: 20 }}></div>;

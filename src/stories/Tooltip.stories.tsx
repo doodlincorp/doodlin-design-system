@@ -12,7 +12,7 @@ export const Default = () => {
   return (
     <div style={{ padding: 20 }}>
       <Tooltip tooltipText={{ Text: "【ツ】" }}>
-        <Button>툴팁</Button>
+        <Button size="md">툴팁</Button>
       </Tooltip>
     </div>
   );
@@ -27,7 +27,7 @@ export const variant = () => {
             Text: "단어형 툴팁",
           }}
         >
-          <Button>툴팁</Button>
+          <Button size="md">툴팁</Button>
         </Tooltip>
       </div>
       <Tooltip
@@ -36,7 +36,7 @@ export const variant = () => {
         }}
         variant="tail"
       >
-        <Button>툴팁</Button>
+        <Button size="md">툴팁</Button>
       </Tooltip>
     </div>
   );
@@ -48,31 +48,31 @@ export const placement = () => {
       <span style={{ marginLeft: 20 }}>
         <Tooltip
           tooltipText={{
-            Text: "【ツ】",
+            Text: "왼쪽 정렬",
           }}
           placement="left"
         >
-          <Button>left</Button>
+          <Button size="md">left</Button>
         </Tooltip>
       </span>
       <span style={{ marginLeft: 20 }}>
         <Tooltip
           tooltipText={{
-            Text: "【ツ】",
+            Text: "중앙 정렬",
           }}
           placement="center"
         >
-          <Button>center</Button>
+          <Button size="md">center</Button>
         </Tooltip>
       </span>
       <span style={{ marginLeft: 20 }}>
         <Tooltip
           tooltipText={{
-            Text: "【ツ】",
+            Text: "오른쪽 정렬",
           }}
           placement="right"
         >
-          <Button>right</Button>
+          <Button size="md">right</Button>
         </Tooltip>
       </span>
     </div>

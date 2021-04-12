@@ -22,13 +22,18 @@ export const Default = () => {
             cancelBtn: (
               <Button
                 className="cancel-btn"
+                size="md"
                 onClick={() => setOpen(false)}
                 variant="ghost"
               >
                 취소
               </Button>
             ),
-            submitBtn: <Button className="submit-btn">확인</Button>,
+            submitBtn: (
+              <Button className="submit-btn" size="md">
+                확인
+              </Button>
+            ),
           }}
         >
           <Text size="desc-sm">

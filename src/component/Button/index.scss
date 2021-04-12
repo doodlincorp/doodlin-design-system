@@ -12,6 +12,7 @@
   text-align: center;
 
   cursor: pointer;
+  white-space: nowrap;
   user-select: none;
   transition: 0.1s ease-out;
   box-sizing: border-box;
@@ -35,8 +36,15 @@
     padding: 0 8px;
     border-radius: 4px;
     font-size: 14px;
-    &.round {
+    &.rounded {
       border-radius: calc(28px / 2);
+      padding: 0 12px;
+    }
+    &.iconType.iconOnly {
+      padding: 0 6px;
+      ._BUTTON_icon {
+        margin-right: 0;
+      }
     }
   }
 
@@ -45,8 +53,12 @@
     padding: 0 12px;
     border-radius: 6px;
     font-size: 14px;
-    &.round {
+    &.rounded {
       border-radius: calc(32px / 2);
+      padding: 0 14px;
+    }
+    &.iconType.iconOnly {
+      padding: 0 8px;
     }
   }
 
@@ -55,8 +67,17 @@
     padding: 0 12px;
     border-radius: 6px;
     font-size: 14px;
-    &.round {
+    &.rounded {
       border-radius: calc(36px / 2);
+      padding: 0 14px;
+    }
+    &.iconType.iconOnly {
+      padding: 0 9px;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -65,23 +86,46 @@
     padding: 0 16px;
     border-radius: 6px;
     font-size: 16px;
-    &.round {
+    &.rounded {
       border-radius: calc(40px / 2);
+      padding: 0 18px;
+    }
+    &.iconType.iconOnly {
+      padding: 0 10px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
     }
   }
 
   &.xl {
     height: 56px;
     padding: 0 32px;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 18px;
-    &.round {
+    &.rounded {
       border-radius: calc(56px / 2);
+      padding: 0 36px;
+    }
+    &.iconType.iconOnly {
+      padding: 0 16px;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
     }
   }
 
-  .none {
-    opacity: 0;
+  ._BUTTON_icon {
+    margin-right: 4px;
+  }
+
+  &.iconType.iconOnly {
+    ._BUTTON_icon {
+      margin-right: 0;
+    }
   }
 
   // Variant
@@ -90,11 +134,24 @@
   }
 
   // ButtonType
+  &.basic {
+    &.ghost.loading {
+      background-color: $gray_8;
+    }
+  }
   &.core {
     @include button-color($yellow_6);
+    &.ghost.loading,
+    &.quiet.loading {
+      background-color: $yellow_6;
+    }
   }
   &.danger {
     @include button-color($red_7);
+    &.ghost.loading,
+    &.quiet.loading {
+      background-color: $red_7;
+    }
   }
   &.light {
     @include button-color($gray_4, $gray_8);
@@ -110,33 +167,90 @@
   }
 
   // Loading
-  &.spin::before {
+  &.loading {
+    pointer-events: none;
+  }
+  &.loading::before {
     position: absolute;
     margin: 0 auto;
-    @include SpinSize(12px, 2px);
+    @include CustomSpin(14px, 2px);
   }
-  &.spin.xxs::before {
-    @include SpinSize(12px, 2px);
+  &.loading.xs::before {
+    @include CustomSpin(14px, 2px);
   }
-  &.spin.xs::before {
-    @include SpinSize(14px, 2px);
+  &.loading.sm::before {
+    @include CustomSpin(16px, 2px);
   }
-  &.spin.sm::before {
-    @include SpinSize(16px, 3px);
+  &.loading.md::before {
+    @include CustomSpin(16px, 2px);
   }
-  &.spin.md::before {
-    @include SpinSize(18px, 3px);
+  &.loading.lg::before {
+    @include CustomSpin(18px, 3px);
   }
-  &.spin.lg::before {
-    @include SpinSize(18px, 3px);
+  &.loading.xl::before {
+    @include CustomSpin(24px, 3px);
   }
-  &.spin.xl::before {
-    @include SpinSize(18px, 3px);
+
+  &.loading.xs.ghost::before,
+  &.loading.xs.quiet::before {
+    @include CustomSpin(14px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
-  &.spin.xxl::before {
-    @include SpinSize(18px, 3px);
+  &.loading.sm.ghost::before,
+  &.loading.sm.quiet::before,
+  &.loading.md.ghost::before,
+  &.loading.md.quiet::before {
+    @include CustomSpin(16px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
-  &.spin.xxxl::before {
-    @include SpinSize(18px, 3px);
+
+  &.loading.lg.ghost::before,
+  &.loading.lg.quiet::before {
+    @include CustomSpin(18px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.xl.ghost::before,
+  &.loading.xl.quiet::before {
+    @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+
+  &.loading.xs.basic::before,
+  &.loading.xs.core::before,
+  &.loading.xs.danger::before {
+    @include CustomSpin(14px, 2px);
+  }
+  &.loading.sm.basic::before,
+  &.loading.sm.core::before,
+  &.loading.sm.danger::before,
+  &.loading.md.basic::before,
+  &.loading.md.core::before,
+  &.loading.md.danger::before {
+    @include CustomSpin(16px, 2px);
+  }
+
+  &.loading.lg.basic::before,
+  &.loading.lg.core::before,
+  &.loading.lg.danger::before {
+    @include CustomSpin(18px, 3px);
+  }
+  &.loading.xl.basic::before,
+  &.loading.xl.core::before,
+  &.loading.xl.danger::before {
+    @include CustomSpin(24px, 3px);
+  }
+
+  &.loading.xs.basic.quiet::before {
+    @include CustomSpin(14px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.sm.basic.quiet::before,
+  &.loading.md.basic.quiet::before {
+    @include CustomSpin(16px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.lg.basic.quiet::before {
+    @include CustomSpin(18px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.xl.basic.quiet::before {
+    @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+
+  .none {
+    opacity: 0;
   }
 }

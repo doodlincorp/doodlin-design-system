@@ -1,27 +1,35 @@
-import React from 'react';
-import Spinner from '../component/Spinner';
-import '../reset.scss';
+import React from "react";
+import Spinner from "../component/Spinner";
+import "../reset.scss";
+import "../component/Spinner/index.scss";
 
 export default {
-  title: 'Component/Spinner',
+  title: "Component/Spinner",
   component: Spinner,
 };
 
 export const Default = () => (
-  <div style={{ padding: 10 }}>
+  <div style={{ padding: 20 }}>
     <Spinner />
   </div>
 );
 
 export const Size = () => (
-  <div style={{ padding: 10 }}>
-    <Spinner size="xxs" />
-    <Spinner size="xs" />
-    <Spinner size="sm" />
-    <Spinner size="md" />
-    <Spinner size="lg" />
-    <Spinner size="xl" />
-    <Spinner size="xxl" />
-    <Spinner size="xxxl" />
+  <div style={{ padding: 20, display: "flex", alignItems: "center" }}>
+    <div style={{ marginRight: 20 }}>
+      <Spinner size="xs" />
+    </div>
+    <div style={{ marginRight: 20 }}>
+      <Spinner size="sm" />
+    </div>
+    <div style={{ marginRight: 20 }}>
+      <Spinner size="md" />
+    </div>
+    <div style={{ marginRight: 20 }}>
+      <Spinner size="lg" />
+    </div>
+    <div style={{ marginRight: 20 }}>
+      <Spinner size="xl" />
+    </div>
   </div>
 );
