@@ -343,6 +343,13 @@ $button-hover-transition: ease-in-out 0.2s;
       }
     }
   }
+  &.textonly {
+    background: transparent;
+    color: $bgc;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   // Disabled
   &.dis {

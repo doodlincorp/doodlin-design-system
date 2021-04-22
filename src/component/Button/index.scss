@@ -10,6 +10,7 @@
   letter-spacing: 0;
   font: inherit;
   text-align: center;
+  font-weight: $medium;
 
   cursor: pointer;
   white-space: nowrap;
@@ -72,12 +73,7 @@
       padding: 0 14px;
     }
     &.iconType.iconOnly {
-      padding: 0 9px;
-    }
-
-    svg {
-      width: 18px;
-      height: 18px;
+      padding: 0 10px;
     }
   }
 
@@ -91,12 +87,12 @@
       padding: 0 18px;
     }
     &.iconType.iconOnly {
-      padding: 0 10px;
+      padding: 0 11px;
     }
 
     svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -119,6 +115,8 @@
   }
 
   ._BUTTON_icon {
+    display: flex;
+    align-items: center;
     margin-right: 4px;
   }
 
@@ -128,6 +126,10 @@
     }
   }
 
+  &.textonly {
+    padding: 0;
+  }
+
   // Variant
   &.solid {
     @include button-color();
@@ -135,12 +137,38 @@
 
   // ButtonType
   &.basic {
+    &:hover {
+      svg {
+        #icon__color {
+          fill: #fff;
+        }
+      }
+    }
+    svg {
+      #icon__color {
+        fill: $gray_8;
+        transition: 0.1s ease-out;
+      }
+    }
     &.ghost.loading {
       background-color: $gray_8;
     }
   }
   &.core {
     @include button-color($yellow_6);
+    &:hover {
+      svg {
+        #icon__color {
+          fill: #fff;
+        }
+      }
+    }
+    svg {
+      #icon__color {
+        fill: $yellow_6;
+        transition: 0.1s ease-out;
+      }
+    }
     &.ghost.loading,
     &.quiet.loading {
       background-color: $yellow_6;
@@ -148,6 +176,19 @@
   }
   &.danger {
     @include button-color($red_7);
+    &:hover {
+      svg {
+        #icon__color {
+          fill: #fff;
+        }
+      }
+    }
+    svg {
+      #icon__color {
+        fill: $red_7;
+        transition: 0.1s ease-out;
+      }
+    }
     &.ghost.loading,
     &.quiet.loading {
       background-color: $red_7;
@@ -155,6 +196,24 @@
   }
   &.light {
     @include button-color($gray_4, $gray_8);
+    &.solid {
+      background: $gray_2;
+      box-shadow: 0 0 0 1px $gray_4 inset;
+      &:hover {
+        background: $gray_3;
+        box-shadow: 0 0 0 1px $gray_5 inset;
+      }
+      &:active {
+        background: $gray_4;
+      }
+    }
+    &.solid.dis {
+      box-shadow: none;
+      &:hover,
+      &:active {
+        background: $gray_2;
+      }
+    }
   }
 
   // Fullwidth
@@ -247,6 +306,34 @@
     @include CustomSpin(18px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
   &.loading.xl.basic.quiet::before {
+    @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+
+  &.loading.xs.light.solid::before {
+    @include CustomSpin(14px, 2px, $Bc0: $gray_8, $Bc1: $gray_4);
+  }
+  &.loading.sm.light.solid::before,
+  &.loading.md.light.solid::before {
+    @include CustomSpin(16px, 2px, $Bc0: $gray_8, $Bc1: $gray_4);
+  }
+  &.loading.lg.light.solid::before {
+    @include CustomSpin(18px, 3px, $Bc0: $gray_8, $Bc1: $gray_4);
+  }
+  &.loading.xl.light.solid::before {
+    @include CustomSpin(24px, 3px, $Bc0: $gray_8, $Bc1: $gray_4);
+  }
+
+  &.loading.xs.textonly::before {
+    @include CustomSpin(14px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.sm.textonly::before,
+  &.loading.md.textonly::before {
+    @include CustomSpin(16px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.lg.textonly::before {
+    @include CustomSpin(18px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.xl.textonly::before {
     @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { PenIcon } from "../asset/PenIcon";
 import Button from "../component/Button";
-import IconList from "../component/Icon/IconList";
 import "../reset.scss";
 
 export default {
@@ -68,6 +67,7 @@ export const Variant = () => (
   <div style={{ padding: 20 }}>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Solid</h1>
+      <Button size="md" buttonType="light" label={{ labelText: "light" }} />
       <Button size="md" buttonType="basic" label={{ labelText: "basic" }} />
       <Button size="md" buttonType="core" label={{ labelText: "core" }} />
       <Button size="md" buttonType="danger" label={{ labelText: "danger" }} />
@@ -104,6 +104,12 @@ export const Variant = () => (
       <Button
         size="md"
         variant="quiet"
+        buttonType="light"
+        label={{ labelText: "light" }}
+      />
+      <Button
+        size="md"
+        variant="quiet"
         buttonType="basic"
         label={{ labelText: "basic" }}
       />
@@ -120,6 +126,33 @@ export const Variant = () => (
         label={{ labelText: "danger" }}
       />
     </div>
+    <div className="article" style={{ marginBottom: 28 }}>
+      <h1 style={{ marginBottom: 12 }}>Text only</h1>
+      <Button
+        size="md"
+        variant="textonly"
+        buttonType="light"
+        label={{ labelText: "light" }}
+      />
+      <Button
+        size="md"
+        variant="textonly"
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+      />
+      <Button
+        size="md"
+        variant="textonly"
+        buttonType="core"
+        label={{ labelText: "core" }}
+      />
+      <Button
+        size="md"
+        variant="textonly"
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+      />
+    </div>
   </div>
 );
 
@@ -127,6 +160,12 @@ export const Loading = () => (
   <div style={{ padding: 20 }}>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Solid</h1>
+      <Button
+        size="md"
+        loading
+        buttonType="light"
+        label={{ labelText: "light" }}
+      />
       <Button
         size="md"
         loading
@@ -183,6 +222,13 @@ export const Loading = () => (
         size="md"
         loading
         variant="quiet"
+        buttonType="light"
+        label={{ labelText: "light" }}
+      />
+      <Button
+        size="md"
+        loading
+        variant="quiet"
         buttonType="basic"
         label={{ labelText: "basic" }}
       />
@@ -197,6 +243,37 @@ export const Loading = () => (
         size="md"
         loading
         variant="quiet"
+        buttonType="danger"
+        label={{ labelText: "danger" }}
+      />
+    </div>
+    <div className="article" style={{ marginBottom: 28 }}>
+      <h1 style={{ marginBottom: 12 }}>Text only</h1>
+      <Button
+        size="md"
+        variant="textonly"
+        loading
+        buttonType="light"
+        label={{ labelText: "light" }}
+      />
+      <Button
+        size="md"
+        variant="textonly"
+        loading
+        buttonType="basic"
+        label={{ labelText: "basic" }}
+      />
+      <Button
+        size="md"
+        variant="textonly"
+        loading
+        buttonType="core"
+        label={{ labelText: "core" }}
+      />
+      <Button
+        size="md"
+        variant="textonly"
+        loading
         buttonType="danger"
         label={{ labelText: "danger" }}
       />
@@ -222,7 +299,6 @@ export const FullWidth = () => (
       size="md"
       buttonType="danger"
       fullWidth
-      icon={{ iconType: <PenIcon color="white" /> }}
       label={{ labelText: "danger" }}
     />
   </div>

@@ -5,7 +5,7 @@ import { TDefaultSize } from "../..";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: TDefaultSize;
-  variant?: "ghost" | "solid" | "quiet";
+  variant?: "ghost" | "solid" | "quiet" | "textonly";
   buttonType?: "basic" | "light" | "core" | "danger";
   fullWidth?: boolean;
   loading?: boolean;
@@ -17,7 +17,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<IButtonProps> = ({
   className,
   children,
-  size = "xs",
+  size = "md",
   variant = "solid",
   disabled,
   fullWidth,
