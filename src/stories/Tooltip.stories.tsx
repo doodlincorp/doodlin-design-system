@@ -12,7 +12,7 @@ export const Default = () => {
   return (
     <div style={{ padding: 20 }}>
       <Tooltip tooltipText={{ Text: "【ツ】" }}>
-        <Button size="md">툴팁</Button>
+        <Button size="md">커서를 올려보세요!</Button>
       </Tooltip>
     </div>
   );
@@ -27,7 +27,7 @@ export const variant = () => {
             Text: "단어형 툴팁",
           }}
         >
-          <Button size="md">툴팁</Button>
+          <Button size="md">단어형 툴팁</Button>
         </Tooltip>
       </div>
       <Tooltip
@@ -36,7 +36,7 @@ export const variant = () => {
         }}
         variant="tail"
       >
-        <Button size="md">툴팁</Button>
+        <Button size="md">문장형 툴팁</Button>
       </Tooltip>
     </div>
   );
