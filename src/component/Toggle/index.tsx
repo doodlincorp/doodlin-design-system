@@ -9,13 +9,8 @@ export interface IToggleProps {
 
 const Toggle: React.FC<IToggleProps> = ({ className, onClick }) => {
   return (
-    <div>
-      <input
-        id="cb1"
-        className={cn("_TOGGLE_", className)}
-        type="checkbox"
-        onClick={onClick}
-      />
+    <div className={className}>
+      <input id="cb1" className="_TOGGLE_" type="checkbox" onClick={onClick} />
       <label className="toggle-bg" htmlFor="cb1"></label>
     </div>
   );
