@@ -1,0 +1,59 @@
+@import "../../index.scss";
+
+._TOGGLE_ {
+  display: none;
+  // add default box-sizing for this scope
+  &,
+  &:after,
+  &:before,
+  & *,
+  & *:after,
+  & *:before,
+  & + .toggle-bg {
+    box-sizing: border-box;
+    &::selection {
+      background: none;
+    }
+  }
+
+  + .toggle-bg {
+    outline: 0;
+    display: block;
+    width: 30px;
+    height: 16px;
+    background-color: $gray_3;
+    border-radius: 8px;
+    padding: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    &:after,
+    &:before {
+      position: relative;
+      display: block;
+      content: "";
+      width: 50%;
+      height: 100%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    }
+    &:after {
+      border-radius: 50%;
+      background: #fff;
+      transition: all 0.15s ease;
+      left: 0;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &:checked + .toggle-bg:after {
+    left: 50%;
+  }
+
+  &:checked + .toggle-bg {
+    background: $yellow_6;
+  }
+}
