@@ -7,5 +7,6 @@ export { default as Textarea } from "./component/Textarea";
 export { default as Modal } from "./component/Modal";
 export { default as Tooltip } from "./component/Tooltip";
 export { default as CustomSelect } from "./component/CustomSelect";
+export { default as Toggle } from "./component/Toggle";
 
 export type TDefaultSize = "xs" | "sm" | "md" | "lg" | "xl";
