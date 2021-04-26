@@ -139,13 +139,21 @@
   &.basic {
     &:hover {
       svg {
-        #icon__color {
+        #icon__stroke {
+          stroke: #fff;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
           fill: #fff;
         }
       }
     }
     svg {
-      #icon__color {
+      #icon__stroke {
+        stroke: #fff;
+        transition: 0.1s ease-out;
+      }
+      #icon__fill {
         fill: $gray_8;
         transition: 0.1s ease-out;
       }
@@ -158,13 +166,21 @@
     @include button-color($yellow_6);
     &:hover {
       svg {
-        #icon__color {
+        #icon__stroke {
+          stroke: #fff;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
           fill: #fff;
         }
       }
     }
     svg {
-      #icon__color {
+      #icon__stroke {
+        stroke: #fff;
+        transition: 0.1s ease-out;
+      }
+      #icon__fill {
         fill: $yellow_6;
         transition: 0.1s ease-out;
       }
@@ -178,13 +194,21 @@
     @include button-color($red_7);
     &:hover {
       svg {
-        #icon__color {
+        #icon__stroke {
+          stroke: #fff;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
           fill: #fff;
         }
       }
     }
     svg {
-      #icon__color {
+      #icon__stroke {
+        stroke: #fff;
+        transition: 0.1s ease-out;
+      }
+      #icon__fill {
         fill: $red_7;
         transition: 0.1s ease-out;
       }

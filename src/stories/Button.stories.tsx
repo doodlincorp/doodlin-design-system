@@ -1,5 +1,5 @@
 import React from "react";
-import { PenIcon } from "../asset/PenIcon";
+import { PenIcon } from "../component/Icon/PenIcon";
 import Button from "../component/Button";
 import "../reset.scss";
 

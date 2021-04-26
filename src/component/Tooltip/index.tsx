@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import "./index.scss";
-import { InfoMarkIcon } from "../../asset/InfoMarkIcon";
+import { InfoMarkIcon } from "../../component/Icon/InfoMarkIcon";
 
 export interface ITooltipProps {
   className?: string;

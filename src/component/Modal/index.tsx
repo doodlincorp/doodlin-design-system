@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import "./index.scss";
-import { ModalCloseIcon } from "../../asset/ModalCloseIcon";
+import { ModalCloseIcon } from "../../component/Icon/ModalCloseIcon";
 
 export interface IModalProps {
   className?: string;
