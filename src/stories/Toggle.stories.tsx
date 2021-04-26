@@ -12,7 +12,7 @@ export const Default = () => {
   const [open, setOpen] = useState(false);
   return (
     <div style={{ padding: 20 }}>
-      <Toggle onClick={() => setOpen(!open)} />
+      <Toggle onClick={() => setOpen(!open)} open={open} />
     </div>
   );
 };

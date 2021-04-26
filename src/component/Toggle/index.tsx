@@ -1,17 +1,26 @@
-import React from "react";
+import React, { MouseEvent } from "react";
 import cn from "classnames";
 import "./index.scss";
 
 export interface IToggleProps {
   className?: string;
-  onClick: () => void;
+  open: boolean;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-const Toggle: React.FC<IToggleProps> = ({ className, onClick }) => {
+const Toggle: React.FC<IToggleProps> = ({
+  className,
+  onClick,
+  open,
+  ...props
+}) => {
   return (
-    <div className={className}>
-      <input id="cb1" className="_TOGGLE_" type="checkbox" onClick={onClick} />
-      <label className="toggle-bg" htmlFor="cb1"></label>
+    <div
+      className={cn("_TOGGLE_", className, { open })}
+      onClick={onClick}
+      {...props}
+    >
+      <div className="toggle-circle"></div>
     </div>
   );
 };

@@ -1,59 +1,31 @@
 @import "../../index.scss";
 
 ._TOGGLE_ {
-  display: none;
-  // add default box-sizing for this scope
-  &,
-  &:after,
-  &:before,
-  & *,
-  & *:after,
-  & *:before,
-  & + .toggle-bg {
-    box-sizing: border-box;
-    &::selection {
-      background: none;
-    }
-  }
-
-  + .toggle-bg {
-    outline: 0;
-    display: block;
-    width: 30px;
-    height: 16px;
-    background-color: $gray_3;
-    border-radius: 8px;
-    padding: 1px;
-    transition: all 0.3s ease;
+  position: relative;
+  margin-right: 8px;
+  width: 30px;
+  height: 16px;
+  background-color: $gray_3;
+  padding: 1px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  .toggle-circle {
     position: relative;
-    cursor: pointer;
-    user-select: none;
-    &:after,
-    &:before {
-      position: relative;
-      display: block;
-      content: "";
-      width: 50%;
-      height: 100%;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
-    }
-    &:after {
-      border-radius: 50%;
-      background: #fff;
-      transition: all 0.15s ease;
-      left: 0;
-    }
-
-    &:before {
-      display: none;
-    }
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    transition: all 0.15s ease;
   }
-
-  &:checked + .toggle-bg:after {
+}
+._TOGGLE_.open {
+  background-color: $yellow_6;
+  .toggle-circle {
     left: 50%;
-  }
-
-  &:checked + .toggle-bg {
-    background: $yellow_6;
   }
 }
