@@ -37,3 +37,5 @@ export const PenIcon: React.FC<IPenIconProps> = ({ color, className }) => {
     </div>
   );
 };
+
+export default PenIcon;

@@ -7,7 +7,7 @@ export interface ISelectArrowIconProps {
   className?: string;
 }
 
-const SelectArrowIcon: React.FC<ISelectArrowIconProps> = ({
+export const SelectArrowIcon: React.FC<ISelectArrowIconProps> = ({
   variant = "single",
   color = "gray_8",
   className,

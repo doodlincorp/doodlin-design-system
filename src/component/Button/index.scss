@@ -78,16 +78,16 @@
   }
 
   &.lg {
-    height: 40px;
+    height: 44px;
     padding: 0 16px;
     border-radius: 6px;
     font-size: 16px;
     &.rounded {
-      border-radius: calc(40px / 2);
+      border-radius: calc(44px / 2);
       padding: 0 18px;
     }
     &.iconType.iconOnly {
-      padding: 0 11px;
+      padding: 0 13px;
     }
 
     svg {

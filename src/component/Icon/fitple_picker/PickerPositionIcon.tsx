@@ -1,13 +1,13 @@
 import React from "react";
 import { colorMap, IColorMap } from "../colorMap";
 
-export interface IPickerSetViewIconProps {
+export interface IPickerPositionIconProps {
   color?: keyof IColorMap;
   className?: string;
   variant?: "left" | "right" | "top" | "bottom";
 }
 
-export const PickerSetViewIcon: React.FC<IPickerSetViewIconProps> = ({
+export const PickerPositionIcon: React.FC<IPickerPositionIconProps> = ({
   color,
   className,
   variant = "right",
