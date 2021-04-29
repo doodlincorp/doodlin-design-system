@@ -57,7 +57,7 @@
       border-color: $gray_6;
       box-shadow: none;
     }
-    &.dis-underline {
+    &.disabled.underline {
       background: transparent;
       pointer-events: none;
       border-bottom: 1px solid $gray_4;
@@ -71,7 +71,7 @@
   }
 
   // Disabled
-  &.dis {
+  &.disabled {
     background: $gray_1;
     border: none;
     pointer-events: none;
@@ -80,7 +80,7 @@
     }
   }
 
-  &.dis-single-line {
+  &.disabled.single-line {
     pointer-events: none;
   }
 }

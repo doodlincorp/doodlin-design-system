@@ -18,9 +18,7 @@ export const Input: React.FC<IInputProps> = ({
   return (
     <input
       className={cn("_INPUT_", className, inputSize, borderType, {
-        dis: disabled,
-        "dis-underline": borderType === "underline" && disabled,
-        "dis-none": borderType === "none" && disabled,
+        disabled,
       })}
       {...props}
     />
