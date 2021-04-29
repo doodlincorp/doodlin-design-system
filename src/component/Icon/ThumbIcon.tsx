@@ -1,12 +1,11 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
 import cn from "classnames";
-import { EScoreCategory } from "#/utils/format";
 
 export interface IThumbIconProps {
   color?: keyof IColorMap;
   className?: string;
-  variant: EScoreCategory;
+  variant: "sobad" | "bad" | "soso" | "good" | "sogood";
   size?: "sm" | "md" | "lg";
 }
 
