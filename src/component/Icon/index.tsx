@@ -37,6 +37,7 @@ import { PopUpCloseBtnIcon } from "./PopUpCloseBtnIcon";
 import { ProfileImageIcon } from "./ProfileImageIcon";
 import { RefreshIcon } from "./RefreshIcon";
 import { ReturnIcon } from "./ReturnIcon";
+import { RejectIcon } from "./RejectIcon";
 import { SearchIcon } from "./SearchIcon";
 import SelectArrowIcon from "./SelectArrowIcon";
 import { SendIcon } from "./SendIcon";
@@ -83,6 +84,7 @@ const Icon = {
   PopUpCloseBtn: PopUpCloseBtnIcon,
   ProfileImage: ProfileImageIcon,
   Refresh: RefreshIcon,
+  Reject: RejectIcon,
   Retrun: ReturnIcon,
   Search: SearchIcon,
   SelectArrow: SelectArrowIcon,
