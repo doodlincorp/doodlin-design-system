@@ -77,7 +77,7 @@
   }
 
   // Disabled
-  &.dis {
+  &.disabled {
     background: $gray_1;
     border: none;
     pointer-events: none;
@@ -86,12 +86,12 @@
     }
   }
 
-  &.dis-underline {
+  &.disabled.underline {
     background: none;
     border-bottom: 1px solid $gray_4;
   }
 
-  &.dis-none {
+  &.disabled.none {
     background: none;
   }
 }

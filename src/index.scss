@@ -352,7 +352,7 @@ $button-hover-transition: ease-in-out 0.2s;
   }
 
   // Disabled
-  &.dis {
+  &.disabled {
     background: $dis-bgc;
     color: $dis-fc;
     cursor: not-allowed;
@@ -360,15 +360,13 @@ $button-hover-transition: ease-in-out 0.2s;
       background: $dis-bgc;
       color: $dis-fc;
     }
-    &.iconType {
-      ._BUTTON_icon {
-        svg {
-          opacity: 0.4;
-        }
+    ._BUTTON_icon {
+      svg {
+        opacity: 0.4;
       }
     }
   }
-  &.dis-ghost {
+  &.disabled.ghost {
     background: transparent;
     box-shadow: 0 0 0 1px $dis-bgc inset;
     &:hover,
@@ -378,7 +376,7 @@ $button-hover-transition: ease-in-out 0.2s;
       color: $dis-fc;
     }
   }
-  &.dis-quiet {
+  &.disabled.quiet {
     background: transparent;
     border: transparent;
     &:hover {

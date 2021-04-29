@@ -44,4 +44,6 @@ export const colorMap: IColorMap = {
   red_7: "#f03e3e",
   red_8: "#e03131", // caution, error alert
   green_6: "#40c057", // success
+
+  label_0: "#7094b5",
 };

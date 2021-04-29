@@ -41,7 +41,7 @@
       border-radius: calc(28px / 2);
       padding: 0 12px;
     }
-    &.iconType.iconOnly {
+    &.iconOnly {
       padding: 0 6px;
       ._BUTTON_icon {
         margin-right: 0;
@@ -58,7 +58,7 @@
       border-radius: calc(32px / 2);
       padding: 0 14px;
     }
-    &.iconType.iconOnly {
+    &.iconOnly {
       padding: 0 8px;
     }
   }
@@ -72,7 +72,7 @@
       border-radius: calc(36px / 2);
       padding: 0 14px;
     }
-    &.iconType.iconOnly {
+    &.iconOnly {
       padding: 0 10px;
     }
   }
@@ -86,7 +86,7 @@
       border-radius: calc(44px / 2);
       padding: 0 18px;
     }
-    &.iconType.iconOnly {
+    &.iconOnly {
       padding: 0 13px;
     }
 
@@ -105,7 +105,7 @@
       border-radius: calc(56px / 2);
       padding: 0 36px;
     }
-    &.iconType.iconOnly {
+    &.iconOnly {
       padding: 0 16px;
     }
     svg {
@@ -120,7 +120,7 @@
     margin-right: 4px;
   }
 
-  &.iconType.iconOnly {
+  &.iconOnly {
     ._BUTTON_icon {
       margin-right: 0;
     }
@@ -192,6 +192,22 @@
   }
   &.danger {
     @include button-color($red_7);
+    svg {
+      #icon__stroke {
+        stroke: #fff;
+        transition: 0.1s ease-out;
+      }
+      #icon__fill {
+        fill: $red_7;
+        transition: 0.1s ease-out;
+      }
+    }
+    &.solid {
+      #icon__fill {
+        fill: #fff;
+        transition: 0.1s ease-out;
+      }
+    }
     &:hover {
       svg {
         #icon__stroke {
@@ -201,16 +217,6 @@
         #icon__fill {
           fill: #fff;
         }
-      }
-    }
-    svg {
-      #icon__stroke {
-        stroke: #fff;
-        transition: 0.1s ease-out;
-      }
-      #icon__fill {
-        fill: $red_7;
-        transition: 0.1s ease-out;
       }
     }
     &.ghost.loading,
@@ -231,7 +237,7 @@
         background: $gray_4;
       }
     }
-    &.solid.dis {
+    &.solid.disabled {
       box-shadow: none;
       &:hover,
       &:active {
@@ -241,7 +247,7 @@
   }
 
   // Fullwidth
-  &.fw {
+  &.fullWidth {
     width: 100%;
     margin: 0;
     & ~ & {

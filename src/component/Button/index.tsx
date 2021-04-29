@@ -10,8 +10,10 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
   loading?: boolean;
   rounded?: boolean;
-  icon?: { iconType?: React.ReactElement };
-  label?: { labelText?: string };
+  label?: {
+    labelIcon?: React.ReactElement;
+    labelText?: string;
+  };
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -24,20 +26,17 @@ const Button: React.FC<IButtonProps> = ({
   loading,
   rounded,
   buttonType = "basic",
-  icon,
   label,
   ...props
 }) => {
   return (
     <button
-      className={cn(`_BUTTON_`, className, size, variant, buttonType, icon, {
+      className={cn(`_BUTTON_`, className, size, variant, buttonType, {
         loading,
         rounded,
-        dis: disabled,
-        "dis-ghost": variant === "ghost" && disabled,
-        "dis-quiet": variant === "quiet" && disabled,
-        fw: fullWidth,
-        iconOnly: !label,
+        disabled,
+        fullWidth,
+        iconOnly: label && !label.labelText,
       })}
       {...props}
     >
@@ -46,9 +45,16 @@ const Button: React.FC<IButtonProps> = ({
           none: loading,
         })}
       >
-        {icon && <div className="_BUTTON_icon">{icon.iconType}</div>}
-        {label?.labelText}
-        {children}
+        {label ? (
+          <>
+            {label.labelIcon && (
+              <div className="_BUTTON_icon">{label.labelIcon}</div>
+            )}
+            {label.labelText}
+          </>
+        ) : (
+          children
+        )}
       </span>
     </button>
   );
