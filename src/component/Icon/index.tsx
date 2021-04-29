@@ -85,7 +85,7 @@ const Icon = {
   ProfileImage: ProfileImageIcon,
   Refresh: RefreshIcon,
   Reject: RejectIcon,
-  Retrun: ReturnIcon,
+  Return: ReturnIcon,
   Search: SearchIcon,
   SelectArrow: SelectArrowIcon,
   Send: SendIcon,
