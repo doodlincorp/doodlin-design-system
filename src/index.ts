@@ -6,7 +6,7 @@ export { default as Text } from "./component/Text";
 export { default as Textarea } from "./component/Textarea";
 export { default as Modal } from "./component/Modal";
 export { default as Tooltip } from "./component/Tooltip";
-export { default as Icon } from "./component/Icon";
+export { default as Icon, colorMap } from "./component/Icon";
 export { default as CustomSelect } from "./component/CustomSelect";
 export { default as Toggle } from "./component/Toggle";
 export { CircleCheckIcon } from "./component/Icon/CircleCheckIcon";

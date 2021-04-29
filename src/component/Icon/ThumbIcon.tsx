@@ -5,7 +5,7 @@ import cn from "classnames";
 export interface IThumbIconProps {
   color?: keyof IColorMap;
   className?: string;
-  variant: "sobad" | "bad" | "soso" | "good" | "sogood";
+  variant: "sobad" | "bad" | "soso" | "good" | "sogood" | "default";
   size?: "sm" | "md" | "lg";
 }
 
