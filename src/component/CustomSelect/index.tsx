@@ -2,7 +2,7 @@ import { useToggle } from "dhoonjang-s-hooks";
 import React, { useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
-import SelectArrowIcon from "../../asset/SelectArrowIcon";
+import SelectArrowIcon from "../Icon/SelectArrowIcon";
 
 export interface ICustomSelectProps<T> {
   value: T;

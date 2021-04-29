@@ -1,13 +1,13 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
 
-export interface IInfoMarkIconProps {
+export interface ISelectArrowIconProps {
   variant?: "single" | "double";
   color?: keyof IColorMap;
   className?: string;
 }
 
-const SelectArrowIcon: React.FC<IInfoMarkIconProps> = ({
+export const SelectArrowIcon: React.FC<ISelectArrowIconProps> = ({
   variant = "single",
   color = "gray_8",
   className,
@@ -31,13 +31,13 @@ const SelectArrowIcon: React.FC<IInfoMarkIconProps> = ({
         >
           <path
             d="M8 14L12 10H4L8 14Z"
-            fill={colorMap[color]}
-            id="select-arrow-icon__color"
+            fill={color ? colorMap[color] : colorMap.gray_8}
+            id="icon__fill"
           />
           <path
             d="M8 2L4 6L12 6L8 2Z"
-            fill={colorMap[color]}
-            id="select-arrow-icon__color"
+            fill={color ? colorMap[color] : colorMap.gray_8}
+            id="icon__fill"
           />
         </svg>
       ) : (
@@ -50,8 +50,8 @@ const SelectArrowIcon: React.FC<IInfoMarkIconProps> = ({
         >
           <path
             d="M5.01443 5.56998L9.58844 0.995972H0.44043L5.01443 5.56998Z"
-            id="select-arrow-icon__color"
-            fill={colorMap[color]}
+            id="icon__fill"
+            fill={color ? colorMap[color] : colorMap.gray_8}
           />
         </svg>
       )}

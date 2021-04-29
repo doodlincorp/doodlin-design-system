@@ -10,7 +10,7 @@ export default {
 export const Default = () => {
   const [selectNum, setSelectNum] = useState<number>(0);
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 20, width: 200 }}>
       <CustomSelect<number>
         options={[0, 1, 2, 3]}
         value={selectNum}
@@ -28,7 +28,7 @@ export const Default = () => {
 export const Double = () => {
   const [selectNum, setSelectNum] = useState<number>(0);
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 20, width: 200 }}>
       <CustomSelect<number>
         options={[0, 1, 2, 3]}
         arrowIconVariant="double"

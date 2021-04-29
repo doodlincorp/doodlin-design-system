@@ -1,43 +1,27 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 // Spinner
 ._SPINNER_ {
-  @include SpinSize($Bc0: $gray_7, $Bc1: $gray_2);
+  @include CustomSpin($Bc0: $gray_7, $Bc1: $gray_2);
 
   // Size
-  &.xxs {
-    @include SpinSize(12px, 2px, $gray_7, $gray_2);
-  }
-
   &.xs {
-    @include SpinSize(14px, 2px, $gray_7, $gray_2);
+    @include CustomSpin(14px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 
   &.sm {
-    @include SpinSize(16px, 3px, $gray_7, $gray_2);
+    @include CustomSpin(16px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 
   &.md {
-    @include SpinSize(18px, 3px, $gray_7, $gray_2);
+    @include CustomSpin(18px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 
   &.lg {
-    @include SpinSize(24px, 3px, $gray_7, $gray_2);
+    @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 
   &.xl {
-    @include SpinSize(28px, 3px, $gray_7, $gray_2);
-  }
-
-  &.xxl {
-    @include SpinSize(36px, 4px, $gray_7, $gray_2);
-  }
-
-  &.xxxl {
-    @include SpinSize(40px, 4px, $gray_7, $gray_2);
-  }
-
-  & + & {
-    margin-top: 20px;
+    @include CustomSpin(28px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 }

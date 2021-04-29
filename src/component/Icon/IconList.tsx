@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
+import { PenIcon } from "../../asset/PenIcon";
 
 const Icon = ({ icon }: any) => {
   return (
     <div>
-      <div>{icon.name}</div>
       <div>{icon.url}</div>
     </div>
   );
@@ -12,12 +12,12 @@ const Icon = ({ icon }: any) => {
 const IconList = () => {
   const icons = [
     {
-      name: 'stack',
-      url: './svg/stack.svg',
+      name: "pen",
+      url: <PenIcon />,
     },
     {
-      name: 'login_kakao',
-      url: './svg/login_kakao_logo.svg',
+      name: "login_kakao",
+      url: "./svg/login_kakao_logo.svg",
     },
   ];
   return (

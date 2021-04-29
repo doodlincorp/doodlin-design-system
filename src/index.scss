@@ -1,10 +1,14 @@
 /////////////////* Fonts */////////////////
 
 // Font-family
-$font: 'Spoqa Han Sans Neo', 'sans-serif';
+$font: "Spoqa Han Sans Neo", "sans-serif";
 
 // Letter-spacing
 $korean-letter-spacing: -0.96px;
+
+// Spoqa chevron
+$right: "&#xE001;";
+$left: "&#xE000;";
 
 // Font-weight
 $light: 300;
@@ -141,12 +145,23 @@ $blue_9: #1864ab;
 $blue_10: #0a467f;
 
 // Kanban Color
+// before
 $gray_4: #d0d0d0;
 $blue_2: #a5d8ff;
 $blue_4: #4dabf7;
 $blue_6: #228be5;
 $teal_4: #38d9a9;
 $teal_6: #12b886;
+// after
+$crayon_red: #e29b9b;
+$crayon_pink: #e29fb7;
+$crayon_grape: #d8a1e5;
+$crayon_violet: #b6a6e5;
+$crayon_indigo: #a1b0ed;
+$crayon_blue: #9ac5e6;
+$crayon_cyan: #95d7e0;
+$crayon_teal: #8ad1bc;
+$crayon_green: #9ad5a2;
 
 // Gray Color
 $gray_0: #f8f8f8; // bg0
@@ -160,11 +175,28 @@ $gray_7: #555555; // primary icon
 $gray_8: #333333; // primary text
 $gray_9: #111111; // title text
 
+// Red Color
+$red_0: #fff5f5;
+$red_1: #ffe3e3;
+$red_2: #ffc9c9;
+$red_3: #ffa8a8;
+$red_4: #ff8787;
+$red_5: #ff6b6b;
+$red_6: #fa5252;
+$red_7: #f03e3e;
+$red_8: #e03131;
+$red_9: #c92a2a;
+$red_10: #a51111;
+
 // System Color
-$red_8: #e03131; // caution, error alert
+$red_1: #ffe3e3; // delete button hover
+$red_7: #f03e3e; // caution, error alert
 $green_6: #40c057; // success
 $yellow_6: #fab005; // warning
 $blue_6: #228be5; // information
+
+// Other Color
+$label_0: #7094b5;
 
 // Shadow
 $shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -172,6 +204,7 @@ $shadow-md0: 0 4px 8px rgba(0, 0, 0, 0.12);
 $shadow-md1: 0 2px 4px rgba(0, 0, 0, 0.08);
 $shadow-lg0: 0 5px 30px rgba(0, 0, 0, 0.12);
 $shadow-lg1: 0 5px 15px rgba(0, 0, 0, 0.08);
+$shadow-option: 0 2px 6px rgba(0, 0, 0, 0.16);
 
 // Container
 $login-container-width: 772px;
@@ -184,7 +217,7 @@ $button-hover-transition: ease-in-out 0.2s;
 // * $Bsize: border-size value (e.g. 3px)
 // * $Bc0: border-color value (e.g. #fff)
 // * $Bc1: border-background-color value (e.g. #ffffff33)
-@mixin SpinSize(
+@mixin CustomSpin(
   $WH: 16px,
   $Bsize: 3px,
   $Bc0: #fff,
@@ -194,7 +227,7 @@ $button-hover-transition: ease-in-out 0.2s;
   height: $WH;
   border: $Bsize solid $Bc0;
   margin: 0;
-  content: ' ';
+  content: " ";
   display: block;
   border-radius: 50%;
   border-color: $Bc0 $Bc1 $Bc1 $Bc1;
@@ -210,6 +243,21 @@ $button-hover-transition: ease-in-out 0.2s;
   }
 }
 
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 // * $bgc: background-color (e.g. #fff)
 // * $fc: font-color (e.g. #111)
 // * $dis-bgc: disabled background-color
@@ -218,29 +266,31 @@ $button-hover-transition: ease-in-out 0.2s;
   $bgc: $gray_8,
   $fc: white,
   $dis-bgc: $gray_2,
-  $dis-fc: $gray_4
+  $dis-fc: $gray_5
 ) {
   background: $bgc;
   color: $fc;
   &:hover {
-    @if $bgc == $yellow_4 {
-      background: $yellow_6;
+    @if $bgc == $gray_4 {
+      background: $gray_3;
     } @else {
       background: lighten($bgc, 10%);
     }
   }
   &:active {
-    @if $bgc == $yellow_4 {
-      background: darken($yellow_6, 5%);
+    @if $bgc == $gray_4 {
+      background: $gray_4;
+    } @else if $bgc == $yellow_6 {
+      background: $yellow_7;
     } @else {
       background: darken($bgc, 10%);
     }
   }
 
-  // Variant (ghost, text)
+  // Variant
   &.ghost {
     background: transparent;
-    border: 1px solid $bgc;
+    box-shadow: 0 0 0 1px $bgc inset;
     @if $bgc == $gray_4 {
       color: $fc;
     } @else {
@@ -249,7 +299,7 @@ $button-hover-transition: ease-in-out 0.2s;
     &:hover {
       @if $bgc == $gray_4 {
         background: $gray_1;
-        border: 1px solid $gray_4;
+        box-shadow: 0 0 0 1px $gray_4 inset;
         color: $fc;
       } @else {
         background: $bgc;
@@ -259,21 +309,45 @@ $button-hover-transition: ease-in-out 0.2s;
     &:active {
       @if $bgc == $gray_4 {
         background: $gray_3;
-        border: 1px solid $gray_4;
+        box-shadow: 0 0 0 1px $gray_4 inset;
+      } @else if $bgc == $yellow_6 {
+        background: $yellow_7;
       } @else {
-        background: darken($bgc, 10%);
+        background: darken($bgc, 15%);
       }
     }
   }
 
-  &.text {
-    background: none;
+  &.quiet {
+    background: transparent;
+    @if $bgc == $gray_8 {
+      color: $gray_8;
+    } @else {
+      color: $bgc;
+    }
+    &:hover {
+      @if $bgc == $gray_8 {
+        background: $gray_1;
+      } @else {
+        background: $bgc;
+        color: #fff;
+      }
+    }
+    &:active {
+      @if $bgc == $gray_8 {
+        background: $gray_3;
+      } @else if $bgc == $yellow_6 {
+        background: $yellow_7;
+      } @else {
+        background-color: darken($bgc, 15%);
+      }
+    }
+  }
+  &.textonly {
+    background: transparent;
     color: $bgc;
     &:hover {
       text-decoration: underline;
-    }
-    &:active {
-      color: darken($bgc, 10%);
     }
   }
 
@@ -281,23 +355,30 @@ $button-hover-transition: ease-in-out 0.2s;
   &.dis {
     background: $dis-bgc;
     color: $dis-fc;
-    cursor: default;
+    cursor: not-allowed;
     &:hover {
       background: $dis-bgc;
       color: $dis-fc;
     }
+    &.iconType {
+      ._BUTTON_icon {
+        svg {
+          opacity: 0.4;
+        }
+      }
+    }
   }
   &.dis-ghost {
     background: transparent;
-    border: 1px solid $dis-bgc;
+    box-shadow: 0 0 0 1px $dis-bgc inset;
     &:hover,
     &:active {
       background: transparent;
-      border: 1px solid $dis-bgc;
+      box-shadow: 0 0 0 1px $dis-bgc inset;
       color: $dis-fc;
     }
   }
-  &.dis-text {
+  &.dis-quiet {
     background: transparent;
     border: transparent;
     &:hover {
