@@ -32,7 +32,7 @@ export const variant = () => {
       </div>
       <Tooltip
         tooltipText={{
-          Text: "안녕하세요.\n 문장형 정보 전달을 위한 툴팁입니다. 【ツ】",
+          Text: "안녕하세요.\n문장형 정보 전달을 위한 툴팁입니다. 【ツ】",
         }}
         variant="tail"
       >
