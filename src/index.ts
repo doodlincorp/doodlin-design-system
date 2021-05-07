@@ -24,3 +24,13 @@ export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositio
 export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
 
 export type TDefaultSize = "xs" | "sm" | "md" | "lg" | "xl";
+export type TFontSize =
+  | "xxs"
+  | "xs"
+  | "sm"
+  | "md"
+  | "lg"
+  | "xl"
+  | "xxl"
+  | "xxxl"
+  | "xxxxl";
