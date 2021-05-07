@@ -125,9 +125,20 @@ button {
 }
 
 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
   border: none;
   background: none;
   padding: 0;
+  user-select: none;
   cursor: pointer;
+  white-space: nowrap;
+  letter-spacing: inherit;
+}
+
+hr {
+  margin: 0;
+  border: 0;
 }
