@@ -92,8 +92,10 @@ video {
 }
 
 html {
-  font-size: 100%;
+  font-size: 62.5%;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  -webkit-font-smoothing: antialiased; // Safari, Chrome only
+  -moz-osx-font-smoothing: grayscale; // Safari, Chrome only
 }
 
 a {

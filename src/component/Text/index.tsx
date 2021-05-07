@@ -5,41 +5,86 @@ import { TFontSize } from "../..";
 
 export interface ITextProps {
   className?: string;
-  variant?: "title" | "sub-title" | "block" | "inline";
-  weight?: "regular" | "medium" | "bold";
+  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "block" | "inline";
+  weight?:
+    | "font-weight-light"
+    | "font-weight-regular"
+    | "font-weight-medium"
+    | "font-weight-bold";
+  lineHeight?: "line-height-medium" | "line-height-large";
   size?: TFontSize;
 }
 
 const Text: React.FC<ITextProps> = ({
   className,
   children,
-  size = "md",
   variant = "inline",
-  weight = "regular",
+  weight,
+  lineHeight,
+  size,
   ...props
 }) => {
   switch (variant) {
-    case "title":
+    case "h1":
       return (
-        <h1 className={cn("_TEXT_", className, size, weight)} {...props}>
+        <h1
+          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          {...props}
+        >
           {children}
         </h1>
       );
-    case "sub-title":
+    case "h2":
       return (
-        <h2 className={cn("_TEXT_", className, size, weight)} {...props}>
+        <h2
+          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          {...props}
+        >
           {children}
         </h2>
       );
+    case "h3":
+      return (
+        <h3
+          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          {...props}
+        >
+          {children}
+        </h3>
+      );
+    case "h4":
+      return (
+        <h4
+          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          {...props}
+        >
+          {children}
+        </h4>
+      );
+    case "h5":
+      return (
+        <h5
+          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          {...props}
+        >
+          {children}
+        </h5>
+      );
     case "block":
       return (
-        <div className={cn("_TEXT_", className, size, weight)} {...props}>
+        <div
+          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          {...props}
+        >
           {children}
         </div>
       );
     default:
       return (
-        <span className={cn("_TEXT_", className, size, weight)} {...props}>
+        <span
+          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          {...props}
+        >
           {children}
         </span>
       );

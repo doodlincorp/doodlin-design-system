@@ -1,56 +1,90 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 ._TEXT_ {
+  font-size: $font-size-medium;
+
+  white-space: pre-wrap;
+  &.block {
+    display: block;
+  }
+  &.inline {
+    display: inline;
+  }
+
+  &.font-weight {
+    &-light {
+      font-weight: $font-weight-light;
+    }
+    &-regular {
+      font-weight: $font-weight-regular;
+    }
+    &-medium {
+      font-weight: $font-weight-medium;
+    }
+    &-bold {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &.line-height {
+    &-medium {
+      line-height: 1.5em;
+    }
+    &-large {
+      line-height: 1.75em;
+    }
+  }
+
+  &.font-size {
+    &-xx-small {
+      font-size: $font-size-xx-small;
+    }
+    &-x-small {
+      font-size: $font-size-x-small;
+    }
+    &-small {
+      font-size: $font-size-small;
+    }
+    &-medium {
+      font-size: $font-size-medium;
+    }
+    &-large {
+      font-size: $font-size-large;
+    }
+    &-x-large {
+      font-size: $font-size-x-large;
+    }
+    &-xx-large {
+      font-size: $font-size-xx-large;
+    }
+    &-xxx-large {
+      font-size: $font-size-xxx-large;
+    }
+    &-xxxx-large {
+      font-size: $font-size-xxxx-large;
+    }
+  }
+}
+h1._TEXT_,
+h2._TEXT_,
+h3._TEXT_,
+h4._TEXT_,
+h5._TEXT_ {
   display: block;
-
-  // nonKorean *(e.g. english, number, ...)
-  &.nK {
-    letter-spacing: 0;
-  }
-
-  // Variant
-  // *title font
-  &.tit-xxxl {
-    @include tit-xxxl-text;
-  }
-  &.tit-xxl {
-    @include tit-xxl-text;
-  }
-  &.tit-xl {
-    @include tit-xl-text;
-  }
-  &.tit-lg {
-    @include tit-lg-text;
-  }
-  &.tit-md {
-    @include tit-md-text;
-  }
-
-  // *UI, Button font
-  &.ui-lg {
-    @include ui-lg-text;
-  }
-  &.ui-md {
-    @include ui-md-text;
-  }
-  &.ui-sm {
-    @include ui-sm-text;
-  }
-  &.ui-xs {
-    @include ui-xs-text;
-  }
-
-  // *description font
-  &.desc-lg {
-    @include desc-lg-text;
-  }
-  &.desc-md {
-    @include desc-md-text;
-  }
-  &.desc-sm {
-    @include desc-sm-text;
-  }
-  &.desc-xs {
-    @include desc-xs-text;
-  }
+  font-weight: $font-weight-medium;
+}
+h1._TEXT_ {
+  font-size: $font-size-xxxx-large;
+}
+h2._TEXT_ {
+  font-size: $font-size-xxx-large;
+}
+h3._TEXT_ {
+  font-size: $font-size-xx-large;
+}
+h4._TEXT_ {
+  font-size: $font-size-x-large;
+}
+h5._TEXT_ {
+  font-size: $font-size-large;
 }

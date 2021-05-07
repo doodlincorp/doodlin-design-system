@@ -31,25 +31,28 @@
   &.xxs {
     height: 28px;
     padding: 0 8px;
-    font-size: 14px;
+    font-size: $font-size-small;
   }
 
   &.sm {
     height: 36px;
     padding: 0 12px;
+    font-size: $font-size-medium;
   }
 
   &.md {
     height: 40px;
+    font-size: $font-size-medium;
   }
 
   &.lg {
     height: 44px;
+    font-size: $font-size-medium;
   }
 
   &.xxxl {
     height: 56px;
-    font-size: 18px;
+    font-size: $font-size-large;
   }
 
   // BorderType (underline, none)
