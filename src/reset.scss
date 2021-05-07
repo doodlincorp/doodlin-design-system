@@ -96,6 +96,9 @@ html {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   -webkit-font-smoothing: antialiased; // Safari, Chrome only
   -moz-osx-font-smoothing: grayscale; // Safari, Chrome only
+  body {
+    font-size: 1.6rem;
+  }
 }
 
 a {

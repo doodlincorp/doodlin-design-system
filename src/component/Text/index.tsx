@@ -6,12 +6,8 @@ import { TFontSize } from "../..";
 export interface ITextProps {
   className?: string;
   variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "block" | "inline";
-  weight?:
-    | "font-weight-light"
-    | "font-weight-regular"
-    | "font-weight-medium"
-    | "font-weight-bold";
-  lineHeight?: "line-height-medium" | "line-height-large";
+  weight?: "light" | "regular" | "medium" | "bold";
+  lineHeight?: "medium" | "large";
   size?: TFontSize;
 }
 
@@ -28,7 +24,13 @@ const Text: React.FC<ITextProps> = ({
     case "h1":
       return (
         <h1
-          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          className={cn(
+            "_TEXT_",
+            className,
+            `font-size-${size}`,
+            `font-weight-${weight}`,
+            `line-height-${lineHeight}`,
+          )}
           {...props}
         >
           {children}
@@ -37,7 +39,13 @@ const Text: React.FC<ITextProps> = ({
     case "h2":
       return (
         <h2
-          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          className={cn(
+            "_TEXT_",
+            className,
+            `font-size-${size}`,
+            `font-weight-${weight}`,
+            `line-height-${lineHeight}`,
+          )}
           {...props}
         >
           {children}
@@ -46,7 +54,13 @@ const Text: React.FC<ITextProps> = ({
     case "h3":
       return (
         <h3
-          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          className={cn(
+            "_TEXT_",
+            className,
+            `font-size-${size}`,
+            `font-weight-${weight}`,
+            `line-height-${lineHeight}`,
+          )}
           {...props}
         >
           {children}
@@ -55,7 +69,13 @@ const Text: React.FC<ITextProps> = ({
     case "h4":
       return (
         <h4
-          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          className={cn(
+            "_TEXT_",
+            className,
+            `font-size-${size}`,
+            `font-weight-${weight}`,
+            `line-height-${lineHeight}`,
+          )}
           {...props}
         >
           {children}
@@ -64,7 +84,13 @@ const Text: React.FC<ITextProps> = ({
     case "h5":
       return (
         <h5
-          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          className={cn(
+            "_TEXT_",
+            className,
+            `font-size-${size}`,
+            `font-weight-${weight}`,
+            `line-height-${lineHeight}`,
+          )}
           {...props}
         >
           {children}
@@ -73,7 +99,13 @@ const Text: React.FC<ITextProps> = ({
     case "block":
       return (
         <div
-          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          className={cn(
+            "_TEXT_",
+            className,
+            `font-size-${size}`,
+            `font-weight-${weight}`,
+            `line-height-${lineHeight}`,
+          )}
           {...props}
         >
           {children}
@@ -82,7 +114,13 @@ const Text: React.FC<ITextProps> = ({
     default:
       return (
         <span
-          className={cn("_TEXT_", className, size, weight, lineHeight)}
+          className={cn(
+            "_TEXT_",
+            className,
+            `font-size-${size}`,
+            `font-weight-${weight}`,
+            `line-height-${lineHeight}`,
+          )}
           {...props}
         >
           {children}

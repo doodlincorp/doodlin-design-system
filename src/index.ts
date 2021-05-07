@@ -26,12 +26,12 @@ export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIco
 
 export type TDefaultSize = "xs" | "sm" | "md" | "lg" | "xl";
 export type TFontSize =
-  | "font-size-xx-small"
-  | "font-size-x-small"
-  | "font-size-small"
-  | "font-size-medium"
-  | "font-size-large"
-  | "font-size-x-large"
-  | "font-size-xx-large"
-  | "font-size-xxx-large"
-  | "font-size-xxxx-large";
+  | "xx-small"
+  | "x-small"
+  | "small"
+  | "medium"
+  | "large"
+  | "x-large"
+  | "xx-large"
+  | "xxx-large"
+  | "xxxx-large";
