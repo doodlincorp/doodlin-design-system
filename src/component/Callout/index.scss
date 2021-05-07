@@ -1,0 +1,40 @@
+@import "../../index.scss";
+
+._CALLOUT_ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: $blue_0;
+  padding: 16px 20px;
+  border-radius: 6px;
+  color: $blue_7;
+  .left {
+    display: flex;
+    align-items: center;
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+  }
+  .close-btn {
+    width: 20px;
+    height: 20px;
+  }
+  &.several {
+    align-items: flex-start;
+    .left {
+      align-items: flex-start;
+    }
+  }
+  &.danger {
+    background: $red_0;
+    color: $red_7;
+    .left {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

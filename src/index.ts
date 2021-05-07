@@ -10,6 +10,7 @@ export { default as Tooltip } from "./component/Tooltip";
 export { default as Icon, colorMap, IColorMap } from "./component/Icon";
 export { default as CustomSelect } from "./component/CustomSelect";
 export { default as Toggle } from "./component/Toggle";
+export { default as Callout } from "./component/Callout";
 export { CircleCheckIcon } from "./component/Icon/CircleCheckIcon";
 export { DocumentIcon } from "./component/Icon/DocumentIcon";
 export { ModalCloseIcon } from "./component/Icon/ModalCloseIcon";
