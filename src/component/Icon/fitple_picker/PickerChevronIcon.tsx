@@ -6,12 +6,14 @@ import "./PickerChevronIcon.scss";
 export interface IPickerChevronIconProps {
   color?: keyof IColorMap;
   className?: string;
+  MinMax?: boolean;
   variant?: "left" | "right" | "top" | "bottom";
 }
 
 export const PickerChevronIcon: React.FC<IPickerChevronIconProps> = ({
   color,
   className,
+  MinMax,
   variant = "right",
 }) => {
   return (
@@ -32,19 +34,36 @@ export const PickerChevronIcon: React.FC<IPickerChevronIconProps> = ({
         justifyContent: "center",
       }}
     >
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          id="icon__fill"
-          d="M11.9139 7.99971L6.20696 2.29272L4.79297 3.70672L9.08595 7.99971L4.79297 12.2927L6.20696 13.7067L11.9139 7.99971Z"
-          fill={color ? colorMap[color] : colorMap.gray_5}
-        />
-      </svg>
+      {MinMax ? (
+        <svg
+          width="7"
+          height="14"
+          viewBox="0 0 7 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="icon__stroke"
+            d="M1 13L5 7L1 1"
+            stroke={color ? colorMap[color] : colorMap.gray_6}
+            stroke-width="2"
+          />
+        </svg>
+      ) : (
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="icon__fill"
+            d="M11.9139 7.99971L6.20696 2.29272L4.79297 3.70672L9.08595 7.99971L4.79297 12.2927L6.20696 13.7067L11.9139 7.99971Z"
+            fill={color ? colorMap[color] : colorMap.gray_5}
+          />
+        </svg>
+      )}
     </div>
   );
 };
