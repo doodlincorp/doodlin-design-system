@@ -2,7 +2,6 @@
 
 ._TEXT_ {
   font-size: $font-size-medium;
-
   white-space: pre-wrap;
   &.block {
     display: block;
@@ -62,6 +61,18 @@
     }
     &-xxxx-large {
       font-size: $font-size-xxxx-large;
+    }
+  }
+
+  &.text-align {
+    &-start {
+      text-align: start;
+    }
+    &-center {
+      text-align: center;
+    }
+    &-end {
+      text-align: end;
     }
   }
 }

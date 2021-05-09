@@ -9,6 +9,7 @@ export interface ITextProps {
   weight?: "light" | "regular" | "medium" | "bold";
   lineHeight?: "medium" | "large";
   size?: TFontSize;
+  align?: "start" | "center" | "end";
 }
 
 const Text: React.FC<ITextProps> = ({
@@ -18,6 +19,7 @@ const Text: React.FC<ITextProps> = ({
   weight,
   lineHeight,
   size,
+  align,
   ...props
 }) => {
   switch (variant) {
@@ -30,6 +32,7 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
+            `text-align-${align}`,
           )}
           {...props}
         >
@@ -45,6 +48,7 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
+            `text-align-${align}`,
           )}
           {...props}
         >
@@ -60,6 +64,7 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
+            `text-align-${align}`,
           )}
           {...props}
         >
@@ -75,6 +80,7 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
+            `text-align-${align}`,
           )}
           {...props}
         >
@@ -90,6 +96,7 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
+            `text-align-${align}`,
           )}
           {...props}
         >
@@ -105,6 +112,7 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
+            `text-align-${align}`,
           )}
           {...props}
         >
@@ -120,6 +128,7 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
+            `text-align-${align}`,
           )}
           {...props}
         >
