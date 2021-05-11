@@ -44,6 +44,7 @@ import { SendIcon } from "./SendIcon";
 import { SettingIcon } from "./SettingIcon";
 import { ThumbIcon } from "./ThumbIcon";
 import { ZipDownloadIcon } from "./ZipDownloadIcon";
+import { MailSendIcon } from "./MailSendIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -123,6 +124,7 @@ const Icon = {
   Garbage: GarbageIcon,
   IDType: IDTypeIcon,
   InfoMark: InfoMarkIcon,
+  MailSend: MailSendIcon,
   MapPin: MapPinIcon,
   ModalClose: ModalCloseIcon,
   OpeningList: OpeningListIcon,
