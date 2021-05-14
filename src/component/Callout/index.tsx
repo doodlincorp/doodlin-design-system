@@ -6,6 +6,7 @@ import { InfoMarkIcon } from "../Icon/InfoMarkIcon";
 
 export interface ICalloutProps {
   className?: string;
+  icon?: boolean;
   several?: boolean;
   variant?: "info" | "danger";
 }
@@ -13,6 +14,7 @@ export interface ICalloutProps {
 const Callout: React.FC<ICalloutProps> = ({
   className,
   children,
+  icon,
   several,
   variant = "info",
   ...props
@@ -26,10 +28,13 @@ const Callout: React.FC<ICalloutProps> = ({
       {...props}
     >
       <div className="left">
-        <InfoMarkIcon
-          className="icon"
-          color={variant === "info" ? "blue_7" : "red_7"}
-        />
+        {icon && (
+          <InfoMarkIcon
+            className="icon"
+            color={variant === "info" ? "blue_7" : "red_7"}
+          />
+        )}
+
         <div>{children}</div>
       </div>
       <button className="close-btn" onClick={() => setOpen(false)}>

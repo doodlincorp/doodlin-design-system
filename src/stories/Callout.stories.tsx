@@ -11,7 +11,7 @@ export default {
 export const Default = () => {
   return (
     <div style={{ padding: 20 }}>
-      <Callout variant="info">
+      <Callout>
         <Text size="small" weight="medium">
           다음 안내사항을 꼭 확인해 주세요.
         </Text>
@@ -30,6 +30,24 @@ export const Variant = () => {
       </Callout>
       <br />
       <Callout variant="danger">
+        <Text size="small" weight="medium">
+          다음 안내사항을 꼭 확인해 주세요.
+        </Text>
+      </Callout>
+    </div>
+  );
+};
+
+export const WithIcon = () => {
+  return (
+    <div style={{ padding: 20 }}>
+      <Callout icon variant="info">
+        <Text size="small" weight="medium">
+          다음 안내사항을 꼭 확인해 주세요.
+        </Text>
+      </Callout>
+      <br />
+      <Callout icon variant="danger">
         <Text size="small" weight="medium">
           다음 안내사항을 꼭 확인해 주세요.
         </Text>
