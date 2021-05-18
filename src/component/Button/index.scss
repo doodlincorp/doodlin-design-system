@@ -137,17 +137,6 @@
 
   // ButtonType
   &.basic {
-    &:hover {
-      svg {
-        #icon__stroke {
-          stroke: #fff;
-          transition: 0.1s ease-out;
-        }
-        #icon__fill {
-          fill: #fff;
-        }
-      }
-    }
     svg {
       #icon__stroke {
         stroke: #fff;
@@ -158,12 +147,6 @@
         transition: 0.1s ease-out;
       }
     }
-    &.ghost.loading {
-      background-color: $gray_8;
-    }
-  }
-  &.core {
-    @include button-color($yellow_6);
     &:hover {
       svg {
         #icon__stroke {
@@ -175,6 +158,12 @@
         }
       }
     }
+    &.ghost.loading {
+      background-color: $gray_8;
+    }
+  }
+  &.core {
+    @include button-color($yellow_6);
     svg {
       #icon__stroke {
         stroke: #fff;
@@ -183,6 +172,17 @@
       #icon__fill {
         fill: $yellow_6;
         transition: 0.1s ease-out;
+      }
+    }
+    &:hover {
+      svg {
+        #icon__stroke {
+          stroke: #fff;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: #fff;
+        }
       }
     }
     &.ghost.loading,
@@ -202,12 +202,6 @@
         transition: 0.1s ease-out;
       }
     }
-    &.solid {
-      #icon__fill {
-        fill: #fff;
-        transition: 0.1s ease-out;
-      }
-    }
     &:hover {
       svg {
         #icon__stroke {
@@ -216,6 +210,7 @@
         }
         #icon__fill {
           fill: #fff;
+          transition: 0.1s ease-out;
         }
       }
     }
@@ -242,6 +237,39 @@
       &:hover,
       &:active {
         background: $gray_2;
+      }
+    }
+  }
+  &.basic,
+  &.core,
+  &.danger {
+    &.solid {
+      svg {
+        #icon__stroke {
+          stroke: #fff;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: #fff;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+  }
+
+  // Variant with Icon
+  &.quiet.basic {
+    &:hover,
+    &:active {
+      svg {
+        #icon__stroke {
+          stroke: $gray_8;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: $gray_8;
+          transition: 0.1s ease-out;
+        }
       }
     }
   }
