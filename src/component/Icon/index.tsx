@@ -45,6 +45,8 @@ import { SettingIcon } from "./SettingIcon";
 import { ThumbIcon } from "./ThumbIcon";
 import { ZipDownloadIcon } from "./ZipDownloadIcon";
 import { MailSendIcon } from "./MailSendIcon";
+import { LinkIcon } from "./LinkIcon";
+import { LinkExternalIcon } from "./LinkExternalIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -142,6 +144,8 @@ const Icon = {
   Setting: SettingIcon,
   Thumb: ThumbIcon,
   ZipDownload: ZipDownloadIcon,
+  Link: LinkIcon,
+  LinkExternal: LinkExternalIcon,
 };
 
 export default Icon;

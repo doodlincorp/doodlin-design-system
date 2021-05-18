@@ -207,6 +207,8 @@ export const Icon = () => (
       <StoriesIcon.Pen></StoriesIcon.Pen>
       <StoriesIcon.Phone></StoriesIcon.Phone>
       <StoriesIcon.Plus></StoriesIcon.Plus>
+      <StoriesIcon.Link></StoriesIcon.Link>
+      <StoriesIcon.LinkExternal></StoriesIcon.LinkExternal>
     </div>
   </div>
 );
