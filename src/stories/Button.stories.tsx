@@ -690,6 +690,84 @@ export const WithIcon = () => (
           label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
         />
       </div>
+
+      <div
+        className="buttons"
+        style={{ display: "flex", alignItems: "center", marginTop: 8 }}
+      >
+        <Button
+          variant="ghost"
+          buttonType="light"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="basic"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="core"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+        <Button
+          variant="ghost"
+          buttonType="danger"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+      </div>
+
+      <div
+        className="buttons"
+        style={{ display: "flex", alignItems: "center", marginTop: 8 }}
+      >
+        <Button
+          variant="quiet"
+          buttonType="light"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+        <Button
+          variant="quiet"
+          buttonType="basic"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+        <Button
+          variant="quiet"
+          buttonType="core"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+        <Button
+          variant="quiet"
+          buttonType="danger"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+      </div>
+
+      <div
+        className="buttons"
+        style={{ display: "flex", alignItems: "center", marginTop: 8 }}
+      >
+        <Button
+          variant="solid"
+          buttonType="light"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+        <Button
+          variant="solid"
+          buttonType="basic"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+        <Button
+          variant="solid"
+          buttonType="core"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+        <Button
+          variant="solid"
+          buttonType="danger"
+          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+        />
+      </div>
     </div>
   </div>
 );
