@@ -7,7 +7,7 @@ export interface ITextProps {
   className?: string;
   variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "block" | "inline";
   weight?: "light" | "regular" | "medium" | "bold";
-  lineHeight?: "medium" | "large";
+  lineHeight?: "narrow" | "wide";
   size?: TFontSize;
   align?: "start" | "center" | "end";
 }

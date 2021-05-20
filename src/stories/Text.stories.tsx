@@ -82,9 +82,9 @@ export const Variant = () => {
         <Text variant="h4">Line Height</Text>
       </header>
       <header style={{ paddingBottom: 8 }}>
-        <Text variant="h5">1.5em</Text>
+        <Text variant="h5">Narrow</Text>
       </header>
-      <Text variant="block" lineHeight="medium">
+      <Text variant="block" lineHeight="narrow">
         토끼, 않은 이런 계절이 내일 하나에 별빛이 이네들은 봅니다. 이름과, 멀리
         내 있습니다. 별에도 별 이름과, 이제 언덕 프랑시스 소학교 까닭입니다.
         잔디가 소학교 둘 패, 어머니, 그리워 애기 듯합니다. 소녀들의 내일 노루,
@@ -92,9 +92,9 @@ export const Variant = () => {
         사람들의 듯합니다. 비둘기, 새겨지는 별 우는 않은 까닭입니다.{" "}
       </Text>
       <header style={{ paddingTop: 16, paddingBottom: 8 }}>
-        <Text variant="h5">1.75em</Text>
+        <Text variant="h5">Wide</Text>
       </header>
-      <Text variant="block" lineHeight="large">
+      <Text variant="block" lineHeight="wide">
         토끼, 않은 이런 계절이 내일 하나에 별빛이 이네들은 봅니다. 이름과, 멀리
         내 있습니다. 별에도 별 이름과, 이제 언덕 프랑시스 소학교 까닭입니다.
         잔디가 소학교 둘 패, 어머니, 그리워 애기 듯합니다. 소녀들의 내일 노루,
