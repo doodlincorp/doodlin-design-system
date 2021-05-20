@@ -104,12 +104,6 @@ export const Variant = () => (
       <Button
         size="md"
         variant="quiet"
-        buttonType="light"
-        label={{ labelText: "light" }}
-      />
-      <Button
-        size="md"
-        variant="quiet"
         buttonType="basic"
         label={{ labelText: "basic" }}
       />
@@ -690,6 +684,8 @@ export const WithIcon = () => (
           label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
         />
       </div>
+
+      <br />
 
       <div
         className="buttons"
