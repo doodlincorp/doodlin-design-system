@@ -13,7 +13,7 @@ export const MailSendIcon: React.FC<IMailSendIconProps> = ({
     <div
       className={className}
       style={{
-        display: "flex",
+        display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
       }}
