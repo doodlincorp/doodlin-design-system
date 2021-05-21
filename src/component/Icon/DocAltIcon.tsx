@@ -1,12 +1,12 @@
 import React from "react";
-import { colorMap, IColorMap } from "../colorMap";
+import { colorMap, IColorMap } from "./colorMap";
 
-export interface IPickerDocumentIconProps {
+export interface IDocAltIconProps {
   color?: keyof IColorMap;
   className?: string;
 }
 
-export const PickerDocumentIcon: React.FC<IPickerDocumentIconProps> = ({
+export const DocAltIcon: React.FC<IDocAltIconProps> = ({
   color,
   className,
 }) => {

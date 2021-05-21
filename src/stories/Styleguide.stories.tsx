@@ -36,19 +36,17 @@ export const Color = () => {
         }}
       />
 
-      <Text size="ui-md" nonKorean>
+      <Text>
         <span style={{ fontWeight: 500 }}>{name}</span>
       </Text>
-      <Text size="ui-xs" nonKorean>
+      <Text>
         <span style={{ fontWeight: 300 }}>{color}</span>
       </Text>
     </div>
   );
   return (
     <div style={{ padding: 20 }}>
-      <Text size="tit-md" nonKorean>
-        Yellow
-      </Text>
+      <Text>Yellow</Text>
       <div style={{ marginBottom: 30 }}>
         <Palette name="Yellow_0" color="#fff9db" />
         <Palette name="Yellow_1" color="#fff3bf" />
@@ -62,9 +60,7 @@ export const Color = () => {
         <Palette name="Yellow_9" color="#e67700" />
       </div>
 
-      <Text size="tit-md" nonKorean>
-        Warm Gray
-      </Text>
+      <Text>Warm Gray</Text>
       <div style={{ marginBottom: 30 }}>
         <Palette name="Gray_0" color="#f8f8f8" />
         <Palette name="Gray_1" color="#f1f1f1" />
@@ -107,6 +103,7 @@ export const Icon = () => (
       <StoriesIcon.DefaultImage></StoriesIcon.DefaultImage>
       <StoriesIcon.DepartmentManage></StoriesIcon.DepartmentManage>
       <StoriesIcon.Doc></StoriesIcon.Doc>
+      <StoriesIcon.DocAlt></StoriesIcon.DocAlt>
       <StoriesIcon.Download></StoriesIcon.Download>
       <StoriesIcon.Edit></StoriesIcon.Edit>
       <StoriesIcon.Ellipsis></StoriesIcon.Ellipsis>
@@ -116,6 +113,7 @@ export const Icon = () => (
       <StoriesIcon.Filter></StoriesIcon.Filter>
       <StoriesIcon.Folder></StoriesIcon.Folder>
       <StoriesIcon.FolderDownload></StoriesIcon.FolderDownload>
+      <StoriesIcon.Memo></StoriesIcon.Memo>
       <StoriesIcon.Garbage></StoriesIcon.Garbage>
       <StoriesIcon.IDType></StoriesIcon.IDType>
       <StoriesIcon.InfoMark></StoriesIcon.InfoMark>

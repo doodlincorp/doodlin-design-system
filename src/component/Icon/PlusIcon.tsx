@@ -4,13 +4,13 @@ import { colorMap, IColorMap } from "./colorMap";
 export interface IPlusIconProps {
   color?: keyof IColorMap;
   className?: string;
-  circle?: boolean;
+  variant?: "circle" | "square" | "none";
 }
 
 export const PlusIcon: React.FC<IPlusIconProps> = ({
   color,
   className,
-  circle,
+  variant = "none",
 }) => {
   return (
     <div
@@ -21,7 +21,7 @@ export const PlusIcon: React.FC<IPlusIconProps> = ({
         justifyContent: "center",
       }}
     >
-      {circle ? (
+      {variant === "circle" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -30,7 +30,7 @@ export const PlusIcon: React.FC<IPlusIconProps> = ({
         >
           <g id="그룹_586" data-name="그룹 586" transform="translate(0 0.076)">
             <g
-              id="plus-circle-icon__stroke"
+              id="icon__stroke"
               data-name="사각형 680"
               transform="translate(0 -0.076)"
               fill="none"
@@ -49,7 +49,7 @@ export const PlusIcon: React.FC<IPlusIconProps> = ({
             </g>
             <g id="그룹_585" data-name="그룹 585" transform="translate(4 4)">
               <rect
-                id="plus-circle-icon__color"
+                id="icon__fill"
                 data-name="사각형 707"
                 width="2"
                 height="10"
@@ -57,7 +57,7 @@ export const PlusIcon: React.FC<IPlusIconProps> = ({
                 fill={color ? colorMap[color] : colorMap.gray_6}
               />
               <rect
-                id="plus-circle-icon__color"
+                id="icon__fill"
                 data-name="사각형 708"
                 width="2"
                 height="10"
@@ -67,7 +67,7 @@ export const PlusIcon: React.FC<IPlusIconProps> = ({
             </g>
           </g>
         </svg>
-      ) : (
+      ) : variant === "none" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -88,13 +88,38 @@ export const PlusIcon: React.FC<IPlusIconProps> = ({
               fill="none"
             />
             <path
-              id="plus-icon__color"
+              id="icon__fill"
               data-name="합치기 19"
               d="M-14197,12954v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
               transform="translate(15877 -12839)"
               fill={color ? colorMap[color] : colorMap.gray_6}
             />
           </g>
+        </svg>
+      ) : (
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            id="icon__stroke"
+            x="0.5"
+            y="0.5"
+            width="15"
+            height="15"
+            rx="3.5"
+            stroke={color ? colorMap[color] : colorMap.gray_5}
+          />
+          <path
+            id="icon__fill"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8.66665 4.66602H7.3332V7.33301H4.66602V8.66645H7.3332V11.3332H8.66665V8.66645H11.3332V7.33301H8.66665V4.66602Z"
+            fill={color ? colorMap[color] : colorMap.gray_5}
+          />
         </svg>
       )}
     </div>

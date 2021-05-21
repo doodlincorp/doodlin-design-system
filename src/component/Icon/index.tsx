@@ -14,7 +14,7 @@ import { CloseIcon } from "./CloseIcon";
 import { CopyIcon } from "./CopyIcon";
 import { DefaultImageIcon } from "./DefaultImageIcon";
 import { DepartmentManageIcon } from "./DepartmentManageIcon";
-import { DocumentIcon } from "./DocumentIcon";
+import { DocIcon } from "./DocIcon";
 import { DownloadIcon } from "./DownloadIcon";
 import { EditIcon } from "./EditIcon";
 import { EllipsisIcon } from "./EllipsisIcon";
@@ -47,6 +47,12 @@ import { ZipDownloadIcon } from "./ZipDownloadIcon";
 import { MailSendIcon } from "./MailSendIcon";
 import { LinkIcon } from "./LinkIcon";
 import { LinkExternalIcon } from "./LinkExternalIcon";
+import { DocAltIcon } from "./DocAltIcon";
+import { DocsTabIcon } from "./DocsTabIcon";
+import { MemoIcon } from "./MemoIcon";
+import { EvaluationsTabIcon } from "./EvaluationsTabIcon";
+import { QuestionnairesTabIcon } from "./QuestionnairesTabIcon";
+import { RightAreaTabIcon } from "./RightAreaTabIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -113,7 +119,12 @@ const Icon = {
   Copy: CopyIcon,
   DefaultImage: DefaultImageIcon,
   DepartmentManage: DepartmentManageIcon,
-  Doc: DocumentIcon,
+  Doc: DocIcon,
+  DocAlt: DocAltIcon,
+  DocsTab: DocsTabIcon,
+  EvaluationsTab: EvaluationsTabIcon,
+  QuestionnairesTab: QuestionnairesTabIcon,
+  RightAreaTab: RightAreaTabIcon,
   Download: DownloadIcon,
   Edit: EditIcon,
   Ellipsis: EllipsisIcon,
@@ -128,6 +139,7 @@ const Icon = {
   InfoMark: InfoMarkIcon,
   MailSend: MailSendIcon,
   MapPin: MapPinIcon,
+  Memo: MemoIcon,
   ModalClose: ModalCloseIcon,
   OpeningList: OpeningListIcon,
   Pen: PenIcon,

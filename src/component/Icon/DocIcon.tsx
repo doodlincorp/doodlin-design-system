@@ -6,10 +6,7 @@ export interface IDocumentIconProps {
   className?: string;
 }
 
-export const DocumentIcon: React.FC<IDocumentIconProps> = ({
-  color,
-  className,
-}) => {
+export const DocIcon: React.FC<IDocumentIconProps> = ({ color, className }) => {
   return (
     <div
       className={className}
