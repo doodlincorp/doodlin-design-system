@@ -8,7 +8,7 @@ export interface ITooltipProps {
   variant?: "box" | "tail";
   tooltipText: { Text: string };
   placement?: "left" | "center" | "right";
-  //trigger?: "hover" | "click";
+  // trigger?: "hover" | "click";
 }
 
 const Tooltip: React.FC<ITooltipProps> = ({
@@ -17,7 +17,7 @@ const Tooltip: React.FC<ITooltipProps> = ({
   variant = "box",
   tooltipText,
   placement = "center",
-  //trigger = "hover",
+  // trigger = "hover",
 }) => {
   return (
     <div
@@ -30,10 +30,12 @@ const Tooltip: React.FC<ITooltipProps> = ({
       <div className="target">
         {children}
 
-        <div className="tooltip-box">
-          {variant === "tail" && <InfoMarkIcon className="icon" />}
-          {tooltipText.Text}
-        </div>
+        {tooltipText.Text.length > 0 && (
+          <div className="tooltip-box">
+            {variant === "tail" && <InfoMarkIcon className="icon" />}
+            {tooltipText.Text}
+          </div>
+        )}
       </div>
     </div>
   );
