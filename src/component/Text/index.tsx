@@ -1,9 +1,12 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 import "./index.scss";
 import { TFontSize } from "../..";
 
-export interface ITextProps {
+export interface ITextProps
+  extends HTMLAttributes<
+    HTMLDivElement | HTMLSpanElement | HTMLHeadingElement
+  > {
   className?: string;
   variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "block" | "inline";
   weight?: "light" | "regular" | "medium" | "bold";
