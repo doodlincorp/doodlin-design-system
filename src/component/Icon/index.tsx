@@ -20,7 +20,6 @@ import { EditIcon } from "./EditIcon";
 import { EllipsisIcon } from "./EllipsisIcon";
 import { EmailIcon } from "./EmailIcon";
 import { ExcelIcon } from "./ExcelIcon";
-import { FileUploadIcon } from "./FileUploadIcon";
 import { FilterIcon } from "./FilterIcon";
 import { FolderDownloadIcon } from "./FolderDownloadIcon";
 import { FolderIcon } from "./FolderIcon";
@@ -53,6 +52,7 @@ import { MemoIcon } from "./MemoIcon";
 import { EvaluationsTabIcon } from "./EvaluationsTabIcon";
 import { QuestionnairesTabIcon } from "./QuestionnairesTabIcon";
 import { RightAreaTabIcon } from "./RightAreaTabIcon";
+import { AttachmentsTabIcon } from "./AttachmentsTabIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -121,6 +121,7 @@ const Icon = {
   DepartmentManage: DepartmentManageIcon,
   Doc: DocIcon,
   DocAlt: DocAltIcon,
+  AttachmentsTab: AttachmentsTabIcon,
   DocsTab: DocsTabIcon,
   EvaluationsTab: EvaluationsTabIcon,
   QuestionnairesTab: QuestionnairesTabIcon,
@@ -130,7 +131,6 @@ const Icon = {
   Ellipsis: EllipsisIcon,
   Email: EmailIcon,
   Excel: ExcelIcon,
-  FileUpload: FileUploadIcon,
   Filter: FilterIcon,
   FolderDownload: FolderDownloadIcon,
   Folder: FolderIcon,

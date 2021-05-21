@@ -23,7 +23,7 @@
     &:hover,
     &.selected {
       border: 1px solid $gray_6;
-      #select-arrow-icon__color {
+      #icon__fill {
         fill: $gray_8;
         transition: 0.1s ease-out;
       }

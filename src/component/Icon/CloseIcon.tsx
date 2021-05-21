@@ -23,7 +23,7 @@ export const CloseIcon: React.FC<ICloseIconProps> = ({ color, className }) => {
         viewBox="0 0 14 14"
       >
         <path
-          id="패스_48"
+          id="icon__fill"
           data-name="패스 48"
           d="M91.707,78.707l-1.414-1.414L85,82.586l-5.293-5.293-1.414,1.414L83.586,84l-5.293,5.293,1.414,1.414L85,85.414l5.293,5.293,1.414-1.414L86.414,84Z"
           transform="translate(-78.293 -77.293)"

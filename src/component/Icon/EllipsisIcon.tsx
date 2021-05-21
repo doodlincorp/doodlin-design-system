@@ -34,7 +34,7 @@ export const EllipsisIcon: React.FC<IEllipsisIconProps> = ({
             transform="translate(-1672 -430)"
           >
             <circle
-              id="ellipsis-icon__color"
+              id="icon__fill"
               data-name="타원 252"
               cx="2"
               cy="2"
@@ -43,7 +43,7 @@ export const EllipsisIcon: React.FC<IEllipsisIconProps> = ({
               fill={color ? colorMap[color] : colorMap.gray_6}
             />
             <circle
-              id="ellipsis-icon__color"
+              id="icon__fill"
               data-name="타원 253"
               cx="2"
               cy="2"
@@ -52,7 +52,7 @@ export const EllipsisIcon: React.FC<IEllipsisIconProps> = ({
               fill={color ? colorMap[color] : colorMap.gray_6}
             />
             <circle
-              id="ellipsis-icon__color"
+              id="icon__fill"
               data-name="타원 254"
               cx="2"
               cy="2"
@@ -75,7 +75,7 @@ export const EllipsisIcon: React.FC<IEllipsisIconProps> = ({
             transform="translate(446 -1672) rotate(90)"
           >
             <circle
-              id="ellipsis-icon__color"
+              id="icon__fill"
               data-name="타원 252"
               cx="2"
               cy="2"
@@ -84,7 +84,7 @@ export const EllipsisIcon: React.FC<IEllipsisIconProps> = ({
               fill={color ? colorMap[color] : colorMap.gray_6}
             />
             <circle
-              id="ellipsis-icon__color"
+              id="icon__fill"
               data-name="타원 253"
               cx="2"
               cy="2"
@@ -93,7 +93,7 @@ export const EllipsisIcon: React.FC<IEllipsisIconProps> = ({
               fill={color ? colorMap[color] : colorMap.gray_6}
             />
             <circle
-              id="ellipsis-icon__color"
+              id="icon__fill"
               data-name="타원 254"
               cx="2"
               cy="2"
