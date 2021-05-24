@@ -14,7 +14,7 @@ export const ChevronIcon: React.FC<IPickerChevronIconProps> = ({
   color,
   className,
   MinMax,
-  variant = "right",
+  variant,
 }) => {
   const degNum = () => {
     switch (variant) {
