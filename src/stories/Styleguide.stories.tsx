@@ -123,7 +123,7 @@ export const Icon = () => (
       <StoriesIcon.Phone></StoriesIcon.Phone>
       <StoriesIcon.Plus></StoriesIcon.Plus>
       <StoriesIcon.Link></StoriesIcon.Link>
-      <StoriesIcon.LinkExternal></StoriesIcon.LinkExternal>
+      <StoriesIcon.LinkExternal color="yellow_6"></StoriesIcon.LinkExternal>
     </div>
   </div>
 );
