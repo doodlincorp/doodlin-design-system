@@ -15,7 +15,14 @@ export default {
 export const Default = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div style={{ margin: 20, position: "relative", padding: 20 }}>
+    <div
+      style={{
+        margin: 20,
+        position: "relative",
+        padding: 20,
+        marginLeft: 200,
+      }}
+    >
       <Option btn={<Button>option</Button>}>
         <OptionItem
           text="hello 소환"
@@ -39,6 +46,7 @@ export const Default = () => {
       <br /> <br />
       <br /> <br />
       <br /> <br />
+      <br /> <br />
       <Option btn={<Button>option</Button>} placement="right">
         <OptionItem
           text="hello 소환"
@@ -58,6 +66,7 @@ export const Default = () => {
           variant="danger"
         ></OptionItem>
       </Option>
+      <br /> <br />
       <br /> <br />
       <br /> <br />
       <br /> <br />
