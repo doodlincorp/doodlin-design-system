@@ -685,6 +685,27 @@ export const WithIcon = () => (
         />
       </div>
 
+      <div
+        className="buttons"
+        style={{ display: "flex", alignItems: "center", marginTop: 8 }}
+      >
+        <Button
+          variant="textonly"
+          buttonType="basic"
+          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+        />
+        <Button
+          variant="textonly"
+          buttonType="core"
+          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+        />
+        <Button
+          variant="textonly"
+          buttonType="danger"
+          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+        />
+      </div>
+
       <br />
 
       <div

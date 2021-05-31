@@ -273,6 +273,44 @@
       }
     }
   }
+  &.textonly {
+    &.basic:hover {
+      svg {
+        #icon__stroke {
+          stroke: $gray_8;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: $gray_8;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+    &.core:hover {
+      svg {
+        #icon__stroke {
+          stroke: $yellow_6;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: $yellow_6;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+    &.danger:hover {
+      svg {
+        #icon__stroke {
+          stroke: $red_7;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: $red_7;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+  }
 
   // Fullwidth
   &.fullWidth {
