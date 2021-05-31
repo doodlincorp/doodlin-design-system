@@ -6,7 +6,7 @@ import { InfoMarkIcon } from "../../component/Icon/InfoMarkIcon";
 export interface ITooltipProps {
   className?: string;
   variant?: "box" | "tail";
-  tooltipText: { Text: string };
+  tooltipText: string;
   placement?: "left" | "center" | "right";
   // trigger?: "hover" | "click";
 }
@@ -30,10 +30,10 @@ const Tooltip: React.FC<ITooltipProps> = ({
       <div className="target">
         {children}
 
-        {tooltipText.Text.length > 0 && (
+        {tooltipText.length > 0 && (
           <div className="tooltip-box">
             {variant === "tail" && <InfoMarkIcon className="icon" />}
-            {tooltipText.Text}
+            {tooltipText}
           </div>
         )}
       </div>
