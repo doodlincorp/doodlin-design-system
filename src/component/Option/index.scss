@@ -1,31 +1,29 @@
 @import "../../index.scss";
 
 ._OPTION_ {
-  position: absolute;
-  z-index: 600;
-  top: 0;
-  left: 0;
-  width: 180px;
-  padding: 4px;
-  background: #fff;
-  border: 1px solid $gray_6;
-  border-radius: 6px;
-  box-sizing: border-box;
-  box-shadow: $shadow-option;
-  ._OPTION_ITEM_ {
-    &.danger {
-      button {
-        color: $red_7;
-        svg {
-          #icon__fill {
-            fill: $red_7;
-          }
-          #icon__stroke {
-            stroke: $red_7;
-          }
-        }
-        &:hover {
-          background-color: $red_1;
+  position: relative;
+  width: min-content;
+  .option-area {
+    position: absolute;
+    z-index: 600;
+    top: calc(100% + 4px);
+    width: 180px;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid $gray_6;
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: $shadow-option;
+    &.left {
+      right: 0;
+    }
+    &.right {
+      left: 0;
+    }
+    ._OPTION_ITEM_ {
+      &.danger {
+        button {
+          color: $red_7;
           svg {
             #icon__fill {
               fill: $red_7;
@@ -34,16 +32,27 @@
               stroke: $red_7;
             }
           }
-        }
-        &:active {
-          background-color: $red_2;
+          &:hover {
+            background-color: $red_1;
+            svg {
+              #icon__fill {
+                fill: $red_7;
+              }
+              #icon__stroke {
+                stroke: $red_7;
+              }
+            }
+          }
+          &:active {
+            background-color: $red_2;
+          }
         }
       }
-    }
-    button {
-      justify-content: flex-start;
-      &.loading {
-        justify-content: center;
+      button {
+        justify-content: flex-start;
+        &.loading {
+          justify-content: center;
+        }
       }
     }
   }
