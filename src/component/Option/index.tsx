@@ -2,6 +2,42 @@ import React, { HTMLAttributes, useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
 import { useToggle } from "dhoonjang-s-hooks";
+import Button from "../Button";
+
+export interface IOptionItemProps {
+  className?: string;
+  text: string;
+  icon?: React.ReactElement;
+  onClick?: () => void;
+  loading?: boolean;
+  disabled?: boolean;
+  variant?: "basic" | "danger";
+}
+
+export const OptionItem: React.FC<IOptionItemProps> = ({
+  className,
+  text,
+  icon,
+  onClick,
+  disabled,
+  loading,
+  variant,
+}) => {
+  return (
+    <div className={cn("_OPTION_ITEM_", variant)}>
+      <Button
+        className={className}
+        variant="quiet"
+        size="sm"
+        fullWidth
+        label={{ labelIcon: icon, labelText: text }}
+        onClick={onClick}
+        disabled={disabled}
+        loading={loading}
+      />
+    </div>
+  );
+};
 
 export interface IOptionProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -9,7 +45,7 @@ export interface IOptionProps extends HTMLAttributes<HTMLDivElement> {
   btn: JSX.Element;
 }
 
-export const Option: React.FC<IOptionProps> = ({
+const Option: React.FC<IOptionProps> = ({
   className,
   children,
   btn,

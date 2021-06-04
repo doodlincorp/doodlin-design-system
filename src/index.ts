@@ -11,6 +11,7 @@ export { default as Icon } from "./component/Icon";
 export { default as CustomSelect } from "./component/CustomSelect";
 export { default as Toggle } from "./component/Toggle";
 export { default as Callout } from "./component/Callout";
+export { default as Option, OptionItem } from "./component/Option";
 
 export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositionIcon";
 export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
