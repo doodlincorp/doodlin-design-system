@@ -39,7 +39,7 @@ export const OptionItem: React.FC<IOptionItemProps> = ({
 
 export interface IOptionProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
-  placement?: "left" | "right";
+  placement?: "left" | "right" | "maxLeft" | "maxRight";
   btn: JSX.Element;
 }
 

@@ -47,10 +47,56 @@ export const Default = () => {
       <br /> <br />
       <br /> <br />
       <Option btn={<Button>option</Button>} placement="right">
+        <Option
+          btn={
+            <OptionItem
+              text="left 소환"
+              onClick={() => setOpen(!open)}
+            ></OptionItem>
+          }
+          placement="maxLeft"
+        >
+          <OptionItem text="아이콘과 함께" icon={<EditIcon />}></OptionItem>
+          <OptionItem text="로딩중" loading></OptionItem>
+          <OptionItem
+            text="비활성화"
+            icon={<SettingIcon />}
+            disabled
+          ></OptionItem>
+          <OptionItem
+            className="delete"
+            text="삭제"
+            icon={<GarbageIcon />}
+            variant="danger"
+          ></OptionItem>
+        </Option>
         <OptionItem
           text="hello 소환"
           onClick={() => setOpen(!open)}
         ></OptionItem>
+        <Option
+          btn={
+            <OptionItem
+              text="right 소환"
+              onClick={() => setOpen(!open)}
+            ></OptionItem>
+          }
+          placement="maxRight"
+        >
+          <OptionItem text="아이콘과 함께" icon={<EditIcon />}></OptionItem>
+          <OptionItem text="로딩중" loading></OptionItem>
+          <OptionItem
+            text="비활성화"
+            icon={<SettingIcon />}
+            disabled
+          ></OptionItem>
+          <OptionItem
+            className="delete"
+            text="삭제"
+            icon={<GarbageIcon />}
+            variant="danger"
+          ></OptionItem>
+        </Option>
         <OptionItem text="아이콘과 함께" icon={<EditIcon />}></OptionItem>
         <OptionItem text="로딩중" loading></OptionItem>
         <OptionItem
