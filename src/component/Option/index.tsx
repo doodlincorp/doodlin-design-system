@@ -4,11 +4,10 @@ import "./index.scss";
 import { useToggle } from "dhoonjang-s-hooks";
 import Button from "../Button";
 
-export interface IOptionItemProps {
+export interface IOptionItemProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   text: string;
   icon?: React.ReactElement;
-  onClick?: () => void;
   loading?: boolean;
   disabled?: boolean;
   variant?: "basic" | "danger";
@@ -24,14 +23,13 @@ export const OptionItem: React.FC<IOptionItemProps> = ({
   variant,
 }) => {
   return (
-    <div className={cn("_OPTION_ITEM_", variant)}>
+    <div className={cn("_OPTION_ITEM_", variant)} onClick={onClick}>
       <Button
         className={className}
         variant="quiet"
         size="sm"
         fullWidth
         label={{ labelIcon: icon, labelText: text }}
-        onClick={onClick}
         disabled={disabled}
         loading={loading}
       />
