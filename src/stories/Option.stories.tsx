@@ -3,8 +3,7 @@ import Button from "../component/Button";
 import { EditIcon } from "../component/Icon/EditIcon";
 import { GarbageIcon } from "../component/Icon/GarbageIcon";
 import { SettingIcon } from "../component/Icon/SettingIcon";
-import Option from "../component/Option";
-import { OptionItem } from "../component/Option/OptionItem";
+import Option, { OptionItem } from "../component/Option";
 import "../reset.scss";
 
 export default {
