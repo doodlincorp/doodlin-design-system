@@ -2,7 +2,7 @@
 
 ._OPTION_ {
   position: relative;
-  width: min-content;
+  width: max-content;
   .option-area {
     position: absolute;
     z-index: 600;
@@ -14,6 +14,9 @@
     border-radius: 6px;
     box-sizing: border-box;
     box-shadow: $shadow-option;
+    ._OPTION_ {
+      width: 100%;
+    }
     &.left {
       right: 0;
     }
@@ -22,7 +25,7 @@
     }
     &.maxLeft,
     &.maxRight {
-      top: -4px;
+      top: 0px;
     }
     &.maxLeft {
       left: 0;
