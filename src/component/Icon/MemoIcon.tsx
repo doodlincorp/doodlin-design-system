@@ -2,11 +2,47 @@ import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
 
 export interface IMemoIconProps {
+  variant?: "default" | "quick";
   color?: keyof IColorMap;
   className?: string;
 }
 
-export const MemoIcon: React.FC<IMemoIconProps> = ({ color, className }) => {
+export const MemoIcon: React.FC<IMemoIconProps> = ({
+  color,
+  className,
+  variant = "default",
+}) => {
+  if (variant === "quick") {
+    return (
+      <div
+        className={className}
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="icon__fill"
+            d="M13.3333 2H2.66659C1.93125 2 1.33325 2.598 1.33325 3.33333V12.6667C1.33325 13.402 1.93125 14 2.66659 14H13.3333C14.0686 14 14.6666 13.402 14.6666 12.6667V3.33333C14.6666 2.598 14.0686 2 13.3333 2ZM2.66659 12.6667V3.33333H13.3333L13.3346 12.6667H2.66659Z"
+            fill={color ? colorMap[color] : colorMap["gray_7"]}
+          />
+          <path
+            id="icon__fill"
+            d="M4 4.66675H12V6.00008H4V4.66675ZM4 7.33341H12V8.66675H4V7.33341ZM4 10.0001H8V11.3334H4V10.0001Z"
+            fill={color ? colorMap[color] : colorMap["gray_7"]}
+          />
+        </svg>
+      </div>
+    );
+  }
   return (
     <div
       className={className}

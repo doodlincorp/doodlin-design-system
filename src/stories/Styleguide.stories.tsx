@@ -98,6 +98,7 @@ export const Icon = () => (
       <StoriesIcon.CircleCheck></StoriesIcon.CircleCheck>
       <StoriesIcon.Clip></StoriesIcon.Clip>
       <StoriesIcon.Clock></StoriesIcon.Clock>
+      <StoriesIcon.Clock variant="solid"></StoriesIcon.Clock>
       <StoriesIcon.Close></StoriesIcon.Close>
       <StoriesIcon.Copy></StoriesIcon.Copy>
       <StoriesIcon.DefaultImage></StoriesIcon.DefaultImage>
@@ -110,9 +111,12 @@ export const Icon = () => (
       <StoriesIcon.Email></StoriesIcon.Email>
       <StoriesIcon.Excel></StoriesIcon.Excel>
       <StoriesIcon.Filter></StoriesIcon.Filter>
+      <StoriesIcon.Tag></StoriesIcon.Tag>
+      <StoriesIcon.Tag variant="ghost"></StoriesIcon.Tag>
       <StoriesIcon.Folder></StoriesIcon.Folder>
       <StoriesIcon.FolderDownload></StoriesIcon.FolderDownload>
       <StoriesIcon.Memo></StoriesIcon.Memo>
+      <StoriesIcon.Memo variant="quick"></StoriesIcon.Memo>
       <StoriesIcon.Garbage></StoriesIcon.Garbage>
       <StoriesIcon.IDType></StoriesIcon.IDType>
       <StoriesIcon.InfoMark></StoriesIcon.InfoMark>

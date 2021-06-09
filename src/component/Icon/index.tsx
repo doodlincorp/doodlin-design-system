@@ -53,6 +53,7 @@ import { EvaluationsTabIcon } from "./EvaluationsTabIcon";
 import { QuestionnairesTabIcon } from "./QuestionnairesTabIcon";
 import { RightAreaTabIcon } from "./RightAreaTabIcon";
 import { AttachmentsTabIcon } from "./AttachmentsTabIcon";
+import { TagIcon } from "./TagIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -155,6 +156,7 @@ const Icon = {
   Send: SendIcon,
   Setting: SettingIcon,
   Thumb: ThumbIcon,
+  Tag: TagIcon,
   ZipDownload: ZipDownloadIcon,
   Link: LinkIcon,
   LinkExternal: LinkExternalIcon,
