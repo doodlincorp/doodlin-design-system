@@ -21,7 +21,7 @@ export const ClockIcon: React.FC<IClockIconProps> = ({
         justifyContent: "center",
       }}
     >
-      {variant === "ghost" && (
+      {variant === "solid" && (
         <svg
           width="16"
           height="16"
@@ -36,7 +36,7 @@ export const ClockIcon: React.FC<IClockIconProps> = ({
           />
         </svg>
       )}
-      {variant === "solid" && (
+      {variant === "ghost" && (
         <svg
           width="16"
           height="16"
