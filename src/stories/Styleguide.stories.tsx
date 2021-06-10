@@ -107,7 +107,7 @@ export const Icon = () => (
       <StoriesIcon.DocAlt></StoriesIcon.DocAlt>
       <StoriesIcon.Download></StoriesIcon.Download>
       <StoriesIcon.Edit></StoriesIcon.Edit>
-      <StoriesIcon.Ellipsis></StoriesIcon.Ellipsis>
+      <StoriesIcon.Ellipsis vertical></StoriesIcon.Ellipsis>
       <StoriesIcon.Email></StoriesIcon.Email>
       <StoriesIcon.Excel></StoriesIcon.Excel>
       <StoriesIcon.Filter></StoriesIcon.Filter>
