@@ -42,11 +42,13 @@ export const InputTextarea = () => {
         placeholder="높이를 넘어가면 자동으로 늘어나고 싶은 입력창입니다"
         borderType="single-line"
         rows={1}
+        areaType="autosize"
       ></Textarea>
       <Textarea
         placeholder="높이를 넘어가면 자동으로 늘어나고 싶은 입력창입니다"
         borderType="underline"
         rows={1}
+        areaType="autosize"
       ></Textarea>
     </div>
   );
@@ -68,12 +70,14 @@ export const Disabled = () => (
         borderType="single-line"
         rows={1}
         disabled
+        areaType="autosize"
       ></Textarea>
       <Textarea
         placeholder="높이를 넘어가면 자동으로 늘어나고 싶은 입력창입니다"
         borderType="underline"
         rows={1}
         disabled
+        areaType="autosize"
       ></Textarea>
     </div>
   </div>

@@ -49,6 +49,7 @@
     "classnames": "^2.2.6",
     "dhoonjang-s-hooks": "^0.1.1",
     "react-icons": "^4.1.0",
+    "react-textarea-autosize": "^8.3.3",
     "storybook": "^6.2.9",
     "ts-node": "^9.1.1"
   }
