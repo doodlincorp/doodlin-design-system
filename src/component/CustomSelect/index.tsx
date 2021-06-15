@@ -2,12 +2,11 @@ import { useToggle } from "dhoonjang-s-hooks";
 import React, { useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
-import SelectArrowIcon from "../Icon/SelectArrowIcon";
+import { ArrowIcon } from "../Icon/ArrowIcon";
 
 export interface ICustomSelectProps<T> {
   value: T;
   options: T[];
-  arrowIconVariant?: "single" | "double";
   className?: string;
   getCurrentViewFunc: (v: T) => JSX.Element;
   getOptionViewFunc: (v: T) => JSX.Element;
@@ -19,7 +18,6 @@ const CustomSelect: <T>(
   value,
   options,
   className,
-  arrowIconVariant,
   getOptionViewFunc,
   getCurrentViewFunc,
 }) => {
@@ -51,7 +49,7 @@ const CustomSelect: <T>(
         }}
       >
         {getCurrentViewFunc(value)}
-        <SelectArrowIcon variant={arrowIconVariant} color={"gray_6"} />
+        <ArrowIcon color={"gray_6"} size={20} rotate={270} variant="solid" />
       </div>
       {optionOpen && <div className="options">{optionsView}</div>}
     </div>

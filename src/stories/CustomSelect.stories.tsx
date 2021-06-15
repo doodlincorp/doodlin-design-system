@@ -24,22 +24,3 @@ export const Default = () => {
     </div>
   );
 };
-
-export const Double = () => {
-  const [selectNum, setSelectNum] = useState<number>(0);
-  return (
-    <div style={{ padding: 20, width: 200 }}>
-      <CustomSelect<number>
-        options={[0, 1, 2, 3]}
-        arrowIconVariant="double"
-        value={selectNum}
-        getCurrentViewFunc={(o) => <div className="current-item">{o}</div>}
-        getOptionViewFunc={(o) => (
-          <div className="current-item" onClick={() => setSelectNum(o)}>
-            {o}
-          </div>
-        )}
-      />
-    </div>
-  );
-};

@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import "./index.scss";
-import { ModalCloseIcon } from "../../component/Icon/ModalCloseIcon";
+import { CloseIcon } from "../Icon/CloseIcon";
 
 export interface IModalProps {
   className?: string;
@@ -28,7 +28,7 @@ const Modal: React.FC<IModalProps> = ({
       <div className={cn("modal-content-box", className)}>
         {closeBtn && (
           <div className="close-btn" onClick={closeBtn}>
-            <ModalCloseIcon />
+            <CloseIcon size={28} color="white" />
           </div>
         )}
         {header && <div className="modal-header">{header.Text}</div>}

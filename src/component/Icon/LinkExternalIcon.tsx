@@ -1,42 +1,41 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface ILinkExternalIconProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
 export const LinkExternalIcon: React.FC<ILinkExternalIconProps> = ({
   color,
   className,
+  size = 16,
+  rotate,
+  flip,
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          d="M8.66664 2L10.862 4.19533L6.19531 8.862L7.13798 9.80467L11.8046 5.138L14 7.33333V2H8.66664Z"
-          fill={color ? colorMap[color] : colorMap.gray_7}
-        />
-        <path
-          id="icon__fill"
-          d="M12.6667 12.6667H3.33333V3.33333H8L6.66667 2H3.33333C2.598 2 2 2.598 2 3.33333V12.6667C2 13.402 2.598 14 3.33333 14H12.6667C13.402 14 14 13.402 14 12.6667V9.33333L12.6667 8V12.6667Z"
-          fill={color ? colorMap[color] : colorMap.gray_7}
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M17.5858 5H13V3H21V11H19V6.41424L10.7071 14.7071L9.29291 13.2929L17.5858 5ZM5 5H11V7H5V19H17V13H19V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7C3 5.89543 3.89543 5 5 5Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
-    </div>
+    </i>
   );
 };

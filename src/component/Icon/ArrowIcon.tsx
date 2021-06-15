@@ -1,71 +1,61 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface IArrowIconProps {
   color?: keyof IColorMap;
   className?: string;
-  variant?: "border" | "solid";
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
+
+  variant?: "arrow" | "chevron" | "solid";
 }
 
 export const ArrowIcon: React.FC<IArrowIconProps> = ({
   color,
   className,
-  variant = "border",
+  size = 16,
+  rotate,
+  flip,
+
+  variant = "chevron",
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "border" && (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <g
-            id="그룹_2915"
-            data-name="그룹 2915"
-            transform="translate(-468 -274)"
-          >
-            <rect
-              id="사각형_1871"
-              data-name="사각형 1871"
-              width="24"
-              height="24"
-              transform="translate(468 274)"
-              fill="none"
-              opacity="0.4"
-            />
-            <path
-              id="icon__fill"
-              data-name="패스 1179"
-              d="M481.707,279.293l-1.414,1.414L484.586,285H472v2h12.586l-4.293,4.293,1.414,1.414L488.414,286Z"
-              fill={color ? colorMap[color] : colorMap.blue_7}
-            />
-          </g>
-        </svg>
-      )}
-      {variant === "solid" && (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+      {variant === "arrow" ? (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            d="M11.2813 6.50932C11.0052 6.50932 10.7813 6.28546 10.7813 6.00932V2.5C10.7813 2.22386 10.5574 2 10.2813 2H5.71435C5.43821 2 5.21435 2.22386 5.21435 2.5V6.00932C5.21435 6.28546 4.99049 6.50932 4.71435 6.50932H2.15134C1.71404 6.50932 1.48745 7.03109 1.78597 7.35065L7.63257 13.609C7.83017 13.8205 8.16554 13.8206 8.3632 13.6091L14.2134 7.35076C14.5121 7.03125 14.2855 6.50932 13.8482 6.50932H11.2813Z"
-            fill={color ? colorMap[color] : colorMap.gray_7}
+            d="M21 11H6.414L11.707 5.707L10.293 4.293L2.586 12L10.293 19.707L11.707 18.293L6.414 13H21V11Z"
+            fill={color ? colorMap[color] : colorMap.gray_8}
+          />
+        </svg>
+      ) : variant === "chevron" ? (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            d="M13.293 6.29303L7.586 12L13.293 17.707L14.707 16.293L10.414 12L14.707 7.70703L13.293 6.29303Z"
+            fill={color ? colorMap[color] : colorMap.gray_8}
+          />
+        </svg>
+      ) : (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            d="M14.7499 7.057C14.6817 7.019 14.6075 7 14.5333 7C14.44 7 14.3476 7.03 14.2678 7.089L8.20113 11.5891C8.07513 11.6826 8 11.8361 8 12.0001C8 12.1641 8.07513 12.3176 8.20113 12.4111L14.2678 16.9112C14.4101 17.0167 14.5963 17.0292 14.7499 16.9432C14.9039 16.8567 15 16.6862 15 16.5002L15 7.50001C15 7.31401 14.9039 7.1435 14.7499 7.057Z"
+            fill={color ? colorMap[color] : colorMap.gray_8}
           />
         </svg>
       )}
-    </div>
+    </i>
   );
 };

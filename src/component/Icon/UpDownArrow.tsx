@@ -3,7 +3,7 @@ import { colorMap, IColorMap } from "./colorMap";
 import "./index.scss";
 import cn from "classnames";
 
-export interface IDownloadIconProps {
+export interface IUpDownArrowIconProps {
   color?: keyof IColorMap;
   className?: string;
   size?: number;
@@ -11,7 +11,7 @@ export interface IDownloadIconProps {
   flip?: boolean;
 }
 
-export const DownloadIcon: React.FC<IDownloadIconProps> = ({
+export const UpDownArrowIcon: React.FC<IUpDownArrowIconProps> = ({
   color,
   className,
   size = 16,
@@ -30,7 +30,9 @@ export const DownloadIcon: React.FC<IDownloadIconProps> = ({
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          d="M19 9H15V3H9V9H5L12 17L19 9ZM4 19H20V21H4V19Z"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M12 3L6 9H18L12 3ZM12 21L18 15L6 15L12 21Z"
           fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>

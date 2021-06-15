@@ -1,61 +1,41 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface IClockIconProps {
   color?: keyof IColorMap;
   className?: string;
-  variant?: "solid" | "ghost";
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
 export const ClockIcon: React.FC<IClockIconProps> = ({
   color,
   className,
-  variant = "ghost",
+  size = 16,
+  rotate,
+  flip,
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "solid" && (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            id="icon__fill"
-            d="M7.99992 1.33325C4.32392 1.33325 1.33325 4.32392 1.33325 7.99992C1.33325 11.6759 4.32392 14.6666 7.99992 14.6666C11.6759 14.6666 14.6666 11.6759 14.6666 7.99992C14.6666 4.32392 11.6759 1.33325 7.99992 1.33325ZM10.1953 11.1379L7.33325 8.27592V3.99992H8.66659V7.72392L11.1379 10.1953L10.1953 11.1379Z"
-            fill={color ? colorMap[color] : colorMap.gray_6}
-          />
-        </svg>
-      )}
-      {variant === "ghost" && (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            id="icon__fill"
-            d="M10.8793 10.8652L7.40039 8.30017V4.40918H8.60039V7.7002L11.6003 9.90717L10.8793 10.8652Z"
-            fill={color ? colorMap[color] : colorMap.gray_6}
-          />
-          <path
-            id="icon__fill"
-            d="M8.00001 2.50025C9.0878 2.50025 10.1512 2.82284 11.0556 3.42719C11.9601 4.03154 12.665 4.89053 13.0813 5.89553C13.4976 6.90052 13.6065 8.00637 13.3943 9.07327C13.1821 10.1402 12.6583 11.1202 11.8891 11.8894C11.1199 12.6586 10.1399 13.1824 9.073 13.3946C8.00611 13.6069 6.90023 13.4979 5.89524 13.0816C4.89025 12.6654 4.03127 11.9604 3.42692 11.0559C2.82257 10.1515 2.50001 9.08807 2.50001 8.00027C2.5016 6.54206 3.08158 5.14404 4.11268 4.11293C5.14379 3.08182 6.54181 2.50184 8.00001 2.50025ZM8.00001 1.00024C6.61554 1.00024 5.26218 1.41076 4.11103 2.17994C2.95989 2.94911 2.06266 4.0424 1.53285 5.32149C1.00304 6.60057 0.864408 8.00806 1.1345 9.36594C1.4046 10.7238 2.07131 11.9711 3.05027 12.9501C4.02924 13.929 5.27651 14.5957 6.63438 14.8658C7.99224 15.1359 9.39969 14.9973 10.6788 14.4675C11.9579 13.9376 13.0511 13.0404 13.8203 11.8893C14.5895 10.7381 15 9.38474 15 8.00027C15 6.14375 14.2625 4.36324 12.9497 3.05048C11.637 1.73772 9.85652 1.00024 8.00001 1.00024Z"
-            fill={color ? colorMap[color] : colorMap.gray_6}
-          />
-        </svg>
-      )}
-    </div>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          id="icon__fill"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M2 12C2 6.486 6.486 2 12 2C17.514 2 22 6.486 22 12C22 17.514 17.514 22 12 22C6.486 22 2 17.514 2 12ZM4 12C4 16.411 7.589 20 12 20C16.411 20 20 16.411 20 12C20 7.589 16.411 4 12 4C7.589 4 4 7.589 4 12ZM11 12.414V7H13V11.586L15.707 14.293L14.293 15.707L11 12.414Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
+        />
+      </svg>
+    </i>
   );
 };

@@ -1,0 +1,10 @@
+@import "../../index.scss";
+
+.dds-icon {
+  display: inline-block;
+  vertical-align: middle;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  &.flip {
+    transform: scaleX(-1);
+  }
+}

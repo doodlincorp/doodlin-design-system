@@ -1,39 +1,41 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface ILinkIconProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
-export const LinkIcon: React.FC<ILinkIconProps> = ({ color, className }) => {
+export const LinkIcon: React.FC<ILinkIconProps> = ({
+  color,
+  className,
+  size = 16,
+  rotate,
+  flip,
+}) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          d="M2.81459 13.1855C3.46459 13.8355 4.31792 14.1602 5.17125 14.1602C6.02525 14.1595 6.87925 13.8355 7.52859 13.1855L9.41392 11.2995L8.47125 10.3568L6.58592 12.2428C5.80659 13.0208 4.53792 13.0222 3.75725 12.2428C2.97792 11.4628 2.97792 10.1942 3.75725 9.41417L5.64325 7.52883L4.70059 6.58617L2.81459 8.4715C1.51525 9.77083 1.51525 11.8862 2.81459 13.1855ZM13.1853 7.52883C14.4839 6.2295 14.4839 4.11417 13.1853 2.81483C11.8853 1.51483 9.76992 1.51617 8.47125 2.81483L6.58592 4.70083L7.52859 5.6435L9.41392 3.7575C10.1939 2.9795 11.4626 2.97817 12.2426 3.7575C13.0219 4.5375 13.0219 5.80617 12.2426 6.58617L10.3566 8.4715L11.2993 9.41417L13.1853 7.52883Z"
-          fill={color ? colorMap[color] : colorMap.gray_7}
-        />
-        <path
-          id="icon__fill"
-          d="M5.64258 11.3003L4.69979 10.3575L10.3572 4.70024L11.3 5.64307L5.64258 11.3003Z"
-          fill={color ? colorMap[color] : colorMap.gray_7}
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M7.757 21.24C6.477 21.24 5.197 20.753 4.222 19.778C2.273 17.829 2.273 14.656 4.222 12.707L7.051 9.879L8.465 11.293L5.636 14.121C4.467 15.291 4.467 17.194 5.636 18.364C6.807 19.533 8.71 19.531 9.879 18.364L12.707 15.535L14.121 16.949L11.293 19.778C10.319 20.753 9.038 21.239 7.757 21.24ZM19.778 4.222C21.726 6.171 21.726 9.344 19.778 11.293L16.949 14.121L15.535 12.707L18.364 9.879C19.533 8.709 19.533 6.806 18.364 5.636C17.194 4.467 15.291 4.469 14.121 5.636L11.293 8.465L9.879 7.051L12.707 4.222C14.655 2.274 17.828 2.272 19.778 4.222ZM7.04948 15.5361L8.46367 16.9504L16.9498 8.46454L15.5356 7.0503L7.04948 15.5361Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
-    </div>
+    </i>
   );
 };

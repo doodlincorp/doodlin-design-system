@@ -77,59 +77,336 @@ export const Color = () => {
   );
 };
 
-export const Icon = () => (
-  <div style={{ padding: 20 }}>
+export const Icon = () => {
+  const IconBlock = ({ children, name, variantName }: any) => (
     <div
-      className="icon-table"
       style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
+        display: "inline-block",
+        width: 120,
+        height: "max-content",
+        padding: 8,
+        margin: 8,
+        textAlign: "center",
+        borderRadius: 6,
+        backgroundColor: "#fff",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.16)",
+        overflow: "hidden",
+        fontSize: 12,
+        boxSizing: "border-box",
       }}
     >
-      <StoriesIcon.AddColumn></StoriesIcon.AddColumn>
-      <StoriesIcon.Align></StoriesIcon.Align>
-      <StoriesIcon.ApplicantList></StoriesIcon.ApplicantList>
-      <StoriesIcon.Archive></StoriesIcon.Archive>
-      <StoriesIcon.Arrow></StoriesIcon.Arrow>
-      <StoriesIcon.Calendar></StoriesIcon.Calendar>
-      <StoriesIcon.Camera></StoriesIcon.Camera>
-      <StoriesIcon.Check></StoriesIcon.Check>
-      <StoriesIcon.Chevron></StoriesIcon.Chevron>
-      <StoriesIcon.CircleCheck></StoriesIcon.CircleCheck>
-      <StoriesIcon.Clip></StoriesIcon.Clip>
-      <StoriesIcon.Clock></StoriesIcon.Clock>
-      <StoriesIcon.Clock variant="solid"></StoriesIcon.Clock>
-      <StoriesIcon.Close></StoriesIcon.Close>
-      <StoriesIcon.Copy></StoriesIcon.Copy>
-      <StoriesIcon.DefaultImage></StoriesIcon.DefaultImage>
-      <StoriesIcon.DepartmentManage></StoriesIcon.DepartmentManage>
-      <StoriesIcon.Doc></StoriesIcon.Doc>
-      <StoriesIcon.DocAlt></StoriesIcon.DocAlt>
-      <StoriesIcon.Download></StoriesIcon.Download>
-      <StoriesIcon.Edit></StoriesIcon.Edit>
-      <StoriesIcon.Ellipsis vertical></StoriesIcon.Ellipsis>
-      <StoriesIcon.Email></StoriesIcon.Email>
-      <StoriesIcon.Excel></StoriesIcon.Excel>
-      <StoriesIcon.Filter></StoriesIcon.Filter>
-      <StoriesIcon.Tag></StoriesIcon.Tag>
-      <StoriesIcon.Tag variant="ghost"></StoriesIcon.Tag>
-      <StoriesIcon.Folder></StoriesIcon.Folder>
-      <StoriesIcon.FolderDownload></StoriesIcon.FolderDownload>
-      <StoriesIcon.Memo></StoriesIcon.Memo>
-      <StoriesIcon.Memo variant="quick"></StoriesIcon.Memo>
-      <StoriesIcon.Garbage></StoriesIcon.Garbage>
-      <StoriesIcon.IDType></StoriesIcon.IDType>
-      <StoriesIcon.InfoMark></StoriesIcon.InfoMark>
-      <StoriesIcon.MapPin></StoriesIcon.MapPin>
-      <StoriesIcon.ModalClose></StoriesIcon.ModalClose>
-      <StoriesIcon.OpeningList></StoriesIcon.OpeningList>
-      <StoriesIcon.Pen></StoriesIcon.Pen>
-      <StoriesIcon.Phone></StoriesIcon.Phone>
-      <StoriesIcon.Plus></StoriesIcon.Plus>
-      <StoriesIcon.Link></StoriesIcon.Link>
-      <StoriesIcon.LinkExternal></StoriesIcon.LinkExternal>
+      <div
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          height: 60,
+          marginBottom: 6,
+        }}
+      >
+        {children}
+      </div>
+      <Text size="xx-small">{name}</Text>
+      <hr
+        style={{
+          borderBottom: "1px solid #E0E0E0",
+          marginTop: 8,
+          marginBottom: 8,
+        }}
+      />
+      <Text size="xx-small" style={{ color: "#8B8B8B" }}>
+        variant:{" "}
+      </Text>
+      <Text size="xx-small" weight="medium">
+        {variantName ? (
+          variantName
+        ) : (
+          <span style={{ color: "#8B8B8B" }}>-</span>
+        )}
+      </Text>
     </div>
-  </div>
-);
+  );
+  return (
+    <div style={{ padding: 20 }}>
+      <div
+        className="icon-table"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(128px, 1fr))",
+          gridGap: "12",
+        }}
+      >
+        <IconBlock name="AddColumnIcon">
+          <StoriesIcon.AddColumn size={40} />
+        </IconBlock>
+
+        <IconBlock name="AlignIcon" variantName="kanban">
+          <StoriesIcon.Align size={40} />
+        </IconBlock>
+
+        <IconBlock name="AlignIcon" variantName="list">
+          <StoriesIcon.Align size={40} variant="list" />
+        </IconBlock>
+
+        <IconBlock name="ApplicnatListIcon">
+          <StoriesIcon.ApplicantList size={40} />
+        </IconBlock>
+
+        <IconBlock name="ArchiveIcon">
+          <StoriesIcon.Archive size={40} />
+        </IconBlock>
+
+        <IconBlock name="ArrowIcon" variantName="arrow">
+          <StoriesIcon.Arrow size={40} variant="arrow" />
+        </IconBlock>
+
+        <IconBlock name="ArrowIcon" variantName="chevron">
+          <StoriesIcon.Arrow size={40} />
+        </IconBlock>
+
+        <IconBlock name="ArrowIcon" variantName="solid">
+          <StoriesIcon.Arrow size={40} variant="solid" />
+        </IconBlock>
+
+        <IconBlock name="CalendarIcon" variantName="default">
+          <StoriesIcon.Calendar size={40} />
+        </IconBlock>
+
+        <IconBlock name="CalendarIcon" variantName="check">
+          <StoriesIcon.Calendar size={40} variant="check" />
+        </IconBlock>
+
+        <IconBlock name="CalendarIcon" variantName="x">
+          <StoriesIcon.Calendar size={40} variant="x" />
+        </IconBlock>
+
+        <IconBlock name="CameraIcon">
+          <StoriesIcon.Camera size={40} />
+        </IconBlock>
+
+        <IconBlock name="CheckIcon" variantName="single">
+          <StoriesIcon.Check size={40} />
+        </IconBlock>
+
+        <IconBlock name="CheckIcon" variantName="double">
+          <StoriesIcon.Check size={40} variant="double" />
+        </IconBlock>
+
+        <IconBlock name="ClipIcon">
+          <StoriesIcon.Clip size={40} rotate={315} />
+        </IconBlock>
+
+        <IconBlock name="ClockIcon">
+          <StoriesIcon.Clock size={40} />
+        </IconBlock>
+
+        <IconBlock name="CloseIcon">
+          <StoriesIcon.Close size={40} />
+        </IconBlock>
+
+        <IconBlock name="CopyIcon">
+          <StoriesIcon.Copy size={40} />
+        </IconBlock>
+
+        <IconBlock name="DefaultImageIcon">
+          <StoriesIcon.DefaultImage size={40} />
+        </IconBlock>
+
+        <IconBlock name="DocIcon" variantName="default">
+          <StoriesIcon.Doc size={40} />
+        </IconBlock>
+
+        <IconBlock name="DocIcon" variantName="blank">
+          <StoriesIcon.Doc size={40} variant="blank" />
+        </IconBlock>
+
+        <IconBlock name="DocIcon" variantName="plus">
+          <StoriesIcon.Doc size={40} variant="plus" />
+        </IconBlock>
+
+        <IconBlock name="DownloadIcon">
+          <StoriesIcon.Download size={40} />
+        </IconBlock>
+
+        <IconBlock name="EditIcon">
+          <StoriesIcon.Edit size={40} />
+        </IconBlock>
+
+        <IconBlock name="EllipsisIcon">
+          <StoriesIcon.Ellipsis size={40} />
+        </IconBlock>
+
+        <IconBlock name="EmailIcon" variantName="solid">
+          <StoriesIcon.Email size={40} />
+        </IconBlock>
+
+        <IconBlock name="EmailIcon" variantName="border">
+          <StoriesIcon.Email size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="EvaluationsTabIcon">
+          <StoriesIcon.EvaluationsTab size={40} />
+        </IconBlock>
+
+        <IconBlock name="ExcelIcon">
+          <StoriesIcon.Excel size={40} />
+        </IconBlock>
+
+        <IconBlock name="FlieDriveIcon">
+          <StoriesIcon.FileDrive size={40} />
+        </IconBlock>
+
+        <IconBlock name="FilterIcon">
+          <StoriesIcon.Filter size={40} />
+        </IconBlock>
+
+        <IconBlock name="GarbageIcon" variantName="solid">
+          <StoriesIcon.Garbage size={40} />
+        </IconBlock>
+
+        <IconBlock name="GarbageIcon" variantName="border">
+          <StoriesIcon.Garbage size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="UserIcon" variantName="general">
+          <StoriesIcon.User size={40} variant="general" />
+        </IconBlock>
+
+        <IconBlock name="UserIcon" variantName="manager">
+          <StoriesIcon.User size={40} variant="manager" />
+        </IconBlock>
+
+        <IconBlock name="UserIcon" variantName="owner">
+          <StoriesIcon.User size={40} variant="owner" />
+        </IconBlock>
+
+        <IconBlock name="UserIcon" variantName="setMember">
+          <StoriesIcon.User size={40} variant="setMember" />
+        </IconBlock>
+
+        <IconBlock name="UserIcon" variantName="evaluable">
+          <StoriesIcon.User size={40} variant="evaluable" />
+        </IconBlock>
+
+        <IconBlock name="UserIcon" variantName="rejected">
+          <StoriesIcon.User size={40} variant="rejected" />
+        </IconBlock>
+
+        <IconBlock name="InfoMarkIcon">
+          <StoriesIcon.InfoMark size={40} />
+        </IconBlock>
+
+        <IconBlock name="LinkExternalIcon">
+          <StoriesIcon.LinkExternal size={40} />
+        </IconBlock>
+
+        <IconBlock name="LinkIcon">
+          <StoriesIcon.Link size={40} />
+        </IconBlock>
+
+        <IconBlock name="LogoutIcon">
+          <StoriesIcon.Logout size={40} />
+        </IconBlock>
+
+        <IconBlock name="MailSendIcon" variantName="send">
+          <StoriesIcon.MailSend size={40} />
+        </IconBlock>
+
+        <IconBlock name="MailSendIcon" variantName="receive">
+          <StoriesIcon.MailSend size={40} variant="receive" />
+        </IconBlock>
+
+        <IconBlock name="MapPinIcon">
+          <StoriesIcon.MapPin size={40} />
+        </IconBlock>
+
+        <IconBlock name="MemoIcon" variantName="default">
+          <StoriesIcon.Memo size={40} />
+        </IconBlock>
+
+        <IconBlock name="MemoIcon" variantName="quick">
+          <StoriesIcon.Memo size={40} variant="quick" />
+        </IconBlock>
+
+        <IconBlock name="OpeningListIcon">
+          <StoriesIcon.OpeningList size={40} />
+        </IconBlock>
+
+        <IconBlock name="PenIcon">
+          <StoriesIcon.Pen size={40} />
+        </IconBlock>
+
+        <IconBlock name="PhoneIcon">
+          <StoriesIcon.Phone size={40} />
+        </IconBlock>
+
+        <IconBlock name="PlusIcon" variantName="default">
+          <StoriesIcon.Plus size={40} />
+        </IconBlock>
+
+        <IconBlock name="PlusIcon" variantName="circle">
+          <StoriesIcon.Plus size={40} variant="circle" />
+        </IconBlock>
+
+        <IconBlock name="PlusIcon" variantName="square">
+          <StoriesIcon.Plus size={40} variant="square" />
+        </IconBlock>
+
+        <IconBlock name="QuestionMarkIcon">
+          <StoriesIcon.QuestionMark size={40} />
+        </IconBlock>
+
+        <IconBlock name="RefreshIcon">
+          <StoriesIcon.Refresh size={40} />
+        </IconBlock>
+
+        <IconBlock name="RejectIcon">
+          <StoriesIcon.Reject size={40} />
+        </IconBlock>
+
+        <IconBlock name="ReturnIcon">
+          <StoriesIcon.Return size={40} />
+        </IconBlock>
+
+        <IconBlock name="SearchIcon">
+          <StoriesIcon.Search size={40} />
+        </IconBlock>
+
+        <IconBlock name="SendIcon">
+          <StoriesIcon.Send size={40} />
+        </IconBlock>
+
+        <IconBlock name="SettingIcon">
+          <StoriesIcon.Setting size={40} />
+        </IconBlock>
+
+        <IconBlock name="SliderIcon">
+          <StoriesIcon.Slider size={40} />
+        </IconBlock>
+
+        <IconBlock name="UpDownArrowIcon">
+          <StoriesIcon.UpDownArrow size={40} />
+        </IconBlock>
+
+        <IconBlock name="TagIcon" variantName="solid">
+          <StoriesIcon.Tag size={40} />
+        </IconBlock>
+
+        <IconBlock name="TagIcon" variantName="border">
+          <StoriesIcon.Tag size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="ThumbIcon" variantName="good">
+          <StoriesIcon.Thumb size={40} variant="good" />
+        </IconBlock>
+
+        <IconBlock name="ZipDownloadIcon">
+          <StoriesIcon.ZipDownload size={40} />
+        </IconBlock>
+      </div>
+    </div>
+  );
+};
 
 export const Spacing = () => <div>【ツ】</div>;

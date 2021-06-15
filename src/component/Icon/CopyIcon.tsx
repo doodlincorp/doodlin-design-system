@@ -1,39 +1,42 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface ICopyIconProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
-export const CopyIcon: React.FC<ICopyIconProps> = ({ color, className }) => {
+export const CopyIcon: React.FC<ICopyIconProps> = ({
+  color,
+  className,
+
+  size = 16,
+  rotate,
+  flip,
+}) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          d="M13.7504 3.64941H13.7104H12.3504H4.64039C4.09039 3.64941 3.65039 4.08941 3.65039 4.63941V12.3494V13.7094V13.7494C3.65039 14.2994 4.09039 14.7394 4.64039 14.7394H13.7504C14.3004 14.7394 14.7404 14.2994 14.7404 13.7494V4.63941C14.7404 4.08941 14.3004 3.64941 13.7504 3.64941ZM12.0704 9.78941H9.79039V12.0694H8.60039V9.78941H6.32039V8.59941H8.60039V6.31941H9.79039V8.59941H12.0704V9.78941Z"
-          fill={color ? colorMap[color] : colorMap.gray_7}
-        />
-        <path
-          id="icon__fill"
-          d="M3.60977 2.61977H12.3498V2.24977C12.3498 1.69977 11.9098 1.25977 11.3598 1.25977H2.24977C1.69977 1.25977 1.25977 1.69977 1.25977 2.24977V11.3598C1.25977 11.9098 1.69977 12.3498 2.24977 12.3498H2.61977V3.60977C2.61977 3.05977 3.05977 2.61977 3.60977 2.61977Z"
-          fill={color ? colorMap[color] : colorMap.gray_7}
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M8 2H20C21.103 2 22 2.897 22 4V16C22 17.103 21.103 18 20 18H8C6.897 18 6 17.103 6 16V4C6 2.897 6.897 2 8 2ZM15 11H18V9H15V6H13V9H10V11H13V14H15V11ZM16 20V22H4C2.897 22 2 21.103 2 20V8H4V20H16Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
-    </div>
+    </i>
   );
 };

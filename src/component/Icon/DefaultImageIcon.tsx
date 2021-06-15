@@ -1,37 +1,39 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface IDefaultImageIConProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
 export const DefaultImageIcon: React.FC<IDefaultImageIConProps> = ({
   color,
   className,
+  size = 16,
+  rotate,
+  flip,
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      <svg
-        width="48"
-        height="50"
-        viewBox="0 0 48 50"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          d="M41.554 0H6.43747C2.88664 0 0 2.90339 0 6.47482V43.5252C0 47.1052 2.88664 50 6.43747 50H41.554C45.1134 50 47.9915 47.0966 47.9915 43.5252V6.47482C48 2.90339 45.1134 0 41.554 0ZM24.4215 42.0092H18.1458H5.30495L14.859 29.4964L21.2879 37.9068L30.7483 25.5224L43.3507 42.0092H24.4215Z"
-          fill={color ? colorMap[color] : colorMap.gray_4}
+          d="M5 21H19C20.104 21 21 20.104 21 19V5C21 3.896 20.104 3 19 3H5C3.896 3 3 3.896 3 5V19C3 20.104 3.896 21 5 21ZM8 14L10.363 16.363L14 11L19 18H5L8 14Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
-    </div>
+    </i>
   );
 };

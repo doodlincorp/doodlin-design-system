@@ -32,7 +32,9 @@ const Tooltip: React.FC<ITooltipProps> = ({
 
         {tooltipText.length > 0 && (
           <div className="tooltip-box">
-            {variant === "tail" && <InfoMarkIcon className="icon" />}
+            {variant === "tail" && (
+              <InfoMarkIcon className="icon" color="blue_4" />
+            )}
             {tooltipText}
           </div>
         )}

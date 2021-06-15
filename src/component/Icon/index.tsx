@@ -6,14 +6,12 @@ import { ArrowIcon } from "./ArrowIcon";
 import { CalendarIcon } from "./CalendarIcon";
 import { CameraIcon } from "./CameraIcon";
 import { CheckIcon } from "./CheckIcon";
-import { ChevronIcon } from "./ChevronIcon";
-import { CircleCheckIcon } from "./CircleCheckIcon";
 import { ClipIcon } from "./ClipIcon";
 import { ClockIcon } from "./ClockIcon";
 import { CloseIcon } from "./CloseIcon";
 import { CopyIcon } from "./CopyIcon";
 import { DefaultImageIcon } from "./DefaultImageIcon";
-import { DepartmentManageIcon } from "./DepartmentManageIcon";
+import { SliderIcon } from "./SliderIcon";
 import { DocIcon } from "./DocIcon";
 import { DownloadIcon } from "./DownloadIcon";
 import { EditIcon } from "./EditIcon";
@@ -21,24 +19,17 @@ import { EllipsisIcon } from "./EllipsisIcon";
 import { EmailIcon } from "./EmailIcon";
 import { ExcelIcon } from "./ExcelIcon";
 import { FilterIcon } from "./FilterIcon";
-import { FolderDownloadIcon } from "./FolderDownloadIcon";
-import { FolderIcon } from "./FolderIcon";
 import { GarbageIcon } from "./GarbageIcon";
-import { IDTypeIcon } from "./IDTypeIcon";
 import { InfoMarkIcon } from "./InfoMarkIcon";
 import { MapPinIcon } from "./MapPinIcon";
-import { ModalCloseIcon } from "./ModalCloseIcon";
 import { OpeningListIcon } from "./OpeningListIcon";
 import PenIcon from "./PenIcon";
 import { PhoneIcon } from "./PhoneIcon";
 import { PlusIcon } from "./PlusIcon";
-import { PopUpCloseBtnIcon } from "./PopUpCloseBtnIcon";
-import { ProfileImageIcon } from "./ProfileImageIcon";
 import { RefreshIcon } from "./RefreshIcon";
 import { ReturnIcon } from "./ReturnIcon";
 import { RejectIcon } from "./RejectIcon";
 import { SearchIcon } from "./SearchIcon";
-import SelectArrowIcon from "./SelectArrowIcon";
 import { SendIcon } from "./SendIcon";
 import { SettingIcon } from "./SettingIcon";
 import { ThumbIcon } from "./ThumbIcon";
@@ -46,14 +37,14 @@ import { ZipDownloadIcon } from "./ZipDownloadIcon";
 import { MailSendIcon } from "./MailSendIcon";
 import { LinkIcon } from "./LinkIcon";
 import { LinkExternalIcon } from "./LinkExternalIcon";
-import { DocAltIcon } from "./DocAltIcon";
-import { DocsTabIcon } from "./DocsTabIcon";
 import { MemoIcon } from "./MemoIcon";
 import { EvaluationsTabIcon } from "./EvaluationsTabIcon";
-import { QuestionnairesTabIcon } from "./QuestionnairesTabIcon";
-import { RightAreaTabIcon } from "./RightAreaTabIcon";
-import { AttachmentsTabIcon } from "./AttachmentsTabIcon";
+import { QuestionMarkIcon } from "./QuestionMarkIcon";
+import { FileDriveIcon } from "./FileDriveIcon";
 import { TagIcon } from "./TagIcon";
+import { UserIcon } from "./UserIcon";
+import { LogoutIcon } from "./LogoutIcon";
+import { UpDownArrowIcon } from "./UpDownArrow";
 
 export interface IColorMap {
   [key: string]: string;
@@ -112,51 +103,42 @@ const Icon = {
   Calendar: CalendarIcon,
   Camera: CameraIcon,
   Check: CheckIcon,
-  Chevron: ChevronIcon,
-  CircleCheck: CircleCheckIcon,
   Clip: ClipIcon,
   Clock: ClockIcon,
   Close: CloseIcon,
   Copy: CopyIcon,
   DefaultImage: DefaultImageIcon,
-  DepartmentManage: DepartmentManageIcon,
   Doc: DocIcon,
-  DocAlt: DocAltIcon,
-  AttachmentsTab: AttachmentsTabIcon,
-  DocsTab: DocsTabIcon,
+  FileDrive: FileDriveIcon,
   EvaluationsTab: EvaluationsTabIcon,
-  QuestionnairesTab: QuestionnairesTabIcon,
-  RightAreaTab: RightAreaTabIcon,
+  QuestionMark: QuestionMarkIcon,
   Download: DownloadIcon,
   Edit: EditIcon,
   Ellipsis: EllipsisIcon,
   Email: EmailIcon,
   Excel: ExcelIcon,
   Filter: FilterIcon,
-  FolderDownload: FolderDownloadIcon,
-  Folder: FolderIcon,
   Garbage: GarbageIcon,
-  IDType: IDTypeIcon,
   InfoMark: InfoMarkIcon,
+  Logout: LogoutIcon,
   MailSend: MailSendIcon,
   MapPin: MapPinIcon,
   Memo: MemoIcon,
-  ModalClose: ModalCloseIcon,
   OpeningList: OpeningListIcon,
   Pen: PenIcon,
   Phone: PhoneIcon,
   Plus: PlusIcon,
-  PopUpCloseBtn: PopUpCloseBtnIcon,
-  ProfileImage: ProfileImageIcon,
   Refresh: RefreshIcon,
   Reject: RejectIcon,
   Return: ReturnIcon,
   Search: SearchIcon,
-  SelectArrow: SelectArrowIcon,
   Send: SendIcon,
   Setting: SettingIcon,
+  Slider: SliderIcon,
   Thumb: ThumbIcon,
   Tag: TagIcon,
+  User: UserIcon,
+  UpDownArrow: UpDownArrowIcon,
   ZipDownload: ZipDownloadIcon,
   Link: LinkIcon,
   LinkExternal: LinkExternalIcon,

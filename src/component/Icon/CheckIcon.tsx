@@ -1,77 +1,56 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface ICheckIconProps {
   color?: keyof IColorMap;
   className?: string;
-  variant?: "sm" | "lg" | "double";
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
+
+  variant?: "single" | "double";
 }
 
 export const CheckIcon: React.FC<ICheckIconProps> = ({
   color,
   className,
-  variant = "sm",
+  size = 16,
+  rotate,
+  flip,
+
+  variant = "single",
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "sm" && (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+      {variant === "single" && (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            d="M6.79999 11.992L3 8.19202L4.414 6.77802L6.79999 9.164L11.964 4L13.378 5.414L6.79999 11.992Z"
-            fill={color ? colorMap[color] : colorMap.white}
-          />
-        </svg>
-      )}
-
-      {variant === "lg" && (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            id="icon__fill"
-            d="M6.12622 14L1 8.76979L2.9075 6.82359L6.12622 10.1076L13.0925 3L15 4.9462L6.12622 14Z"
-            fill={color ? colorMap[color] : colorMap.white}
+            d="M10 15.586L6.70703 12.293L5.29303 13.707L10 18.414L19.707 8.707L18.293 7.293L10 15.586Z"
+            fill={color ? colorMap[color] : colorMap.gray_8}
           />
         </svg>
       )}
       {variant === "double" && (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            d="M5.99997 14.414L2.29297 10.707L3.70697 9.29297L5.99997 11.586L11.293 6.29297L12.707 7.70697L5.99997 14.414Z"
-            fill={color ? colorMap[color] : colorMap.gray_8}
-          />
-          <path
-            id="icon__fill"
-            d="M5.99997 9.41397L2.29297 5.70697L3.70697 4.29297L5.99997 6.58597L11.293 1.29297L12.707 2.70697L5.99997 9.41397Z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.414 9L9.707 12.293L18 4L19.414 5.414L9.707 15.121L5 10.414L6.414 9ZM6.414 14L9.707 17.293L18 9L19.414 10.414L9.707 20.121L5 15.414L6.414 14Z"
             fill={color ? colorMap[color] : colorMap.gray_8}
           />
         </svg>
       )}
-    </div>
+    </i>
   );
 };

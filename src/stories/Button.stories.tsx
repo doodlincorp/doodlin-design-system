@@ -546,7 +546,7 @@ export const WithIcon = () => (
           variant="solid"
           buttonType="light"
           size="xs"
-          label={{ labelIcon: <Icon.Ellipsis vertical />, labelText: "수정" }}
+          label={{ labelIcon: <Icon.Ellipsis />, labelText: "수정" }}
         />
         <Button
           variant="solid"
