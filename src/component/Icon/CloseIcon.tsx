@@ -23,6 +23,7 @@ export const CloseIcon: React.FC<ICloseIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

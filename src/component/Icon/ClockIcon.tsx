@@ -23,6 +23,7 @@ export const ClockIcon: React.FC<IClockIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

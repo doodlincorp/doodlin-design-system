@@ -23,6 +23,7 @@ export const UpDownArrowIcon: React.FC<IUpDownArrowIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

@@ -32,16 +32,14 @@ const Callout: React.FC<ICalloutProps> = ({
           <InfoMarkIcon
             className="icon"
             color={variant === "info" ? "blue_7" : "red_7"}
+            size={20}
           />
         )}
 
         <div>{children}</div>
       </div>
       <button className="close-btn" onClick={() => setOpen(false)}>
-        <CloseIcon
-          className="icon"
-          color={variant === "info" ? "blue_7" : "red_7"}
-        />
+        <CloseIcon color={variant === "info" ? "blue_7" : "red_7"} size={24} />
       </button>
     </div>
   );

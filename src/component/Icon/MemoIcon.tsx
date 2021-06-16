@@ -26,6 +26,7 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
         className={cn("dds-icon", className, { flip })}
         style={{
           width: size,
+          minWidth: size,
           height: size,
           transform: `rotate(${rotate}deg)`,
         }}
@@ -50,6 +51,7 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

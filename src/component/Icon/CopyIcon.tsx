@@ -24,6 +24,7 @@ export const CopyIcon: React.FC<ICopyIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

@@ -29,6 +29,7 @@ import { PlusIcon } from "./PlusIcon";
 import { RefreshIcon } from "./RefreshIcon";
 import { ReturnIcon } from "./ReturnIcon";
 import { RejectIcon } from "./RejectIcon";
+import { RevisionIcon } from "./RevisionIcon";
 import { SearchIcon } from "./SearchIcon";
 import { SendIcon } from "./SendIcon";
 import { SettingIcon } from "./SettingIcon";
@@ -131,6 +132,7 @@ const Icon = {
   Refresh: RefreshIcon,
   Reject: RejectIcon,
   Return: ReturnIcon,
+  Revision: RevisionIcon,
   Search: SearchIcon,
   Send: SendIcon,
   Setting: SettingIcon,
