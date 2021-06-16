@@ -374,6 +374,10 @@ export const Icon = () => {
           <StoriesIcon.Return size={40} />
         </IconBlock>
 
+        <IconBlock name="ReturnIcon">
+          <StoriesIcon.Revision size={40} />
+        </IconBlock>
+
         <IconBlock name="SearchIcon">
           <StoriesIcon.Search size={40} />
         </IconBlock>

@@ -13,14 +13,8 @@
     display: flex;
     align-items: center;
     .icon {
-      width: 20px;
-      height: 20px;
       margin-right: 8px;
     }
-  }
-  .close-btn {
-    width: 20px;
-    height: 20px;
   }
   &.several {
     align-items: flex-start;
