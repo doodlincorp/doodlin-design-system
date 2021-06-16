@@ -9,7 +9,7 @@ export interface IThumbIconProps {
   size?: number;
   rotate?: number;
   flip?: boolean;
-  variant?: "sobad" | "bad" | "soso" | "good" | "sogood";
+  variant?: "sobad" | "bad" | "soso" | "good" | "sogood" | "default";
 }
 
 export const ThumbIcon: React.FC<IThumbIconProps> = ({
