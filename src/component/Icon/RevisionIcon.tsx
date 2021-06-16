@@ -23,6 +23,7 @@ export const RevisionIcon: React.FC<IRevisionIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

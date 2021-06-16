@@ -27,6 +27,7 @@ export const AlignIcon: React.FC<IAlignIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

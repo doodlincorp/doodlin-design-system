@@ -23,6 +23,7 @@ export const InfoMarkIcon: React.FC<IInfoMarkIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

@@ -25,6 +25,7 @@ export const PlusIcon: React.FC<IPlusIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

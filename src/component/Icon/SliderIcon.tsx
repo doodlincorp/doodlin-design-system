@@ -23,6 +23,7 @@ export const SliderIcon: React.FC<ISliderIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

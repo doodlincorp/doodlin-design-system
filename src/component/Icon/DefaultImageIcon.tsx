@@ -23,6 +23,7 @@ export const DefaultImageIcon: React.FC<IDefaultImageIConProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

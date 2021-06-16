@@ -23,6 +23,7 @@ export const FileDriveIcon: React.FC<IFileDriveIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}

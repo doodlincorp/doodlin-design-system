@@ -23,6 +23,7 @@ export const EllipsisIcon: React.FC<IEllipsisIconProps> = ({
       className={cn("dds-icon", className, { flip })}
       style={{
         width: size,
+        minWidth: size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}
