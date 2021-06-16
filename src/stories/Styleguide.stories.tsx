@@ -36,11 +36,16 @@ export const Color = () => {
         }}
       />
 
-      <Text>
-        <span style={{ fontWeight: 500 }}>{name}</span>
+      <Text
+        size="small"
+        weight="medium"
+        variant="block"
+        style={{ padding: "4px 0" }}
+      >
+        {name}
       </Text>
-      <Text>
-        <span style={{ fontWeight: 300 }}>{color}</span>
+      <Text size="xx-small" weight="regular" color="#8B8B8B">
+        {color}
       </Text>
     </div>
   );
