@@ -31,7 +31,7 @@ export const CloseIcon: React.FC<ICloseIconProps> = ({
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          d="M16.192 6.34399L11.949 10.586L7.707 6.34399L6.293 7.75799L10.535 12L6.293 16.242L7.707 17.656L11.949 13.414L16.192 17.656L17.606 16.242L13.364 12L17.606 7.75799L16.192 6.34399Z"
+          d="M18.0002 4L11.9993 10L5.99982 4L4 6L9.99947 12L4 18L5.99982 20L11.9993 14L18.0002 20L20 18L14.0005 12L20 6L18.0002 4Z"
           fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>

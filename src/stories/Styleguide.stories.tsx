@@ -406,6 +406,10 @@ export const Icon = () => {
           <StoriesIcon.Tag size={40} variant="border" />
         </IconBlock>
 
+        <IconBlock name="ThumbIcon" variantName="sobad">
+          <StoriesIcon.Thumb size={40} variant="sobad" />
+        </IconBlock>
+
         <IconBlock name="ThumbIcon" variantName="good">
           <StoriesIcon.Thumb size={40} variant="good" />
         </IconBlock>

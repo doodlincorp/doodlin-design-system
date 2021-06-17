@@ -44,7 +44,7 @@ export const ArrowIcon: React.FC<IArrowIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            d="M13.293 6.29303L7.586 12L13.293 17.707L14.707 16.293L10.414 12L14.707 7.70703L13.293 6.29303Z"
+            d="M15.0143 4L7 12L15.0143 20L17 18.0179L10.9714 12L17 5.98213L15.0143 4Z"
             fill={color ? colorMap[color] : colorMap.gray_8}
           />
         </svg>

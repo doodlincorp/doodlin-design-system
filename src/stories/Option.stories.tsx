@@ -27,10 +27,7 @@ export const Default = () => {
           text="hello 소환"
           onClick={() => setOpen(!open)}
         ></OptionItem>
-        <OptionItem
-          text="아이콘과 함께"
-          icon={<EditIcon size={16} />}
-        ></OptionItem>
+        <OptionItem text="아이콘과 함께" icon={<EditIcon />}></OptionItem>
         <OptionItem text="로딩중" loading></OptionItem>
         <OptionItem
           text="비활성화"

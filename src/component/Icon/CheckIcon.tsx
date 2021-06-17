@@ -36,7 +36,7 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            d="M10 15.586L6.70703 12.293L5.29303 13.707L10 18.414L19.707 8.707L18.293 7.293L10 15.586Z"
+            d="M9.20459 16.9313L4.86388 12.1936L3 14.2279L9.20459 21L22 7.03435L20.1361 5L9.20459 16.9313Z"
             fill={color ? colorMap[color] : colorMap.gray_8}
           />
         </svg>
