@@ -66,12 +66,15 @@
 
   &.text-align {
     &-start {
+      display: block;
       text-align: start;
     }
     &-center {
+      display: block;
       text-align: center;
     }
     &-end {
+      display: block;
       text-align: end;
     }
   }
