@@ -404,31 +404,46 @@ export const WithIcon = () => (
           variant="ghost"
           buttonType="light"
           size="xs"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="ghost"
           buttonType="light"
           size="sm"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="ghost"
           buttonType="light"
           size="md"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="ghost"
           buttonType="light"
           size="lg"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="ghost"
           buttonType="light"
           size="xl"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
       </div>
 
@@ -440,31 +455,31 @@ export const WithIcon = () => (
           variant="ghost"
           buttonType="light"
           size="xs"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
           buttonType="light"
           size="sm"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
           buttonType="light"
           size="md"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
           buttonType="light"
           size="lg"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
           buttonType="light"
           size="xl"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
     </div>
@@ -478,25 +493,37 @@ export const WithIcon = () => (
           variant="quiet"
           buttonType="basic"
           size="sm"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="quiet"
           buttonType="basic"
           size="md"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="quiet"
           buttonType="basic"
           size="lg"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="quiet"
           buttonType="basic"
           size="xl"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
       </div>
 
@@ -508,31 +535,31 @@ export const WithIcon = () => (
           variant="quiet"
           buttonType="basic"
           size="xs"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
           buttonType="basic"
           size="sm"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
           buttonType="basic"
           size="md"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
           buttonType="basic"
           size="lg"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
           buttonType="basic"
           size="xl"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
     </div>
@@ -552,25 +579,37 @@ export const WithIcon = () => (
           variant="solid"
           buttonType="light"
           size="sm"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="solid"
           buttonType="light"
           size="md"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="solid"
           buttonType="light"
           size="lg"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="solid"
           buttonType="light"
           size="xl"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
       </div>
 
@@ -582,31 +621,31 @@ export const WithIcon = () => (
           variant="solid"
           buttonType="light"
           size="xs"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
           buttonType="light"
           size="sm"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
           buttonType="light"
           size="md"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
           buttonType="light"
           size="lg"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
           buttonType="light"
           size="xl"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
     </div>
@@ -619,22 +658,34 @@ export const WithIcon = () => (
         <Button
           variant="ghost"
           buttonType="light"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="ghost"
           buttonType="basic"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="ghost"
           buttonType="core"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="ghost"
           buttonType="danger"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
       </div>
 
@@ -645,17 +696,26 @@ export const WithIcon = () => (
         <Button
           variant="quiet"
           buttonType="basic"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="quiet"
           buttonType="core"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="quiet"
           buttonType="danger"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
       </div>
 
@@ -666,22 +726,34 @@ export const WithIcon = () => (
         <Button
           variant="solid"
           buttonType="light"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="solid"
           buttonType="basic"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="solid"
           buttonType="core"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="solid"
           buttonType="danger"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
       </div>
 
@@ -692,17 +764,26 @@ export const WithIcon = () => (
         <Button
           variant="textonly"
           buttonType="basic"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="textonly"
           buttonType="core"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
         <Button
           variant="textonly"
           buttonType="danger"
-          label={{ labelIcon: <Icon.Pen color="gray_7" />, labelText: "수정" }}
+          label={{
+            labelIcon: <Icon.Setting color="gray_7" />,
+            labelText: "수정",
+          }}
         />
       </div>
 
@@ -715,22 +796,22 @@ export const WithIcon = () => (
         <Button
           variant="ghost"
           buttonType="light"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
           buttonType="basic"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
           buttonType="core"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
           buttonType="danger"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
 
@@ -741,22 +822,22 @@ export const WithIcon = () => (
         <Button
           variant="quiet"
           buttonType="light"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
           buttonType="basic"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
           buttonType="core"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
           buttonType="danger"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
 
@@ -767,22 +848,22 @@ export const WithIcon = () => (
         <Button
           variant="solid"
           buttonType="light"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
           buttonType="basic"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
           buttonType="core"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
           buttonType="danger"
-          label={{ labelIcon: <Icon.Pen color="gray_7" /> }}
+          label={{ labelIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
     </div>
