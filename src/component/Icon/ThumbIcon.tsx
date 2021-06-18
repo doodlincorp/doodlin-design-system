@@ -9,7 +9,7 @@ export interface IThumbIconProps {
   size?: number;
   rotate?: number;
   flip?: boolean;
-  variant?: "sobad" | "bad" | "soso" | "good" | "sogood";
+  variant?: "sobad" | "bad" | "soso" | "good" | "sogood" | "default";
 }
 
 export const ThumbIcon: React.FC<IThumbIconProps> = ({
@@ -24,8 +24,22 @@ export const ThumbIcon: React.FC<IThumbIconProps> = ({
     <i
       className={cn("dds-icon", className, { flip })}
       style={{
-        width: size,
-        minWidth: size,
+        width:
+          variant === "sobad"
+            ? size * 2
+            : variant === "sogood"
+            ? size * 2
+            : variant === "soso"
+            ? size * 2
+            : size,
+        minWidth:
+          variant === "sobad"
+            ? size * 2
+            : variant === "sogood"
+            ? size * 2
+            : variant === "soso"
+            ? size * 2
+            : size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}
@@ -120,7 +134,7 @@ export const ThumbIcon: React.FC<IThumbIconProps> = ({
             fill-opacity="0.3"
           />
         </svg>
-      ) : (
+      ) : variant === "sogood" ? (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -149,6 +163,8 @@ export const ThumbIcon: React.FC<IThumbIconProps> = ({
             fill-opacity="0.3"
           />
         </svg>
+      ) : (
+        ""
       )}
     </i>
   );

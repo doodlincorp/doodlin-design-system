@@ -28,7 +28,7 @@ const Modal: React.FC<IModalProps> = ({
       <div className={cn("modal-content-box", className)}>
         {closeBtn && (
           <div className="close-btn" onClick={closeBtn}>
-            <CloseIcon size={28} color="white" />
+            <CloseIcon color="white" />
           </div>
         )}
         {header && <div className="modal-header">{header.Text}</div>}
