@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { Text } from "..";
 import Button from "../component/Button";
+import Divider from "../component/Divider";
 import { EditIcon } from "../component/Icon/EditIcon";
 import { GarbageIcon } from "../component/Icon/GarbageIcon";
 import { SettingIcon } from "../component/Icon/SettingIcon";
@@ -29,6 +31,7 @@ export const Default = () => {
         ></OptionItem>
         <OptionItem text="아이콘과 함께" icon={<EditIcon />}></OptionItem>
         <OptionItem text="로딩중" loading></OptionItem>
+        <Divider />
         <OptionItem
           text="비활성화"
           icon={<SettingIcon />}
