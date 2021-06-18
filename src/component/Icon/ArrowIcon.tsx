@@ -10,7 +10,7 @@ export interface IArrowIconProps {
   rotate?: number;
   flip?: boolean;
 
-  variant?: "arrow" | "chevron" | "solid";
+  variant?: "arrow" | "chevron" | "chevron-alt" | "solid";
 }
 
 export const ArrowIcon: React.FC<IArrowIconProps> = ({
@@ -19,7 +19,6 @@ export const ArrowIcon: React.FC<IArrowIconProps> = ({
   size = 16,
   rotate,
   flip,
-
   variant = "chevron",
 }) => {
   return (
@@ -45,6 +44,16 @@ export const ArrowIcon: React.FC<IArrowIconProps> = ({
           <path
             id="icon__fill"
             d="M15.0143 4L7 12L15.0143 20L17 18.0179L10.9714 12L17 5.98213L15.0143 4Z"
+            fill={color ? colorMap[color] : colorMap.gray_8}
+          />
+        </svg>
+      ) : variant === "chevron-alt" ? (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            id="icon__fill"
+            d="M13.168 5.44531L14.8321 6.55471L11.2019 12L14.8321 17.4453L13.168 18.5547L8.79816 12L13.168 5.44531Z"
             fill={color ? colorMap[color] : colorMap.gray_8}
           />
         </svg>

@@ -170,6 +170,10 @@ export const Icon = () => {
           <StoriesIcon.Arrow size={40} />
         </IconBlock>
 
+        <IconBlock name="ArrowIcon" variantName="chevron-alt">
+          <StoriesIcon.Arrow size={40} variant="chevron-alt" />
+        </IconBlock>
+
         <IconBlock name="ArrowIcon" variantName="solid">
           <StoriesIcon.Arrow size={40} variant="solid" />
         </IconBlock>
