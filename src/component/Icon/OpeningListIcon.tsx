@@ -1,47 +1,42 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface IOpeningListIconProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
 export const OpeningListIcon: React.FC<IOpeningListIconProps> = ({
   color,
   className,
+  size = 16,
+  rotate,
+  flip,
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        minWidth: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          d="M12 3H2V5H12V3Z"
-          fill={color ? colorMap[color] : colorMap.gray_5}
-        />
-        <path
-          id="icon__fill"
-          d="M14 7H2V9H14V7Z"
-          fill={color ? colorMap[color] : colorMap.gray_5}
-        />
-        <path
-          id="icon__fill"
-          d="M10 11H2V13H10V11Z"
-          fill={color ? colorMap[color] : colorMap.gray_5}
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M4 6H16V8H4V6ZM4 11H20V13H4V11ZM12 16H4V18H12V16Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
-    </div>
+    </i>
   );
 };

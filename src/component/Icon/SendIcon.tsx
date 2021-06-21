@@ -1,34 +1,40 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface ISendIconProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
-export const SendIcon: React.FC<ISendIconProps> = ({ color, className }) => {
+export const SendIcon: React.FC<ISendIconProps> = ({
+  color,
+  className,
+  size = 16,
+  rotate,
+  flip,
+}) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        minWidth: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          d="M10.7704 14.0298L15.4704 0.529785L1.97039 5.22978L0.400391 5.77979L1.99039 6.27979L7.86039 8.13979L9.72039 14.0098L10.2204 15.5998L10.7704 14.0298ZM8.12039 7.16979L3.57039 5.72978L12.7704 2.52979L8.12039 7.16979ZM8.83039 7.87979L13.4704 3.23979L10.2704 12.4398L8.83039 7.87979Z"
-          fill={color ? colorMap[color] : colorMap.gray_7}
+          d="M21.426 11.095L4.426 3.09499C4.076 2.93099 3.663 2.98199 3.365 3.22799C3.066 3.47299 2.937 3.86799 3.03 4.24199L4.242 9.09099L12 12L4.242 14.909L3.03 19.758C2.936 20.132 3.066 20.528 3.365 20.773C3.548 20.923 3.772 21 4 21C4.145 21 4.29 20.969 4.426 20.905L21.426 12.905C21.776 12.74 22 12.388 22 12C22 11.612 21.776 11.26 21.426 11.095Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
-    </div>
+    </i>
   );
 };

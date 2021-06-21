@@ -1,39 +1,40 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface IArchiveIConProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
 export const ArchiveIcon: React.FC<IArchiveIConProps> = ({
   color,
   className,
+  size = 16,
+  rotate,
+  flip,
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        minWidth: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M12.8387 7.49983V3.08118H3.16129V7.49983H6.06452C6.06452 8.56032 6.93161 9.42101 8 9.42101C9.06839 9.42101 9.93548 8.56032 9.93548 7.49983H12.8387ZM14 7.49983V3.08118C14 2.44526 13.4794 1.92847 12.8387 1.92847H3.16129C2.52065 1.92847 2 2.44526 2 3.08118V7.49983V11.9186V11.9186C2 12.5545 2.52065 13.0713 3.16129 13.0713H12.8387C13.4794 13.0713 14 12.5545 14 11.9186V11.9186V7.49983Z"
-          fill={color ? colorMap[color] : colorMap.gray_7}
+          d="M20 3H4C2.897 3 2 3.897 2 5V13V14V19C2 20.104 2.896 21 4 21H20C21.104 21 22 20.104 22 19V14V13V5C22 3.897 21.103 3 20 3ZM19 12H16H15.858C15.412 13.722 13.861 15 12 15C10.139 15 8.588 13.722 8.142 12H8H4V5H20V12H19Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
-    </div>
+    </i>
   );
 };

@@ -1,85 +1,42 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface IAddColumnIconProps {
   color?: keyof IColorMap;
   className?: string;
-  variant?: "left" | "right";
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
 export const AddColumnIcon: React.FC<IAddColumnIconProps> = ({
   color,
   className,
-  variant = "right",
+  size = 16,
+  rotate,
+  flip,
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        minWidth: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "left" && (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <mask id="path-1-inside-1" fill="white">
-            <rect x="9" width="6" height="16" rx="1" />
-          </mask>
-          <rect
-            x="9"
-            width="6"
-            height="16"
-            rx="1"
-            stroke={color ? colorMap[color] : colorMap.gray_8}
-            strokeWidth="4"
-            mask="url(#path-1-inside-1)"
-          />
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            id="icon__fill"
-            d="M3.5 0C3.22386 0 3 0.223858 3 0.5V2H1.5C1.22386 2 1 2.22386 1 2.5V3.5C1 3.77614 1.22386 4 1.5 4H3V5.5C3 5.77614 3.22386 6 3.5 6H4.5C4.77614 6 5 5.77614 5 5.5V4H6.5C6.77614 4 7 3.77614 7 3.5V2.5C7 2.22386 6.77614 2 6.5 2H5V0.5C5 0.223858 4.77614 0 4.5 0H3.5Z"
-            fill={color ? colorMap[color] : colorMap.gray_8}
-          />
-        </svg>
-      )}
-
-      {variant === "right" && (
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <mask id="path-1-inside-1" fill="white">
-            <rect x="1" width="6" height="16" rx="1" />
-          </mask>
-          <rect
-            x="1"
-            width="6"
-            height="16"
-            rx="1"
-            stroke={color ? colorMap[color] : colorMap.gray_8}
-            strokeWidth="4"
-            mask="url(#path-1-inside-1)"
-          />
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            id="icon__fill"
-            d="M11.5 0C11.2239 0 11 0.223858 11 0.5V2H9.5C9.22386 2 9 2.22386 9 2.5V3.5C9 3.77614 9.22386 4 9.5 4H11V5.5C11 5.77614 11.2239 6 11.5 6H12.5C12.7761 6 13 5.77614 13 5.5V4H14.5C14.7761 4 15 3.77614 15 3.5V2.5C15 2.22386 14.7761 2 14.5 2H13V0.5C13 0.223858 12.7761 0 12.5 0H11.5Z"
-            fill={color ? colorMap[color] : colorMap.gray_8}
-          />
-        </svg>
-      )}
-    </div>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          id="icon__fill"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M6 5H10V19H6V5ZM4 5C4 3.89543 4.89543 3 6 3H10C11.1046 3 12 3.89543 12 5V19C12 20.1046 11.1046 21 10 21H6C4.89543 21 4 20.1046 4 19V5ZM16 3H18V5H20V7H18V9H16V7H14V5H16V3Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
+        />
+      </svg>
+    </i>
   );
 };

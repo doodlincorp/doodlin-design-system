@@ -1,22 +1,31 @@
 import React from "react";
 import { colorMap, IColorMap } from "../colorMap";
+import "../index.scss";
+import cn from "classnames";
 
 export interface IPickerToggleIconProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
 export const PickerToggleIcon: React.FC<IPickerToggleIconProps> = ({
   color,
   className,
+  size = 16,
+  rotate,
+  flip,
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        minWidth: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
       <svg
@@ -37,6 +46,6 @@ export const PickerToggleIcon: React.FC<IPickerToggleIconProps> = ({
           fill={color ? colorMap[color] : colorMap.gray_5}
         />
       </svg>
-    </div>
+    </i>
   );
 };

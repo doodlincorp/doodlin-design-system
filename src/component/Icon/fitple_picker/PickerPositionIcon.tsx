@@ -1,24 +1,35 @@
 import React from "react";
 import { colorMap, IColorMap } from "../colorMap";
+import "../index.scss";
+import cn from "classnames";
 
 export interface IPickerPositionIconProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
+
   variant?: "left" | "right" | "top" | "bottom";
 }
 
 export const PickerPositionIcon: React.FC<IPickerPositionIconProps> = ({
   color,
   className,
+  size = 16,
+  rotate,
+  flip,
+
   variant = "right",
 }) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        minWidth: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
       {variant === "left" && (
@@ -117,6 +128,6 @@ export const PickerPositionIcon: React.FC<IPickerPositionIconProps> = ({
           />
         </svg>
       )}
-    </div>
+    </i>
   );
 };

@@ -1,35 +1,40 @@
 import React from "react";
 import { colorMap, IColorMap } from "./colorMap";
+import "./index.scss";
+import cn from "classnames";
 
 export interface ICloseIconProps {
   color?: keyof IColorMap;
   className?: string;
+  size?: number;
+  rotate?: number;
+  flip?: boolean;
 }
 
-export const CloseIcon: React.FC<ICloseIconProps> = ({ color, className }) => {
+export const CloseIcon: React.FC<ICloseIconProps> = ({
+  color,
+  className,
+  size = 16,
+  rotate,
+  flip,
+}) => {
   return (
-    <div
-      className={className}
+    <i
+      className={cn("dds-icon", className, { flip })}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        width: size,
+        minWidth: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="14"
-        height="14"
-        viewBox="0 0 14 14"
-      >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          data-name="패스 48"
-          d="M91.707,78.707l-1.414-1.414L85,82.586l-5.293-5.293-1.414,1.414L83.586,84l-5.293,5.293,1.414,1.414L85,85.414l5.293,5.293,1.414-1.414L86.414,84Z"
-          transform="translate(-78.293 -77.293)"
-          fill={color ? colorMap[color] : colorMap.gray_6}
+          d="M18.0002 4L11.9993 10L5.99982 4L4 6L9.99947 12L4 18L5.99982 20L11.9993 14L18.0002 20L20 18L14.0005 12L20 6L18.0002 4Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
-    </div>
+    </i>
   );
 };
