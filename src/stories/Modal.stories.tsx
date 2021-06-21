@@ -16,6 +16,7 @@ export const Default = () => {
       <Button onClick={() => setOpen(true)}>모달 오픈</Button>
       {open && (
         <Modal
+          zIndex={100}
           closeBtn={() => setOpen(false)}
           header={{ Text: "기본 모달" }}
           footer={{
