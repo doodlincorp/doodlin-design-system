@@ -12,7 +12,7 @@ export interface IModalProps {
   footer?: {
     cancelBtn?: React.ReactElement;
     submitBtn?: React.ReactElement;
-    footerStyle?: "start" | "center" | "end";
+    footerStyle?: "start" | "center" | "end" | "space-between";
   };
 }
 

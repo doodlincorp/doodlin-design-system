@@ -34,6 +34,7 @@ export const Default = () => {
                 확인
               </Button>
             ),
+            footerStyle: "space-between",
           }}
         >
           <Text size="desc-sm">

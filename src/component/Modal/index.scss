@@ -68,6 +68,9 @@
     &.end {
       justify-content: flex-end;
     }
+    &.space-between {
+      justify-content: space-between;
+    }
     .cancel-btn {
       @include button-color($gray_4, $gray_8);
     }

@@ -20,7 +20,7 @@ export interface ITextProps
 const Text: React.FC<ITextProps> = ({
   className,
   children,
-  variant = "inline",
+  variant = "block",
   weight,
   lineHeight,
   size,
