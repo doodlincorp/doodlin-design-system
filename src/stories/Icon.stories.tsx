@@ -174,10 +174,6 @@ export const Default = () => {
           <StoriesIcon.Email size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="EvaluationsTabIcon">
-          <StoriesIcon.EvaluationsTab size={40} />
-        </IconBlock>
-
         <IconBlock name="ExcelIcon">
           <StoriesIcon.Excel size={40} />
         </IconBlock>
@@ -268,6 +264,14 @@ export const Default = () => {
 
         <IconBlock name="PhoneIcon">
           <StoriesIcon.Phone size={40} />
+        </IconBlock>
+
+        <IconBlock name="PieChartIcon" variantName="default">
+          <StoriesIcon.PieChart size={40} />
+        </IconBlock>
+
+        <IconBlock name="PieChartIcon" variantName="alt">
+          <StoriesIcon.PieChart size={40} variant="alt" />
         </IconBlock>
 
         <IconBlock name="PlusIcon" variantName="default">

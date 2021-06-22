@@ -39,7 +39,7 @@ import { MailSendIcon } from "./MailSendIcon";
 import { LinkIcon } from "./LinkIcon";
 import { LinkExternalIcon } from "./LinkExternalIcon";
 import { MemoIcon } from "./MemoIcon";
-import { EvaluationsTabIcon } from "./EvaluationsTabIcon";
+import { PieChartIcon } from "./PieChartIcon";
 import { QuestionMarkIcon } from "./QuestionMarkIcon";
 import { FileDriveIcon } from "./FileDriveIcon";
 import { TagIcon } from "./TagIcon";
@@ -111,7 +111,7 @@ const Icon = {
   DefaultImage: DefaultImageIcon,
   Doc: DocIcon,
   FileDrive: FileDriveIcon,
-  EvaluationsTab: EvaluationsTabIcon,
+  PieChart: PieChartIcon,
   QuestionMark: QuestionMarkIcon,
   Download: DownloadIcon,
   Edit: EditIcon,
