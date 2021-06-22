@@ -22,9 +22,7 @@ export const variant = () => {
   return (
     <div style={{ paddingLeft: 120, paddingTop: 20 }}>
       <div className="box-tooltip-area" style={{ marginBottom: 60 }}>
-        <Tooltip
-          tooltipText={"단어형 툴팁"}
-        >
+        <Tooltip tooltipText={"단어형 툴팁"}>
           <Button size="md">단어형 툴팁</Button>
         </Tooltip>
       </div>
@@ -42,26 +40,17 @@ export const placement = () => {
   return (
     <div style={{ paddingLeft: 120, paddingTop: 20 }}>
       <span style={{ marginLeft: 20 }}>
-        <Tooltip
-          tooltipText={"왼쪽 정렬"}
-          placement="left"
-        >
+        <Tooltip tooltipText={"왼쪽 정렬"} placement="left">
           <Button size="md">left</Button>
         </Tooltip>
       </span>
       <span style={{ marginLeft: 20 }}>
-        <Tooltip
-          tooltipText={"중앙 정렬"}
-          placement="center"
-        >
+        <Tooltip tooltipText={"중앙 정렬"} placement="center">
           <Button size="md">center</Button>
         </Tooltip>
       </span>
       <span style={{ marginLeft: 20 }}>
-        <Tooltip
-          tooltipText={"오른쪽 정렬"}
-          placement="right"
-        >
+        <Tooltip tooltipText={"오른쪽 정렬"} placement="right">
           <Button size="md">right</Button>
         </Tooltip>
       </span>
