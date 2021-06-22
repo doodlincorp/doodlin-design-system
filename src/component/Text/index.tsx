@@ -2,11 +2,13 @@ import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 import "./index.scss";
 import { TFontSize } from "../..";
+import { colorMap, IColorMap } from "../Icon/colorMap";
 
 export interface ITextProps
   extends HTMLAttributes<
     HTMLDivElement | HTMLSpanElement | HTMLHeadingElement
   > {
+  textColor?: keyof IColorMap;
   className?: string;
   variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "block" | "inline";
   weight?: "light" | "regular" | "medium" | "bold";
@@ -18,11 +20,12 @@ export interface ITextProps
 const Text: React.FC<ITextProps> = ({
   className,
   children,
-  variant = "inline",
+  variant = "block",
   weight,
   lineHeight,
   size,
   align,
+  textColor,
   ...props
 }) => {
   switch (variant) {
@@ -37,6 +40,7 @@ const Text: React.FC<ITextProps> = ({
             `line-height-${lineHeight}`,
             `text-align-${align}`,
           )}
+          style={{ color: `${textColor && colorMap[textColor]}` }}
           {...props}
         >
           {children}
@@ -53,6 +57,7 @@ const Text: React.FC<ITextProps> = ({
             `line-height-${lineHeight}`,
             `text-align-${align}`,
           )}
+          style={{ color: `${textColor && colorMap[textColor]}` }}
           {...props}
         >
           {children}
@@ -69,6 +74,7 @@ const Text: React.FC<ITextProps> = ({
             `line-height-${lineHeight}`,
             `text-align-${align}`,
           )}
+          style={{ color: `${textColor && colorMap[textColor]}` }}
           {...props}
         >
           {children}
@@ -85,6 +91,7 @@ const Text: React.FC<ITextProps> = ({
             `line-height-${lineHeight}`,
             `text-align-${align}`,
           )}
+          style={{ color: `${textColor && colorMap[textColor]}` }}
           {...props}
         >
           {children}
@@ -101,6 +108,7 @@ const Text: React.FC<ITextProps> = ({
             `line-height-${lineHeight}`,
             `text-align-${align}`,
           )}
+          style={{ color: `${textColor && colorMap[textColor]}` }}
           {...props}
         >
           {children}
@@ -117,6 +125,7 @@ const Text: React.FC<ITextProps> = ({
             `line-height-${lineHeight}`,
             `text-align-${align}`,
           )}
+          style={{ color: `${textColor && colorMap[textColor]}` }}
           {...props}
         >
           {children}
@@ -133,6 +142,7 @@ const Text: React.FC<ITextProps> = ({
             `line-height-${lineHeight}`,
             `text-align-${align}`,
           )}
+          style={{ color: `${textColor && colorMap[textColor]}` }}
           {...props}
         >
           {children}

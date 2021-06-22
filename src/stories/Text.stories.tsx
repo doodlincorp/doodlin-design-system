@@ -107,7 +107,7 @@ export const Variant = () => {
       <header style={{ paddingBottom: 8 }}>
         <Text variant="h5">start</Text>
       </header>
-      <Text variant="block" align="start">
+      <Text align="start">
         토끼, 않은 이런 계절이 내일 하나에 별빛이 이네들은 봅니다. 이름과, 멀리
         내 있습니다. 별에도 별 이름과, 이제 언덕 프랑시스 소학교 까닭입니다.
         잔디가 소학교 둘 패, 어머니, 그리워 애기 듯합니다. 소녀들의 내일 노루,
@@ -117,7 +117,7 @@ export const Variant = () => {
       <header style={{ paddingTop: 16, paddingBottom: 8 }}>
         <Text variant="h5">center</Text>
       </header>
-      <Text variant="block" align="center">
+      <Text align="center">
         토끼, 않은 이런 계절이 내일 하나에 별빛이 이네들은 봅니다. 이름과, 멀리
         내 있습니다. 별에도 별 이름과, 이제 언덕 프랑시스 소학교 까닭입니다.
         잔디가 소학교 둘 패, 어머니, 그리워 애기 듯합니다. 소녀들의 내일 노루,
@@ -127,7 +127,7 @@ export const Variant = () => {
       <header style={{ paddingTop: 16, paddingBottom: 8 }}>
         <Text variant="h5">end</Text>
       </header>
-      <Text variant="block" align="end">
+      <Text align="end">
         토끼, 않은 이런 계절이 내일 하나에 별빛이 이네들은 봅니다. 이름과, 멀리
         내 있습니다. 별에도 별 이름과, 이제 언덕 프랑시스 소학교 까닭입니다.
         잔디가 소학교 둘 패, 어머니, 그리워 애기 듯합니다. 소녀들의 내일 노루,

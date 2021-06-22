@@ -16,6 +16,7 @@ export const Default = () => {
       <Button onClick={() => setOpen(true)}>모달 오픈</Button>
       {open && (
         <Modal
+          zIndex={100}
           closeBtn={() => setOpen(false)}
           header={{ Text: "기본 모달" }}
           footer={{
@@ -34,9 +35,10 @@ export const Default = () => {
                 확인
               </Button>
             ),
+            footerStyle: "space-between",
           }}
         >
-          <Text size="desc-sm">
+          <Text>
             같은 그들의 날카로우나 품으며, 하는 새 심장의 많이 보라. 두손을 어디
             그들의 황금시대를 예수는 이것이야말로 이것이다. 하는 그들은 우리
             이상의 청춘에서만 칼이다. 같은 그들의 날카로우나 품으며, 하는 새
