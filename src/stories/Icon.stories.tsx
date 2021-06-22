@@ -274,6 +274,10 @@ export const Default = () => {
           <StoriesIcon.PieChart size={40} variant="alt" />
         </IconBlock>
 
+        <IconBlock name="PieChartIcon" variantName="doughnut">
+          <StoriesIcon.PieChart size={40} variant="doughnut" />
+        </IconBlock>
+
         <IconBlock name="PlusIcon" variantName="default">
           <StoriesIcon.Plus size={40} />
         </IconBlock>
