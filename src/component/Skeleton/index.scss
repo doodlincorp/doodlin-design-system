@@ -1,0 +1,100 @@
+@import "../../index.scss";
+
+._SKELETON_ {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.15);
+  height: auto;
+  border-radius: 6px;
+
+  // variant
+
+  &.circle {
+    border-radius: 50%;
+  }
+
+  &.false {
+    animation: none;
+  }
+
+  // animation
+
+  &.pulse {
+    animation: pulse 1.5s ease-in-out 0.5s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &.wave {
+    position: relative;
+    overflow: hidden;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(#fff, 0.3) 60%,
+        transparent
+      );
+      transform: translateX(-100%);
+      animation: wave 1.6s linear 0.8s infinite;
+    }
+  }
+  @keyframes wave {
+    0% {
+      transform: translateX(-100%);
+    }
+    60% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  &.fitContent {
+    max-width: fit-content;
+  }
+
+  &.withChildren {
+    & > * {
+      visibility: hidden;
+    }
+  }
+
+  &._BTN_ {
+    &.xs {
+      width: 40px;
+      height: 28px;
+    }
+    &.sm {
+      width: 60px;
+      height: 32px;
+    }
+    &.md {
+      width: 80px;
+      height: 36px;
+    }
+    &.lg {
+      width: 100px;
+      height: 44px;
+    }
+    &.xl {
+      width: 140px;
+      height: 56px;
+    }
+  }
+}
