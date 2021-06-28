@@ -15,7 +15,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "predeploy": "yarn build-storybook -o ./build_story",
-    "deploy": "aws s3 sync build_story s3://design.doodlin.co.kr",
+    "deploy": "aws s3 sync build_story s3://design.doodlin.co.kr --acl public-read",
     "postdeploy": "aws cloudfront create-invalidation --distribution-id=EGVDPWP38YTUH --paths '/*'"
   },
   "author": "",
