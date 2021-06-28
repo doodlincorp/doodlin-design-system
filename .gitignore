@@ -1,5 +1,6 @@
 node_modules/
 build/
+build_story/
 
 yarn-error.log
 yarn.lock
