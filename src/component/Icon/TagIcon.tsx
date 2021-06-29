@@ -35,8 +35,8 @@ export const TagIcon: React.FC<ITagIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M13 3C13.266 3 13.52 3.105 13.707 3.293L21.707 11.293C22.098 11.684 22.098 12.316 21.707 12.707L12.707 21.707C12.512 21.902 12.256 22 12 22C11.744 22 11.488 21.902 11.293 21.707L3.293 13.707C3.105 13.52 3 13.266 3 13V4C3 3.447 3.447 3 4 3H13ZM5 12.586L12 19.586L19.586 12L12.586 5H5V12.586ZM10.001 8.495C10.001 9.32619 9.32719 10 8.496 10C7.66481 10 6.991 9.32619 6.991 8.495C6.991 7.66381 7.66481 6.99 8.496 6.99C9.32719 6.99 10.001 7.66381 10.001 8.495Z"
             fill={color ? colorMap[color] : colorMap.gray_8}
           />

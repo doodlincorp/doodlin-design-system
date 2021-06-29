@@ -50,8 +50,8 @@ export const ArrowIcon: React.FC<IArrowIconProps> = ({
       ) : variant === "chevron-alt" ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             id="icon__fill"
             d="M13.168 5.44531L14.8321 6.55471L11.2019 12L14.8321 17.4453L13.168 18.5547L8.79816 12L13.168 5.44531Z"
             fill={color ? colorMap[color] : colorMap.gray_8}

@@ -31,8 +31,8 @@ export const AddColumnIcon: React.FC<IAddColumnIconProps> = ({
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M6 5H10V19H6V5ZM4 5C4 3.89543 4.89543 3 6 3H10C11.1046 3 12 3.89543 12 5V19C12 20.1046 11.1046 21 10 21H6C4.89543 21 4 20.1046 4 19V5ZM16 3H18V5H20V7H18V9H16V7H14V5H16V3Z"
           fill={color ? colorMap[color] : colorMap.gray_8}
         />

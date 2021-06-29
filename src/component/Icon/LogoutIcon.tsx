@@ -31,8 +31,8 @@ export const LogoutIcon: React.FC<ILogoutIconProps> = ({
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M11 3H20C21.103 3 22 3.897 22 5V19C22 20.103 21.103 21 20 21H11C9.897 21 9 20.103 9 19V15H11V19H20V5H11V9H9V5C9 3.897 9.897 3 11 3ZM7 11H16V13H7V16L2 12L7 8V11Z"
           fill={color ? colorMap[color] : colorMap.gray_8}
         />

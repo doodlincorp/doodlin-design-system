@@ -31,8 +31,8 @@ export const PenIcon: React.FC<IPenIconProps> = ({
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M20 7L18 9L15 6L17 4L20 7ZM4 20H7L16.5 10.5L13.5 7.5L4 17V20Z"
           fill={color ? colorMap[color] : colorMap.gray_8}
         />
