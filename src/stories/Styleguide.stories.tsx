@@ -48,32 +48,69 @@ export const Color = () => {
   );
   return (
     <div style={{ padding: 20 }}>
-      <Text>Yellow</Text>
+      <Text>Primary Blue</Text>
       <div style={{ marginBottom: 30 }}>
-        <Palette name="Yellow_0" color="#fff9db" />
-        <Palette name="Yellow_1" color="#fff3bf" />
-        <Palette name="Yellow_2" color="#ffec99" />
-        <Palette name="Yellow_3" color="#ffe066" />
-        <Palette name="Yellow_4" color="#ffd43b" />
-        <Palette name="Yellow_5" color="#fcc419" />
-        <Palette name="Yellow_6" color="#fab005" />
-        <Palette name="Yellow_7" color="#f59f00" />
-        <Palette name="Yellow_8" color="#f08c00" />
-        <Palette name="Yellow_9" color="#e67700" />
+        <Palette name="blue_0" color="#F3F9FF" />
+        <Palette name="blue_1" color="#E6F2FF" />
+        <Palette name="blue_2" color="#C5E1FF" />
+        <Palette name="blue_3" color="#92C7FF" />
+        <Palette name="blue_4" color="#5FACFF" />
+        <Palette name="blue_5" color="#1184FF" /> 
+        <Palette name="blue_6" color="#0C6CD3" />
+        <Palette name="blue_7" color="#004C9E" />
+        <Palette name="blue_8" color="#003267" />
       </div>
 
-      <Text>Warm Gray</Text>
+      <Text>Gray</Text>
       <div style={{ marginBottom: 30 }}>
-        <Palette name="Gray_0" color="#f8f8f8" />
-        <Palette name="Gray_1" color="#f1f1f1" />
-        <Palette name="Gray_2" color="#e9e9e9" />
-        <Palette name="Gray_3" color="#e0e0e0" />
-        <Palette name="Gray_4" color="#d0d0d0" />
-        <Palette name="Gray_5" color="#b0b0b0" />
-        <Palette name="Gray_6" color="#8b8b8b" />
-        <Palette name="Gray_7" color="#555555" />
-        <Palette name="Gray_8" color="#333333" />
-        <Palette name="Gray_9" color="#111111" />
+        <Palette name="gray_0" color="#F9F9FB" />
+        <Palette name="gray_1" color="#EFEFF2" />
+        <Palette name="gray_2" color="#EBEBEE" />
+        <Palette name="gray_3" color="#E0E0E5" />
+        <Palette name="gray_4" color="#CACACC" />
+        <Palette name="gray_5" color="#B1B1B3" />
+        <Palette name="gray_6" color="#767679" />
+        <Palette name="gray_7" color="#444348" />
+        <Palette name="gray_8" color="#15141A" />
+        <Palette name="blue_gray" color="#8F8F9C" />
+      </div>
+
+      <Text>System Color</Text>
+      <div style={{ marginBottom: 30 }}>
+        <Palette name="active_green" color="#69DB7C" />
+        <Palette name="inactive_red" color="#FF8787" />
+        <Palette name="warning_red_1" color="#FFF0EE" />
+        <Palette name="warning_red_2" color="#F8D0D1" />
+      </div>
+
+      <Text>Green</Text>
+      <div style={{ marginBottom: 30 }}>
+        <Palette name="green" color="#34C759" />
+        <Palette name="thumbs_green" color="#40C057" />
+        <Palette name="text_green" color="#00A21D" />
+
+      </div>
+
+      <Text>Red</Text>
+      <div style={{ marginBottom: 30 }}>
+        <Palette name="red_5" color="#FF6B6B" />
+        <Palette name="red_6" color="#FA5252" />
+        <Palette name="red_7" color="#F03E3E" />
+        <Palette name="red_8" color="#E03131" />
+        <Palette name="red_9" color="#C92A2A" />
+        <Palette name="red_10" color="#A51111" />
+      </div>
+
+      <Text>Orange</Text>
+      <div style={{ marginBottom: 30 }}>
+        <Palette name="orange_1" color="#FFECE2" />
+        <Palette name="interview_orange_7" color="#F38119" />
+      </div>
+
+      <Text>Refferal Color</Text>
+      <div style={{ marginBottom: 30 }}>
+        <Palette name="referral_blue_1" color="#E8EFF7" />
+        <Palette name="referral_blue_7" color="#1864AB" />
       </div>
     </div>
   );

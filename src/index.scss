@@ -39,84 +39,56 @@ $spacer-xx-large: 6rem;
 
 /////////////////* Color */////////////////
 
-// Primary Color
-$yellow_0: #fff9db;
-$yellow_1: #fff3bf;
-$yellow_2: #ffec99;
-$yellow_3: #ffe066;
-$yellow_4: #ffd43b; // Primary
-$yellow_5: #fcc419;
-$yellow_6: #fab005; // Primary
-$yellow_7: #f59f00;
-$yellow_8: #f08c00;
-$yellow_9: #e67700;
+// Primary Blue
+$blue_0: #f3f9ff;
+$blue_1: #E6F2FF;
+$blue_2: #C5E1FF;
+$blue_3: #92C7FF;
+$blue_4: #5FACFF;
+$blue_5: #1184FF;
+$blue_6: #0C6CD3;
+$blue_7: #004C9E;
+$blue_8: #003267;
 
-// Secondary Color
-$blue_0: #e7f5ff;
-$blue_1: #d0ebff;
-$blue_2: #a5d8ff;
-$blue_3: #74c0fc;
-$blue_4: #4dabf7;
-$blue_5: #339af0;
-$blue_6: #228be5;
-$blue_7: #1c7ed6;
-$blue_8: #1971c2;
-$blue_9: #1864ab;
-$blue_10: #0a467f;
-
-// Kanban Color
-// before
-$gray_4: #d0d0d0;
-$blue_2: #a5d8ff;
-$blue_4: #4dabf7;
-$blue_6: #228be5;
-$teal_4: #38d9a9;
-$teal_6: #12b886;
-// after
-$crayon_red: #e29b9b;
-$crayon_pink: #e29fb7;
-$crayon_grape: #d8a1e5;
-$crayon_violet: #b6a6e5;
-$crayon_indigo: #a1b0ed;
-$crayon_blue: #9ac5e6;
-$crayon_cyan: #95d7e0;
-$crayon_teal: #8ad1bc;
-$crayon_green: #9ad5a2;
-
-// Gray Color
-$gray_0: #f8f8f8; // bg0
-$gray_1: #f1f1f1; // bg1, hover
-$gray_2: #e9e9e9; // ghost && disabled button border
-$gray_3: #e0e0e0; // primary border
-$gray_4: #d0d0d0; // input, button border, disabled text
-$gray_5: #b0b0b0;
-$gray_6: #8b8b8b; // sub icon, text
-$gray_7: #555555; // primary icon
-$gray_8: #333333; // primary text
-$gray_9: #111111; // title text
-
-// Red Color
-$red_0: #fff5f5;
-$red_1: #ffe3e3;
-$red_2: #ffc9c9;
-$red_3: #ffa8a8;
-$red_4: #ff8787;
-$red_5: #ff6b6b;
-$red_6: #fa5252;
-$red_7: #f03e3e;
-$red_8: #e03131;
-$red_9: #c92a2a;
-$red_10: #a51111;
+// Gray
+$white: #fff;
+$gray_0: #F9F9FB;
+$gray_1: #EFEFF2;
+$gray_2: #EBEBEE;
+$gray_3: #E0E0E5;
+$gray_4: #CACACC;
+$gray_5: #B1B1B3;
+$gray_6: #767679;
+$gray_7: #444348;
+$gray_8: #15141A;
+$blue_gray: #8F8F9C;
 
 // System Color
-$red_1: #ffe3e3; // delete button hover
-$red_7: #f03e3e; // caution, error alert
-$green_6: #40c057; // success
-$yellow_6: #fab005; // warning
-$blue_6: #228be5; // information
+$active_green: #69DB7C;
+$inactive_red: #FF8787;
+$warning_red_1: #FFF0EE;
+$warning_red_2: #F8D0D1;
 
-// Other Color
-$label_0: #7094b5;
+// Green
+$green: #34C759;
+$thumbs_green: #40C057;
+$text_green: #00A21D;
+
+// Red
+$red_5: #FF6B6B;
+$red_6: #FA5252;
+$red_7: #F03E3E;
+$red_8: #E03131;
+$red_9: #C92A2A;
+$red_10: #A51111;
+
+// Orange
+$orange_1: #FFECE2;
+$interview_orange_7: #F38119;
+
+// Refferal Color
+$referral_blue_1: #E8EFF7;
+$referral_blue_7: #1864AB;
 
 // Shadow
 $shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -183,70 +155,102 @@ $button-hover-transition: ease-in-out 0.2s;
 // * $dis-bgc: disabled background-color
 // * $dis-fc: disabled font-color
 @mixin button-color(
-  $bgc: $gray_8,
+  $bgc: $gray_7,
   $fc: white,
-  $dis-bgc: $gray_2,
-  $dis-fc: $gray_5
 ) {
   background: $bgc;
   color: $fc;
   &:hover {
-    @if $bgc == $gray_4 {
-      background: $gray_3;
-    } @else {
-      background: lighten($bgc, 10%);
+    @if $bgc == $gray_1 {
+      color: $gray_8;
+    } @else if $bgc == $gray_7 {
+      background: $gray_8;
+    } 
+    @else if $bgc == $blue_5 {
+      background: $blue_6;
+    }
+    @else if $bgc == $red_7 {
+      background: $red_8;
+    }
+    @else {
+      background: darken($bgc, 10%);
     }
   }
   &:active {
     @if $bgc == $gray_4 {
       background: $gray_4;
-    } @else if $bgc == $yellow_6 {
-      background: $yellow_7;
-    } @else {
-      background: darken($bgc, 10%);
+    } @else if $bgc == $gray_7 {
+      background: $gray_7;
+    } 
+    @else if $bgc == $blue_5 {
+      background: $blue_7;
+    }
+    @else if $bgc == $red_7 {
+      background: $red_9;
+    } 
+    @else {
+      background: lighten($bgc, 5%);
     }
   }
 
   // Variant
   &.ghost {
     background: transparent;
-    box-shadow: 0 0 0 1px $bgc inset;
-    @if $bgc == $gray_4 {
-      color: $fc;
-    } @else {
-      color: $bgc;
+    border-width: 1px;
+    border-style: solid;
+    color: $bgc;
+    @if $bgc == $gray_1 {
+      // buttonType="light"
+      border-color: $gray_4;
+      color: $gray_8;
+    } @else if $bgc == $gray_7 {
+      // buttonType="basic"
+      color: $gray_8;
     }
     &:hover {
-      @if $bgc == $gray_4 {
-        background: $gray_1;
-        box-shadow: 0 0 0 1px $gray_4 inset;
-        color: $fc;
+      @if $bgc == $gray_1 {
+        // buttonType="light"
+        background-color: $gray_1;
       } @else {
         background: $bgc;
         color: $fc;
+        border-color: $bgc;
       }
     }
     &:active {
-      @if $bgc == $gray_4 {
+      @if $bgc == $gray_1 {
+      // buttonType="light"
         background: $gray_3;
-        box-shadow: 0 0 0 1px $gray_4 inset;
-      } @else if $bgc == $yellow_6 {
-        background: $yellow_7;
-      } @else {
+      } @else if $bgc == $blue_5 {
+        // buttonType="core"
+        background: $blue_6;
+        border-color: $blue_6;
+      }@else if $bgc == $red_7 {
+        // buttonType="danger"
+        background: $red_9;
+        border-color: $red_9;
+      } 
+      @else {
         background: darken($bgc, 15%);
+        border-color: darken($bgc, 15%);
       }
     }
   }
 
   &.quiet {
     background: transparent;
-    @if $bgc == $gray_8 {
+    @if $bgc == $gray_1 {
+      // buttonType="light"
+      color: $gray_8;
+    } @else if $bgc == $gray_7 {
+      // buttonType="basic"
       color: $gray_8;
     } @else {
       color: $bgc;
     }
     &:hover {
-      @if $bgc == $gray_8 {
+      @if $bgc == $gray_1 {
+        // buttonType="light"
         background: $gray_1;
       } @else {
         background: $bgc;
@@ -254,57 +258,30 @@ $button-hover-transition: ease-in-out 0.2s;
       }
     }
     &:active {
-      @if $bgc == $gray_8 {
-        background: $gray_3;
-      } @else if $bgc == $yellow_6 {
-        background: $yellow_7;
-      } @else {
+       @if $bgc == $blue_5 {
+         // buttonType="core"
+        background: $blue_6;
+      }
+      @else if $bgc == $red_7 {
+        // buttonType="danger"
+        background: $red_9;
+      }
+      @else {
         background-color: darken($bgc, 15%);
       }
     }
   }
   &.textonly {
     background: transparent;
-    color: $bgc;
+    @if $bgc == $gray_1 {
+      color: $gray_8;
+    } @else if $bgc == $gray_7 {
+      color: $gray_8;
+    } @else {
+      color: $bgc;
+    }
     &:hover {
       text-decoration: underline;
-    }
-  }
-
-  // Disabled
-  &.disabled {
-    background: $dis-bgc;
-    color: $dis-fc;
-    cursor: not-allowed;
-    &:hover {
-      background: $dis-bgc;
-      color: $dis-fc;
-    }
-    ._BUTTON_icon {
-      svg {
-        opacity: 0.4;
-      }
-    }
-  }
-  &.disabled.ghost {
-    background: transparent;
-    box-shadow: 0 0 0 1px $dis-bgc inset;
-    &:hover,
-    &:active {
-      background: transparent;
-      box-shadow: 0 0 0 1px $dis-bgc inset;
-      color: $dis-fc;
-    }
-  }
-  &.disabled.quiet {
-    background: transparent;
-    border: transparent;
-    &:hover {
-      background: transparent;
-      text-decoration: none;
-    }
-    &:active {
-      color: $dis-fc;
     }
   }
 }

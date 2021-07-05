@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import "./index.scss";
 import cn from "classnames";
-import { TDefaultSize } from "../..";
+import { TButtonSize } from "../..";
 
 export interface ISkeletonBtnProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -11,7 +11,7 @@ export interface ISkeletonBtnProps extends HTMLAttributes<HTMLDivElement> {
   height?: number | string;
   fitContent?: boolean;
   withChildren?: boolean;
-  size?: TDefaultSize;
+  size?: TButtonSize;
 }
 
 export const SkeletonBtn: React.FC<ISkeletonBtnProps> = ({

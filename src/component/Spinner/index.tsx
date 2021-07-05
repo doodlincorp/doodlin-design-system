@@ -1,11 +1,11 @@
 import React from "react";
 import cn from "classnames";
 import "./index.scss";
-import { TDefaultSize } from "../..";
+import { TButtonSize } from "../..";
 
 export interface ISpinnerProps {
   className?: string;
-  size?: TDefaultSize;
+  size?: TButtonSize;
 }
 
 export const Spinner: React.FC<ISpinnerProps> = ({

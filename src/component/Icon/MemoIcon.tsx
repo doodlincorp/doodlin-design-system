@@ -60,7 +60,7 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
         <path
           id="icon__fill"
           d="M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM14 15H7V13H14V15ZM17 11H7V9H17V11ZM17 7H7V5H17V7Z"
-          fill={color ? colorMap[color] : colorMap["yellow_6"]}
+          fill={color ? colorMap[color] : colorMap["blue_5"]}
         />
       </svg>
     </i>

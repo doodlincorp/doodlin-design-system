@@ -32,30 +32,44 @@
   }
 
   // Size
+  &.xxs {
+    height: 24px;
+    padding: 0 6px;
+    border-radius: 6px;
+    font-size: $font-size-xx-small;
+    &.rounded {
+      border-radius: calc(24px / 2);
+      padding: 0 8px;
+    }
+    &.iconOnly {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+    }
+  }
+
   &.xs {
     height: 28px;
     padding: 0 8px;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 6px;
+    font-size: $font-size-small;
     &.rounded {
       border-radius: calc(28px / 2);
-      padding: 0 12px;
+      padding: 0 10px;
     }
     &.iconOnly {
       width: 28px;
       height: 28px;
       padding: 0;
-      ._BUTTON_icon {
-        margin-right: 0;
-      }
+
     }
   }
 
   &.sm {
     height: 32px;
     padding: 0 12px;
-    border-radius: 6px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: $font-size-small;
     &.rounded {
       border-radius: calc(32px / 2);
       padding: 0 14px;
@@ -78,8 +92,8 @@
   &.md {
     height: 36px;
     padding: 0 12px;
-    border-radius: 6px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: $font-size-small;
     &.rounded {
       border-radius: calc(36px / 2);
       padding: 0 14px;
@@ -102,8 +116,11 @@
   &.lg {
     height: 44px;
     padding: 0 16px;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: $font-size-medium;
+    &.ghost.light {
+      border-width: 2px;
+    }
     &.rounded {
       border-radius: calc(44px / 2);
       padding: 0 18px;
@@ -113,7 +130,12 @@
       height: 44px;
       padding: 0;
     }
-
+    ._BUTTON_leading-icon {
+      margin-right: 8px;
+    }
+    ._BUTTON_tailing-icon {
+      margin-left: 8px;
+    }
     .dds-icon {
       width: 20px !important;
       height: 20px !important;
@@ -127,8 +149,11 @@
   &.xl {
     height: 56px;
     padding: 0 32px;
-    border-radius: 6px;
-    font-size: 18px;
+    border-radius: 14px;
+    font-size: $font-size-large;
+    &.ghost.light {
+      border-width: 2px;
+    }
     &.rounded {
       border-radius: calc(56px / 2);
       padding: 0 36px;
@@ -137,6 +162,12 @@
       width: 56px;
       height: 56px;
       padding: 0;
+    }
+    ._BUTTON_leading-icon {
+      margin-right: 8px;
+    }
+    ._BUTTON_tailing-icon {
+      margin-left: 8px;
     }
     .dds-icon {
       width: 24px !important;
@@ -148,15 +179,25 @@
     }
   }
 
-  ._BUTTON_icon {
+  ._BUTTON_leading-icon, ._BUTTON_tailing-icon {
     display: flex;
     align-items: center;
+  }
+
+  ._BUTTON_leading-icon {
     margin-right: 4px;
   }
 
+  ._BUTTON_tailing-icon {
+    margin-left: 4px;
+  }
+
   &.iconOnly {
-    ._BUTTON_icon {
+    ._BUTTON_leading-icon {
       margin-right: 0;
+    }
+    ._BUTTON_tailing-icon {
+      margin-left: 0;
     }
   }
 
@@ -197,14 +238,14 @@
     }
   }
   &.core {
-    @include button-color($yellow_6);
+    @include button-color($blue_5);
     svg {
       #icon__stroke {
         stroke: #fff;
         transition: 0.1s ease-out;
       }
       #icon__fill {
-        fill: $yellow_6;
+        fill: $blue_5;
         transition: 0.1s ease-out;
       }
     }
@@ -219,9 +260,12 @@
         }
       }
     }
+    &.ghost.lg, &.ghost.xl {
+      border-width: 2px;
+    }
     &.ghost.loading,
     &.quiet.loading {
-      background-color: $yellow_6;
+      background-color: $blue_5;
     }
   }
   &.danger {
@@ -248,29 +292,23 @@
         }
       }
     }
+    &.ghost.lg, &.ghost.xl {
+      border-width: 2px;
+    }
     &.ghost.loading,
     &.quiet.loading {
       background-color: $red_7;
     }
   }
   &.light {
-    @include button-color($gray_4, $gray_8);
+    @include button-color($gray_1, $gray_8);
     &.solid {
-      background: $gray_2;
-      box-shadow: 0 0 0 1px $gray_4 inset;
+      background-color: $gray_1;
       &:hover {
-        background: $gray_3;
-        box-shadow: 0 0 0 1px $gray_5 inset;
+        background-color: $gray_3;
       }
       &:active {
-        background: $gray_4;
-      }
-    }
-    &.solid.disabled {
-      box-shadow: none;
-      &:hover,
-      &:active {
-        background: $gray_2;
+        background-color: $gray_4;
       }
     }
   }
@@ -292,21 +330,6 @@
   }
 
   // Variant with Icon
-  &.quiet.basic {
-    &:hover,
-    &:active {
-      svg {
-        #icon__stroke {
-          stroke: $gray_8;
-          transition: 0.1s ease-out;
-        }
-        #icon__fill {
-          fill: $gray_8;
-          transition: 0.1s ease-out;
-        }
-      }
-    }
-  }
   &.textonly {
     &.basic:hover {
       svg {
@@ -323,11 +346,11 @@
     &.core:hover {
       svg {
         #icon__stroke {
-          stroke: $yellow_6;
+          stroke: $blue_5;
           transition: 0.1s ease-out;
         }
         #icon__fill {
-          fill: $yellow_6;
+          fill: $blue_5;
           transition: 0.1s ease-out;
         }
       }
@@ -341,6 +364,110 @@
         #icon__fill {
           fill: $red_7;
           transition: 0.1s ease-out;
+        }
+      }
+    }
+  }
+
+  // Disabled
+  &.disabled {
+    background-color: $gray_2;
+    color: $gray_5;
+    cursor: not-allowed;
+    &:hover {
+      background-color: $gray_2;
+      color: $gray_5;
+    }
+    ._BUTTON_leading-icon, ._BUTTON_tailing-icon {
+      svg {
+        opacity: 0.3;
+      }
+    }
+    &.ghost {
+      background-color: transparent;
+      border-color: $gray_2;
+      color: $gray_5;
+      &:hover,
+      &:active {
+        background-color: transparent;
+        border-color: $gray_2 ;
+        color: $gray_5;
+      }
+      &.core, &.danger, &.basic, &.light {
+        svg {
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+          #icon__fill {
+            fill: $gray_8;
+          }
+        }
+      }
+    }
+    &.quiet {
+      background-color: transparent;
+      color: $gray_5;
+      &:hover {
+        background-color: transparent;
+        text-decoration: none;
+        color: $gray_5;
+        svg {
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+          #icon__fill {
+            fill: $gray_8;
+          }
+        }
+      }
+      &.core, &.danger, &.basic, &.light  {
+        svg {
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+          #icon__fill {
+            fill: $gray_8;
+          }
+        }
+      }
+    }
+    &.solid {
+      background-color: $gray_1;
+      svg {
+        #icon__stroke {
+          stroke: $gray_8;
+        }
+        #icon__fill {
+          fill: $gray_8;
+        }
+      }
+      &:hover {
+        background-color: $gray_1;
+      }
+    }
+    &.textonly {
+      color: $gray_5;
+      &.core, &.danger, &.basic, &.light  {
+        background-color: transparent;
+        svg {
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+          #icon__fill {
+            fill: $gray_8;
+          }
+        }
+      }
+      &:hover {
+        background-color: transparent;
+        text-decoration: none;
+        svg {
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+          #icon__fill {
+            fill: $gray_8;
+          }
         }
       }
     }

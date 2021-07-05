@@ -17,7 +17,7 @@ export { default as Divider } from "./component/Divider";
 export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositionIcon";
 export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
 
-export type TDefaultSize = "xs" | "sm" | "md" | "lg" | "xl";
+export type TButtonSize = "xxs" | "xs" | "sm" | "md" | "lg" | "xl";
 export type TFontSize =
   | "xx-small"
   | "x-small"

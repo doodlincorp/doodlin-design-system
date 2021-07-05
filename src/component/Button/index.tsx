@@ -1,17 +1,18 @@
 import React, { ButtonHTMLAttributes, useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
-import { TDefaultSize } from "../..";
+import { TButtonSize } from "../..";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: TDefaultSize;
+  size?: TButtonSize;
   variant?: "ghost" | "solid" | "quiet" | "textonly";
   buttonType?: "basic" | "light" | "core" | "danger";
   fullWidth?: boolean;
   loading?: boolean;
   rounded?: boolean;
   label?: {
-    labelIcon?: React.ReactElement;
+    labelLeadingIcon?: React.ReactElement;
+    labelTailingIcon?: React.ReactElement;
     labelText?: string;
   };
 }
@@ -50,10 +51,13 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
         >
           {label ? (
             <>
-              {label.labelIcon && (
-                <div className="_BUTTON_icon">{label.labelIcon}</div>
+              {label.labelLeadingIcon && (
+                <div className="_BUTTON_leading-icon">{label.labelLeadingIcon}</div>
               )}
               {label.labelText}
+              {label.labelTailingIcon && (
+                <div className="_BUTTON_tailing-icon">{label.labelTailingIcon}</div>
+              )}
             </>
           ) : (
             children

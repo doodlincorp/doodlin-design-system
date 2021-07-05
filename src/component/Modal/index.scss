@@ -10,7 +10,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 1300;
-  background-color: rgba($gray_9, 0.7);
+  background-color: rgba(#000, 0.7);
   user-select: none;
   cursor: default;
   .modal-content-box {
@@ -75,7 +75,7 @@
       @include button-color($gray_4, $gray_8);
     }
     .submit-btn {
-      @include button-color($yellow_6);
+      @include button-color($blue_5);
     }
   }
 }
