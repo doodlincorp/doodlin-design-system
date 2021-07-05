@@ -22,66 +22,12 @@ export const Size = () => (
     <Button size="md" label={{ labelText: "medium" }} />
     <Button size="lg" label={{ labelText: "large" }} />
     <Button size="xl" label={{ labelText: "extra-large" }} />
-    <br />
-    <br />
-    <Button size="xxs" rounded label={{ labelText: "tiny" }} />
-    <Button size="xs" rounded label={{ labelText: "extra-small" }} />
-    <Button size="sm" rounded label={{ labelText: "small" }} />
-    <Button size="md" rounded label={{ labelText: "medium" }} />
-    <Button size="lg" rounded label={{ labelText: "large" }} />
-    <Button size="xl" rounded label={{ labelText: "extra-large" }} />
-    <br />
-    <br />
-    <Button size="xxs" label={{labelLeadingIcon:<Icon.Edit />}} />
-    <Button size="xs"  label={{labelLeadingIcon:<Icon.Edit />}} />
-    <Button size="sm"  label={{labelLeadingIcon:<Icon.Edit />}}/>
-    <Button size="md"  label={{labelLeadingIcon:<Icon.Edit />}} />
-    <Button size="lg"  label={{labelLeadingIcon:<Icon.Edit />}} />
-    <Button size="xl"  label={{labelLeadingIcon:<Icon.Edit />}} />
-    <br />
-    <br />
-    <Button size="xxs" rounded label={{labelLeadingIcon:<Icon.Edit />}} />
-    <Button size="xs"  rounded label={{labelLeadingIcon:<Icon.Edit />}} />
-    <Button size="sm"  rounded label={{labelLeadingIcon:<Icon.Edit />}}/>
-    <Button size="md"  rounded label={{labelLeadingIcon:<Icon.Edit />}} />
-    <Button size="lg"  rounded label={{labelLeadingIcon:<Icon.Edit />}} />
-    <Button size="xl"  rounded label={{labelLeadingIcon:<Icon.Edit />}} />
-    <br />
-    <br />
-    <Button size="xxs" label={{labelLeadingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="xs"  label={{labelLeadingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="sm"  label={{labelLeadingIcon:<Icon.Edit />, labelText:"공고 설정" }}/>
-    <Button size="md"  label={{labelLeadingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="lg"  label={{labelLeadingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="xl"  label={{labelLeadingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <br />
-    <br />
-    <Button size="xxs" label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="xs"  label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="sm"  label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }}/>
-    <Button size="md"  label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="lg"  label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="xl"  label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <br />
-    <br />
-    <Button size="xxs" variant="ghost" label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="xs"  variant="ghost" label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="sm"  variant="ghost" label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }}/>
-    <Button size="md"  variant="ghost" label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="lg"  variant="ghost" label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-    <Button size="xl"  variant="ghost" label={{labelTailingIcon:<Icon.Edit />, labelText:"공고 설정" }} />
-
-
   </div>
 );
 
 export const Type = () => (
   <div style={{ padding: 20 }}>
-    <Button
-      size="md"
-      buttonType="light"
-      label={{ labelText: "light" }}
-    />
+    <Button size="md" buttonType="light" label={{ labelText: "light" }} />
     <Button size="md" buttonType="basic" label={{ labelText: "basic" }} />
     <Button size="md" buttonType="core" label={{ labelText: "core" }} />
     <Button size="md" buttonType="danger" label={{ labelText: "danger" }} />
@@ -504,7 +450,6 @@ export const WithIcon = () => (
           variant="ghost"
           buttonType="light"
           size="xl"
-          
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
@@ -516,7 +461,7 @@ export const WithIcon = () => (
         className="buttons"
         style={{ display: "flex", alignItems: "center" }}
       >
-         <Button
+        <Button
           variant="ghost"
           buttonType="light"
           size="xxs"
@@ -544,7 +489,6 @@ export const WithIcon = () => (
           variant="ghost"
           buttonType="light"
           size="lg"
-          
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
@@ -592,7 +536,6 @@ export const WithIcon = () => (
           variant="quiet"
           buttonType="basic"
           size="xl"
-          
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
@@ -632,7 +575,6 @@ export const WithIcon = () => (
           variant="quiet"
           buttonType="basic"
           size="xl"
-          
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
@@ -680,7 +622,6 @@ export const WithIcon = () => (
           variant="solid"
           buttonType="light"
           size="xl"
-          
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
@@ -720,7 +661,6 @@ export const WithIcon = () => (
           variant="solid"
           buttonType="light"
           size="xl"
-          
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
@@ -738,7 +678,6 @@ export const WithIcon = () => (
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
         <Button
           variant="ghost"
@@ -747,7 +686,6 @@ export const WithIcon = () => (
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
         <Button
           variant="ghost"
@@ -756,7 +694,6 @@ export const WithIcon = () => (
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
         <Button
           variant="ghost"
@@ -765,7 +702,6 @@ export const WithIcon = () => (
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
       </div>
 
@@ -780,7 +716,6 @@ export const WithIcon = () => (
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
         <Button
           variant="quiet"
@@ -789,7 +724,6 @@ export const WithIcon = () => (
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
         <Button
           variant="quiet"
@@ -798,7 +732,6 @@ export const WithIcon = () => (
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
         <Button
           variant="quiet"
@@ -807,8 +740,6 @@ export const WithIcon = () => (
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
-          
         />
       </div>
 
@@ -818,7 +749,6 @@ export const WithIcon = () => (
       >
         <Button
           variant="solid"
-          
           buttonType="light"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
@@ -827,33 +757,27 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          
           buttonType="basic"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
         <Button
           variant="solid"
-          
           buttonType="core"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
         <Button
           variant="solid"
-          
           buttonType="danger"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
       </div>
 
@@ -863,7 +787,6 @@ export const WithIcon = () => (
       >
         <Button
           variant="textonly"
-          
           buttonType="light"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
@@ -872,7 +795,6 @@ export const WithIcon = () => (
         />
         <Button
           variant="textonly"
-          
           buttonType="basic"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
@@ -881,7 +803,6 @@ export const WithIcon = () => (
         />
         <Button
           variant="textonly"
-          
           buttonType="core"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
@@ -890,13 +811,11 @@ export const WithIcon = () => (
         />
         <Button
           variant="textonly"
-          
           buttonType="danger"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
             labelText: "설정",
           }}
-          
         />
       </div>
 
@@ -908,27 +827,22 @@ export const WithIcon = () => (
       >
         <Button
           variant="ghost"
-          
           buttonType="light"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
-          
           buttonType="basic"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
-          
           buttonType="core"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="ghost"
-          
           buttonType="danger"
-          
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
@@ -939,27 +853,22 @@ export const WithIcon = () => (
       >
         <Button
           variant="quiet"
-          
           buttonType="light"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
-          
           buttonType="basic"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
-          
           buttonType="core"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
-          
           buttonType="danger"
-          
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
       </div>
@@ -970,26 +879,21 @@ export const WithIcon = () => (
       >
         <Button
           variant="solid"
-          
           buttonType="light"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
-          
           buttonType="basic"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
-          
           buttonType="core"
-          
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="solid"
-          
           buttonType="danger"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
