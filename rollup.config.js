@@ -42,6 +42,7 @@ export default {
           "RefObject",
         ],
         "node_modules/react-dom/index.js": ["render"],
+        "node_modules/dhj-hooks/build/index.js": ["useToggle"],
       },
     }),
     typescript({ useTsconfigDeclarationDir: true }),
