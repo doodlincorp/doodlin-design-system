@@ -310,14 +310,6 @@ export const Default = () => {
           <StoriesIcon.InfoMark size={40} />
         </IconBlock>
 
-        <IconBlock name="LayoutIcon" variantName="default">
-          <StoriesIcon.Layout size={40} />
-        </IconBlock>
-
-        <IconBlock name="LayoutIcon" variantName="sidebar">
-          <StoriesIcon.Layout size={40} variant="sidebar" />
-        </IconBlock>
-
         <IconBlock name="LinkExternalIcon">
           <StoriesIcon.LinkExternal size={40} />
         </IconBlock>
@@ -416,6 +408,10 @@ export const Default = () => {
 
         <IconBlock name="SettingIcon">
           <StoriesIcon.Setting size={40} />
+        </IconBlock>
+
+        <IconBlock name="SideBarIcon">
+          <StoriesIcon.SideBar size={40} />
         </IconBlock>
 
         <IconBlock name="SliderIcon" variantName="default">

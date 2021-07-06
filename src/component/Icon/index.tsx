@@ -54,7 +54,7 @@ import { VisionIcon } from "./VisionIcon";
 import { EmojiIcon } from "./EmojiIcon";
 import { DotIcon } from "./DotIcon";
 import { AllIcon } from "./AllIcon";
-import { LayoutIcon } from "./LayoutIcon";
+import { SideBarIcon } from "./SideBarIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -148,7 +148,6 @@ const Icon = {
   Garbage: GarbageIcon,
   Grid: GridIcon,
   InfoMark: InfoMarkIcon,
-  Layout: LayoutIcon,
   Lock: LockIcon,
   Logout: LogoutIcon,
   Mail: MailIcon,
@@ -162,6 +161,7 @@ const Icon = {
   Search: SearchIcon,
   Send: SendIcon,
   Setting: SettingIcon,
+  SideBar: SideBarIcon,
   Slider: SliderIcon,
   Thumb: ThumbIcon,
   Tag: TagIcon,
