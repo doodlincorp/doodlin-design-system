@@ -9,8 +9,7 @@ export interface IDocumentIconProps {
   size?: number;
   rotate?: number;
   flip?: boolean;
-
-  variant?: "default" | "blank" | "plus";
+  variant?: "solid" | "border" | "blank" | "plus";
 }
 
 export const DocIcon: React.FC<IDocumentIconProps> = ({
@@ -19,8 +18,7 @@ export const DocIcon: React.FC<IDocumentIconProps> = ({
   size = 16,
   rotate,
   flip,
-
-  variant = "default",
+  variant = "solid",
 }) => {
   return (
     <i
@@ -32,7 +30,16 @@ export const DocIcon: React.FC<IDocumentIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "default" && (
+      {variant === "solid" && (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            d="M18 22C19.104 22 20 21.104 20 20V8L14 2H6C4.896 2 4 2.896 4 4V20C4 21.104 4.896 22 6 22H18ZM13 4L18 9H14C13.447 9 13 9 13 9V4ZM7 8H10V10H7V8ZM7 12H17V14H7V12ZM7 16H17V18H7V16Z"
+            fill={color ? colorMap[color] : colorMap.gray_8}
+          />
+        </svg>
+      )}
+      {variant === "border" && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"

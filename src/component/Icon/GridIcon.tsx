@@ -3,24 +3,22 @@ import { colorMap, IColorMap } from "./colorMap";
 import "./index.scss";
 import cn from "classnames";
 
-export interface IEmailIconProps {
+export interface IGridIconProps {
   color?: keyof IColorMap;
   className?: string;
   size?: number;
   rotate?: number;
   flip?: boolean;
-
-  variant?: "solid" | "border";
+  variant?: "card" | "row";
 }
 
-export const EmailIcon: React.FC<IEmailIconProps> = ({
+export const GridIcon: React.FC<IGridIconProps> = ({
   color,
   className,
   size = 16,
   rotate,
   flip,
-
-  variant = "solid",
+  variant = "card",
 }) => {
   return (
     <i
@@ -32,11 +30,11 @@ export const EmailIcon: React.FC<IEmailIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "solid" ? (
+      {variant === "card" ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            d="M20 4H4C2.896 4 2 4.896 2 6V18C2 19.104 2.896 20 4 20H20C21.104 20 22 19.104 22 18V6C22 4.896 21.104 4 20 4ZM20 8.7L12 14.034L4 8.7V6.297L12 11.63L20 6.297V8.7Z"
+            d="M4 4H8V8H4V4ZM10 4H14V8H10V4ZM16 4H20V8H16V4ZM4 10H8V14H4V10ZM10 10H14V14H10V10ZM16 10H20V14H16V10ZM4 16H8V20H4V16ZM10 16H14V20H10V16ZM16 16H20V20H16V16Z"
             fill={color ? colorMap[color] : colorMap.gray_8}
           />
         </svg>
@@ -44,7 +42,9 @@ export const EmailIcon: React.FC<IEmailIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            d="M20 4H4C2.897 4 2 4.897 2 6V18C2 19.103 2.897 20 4 20H20C21.103 20 22 19.103 22 18V6C22 4.897 21.103 4 20 4ZM20 6V6.511L12 12.734L4 6.512V6H20ZM4 18V9.044L11.386 14.789C11.566 14.93 11.783 15 12 15C12.217 15 12.434 14.93 12.614 14.789L20 9.044L20.002 18H4Z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4 5H20V8H4V5ZM4 10.5H20V13.5H4V10.5ZM20 16H4V19H20V16Z"
             fill={color ? colorMap[color] : colorMap.gray_8}
           />
         </svg>

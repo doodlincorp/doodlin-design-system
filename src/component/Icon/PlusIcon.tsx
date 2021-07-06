@@ -9,7 +9,7 @@ export interface IPlusIconProps {
   size?: number;
   rotate?: number;
   flip?: boolean;
-  variant?: "default" | "circle" | "square";
+  variant?: "default" | "circle";
 }
 
 export const PlusIcon: React.FC<IPlusIconProps> = ({
@@ -30,17 +30,7 @@ export const PlusIcon: React.FC<IPlusIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "circle" ? (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            id="icon__fill"
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M2 12C2 6.486 6.486 2 12 2C17.514 2 22 6.486 22 12C22 17.514 17.514 22 12 22C6.486 22 2 17.514 2 12ZM4 12C4 16.411 7.589 20 12 20C16.411 20 20 16.411 20 12C20 7.589 16.411 4 12 4C7.589 4 4 7.589 4 12ZM11 11V7H13V11H17V13H13V17H11V13H7V11H11Z"
-            fill={color ? colorMap[color] : colorMap.gray_8}
-          />
-        </svg>
-      ) : variant === "default" ? (
+      {variant === "default" ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -49,22 +39,20 @@ export const PlusIcon: React.FC<IPlusIconProps> = ({
           />
         </svg>
       ) : (
-        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect
-            id="icon__stroke"
-            x="0.5"
-            y="0.5"
-            width="15"
-            height="15"
-            rx="3.5"
-            stroke={color ? colorMap[color] : colorMap.gray_8}
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 20.5C16.6944 20.5 20.5 16.6944 20.5 12C20.5 7.30558 16.6944 3.5 12 3.5C7.30558 3.5 3.5 7.30558 3.5 12C3.5 16.6944 7.30558 20.5 12 20.5ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+            fill={color ? colorMap[color] : colorMap.gray_6}
           />
           <path
             id="icon__fill"
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M8.66665 4.66602H7.3332V7.33301H4.66602V8.66645H7.3332V11.3332H8.66665V8.66645H11.3332V7.33301H8.66665V4.66602Z"
-            fill={color ? colorMap[color] : colorMap.gray_8}
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13 11V7H11V11H7V13H11V17H13V13H17V11H13Z"
+            fill={color ? colorMap[color] : colorMap.gray_7}
           />
         </svg>
       )}

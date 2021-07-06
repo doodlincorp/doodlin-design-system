@@ -16,36 +16,35 @@ import { DocIcon } from "./DocIcon";
 import { DownloadIcon } from "./DownloadIcon";
 import { EditIcon } from "./EditIcon";
 import { EllipsisIcon } from "./EllipsisIcon";
-import { EmailIcon } from "./EmailIcon";
+import { MailIcon } from "./MailIcon";
 import { ExcelIcon } from "./ExcelIcon";
 import { FilterIcon } from "./FilterIcon";
 import { GarbageIcon } from "./GarbageIcon";
 import { InfoMarkIcon } from "./InfoMarkIcon";
 import { MapPinIcon } from "./MapPinIcon";
-import { OpeningListIcon } from "./OpeningListIcon";
-import PenIcon from "./PenIcon";
 import { PhoneIcon } from "./PhoneIcon";
 import { PlusIcon } from "./PlusIcon";
 import { RefreshIcon } from "./RefreshIcon";
 import { ReturnIcon } from "./ReturnIcon";
 import { RejectIcon } from "./RejectIcon";
-import { RevisionIcon } from "./RevisionIcon";
 import { SearchIcon } from "./SearchIcon";
 import { SendIcon } from "./SendIcon";
 import { SettingIcon } from "./SettingIcon";
 import { ThumbIcon } from "./ThumbIcon";
 import { ZipDownloadIcon } from "./ZipDownloadIcon";
-import { MailSendIcon } from "./MailSendIcon";
 import { LinkIcon } from "./LinkIcon";
 import { LinkExternalIcon } from "./LinkExternalIcon";
 import { MemoIcon } from "./MemoIcon";
-import { PieChartIcon } from "./PieChartIcon";
 import { QuestionMarkIcon } from "./QuestionMarkIcon";
 import { FileDriveIcon } from "./FileDriveIcon";
 import { TagIcon } from "./TagIcon";
 import { UserIcon } from "./UserIcon";
 import { LogoutIcon } from "./LogoutIcon";
 import { UpDownArrowIcon } from "./UpDownArrow";
+import { FolderIcon } from "./FolderIcon";
+import { ErrorIcon } from "./ErrorIcon";
+import { GridIcon } from "./GridIcon";
+import { ChartIcon } from "./ChartIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -112,6 +111,7 @@ const Icon = {
   Arrow: ArrowIcon,
   Calendar: CalendarIcon,
   Camera: CameraIcon,
+  Chart: ChartIcon,
   Check: CheckIcon,
   Clip: ClipIcon,
   Clock: ClockIcon,
@@ -120,28 +120,26 @@ const Icon = {
   DefaultImage: DefaultImageIcon,
   Doc: DocIcon,
   FileDrive: FileDriveIcon,
-  PieChart: PieChartIcon,
   QuestionMark: QuestionMarkIcon,
   Download: DownloadIcon,
   Edit: EditIcon,
   Ellipsis: EllipsisIcon,
-  Email: EmailIcon,
+  Error: ErrorIcon,
   Excel: ExcelIcon,
   Filter: FilterIcon,
+  Folder: FolderIcon,
   Garbage: GarbageIcon,
+  Grid: GridIcon,
   InfoMark: InfoMarkIcon,
   Logout: LogoutIcon,
-  MailSend: MailSendIcon,
+  Mail: MailIcon,
   MapPin: MapPinIcon,
   Memo: MemoIcon,
-  OpeningList: OpeningListIcon,
-  Pen: PenIcon,
   Phone: PhoneIcon,
   Plus: PlusIcon,
   Refresh: RefreshIcon,
   Reject: RejectIcon,
   Return: ReturnIcon,
-  Revision: RevisionIcon,
   Search: SearchIcon,
   Send: SendIcon,
   Setting: SettingIcon,

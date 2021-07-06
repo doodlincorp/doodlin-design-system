@@ -4,12 +4,12 @@ import "./index.scss";
 import cn from "classnames";
 
 export interface IMemoIconProps {
-  variant?: "default" | "quick";
   color?: keyof IColorMap;
   className?: string;
   size?: number;
   rotate?: number;
   flip?: boolean;
+  variant?: "default" | "tail";
 }
 
 export const MemoIcon: React.FC<IMemoIconProps> = ({
@@ -20,7 +20,7 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
   flip,
   variant = "default",
 }) => {
-  if (variant === "quick") {
+  if (variant === "default") {
     return (
       <i
         className={cn("dds-icon", className, { flip })}
@@ -59,8 +59,10 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          d="M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM14 15H7V13H14V15ZM17 11H7V9H17V11ZM17 7H7V5H17V7Z"
-          fill={color ? colorMap[color] : colorMap["blue_5"]}
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M4 2H20C21.103 2 22 2.897 22 4V16C22 17.103 21.103 18 20 18H7.333L2 22V4C2 2.897 2.897 2 4 2ZM6.667 16H20V4H4V18L6.667 16ZM17 7H7V9H17V7ZM14 11H7V13H14V11Z"
+          fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
     </i>

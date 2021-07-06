@@ -40,10 +40,10 @@ export const Default = () => {
       </div>
       <Text size="xx-small">{name}</Text>
       <Divider />
-      <Text size="xx-small" style={{ color: "#8B8B8B" }}>
+      <Text size="xx-small" textColor="gray_6">
         variant:{" "}
       </Text>
-      <Text size="xx-small" weight="medium">
+      <Text size="xx-small" weight="medium" textColor="blue_6">
         {variantName ? (
           variantName
         ) : (
@@ -110,8 +110,24 @@ export const Default = () => {
           <StoriesIcon.Calendar size={40} variant="x" />
         </IconBlock>
 
-        <IconBlock name="CameraIcon">
+        <IconBlock name="CameraIcon" variantName="solid">
           <StoriesIcon.Camera size={40} />
+        </IconBlock>
+
+        <IconBlock name="CameraIcon" variantName="border">
+          <StoriesIcon.Camera size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="ChartIcon" variantName="pie">
+          <StoriesIcon.Chart size={40} variant="pie" />
+        </IconBlock>
+
+        <IconBlock name="ChartIcon" variantName="doughnut">
+          <StoriesIcon.Chart size={40} variant="doughnut" />
+        </IconBlock>
+
+        <IconBlock name="ChartIcon" variantName="bar">
+          <StoriesIcon.Chart size={40} variant="bar" />
         </IconBlock>
 
         <IconBlock name="CheckIcon" variantName="single">
@@ -123,27 +139,47 @@ export const Default = () => {
         </IconBlock>
 
         <IconBlock name="ClipIcon">
-          <StoriesIcon.Clip size={40} rotate={315} />
+          <StoriesIcon.Clip size={40} />
         </IconBlock>
 
-        <IconBlock name="ClockIcon">
+        <IconBlock name="ClockIcon" variantName="solid">
           <StoriesIcon.Clock size={40} />
         </IconBlock>
 
-        <IconBlock name="CloseIcon">
+        <IconBlock name="ClockIcon" variantName="border">
+          <StoriesIcon.Clock size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="ClockIcon" variantName="history">
+          <StoriesIcon.Clock size={40} variant="history" />
+        </IconBlock>
+
+        <IconBlock name="CloseIcon" variantName="default">
           <StoriesIcon.Close size={40} />
         </IconBlock>
 
-        <IconBlock name="CopyIcon">
+        <IconBlock name="CloseIcon" variantName="circle">
+          <StoriesIcon.Close size={40} variant="circle" />
+        </IconBlock>
+
+        <IconBlock name="CopyIcon" variantName="default">
           <StoriesIcon.Copy size={40} />
+        </IconBlock>
+
+        <IconBlock name="CopyIcon" variantName="alt">
+          <StoriesIcon.Copy size={40} variant="alt" />
         </IconBlock>
 
         <IconBlock name="DefaultImageIcon">
           <StoriesIcon.DefaultImage size={40} />
         </IconBlock>
 
-        <IconBlock name="DocIcon" variantName="default">
+        <IconBlock name="DocIcon" variantName="solid">
           <StoriesIcon.Doc size={40} />
+        </IconBlock>
+
+        <IconBlock name="DocIcon" variantName="border">
+          <StoriesIcon.Doc size={40} variant="border" />
         </IconBlock>
 
         <IconBlock name="DocIcon" variantName="blank">
@@ -154,36 +190,48 @@ export const Default = () => {
           <StoriesIcon.Doc size={40} variant="plus" />
         </IconBlock>
 
-        <IconBlock name="DownloadIcon">
+        <IconBlock name="DownloadIcon" variantName="default">
           <StoriesIcon.Download size={40} />
         </IconBlock>
 
-        <IconBlock name="EditIcon">
+        <IconBlock name="DownloadIcon" variantName="upload">
+          <StoriesIcon.Download size={40} variant="upload" />
+        </IconBlock>
+
+        <IconBlock name="EditIcon" variantName="default">
           <StoriesIcon.Edit size={40} />
+        </IconBlock>
+
+        <IconBlock name="EditIcon" variantName="box">
+          <StoriesIcon.Edit size={40} variant="box" />
         </IconBlock>
 
         <IconBlock name="EllipsisIcon">
           <StoriesIcon.Ellipsis size={40} />
         </IconBlock>
 
-        <IconBlock name="EmailIcon" variantName="solid">
-          <StoriesIcon.Email size={40} />
-        </IconBlock>
-
-        <IconBlock name="EmailIcon" variantName="border">
-          <StoriesIcon.Email size={40} variant="border" />
-        </IconBlock>
-
         <IconBlock name="ExcelIcon">
           <StoriesIcon.Excel size={40} />
+        </IconBlock>
+
+        <IconBlock name="ErrorIcon">
+          <StoriesIcon.Error size={40} />
         </IconBlock>
 
         <IconBlock name="FlieDriveIcon">
           <StoriesIcon.FileDrive size={40} />
         </IconBlock>
 
-        <IconBlock name="FilterIcon">
-          <StoriesIcon.Filter size={40} />
+        <IconBlock name="FilterIcon" variantName="default">
+          <StoriesIcon.Filter size={40} variant="default" />
+        </IconBlock>
+
+        <IconBlock name="FilterIcon" variantName="chevron">
+          <StoriesIcon.Filter size={40} variant="chevron" />
+        </IconBlock>
+
+        <IconBlock name="FolderIcon">
+          <StoriesIcon.Folder size={40} />
         </IconBlock>
 
         <IconBlock name="GarbageIcon" variantName="solid">
@@ -192,6 +240,138 @@ export const Default = () => {
 
         <IconBlock name="GarbageIcon" variantName="border">
           <StoriesIcon.Garbage size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="GridIcon" variantName="card">
+          <StoriesIcon.Grid size={40} />
+        </IconBlock>
+
+        <IconBlock name="GridIcon" variantName="row">
+          <StoriesIcon.Grid size={40} variant="row" />
+        </IconBlock>
+
+        <IconBlock name="InfoMarkIcon">
+          <StoriesIcon.InfoMark size={40} />
+        </IconBlock>
+
+        <IconBlock name="LinkExternalIcon">
+          <StoriesIcon.LinkExternal size={40} />
+        </IconBlock>
+
+        <IconBlock name="LinkIcon">
+          <StoriesIcon.Link size={40} />
+        </IconBlock>
+
+        <IconBlock name="LogoutIcon">
+          <StoriesIcon.Logout size={40} />
+        </IconBlock>
+
+        <IconBlock name="MailIcon" variantName="solid">
+          <StoriesIcon.Mail size={40} />
+        </IconBlock>
+
+        <IconBlock name="MailIcon" variantName="border">
+          <StoriesIcon.Mail size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="MailIcon" variantName="outgoing">
+          <StoriesIcon.Mail size={40} variant="outgoing" />
+        </IconBlock>
+
+        <IconBlock name="MailIcon" variantName="incoming">
+          <StoriesIcon.Mail size={40} variant="incoming" />
+        </IconBlock>
+
+        <IconBlock name="MapPinIcon" variantName="solid">
+          <StoriesIcon.MapPin size={40} />
+        </IconBlock>
+
+        <IconBlock name="MapPinIcon" variantName="border">
+          <StoriesIcon.MapPin size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="MemoIcon" variantName="default">
+          <StoriesIcon.Memo size={40} />
+        </IconBlock>
+
+        <IconBlock name="MemoIcon" variantName="tail">
+          <StoriesIcon.Memo size={40} variant="tail" />
+        </IconBlock>
+
+        <IconBlock name="PhoneIcon">
+          <StoriesIcon.Phone size={40} />
+        </IconBlock>
+
+        <IconBlock name="PlusIcon" variantName="default">
+          <StoriesIcon.Plus size={40} />
+        </IconBlock>
+
+        <IconBlock name="PlusIcon" variantName="circle">
+          <StoriesIcon.Plus size={40} variant="circle" />
+        </IconBlock>
+
+        <IconBlock name="QuestionMarkIcon" variantName="default">
+          <StoriesIcon.QuestionMark size={40} />
+        </IconBlock>
+
+        <IconBlock name="QuestionMarkIcon" variantName="solid">
+          <StoriesIcon.QuestionMark size={40} variant="solid" />
+        </IconBlock>
+
+        <IconBlock name="QuestionMarkIcon" variantName="border">
+          <StoriesIcon.QuestionMark size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="RefreshIcon">
+          <StoriesIcon.Refresh size={40} />
+        </IconBlock>
+
+        <IconBlock name="RejectIcon">
+          <StoriesIcon.Reject size={40} />
+        </IconBlock>
+
+        <IconBlock name="ReturnIcon">
+          <StoriesIcon.Return size={40} />
+        </IconBlock>
+
+        <IconBlock name="SearchIcon">
+          <StoriesIcon.Search size={40} />
+        </IconBlock>
+
+        <IconBlock name="SendIcon">
+          <StoriesIcon.Send size={40} />
+        </IconBlock>
+
+        <IconBlock name="SettingIcon">
+          <StoriesIcon.Setting size={40} />
+        </IconBlock>
+
+        <IconBlock name="SliderIcon" variantName="default">
+          <StoriesIcon.Slider size={40} />
+        </IconBlock>
+
+        <IconBlock name="SliderIcon" variantName="alt">
+          <StoriesIcon.Slider size={40} variant="alt" />
+        </IconBlock>
+
+        <IconBlock name="TagIcon" variantName="solid">
+          <StoriesIcon.Tag size={40} />
+        </IconBlock>
+
+        <IconBlock name="TagIcon" variantName="border">
+          <StoriesIcon.Tag size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="ThumbIcon" variantName="sobad">
+          <StoriesIcon.Thumb size={40} variant="sobad" />
+        </IconBlock>
+
+        <IconBlock name="ThumbIcon" variantName="good">
+          <StoriesIcon.Thumb size={40} variant="good" />
+        </IconBlock>
+
+        <IconBlock name="UpDownArrowIcon">
+          <StoriesIcon.UpDownArrow size={40} />
         </IconBlock>
 
         <IconBlock name="UserIcon" variantName="general">
@@ -218,132 +398,8 @@ export const Default = () => {
           <StoriesIcon.User size={40} variant="rejected" />
         </IconBlock>
 
-        <IconBlock name="InfoMarkIcon">
-          <StoriesIcon.InfoMark size={40} />
-        </IconBlock>
-
-        <IconBlock name="LinkExternalIcon">
-          <StoriesIcon.LinkExternal size={40} />
-        </IconBlock>
-
-        <IconBlock name="LinkIcon">
-          <StoriesIcon.Link size={40} />
-        </IconBlock>
-
-        <IconBlock name="LogoutIcon">
-          <StoriesIcon.Logout size={40} />
-        </IconBlock>
-
-        <IconBlock name="MailSendIcon" variantName="send">
-          <StoriesIcon.MailSend size={40} />
-        </IconBlock>
-
-        <IconBlock name="MailSendIcon" variantName="receive">
-          <StoriesIcon.MailSend size={40} variant="receive" />
-        </IconBlock>
-
-        <IconBlock name="MapPinIcon">
-          <StoriesIcon.MapPin size={40} />
-        </IconBlock>
-
-        <IconBlock name="MemoIcon" variantName="default">
-          <StoriesIcon.Memo size={40} />
-        </IconBlock>
-
-        <IconBlock name="MemoIcon" variantName="quick">
-          <StoriesIcon.Memo size={40} variant="quick" />
-        </IconBlock>
-
-        <IconBlock name="OpeningListIcon">
-          <StoriesIcon.OpeningList size={40} />
-        </IconBlock>
-
-        <IconBlock name="PenIcon">
-          <StoriesIcon.Pen size={40} />
-        </IconBlock>
-
-        <IconBlock name="PhoneIcon">
-          <StoriesIcon.Phone size={40} />
-        </IconBlock>
-
-        <IconBlock name="PieChartIcon" variantName="default">
-          <StoriesIcon.PieChart size={40} />
-        </IconBlock>
-
-        <IconBlock name="PieChartIcon" variantName="alt">
-          <StoriesIcon.PieChart size={40} variant="alt" />
-        </IconBlock>
-
-        <IconBlock name="PieChartIcon" variantName="doughnut">
-          <StoriesIcon.PieChart size={40} variant="doughnut" />
-        </IconBlock>
-
-        <IconBlock name="PlusIcon" variantName="default">
-          <StoriesIcon.Plus size={40} />
-        </IconBlock>
-
-        <IconBlock name="PlusIcon" variantName="circle">
-          <StoriesIcon.Plus size={40} variant="circle" />
-        </IconBlock>
-
-        <IconBlock name="PlusIcon" variantName="square">
-          <StoriesIcon.Plus size={40} variant="square" />
-        </IconBlock>
-
-        <IconBlock name="QuestionMarkIcon">
-          <StoriesIcon.QuestionMark size={40} />
-        </IconBlock>
-
-        <IconBlock name="RefreshIcon">
-          <StoriesIcon.Refresh size={40} />
-        </IconBlock>
-
-        <IconBlock name="RejectIcon">
-          <StoriesIcon.Reject size={40} />
-        </IconBlock>
-
-        <IconBlock name="ReturnIcon">
-          <StoriesIcon.Return size={40} />
-        </IconBlock>
-
-        <IconBlock name="ReturnIcon">
-          <StoriesIcon.Revision size={40} />
-        </IconBlock>
-
-        <IconBlock name="SearchIcon">
-          <StoriesIcon.Search size={40} />
-        </IconBlock>
-
-        <IconBlock name="SendIcon">
-          <StoriesIcon.Send size={40} />
-        </IconBlock>
-
-        <IconBlock name="SettingIcon">
-          <StoriesIcon.Setting size={40} />
-        </IconBlock>
-
-        <IconBlock name="SliderIcon">
-          <StoriesIcon.Slider size={40} />
-        </IconBlock>
-
-        <IconBlock name="UpDownArrowIcon">
-          <StoriesIcon.UpDownArrow size={40} />
-        </IconBlock>
-
-        <IconBlock name="TagIcon" variantName="solid">
-          <StoriesIcon.Tag size={40} />
-        </IconBlock>
-
-        <IconBlock name="TagIcon" variantName="border">
-          <StoriesIcon.Tag size={40} variant="border" />
-        </IconBlock>
-
-        <IconBlock name="ThumbIcon" variantName="sobad">
-          <StoriesIcon.Thumb size={40} variant="sobad" />
-        </IconBlock>
-
-        <IconBlock name="ThumbIcon" variantName="good">
-          <StoriesIcon.Thumb size={40} variant="good" />
+        <IconBlock name="UserIcon" variantName="all">
+          <StoriesIcon.User size={40} variant="all" />
         </IconBlock>
 
         <IconBlock name="ZipDownloadIcon">
@@ -359,12 +415,7 @@ export const Rotate = () => {
     <div style={{ padding: 20 }}>
       <StoriesIcon.Arrow variant="arrow" size={40} rotate={90} color="red_7" />
       <Divider variant="vertical" />
-      <StoriesIcon.Arrow
-        variant="arrow"
-        size={40}
-        rotate={45}
-        color="green_6"
-      />
+      <StoriesIcon.Arrow variant="arrow" size={40} rotate={45} color="green" />
       <Divider variant="vertical" />
       <StoriesIcon.Arrow
         variant="arrow"

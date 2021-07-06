@@ -3,7 +3,7 @@ import { colorMap, IColorMap } from "./colorMap";
 import "./index.scss";
 import cn from "classnames";
 
-export interface IOpeningListIconProps {
+export interface IFolderIconProps {
   color?: keyof IColorMap;
   className?: string;
   size?: number;
@@ -11,7 +11,7 @@ export interface IOpeningListIconProps {
   flip?: boolean;
 }
 
-export const OpeningListIcon: React.FC<IOpeningListIconProps> = ({
+export const FolderIcon: React.FC<IFolderIconProps> = ({
   color,
   className,
   size = 16,
@@ -31,9 +31,7 @@ export const OpeningListIcon: React.FC<IOpeningListIconProps> = ({
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M4 6H16V8H4V6ZM4 11H20V13H4V11ZM12 16H4V18H12V16Z"
+          d="M20 5H10.414L8.707 3.293C8.52 3.105 8.265 3 8 3H4C2.897 3 2 3.897 2 5V19C2 20.103 2.897 21 4 21H20C21.103 21 22 20.103 22 19V7C22 5.897 21.103 5 20 5Z"
           fill={color ? colorMap[color] : colorMap.gray_8}
         />
       </svg>
