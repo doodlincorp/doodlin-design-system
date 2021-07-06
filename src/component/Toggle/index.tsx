@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React from "react";
 import cn from "classnames";
 import "./index.scss";
 
