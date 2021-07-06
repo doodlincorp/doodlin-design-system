@@ -124,6 +124,84 @@ export const Size = () => {
   );
 };
 
+export const Variant = () => {
+  const [select, setSelect] = useState(false);
+  return (
+    <div style={{ padding: 20 }}>
+      <Tab variant="rail">
+        <TabItem
+          label="1번"
+          width={100}
+          onClick={() => setSelect(false)}
+          selected={!select}
+        />
+        <TabItem
+          label="2번"
+          width={100}
+          onClick={() => setSelect(true)}
+          selected={select}
+        />
+      </Tab>
+
+      <Divider size={40} />
+
+      <Tab size="md" variant="underline">
+        <TabItem
+          label="1번"
+          onClick={() => setSelect(false)}
+          selected={!select}
+        />
+        <TabItem
+          label="2번"
+          onClick={() => setSelect(true)}
+          selected={select}
+        />
+      </Tab>
+    </div>
+  );
+};
+
+export const Disabled = () => {
+  const [select, setSelect] = useState(false);
+  return (
+    <div style={{ padding: 20 }}>
+      <Tab variant="rail">
+        <TabItem
+          label="1번"
+          width={100}
+          onClick={() => setSelect(false)}
+          selected={!select}
+          disabled
+        />
+        <TabItem
+          label="2번"
+          width={100}
+          onClick={() => setSelect(true)}
+          selected={select}
+          disabled
+        />
+      </Tab>
+
+      <Divider size={40} />
+
+      <Tab size="md" variant="underline">
+        <TabItem
+          label="1번"
+          onClick={() => setSelect(false)}
+          selected={!select}
+          disabled
+        />
+        <TabItem
+          label="2번"
+          onClick={() => setSelect(true)}
+          selected={select}
+          disabled
+        />
+      </Tab>
+    </div>
+  );
+};
+
 export const WithIcon = () => {
   const [select, setSelect] = useState(false);
   return (
@@ -167,6 +245,61 @@ export const WithIcon = () => {
       <Divider size={40} />
 
       <Tab>
+        <TabItem
+          width={100}
+          onClick={() => setSelect(false)}
+          selected={!select}
+          icon={{ tailing: <Icon.Emoji variant="border" /> }}
+        />
+        <TabItem
+          width={100}
+          onClick={() => setSelect(true)}
+          selected={select}
+          icon={{ tailing: <Icon.Emoji variant="border" /> }}
+        />
+      </Tab>
+
+      <Divider size={40} />
+
+      <Tab variant="underline">
+        <TabItem
+          label="leading"
+          width={100}
+          onClick={() => setSelect(false)}
+          selected={!select}
+          icon={{ leading: <Icon.Emoji variant="border" /> }}
+        />
+        <TabItem
+          label="leading"
+          width={100}
+          onClick={() => setSelect(true)}
+          selected={select}
+          icon={{ leading: <Icon.Emoji variant="border" /> }}
+        />
+      </Tab>
+
+      <Divider size={40} />
+
+      <Tab variant="underline">
+        <TabItem
+          label="tailing"
+          width={100}
+          onClick={() => setSelect(false)}
+          selected={!select}
+          icon={{ tailing: <Icon.Emoji variant="border" /> }}
+        />
+        <TabItem
+          label="tailing"
+          width={100}
+          onClick={() => setSelect(true)}
+          selected={select}
+          icon={{ tailing: <Icon.Emoji variant="border" /> }}
+        />
+      </Tab>
+
+      <Divider size={40} />
+
+      <Tab variant="underline">
         <TabItem
           width={100}
           onClick={() => setSelect(false)}

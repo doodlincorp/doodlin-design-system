@@ -8,6 +8,7 @@ export interface ITabItemProps extends HTMLAttributes<HTMLDivElement> {
   width?: number;
   selected?: boolean;
   icon?: { leading?: React.ReactElement; tailing?: React.ReactElement };
+  disabled?: boolean;
 }
 
 export const TabItem: React.FC<ITabItemProps> = ({
@@ -17,11 +18,12 @@ export const TabItem: React.FC<ITabItemProps> = ({
   width,
   selected,
   icon,
+  disabled,
   ...props
 }) => {
   return (
     <div
-      className={cn("_TABITEM_", { selected, iconOnly: !label })}
+      className={cn("_TABITEM_", { selected, iconOnly: !label, disabled })}
       onClick={onClick}
       style={{ width: width }}
       {...props}
@@ -35,18 +37,24 @@ export const TabItem: React.FC<ITabItemProps> = ({
 
 export interface ITabProps {
   className?: string;
+  variant?: "rail" | "underline";
   size?: "xs" | "sm" | "md";
 }
 
 const Tab: React.FC<ITabProps> = ({
   className,
   children,
+  variant = "rail",
   size = "md",
   ...props
 }) => {
   return (
-    <div className={cn("_TAB_", className, size)} {...props}>
-      <div className="rail">{children}</div>
+    <div className={cn("_TAB_", className, variant, size)} {...props}>
+      {variant === "rail" ? (
+        <div className="rail">{children}</div>
+      ) : (
+        <div className="underline">{children}</div>
+      )}
     </div>
   );
 };

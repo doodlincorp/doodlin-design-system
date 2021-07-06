@@ -2,16 +2,34 @@
 
 ._TAB_ {
   display: inline-block;
-  &.xs .rail {
-    height: 28px;
+  // TABITEM common styles
+  ._TABITEM_ {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: $font-size-small;
+    box-sizing: border-box;
+    color: $gray_6;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    &.disabled {
+      background-color: transparent;
+      cursor: not-allowed;
+      color: $gray_5;
+      box-shadow: none;
+      .dds-icon {
+        #icon__fill {
+          fill: $gray_5;
+        }
+        #icon__stroke {
+          stroke: $gray_5;
+        }
+      }
+    }
   }
-  &.sm .rail {
-    height: 32px;
-  }
-  &.md .rail {
-    height: 36px;
-    border-radius: 10px;
-  }
+  //
   .rail {
     width: max-content;
     background-color: $gray_1;
@@ -19,20 +37,10 @@
     padding: 2px;
     box-sizing: border-box;
     box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
     ._TABITEM_ {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      vertical-align: middle;
       padding: 0 4px;
-      font-size: $font-size-small;
       font-weight: $font-weight-medium;
-      box-sizing: border-box;
       border-radius: 6px;
-      color: $gray_6;
-      user-select: none;
-      text-align: center;
       .dds-icon {
         #icon__fill {
           fill: $gray_6;
@@ -55,6 +63,20 @@
           }
         }
       }
+      &.disabled {
+        background-color: transparent;
+        cursor: not-allowed;
+        color: $gray_5;
+        box-shadow: none;
+        .dds-icon {
+          #icon__fill {
+            fill: $gray_5;
+          }
+          #icon__stroke {
+            stroke: $gray_5;
+          }
+        }
+      }
       .leading-icon {
         margin-right: 4px;
       }
@@ -67,16 +89,95 @@
           margin: 0;
         }
       }
+      &.md {
+        border-radius: 8px;
+      }
     }
   }
-  &.xs ._TABITEM_ {
-    height: 24px;
-  }
-  &.sm ._TABITEM_ {
+  &.xs .rail {
     height: 28px;
+    ._TABITEM_ {
+      height: 24px;
+    }
   }
-  &.md ._TABITEM_ {
+  &.sm .rail {
     height: 32px;
-    border-radius: 8px;
+    ._TABITEM_ {
+      height: 28px;
+    }
+  }
+  &.md .rail {
+    height: 36px;
+    border-radius: 10px;
+    ._TABITEM_ {
+      height: 32px;
+    }
+  }
+
+  .underline {
+    ._TABITEM_ {
+      font-weight: $font-weight-regular;
+      border-bottom: 2px solid transparent;
+      padding: 0 8px;
+      .dds-icon {
+        #icon__fill {
+          fill: $gray_6;
+        }
+        #icon__stroke {
+          stroke: $gray_6;
+        }
+      }
+      &.selected {
+        color: $gray_8;
+        font-weight: $font-weight-medium;
+        border-bottom: 2px solid $blue_5;
+        .dds-icon {
+          #icon__fill {
+            fill: $gray_8;
+          }
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+        }
+      }
+      .leading-icon {
+        margin-right: 4px;
+      }
+      .tailing-icon {
+        margin-left: 4px;
+      }
+      &.iconOnly {
+        .leading-icon,
+        .tailing-icon {
+          margin: 0;
+        }
+      }
+      &.disabled {
+        cursor: not-allowed;
+        color: $gray_5;
+        font-weight: $font-weight-regular;
+        border-bottom: 2px solid transparent;
+        .dds-icon {
+          #icon__fill {
+            fill: $gray_5;
+          }
+          #icon__stroke {
+            stroke: $gray_5;
+          }
+        }
+      }
+    }
+  }
+  &.xs .underline ._TABITEM_ {
+    height: 28px;
+    padding: 0 8px;
+  }
+  &.sm .underline ._TABITEM_ {
+    height: 32px;
+    padding: 0 12px;
+  }
+  &.md .underline ._TABITEM_ {
+    height: 36px;
+    padding: 0 14px;
   }
 }

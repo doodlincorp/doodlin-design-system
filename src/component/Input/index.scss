@@ -93,7 +93,9 @@
     background-color: $gray_1;
     cursor: not-allowed;
     user-select: none;
-    pointer-events: none;
+    ._INPUT_ {
+      cursor: not-allowed;
+    }
     ._INPUT_::placeholder {
       color: $gray_5;
     }
