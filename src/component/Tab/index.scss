@@ -1,0 +1,82 @@
+@import "../../index.scss";
+
+._TAB_ {
+  display: inline-block;
+  &.xs .rail {
+    height: 28px;
+  }
+  &.sm .rail {
+    height: 32px;
+  }
+  &.md .rail {
+    height: 36px;
+    border-radius: 10px;
+  }
+  .rail {
+    width: max-content;
+    background-color: $gray_1;
+    border-radius: 8px;
+    padding: 2px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    ._TABITEM_ {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      padding: 0 4px;
+      font-size: $font-size-small;
+      font-weight: $font-weight-medium;
+      box-sizing: border-box;
+      border-radius: 6px;
+      color: $gray_6;
+      user-select: none;
+      text-align: center;
+      .dds-icon {
+        #icon__fill {
+          fill: $gray_6;
+        }
+        #icon__stroke {
+          stroke: $gray_6;
+        }
+      }
+      &.selected {
+        color: $gray_8;
+        background-color: #fff;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15),
+          0px 1px 1px rgba(0, 0, 0, 0.06);
+        .dds-icon {
+          #icon__fill {
+            fill: $gray_8;
+          }
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+        }
+      }
+      .leading-icon {
+        margin-right: 4px;
+      }
+      .tailing-icon {
+        margin-left: 4px;
+      }
+      &.iconOnly {
+        .leading-icon,
+        .tailing-icon {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &.xs ._TABITEM_ {
+    height: 24px;
+  }
+  &.sm ._TABITEM_ {
+    height: 28px;
+  }
+  &.md ._TABITEM_ {
+    height: 32px;
+    border-radius: 8px;
+  }
+}

@@ -11,7 +11,7 @@ export const Default = () => {
   return (
     <div style={{ padding: 20 }}>
       <Text>
-        안녕하세요? 핏플입니다.
+        안녕하세요?
         <br />
         날씨가 참 좋아요.
       </Text>
