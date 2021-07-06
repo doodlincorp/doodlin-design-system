@@ -1,6 +1,6 @@
 {
   "name": "doodlin-design-system",
-  "version": "0.8.25",
+  "version": "0.8.26",
   "description": "",
   "main": "build/index.js",
   "module": "build/index.es.js",
