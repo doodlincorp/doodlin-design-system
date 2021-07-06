@@ -72,6 +72,8 @@ export const WithIcon = () => (
     <Input
       inputSize="lg"
       placeholder="with tailing icon"
+      value="dsfsdf"
+      onChange={() => {}}
       icon={{ tailing: <Icon.Search /> }}
     />
     <Input
