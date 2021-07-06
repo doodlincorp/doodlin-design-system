@@ -3,8 +3,11 @@ import cn from "classnames";
 import "./index.scss";
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  inputSize?: "xxs" | "sm" | "md" | "lg" | "xxxl";
-  borderType?: "border" | "underline" | "none";
+  inputSize?: "xs" | "sm" | "md" | "lg" | "xl";
+  icon?: {
+    leading?: React.ReactElement;
+    tailing?: React.ReactElement;
+  };
 }
 
 export const Input = React.forwardRef<HTMLInputElement, IInputProps>(
@@ -12,23 +15,22 @@ export const Input = React.forwardRef<HTMLInputElement, IInputProps>(
     {
       className,
       inputSize = "md",
-      borderType = "border",
       disabled,
       spellCheck = "false",
+      autoComplete = "off",
+      icon,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
-      <input
-        ref={ref}
-        className={cn("_INPUT_", className, inputSize, borderType, {
-          disabled,
-        })}
-        {...props}
-      />
+      <div className={cn("_INPUTWRAPPER_", className, inputSize, { disabled })}>
+        {icon && <div className="leading_icon">{icon.leading}</div>}
+        <input ref={ref} className={cn("_INPUT_", icon)} {...props} />
+        {icon && icon.tailing}
+      </div>
     );
-  }
+  },
 );
 
 export default Input;

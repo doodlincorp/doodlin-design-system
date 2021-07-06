@@ -1,26 +1,21 @@
 @import "../../index.scss";
 
-._INPUT_ {
-  width: 100%;
-  padding: 0 16px;
+._INPUTWRAPPER_ {
+  display: flex;
+  align-items: center;
   border-radius: 6px;
-  border: 1px solid $gray_3;
+  border: 1px solid $blue_gray;
 
   transition: all 0.2s ease-out;
   box-sizing: border-box;
 
-  &::placeholder {
-    color: $gray_5;
+  &:focus-within {
+    border-color: $gray_7;
   }
 
   &:hover,
-  &:active,
-  &:focus {
-    border: 1px solid $gray_6;
-  }
-  &:focus {
-    outline: none;
-    box-shadow: $shadow-sm;
+  &:active {
+    border-color: $gray_7;
   }
 
   & + & {
@@ -28,73 +23,109 @@
   }
 
   // Size
-  &.xxs {
+  &.xs {
     height: 28px;
     padding: 0 8px;
     font-size: $font-size-small;
   }
 
   &.sm {
-    height: 36px;
+    height: 32px;
     padding: 0 12px;
-    font-size: $font-size-medium;
+    border-radius: 8px;
+    font-size: $font-size-small;
   }
 
   &.md {
-    height: 40px;
-    font-size: $font-size-medium;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: $font-size-small;
   }
 
   &.lg {
     height: 44px;
+    padding: 0 16px;
+    border-radius: 10px;
+    border-width: 2px;
     font-size: $font-size-medium;
-  }
-
-  &.xxxl {
-    height: 56px;
-    font-size: $font-size-large;
-  }
-
-  // BorderType (underline, none)
-  &.underline {
-    border: none;
-    background: transparent;
-    border-radius: 0;
-    border-bottom: 1px solid $gray_4;
-    &:hover,
-    &:active,
-    &:focus {
-      border-color: $gray_6;
-      box-shadow: none;
+    .dds-icon {
+      width: 20px !important;
+      height: 20px !important;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    ._INPUT_.leading {
+      padding-left: 8px;
+    }
+    ._INPUT_.tailing {
+      padding-right: 8px;
     }
   }
 
-  &.none {
-    border: none;
-    border-radius: 0;
-    &:hover,
-    &:active,
-    &:focus {
-      box-shadow: none;
+  &.xl {
+    height: 56px;
+    padding: 0 20px;
+    border-radius: 14px;
+    border-width: 2px;
+    font-size: $font-size-large;
+    .dds-icon {
+      width: 24px !important;
+      height: 24px !important;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    ._INPUT_.leading {
+      padding-left: 8px;
+    }
+    ._INPUT_.tailing {
+      padding-right: 8px;
     }
   }
 
   // Disabled
   &.disabled {
-    background: $gray_1;
-    border: none;
+    border-color: $gray_1;
+    background-color: $gray_1;
+    cursor: not-allowed;
+    user-select: none;
     pointer-events: none;
-    &::placeholder {
-      opacity: 0.7;
+    ._INPUT_::placeholder {
+      color: $gray_5;
+    }
+    .dds-icon {
+      #icon__fill {
+        fill: $gray_5;
+      }
+      #icon__stroke {
+        stroke: $gray_5;
+      }
     }
   }
+}
 
-  &.disabled.underline {
-    background: none;
-    border-bottom: 1px solid $gray_4;
+._INPUT_ {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+  &::placeholder {
+    color: $gray_6;
   }
 
-  &.disabled.none {
-    background: none;
+  &:focus {
+    outline: none;
+  }
+
+  &.leading {
+    padding-left: 5px;
+  }
+
+  &.tailing {
+    padding-right: 5px;
   }
 }
