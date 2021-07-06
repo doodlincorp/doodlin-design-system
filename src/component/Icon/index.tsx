@@ -45,6 +45,16 @@ import { FolderIcon } from "./FolderIcon";
 import { ErrorIcon } from "./ErrorIcon";
 import { GridIcon } from "./GridIcon";
 import { ChartIcon } from "./ChartIcon";
+import { ExtensionIcon } from "./ExtensionIcon";
+import { FlagIcon } from "./FlagIcon";
+import { FullscreenIcon } from "./FullscreenIcon";
+import { ExtendIcon } from "./ExtendIcon";
+import { LockIcon } from "./LockIcon";
+import { VisionIcon } from "./VisionIcon";
+import { EmojiIcon } from "./EmojiIcon";
+import { DotIcon } from "./DotIcon";
+import { AllIcon } from "./AllIcon";
+import { LayoutIcon } from "./LayoutIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -106,6 +116,7 @@ export const colorMap: IColorMap = {
 const Icon = {
   AddColumn: AddColumnIcon,
   Align: AlignIcon,
+  All: AllIcon,
   ApplicantList: ApplicantListIcon,
   Archive: ArchiveIcon,
   Arrow: ArrowIcon,
@@ -119,18 +130,26 @@ const Icon = {
   Copy: CopyIcon,
   DefaultImage: DefaultImageIcon,
   Doc: DocIcon,
+  Dot: DotIcon,
   FileDrive: FileDriveIcon,
   QuestionMark: QuestionMarkIcon,
   Download: DownloadIcon,
   Edit: EditIcon,
   Ellipsis: EllipsisIcon,
+  Emoji: EmojiIcon,
   Error: ErrorIcon,
   Excel: ExcelIcon,
+  Extend: ExtendIcon,
+  Extension: ExtensionIcon,
   Filter: FilterIcon,
+  Flag: FlagIcon,
   Folder: FolderIcon,
+  Fullscreen: FullscreenIcon,
   Garbage: GarbageIcon,
   Grid: GridIcon,
   InfoMark: InfoMarkIcon,
+  Layout: LayoutIcon,
+  Lock: LockIcon,
   Logout: LogoutIcon,
   Mail: MailIcon,
   MapPin: MapPinIcon,
@@ -148,6 +167,7 @@ const Icon = {
   Tag: TagIcon,
   User: UserIcon,
   UpDownArrow: UpDownArrowIcon,
+  Vision: VisionIcon,
   ZipDownload: ZipDownloadIcon,
   Link: LinkIcon,
   LinkExternal: LinkExternalIcon,

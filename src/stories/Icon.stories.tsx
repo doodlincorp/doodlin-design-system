@@ -74,6 +74,10 @@ export const Default = () => {
           <StoriesIcon.Align size={40} variant="list" />
         </IconBlock>
 
+        <IconBlock name="AllIcon">
+          <StoriesIcon.All size={40} />
+        </IconBlock>
+
         <IconBlock name="ApplicnatListIcon">
           <StoriesIcon.ApplicantList size={40} />
         </IconBlock>
@@ -190,6 +194,14 @@ export const Default = () => {
           <StoriesIcon.Doc size={40} variant="plus" />
         </IconBlock>
 
+        <IconBlock name="DotIcon" variantName="active">
+          <StoriesIcon.Dot size={40} />
+        </IconBlock>
+
+        <IconBlock name="DotIcon" variantName="inactive">
+          <StoriesIcon.Dot size={40} variant="inactive" />
+        </IconBlock>
+
         <IconBlock name="DownloadIcon" variantName="default">
           <StoriesIcon.Download size={40} />
         </IconBlock>
@@ -214,6 +226,34 @@ export const Default = () => {
           <StoriesIcon.Excel size={40} />
         </IconBlock>
 
+        <IconBlock name="ExtendIcon" variantName="default">
+          <StoriesIcon.Extend size={40} />
+        </IconBlock>
+
+        <IconBlock name="ExtendIcon" variantName="alt">
+          <StoriesIcon.Extend size={40} variant="alt" />
+        </IconBlock>
+
+        <IconBlock name="ExtensionIcon" variantName="solid">
+          <StoriesIcon.Extension size={40} />
+        </IconBlock>
+
+        <IconBlock name="ExtensionIcon" variantName="border">
+          <StoriesIcon.Extension size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="EmojiIcon" variantName="solid">
+          <StoriesIcon.Emoji size={40} />
+        </IconBlock>
+
+        <IconBlock name="EmojiIcon" variantName="border">
+          <StoriesIcon.Emoji size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="EmojiIcon" variantName="add">
+          <StoriesIcon.Emoji size={40} variant="add" />
+        </IconBlock>
+
         <IconBlock name="ErrorIcon">
           <StoriesIcon.Error size={40} />
         </IconBlock>
@@ -230,8 +270,24 @@ export const Default = () => {
           <StoriesIcon.Filter size={40} variant="chevron" />
         </IconBlock>
 
+        <IconBlock name="FlagIcon" variantName="default">
+          <StoriesIcon.Flag size={40} />
+        </IconBlock>
+
+        <IconBlock name="FlagIcon" variantName="alt">
+          <StoriesIcon.Flag size={40} variant="alt" />
+        </IconBlock>
+
         <IconBlock name="FolderIcon">
           <StoriesIcon.Folder size={40} />
+        </IconBlock>
+
+        <IconBlock name="FullscreenIcon" variantName="default">
+          <StoriesIcon.Fullscreen size={40} />
+        </IconBlock>
+
+        <IconBlock name="FullscreenIcon" variantName="exit">
+          <StoriesIcon.Fullscreen size={40} variant="exit" />
         </IconBlock>
 
         <IconBlock name="GarbageIcon" variantName="solid">
@@ -254,12 +310,28 @@ export const Default = () => {
           <StoriesIcon.InfoMark size={40} />
         </IconBlock>
 
+        <IconBlock name="LayoutIcon" variantName="default">
+          <StoriesIcon.Layout size={40} />
+        </IconBlock>
+
+        <IconBlock name="LayoutIcon" variantName="sidebar">
+          <StoriesIcon.Layout size={40} variant="sidebar" />
+        </IconBlock>
+
         <IconBlock name="LinkExternalIcon">
           <StoriesIcon.LinkExternal size={40} />
         </IconBlock>
 
         <IconBlock name="LinkIcon">
           <StoriesIcon.Link size={40} />
+        </IconBlock>
+
+        <IconBlock name="LockIcon" variantName="locked">
+          <StoriesIcon.Lock size={40} />
+        </IconBlock>
+
+        <IconBlock name="LockIcon" variantName="open">
+          <StoriesIcon.Lock size={40} variant="open" />
         </IconBlock>
 
         <IconBlock name="LogoutIcon">
@@ -366,8 +438,20 @@ export const Default = () => {
           <StoriesIcon.Thumb size={40} variant="sobad" />
         </IconBlock>
 
+        <IconBlock name="ThumbIcon" variantName="bad">
+          <StoriesIcon.Thumb size={40} variant="bad" />
+        </IconBlock>
+
+        <IconBlock name="ThumbIcon" variantName="soso">
+          <StoriesIcon.Thumb size={40} variant="soso" />
+        </IconBlock>
+
         <IconBlock name="ThumbIcon" variantName="good">
           <StoriesIcon.Thumb size={40} variant="good" />
+        </IconBlock>
+
+        <IconBlock name="ThumbIcon" variantName="sogood">
+          <StoriesIcon.Thumb size={40} variant="sogood" />
         </IconBlock>
 
         <IconBlock name="UpDownArrowIcon">
@@ -400,6 +484,14 @@ export const Default = () => {
 
         <IconBlock name="UserIcon" variantName="all">
           <StoriesIcon.User size={40} variant="all" />
+        </IconBlock>
+
+        <IconBlock name="VisionIcon" variantName="vision">
+          <StoriesIcon.Vision size={40} variant="vision" />
+        </IconBlock>
+
+        <IconBlock name="VisionIcon" variantName="invision">
+          <StoriesIcon.Vision size={40} variant="invision" />
         </IconBlock>
 
         <IconBlock name="ZipDownloadIcon">
