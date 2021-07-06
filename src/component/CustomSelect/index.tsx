@@ -1,4 +1,4 @@
-import { useToggle } from "dhoonjang-s-hooks";
+import { useToggle } from "dhj-hooks";
 import React, { useRef } from "react";
 import cn from "classnames";
 import "./index.scss";

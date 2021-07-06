@@ -4898,10 +4898,17 @@ detect-port@^1.3.0:
     address "^1.0.1"
     debug "^2.6.0"
 
-dhoonjang-s-hooks@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/dhoonjang-s-hooks/-/dhoonjang-s-hooks-0.1.1.tgz#767c5e3f7a5bd944a9573f4ab4573ff04c6ab460"
-  integrity sha512-mAAT4W56UgrHqK/AvnaykgiRbAeGyL99i0Q1c/HwW7XWevk3Vfoow2ffyYoXtXQJAuj0CvwDl+o86jBmBkfoBw==
+dhj-hooks@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/dhj-hooks/-/dhj-hooks-0.5.2.tgz#28193b414d580100a434b1708c645a76ff83f023"
+  integrity sha512-CNIeTfAxFIsUCUBwG9wIiEQN6i/hxxu5fA2gVSK1aHuYkU41J5ngXBeiHS7PLn1n2dNPK0xILLJTFWM48bW2kQ==
+  dependencies:
+    dhj-string "^0.7.1"
+
+dhj-string@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/dhj-string/-/dhj-string-0.7.1.tgz#e13a3722c58cc4a9e14e6a3007589bf74a5d84d1"
+  integrity sha512-KZgzs1mPYnOJYB5YHM3GmLrczzXF20ZGjMt2wRSmtiUvOJNpyTPGXmoEx2tggbvY6ruKhYsZfOkHA4Dd5SlQVA==
 
 diff@^4.0.1:
   version "4.0.2"

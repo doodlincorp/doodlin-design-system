@@ -1,7 +1,7 @@
 import React, { HTMLAttributes, useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
-import { useToggle } from "dhoonjang-s-hooks";
+import { useToggle } from "dhj-hooks";
 import Button from "../Button";
 
 export interface IOptionItemProps extends HTMLAttributes<HTMLDivElement> {
