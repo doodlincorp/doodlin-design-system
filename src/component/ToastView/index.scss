@@ -1,0 +1,49 @@
+@import "../../index.scss";
+
+@keyframes toastRevealAnimation {
+  0% {
+    left: -350px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes toastHideAnimation {
+  0% {
+    left: 0px;
+    opacity: 1;
+  }
+  100% {
+    left: -350px;
+    opacity: 0;
+  }
+}
+.ToastView {
+  position: relative;
+  box-sizing: border-box;
+  width: max-content;
+  min-width: 300px;
+  min-height: 30px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 10px;
+  box-shadow: $shadow-lg0;
+  display: flex;
+  align-items: center;
+  animation: toastRevealAnimation 0.4s;
+  .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  &.hiding {
+    margin-bottom: 0px;
+    animation: toastHideAnimation 0.4s;
+  }
+  & + .ToastView.hiding {
+    transition: 0.4s;
+    margin-bottom: -80px;
+  }
+}
