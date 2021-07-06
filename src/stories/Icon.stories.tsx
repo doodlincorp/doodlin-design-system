@@ -62,435 +62,435 @@ export const Default = () => {
           gridGap: "12",
         }}
       >
-        <IconBlock name="AddColumnIcon">
+        <IconBlock name="AddColumn">
           <StoriesIcon.AddColumn size={40} />
         </IconBlock>
 
-        <IconBlock name="AlignIcon" variantName="kanban">
+        <IconBlock name="Align" variantName="kanban">
           <StoriesIcon.Align size={40} />
         </IconBlock>
 
-        <IconBlock name="AlignIcon" variantName="list">
+        <IconBlock name="Align" variantName="list">
           <StoriesIcon.Align size={40} variant="list" />
         </IconBlock>
 
-        <IconBlock name="AllIcon">
+        <IconBlock name="All">
           <StoriesIcon.All size={40} />
         </IconBlock>
 
-        <IconBlock name="ApplicnatListIcon">
+        <IconBlock name="ApplicnatList">
           <StoriesIcon.ApplicantList size={40} />
         </IconBlock>
 
-        <IconBlock name="ArchiveIcon">
+        <IconBlock name="Archive">
           <StoriesIcon.Archive size={40} />
         </IconBlock>
 
-        <IconBlock name="ArrowIcon" variantName="arrow">
+        <IconBlock name="Arrow" variantName="arrow">
           <StoriesIcon.Arrow size={40} variant="arrow" />
         </IconBlock>
 
-        <IconBlock name="ArrowIcon" variantName="chevron">
+        <IconBlock name="Arrow" variantName="chevron">
           <StoriesIcon.Arrow size={40} />
         </IconBlock>
 
-        <IconBlock name="ArrowIcon" variantName="chevron-alt">
+        <IconBlock name="Arrow" variantName="chevron-alt">
           <StoriesIcon.Arrow size={40} variant="chevron-alt" />
         </IconBlock>
 
-        <IconBlock name="ArrowIcon" variantName="solid">
+        <IconBlock name="Arrow" variantName="solid">
           <StoriesIcon.Arrow size={40} variant="solid" />
         </IconBlock>
 
-        <IconBlock name="CalendarIcon" variantName="default">
+        <IconBlock name="Calendar" variantName="default">
           <StoriesIcon.Calendar size={40} />
         </IconBlock>
 
-        <IconBlock name="CalendarIcon" variantName="check">
+        <IconBlock name="Calendar" variantName="check">
           <StoriesIcon.Calendar size={40} variant="check" />
         </IconBlock>
 
-        <IconBlock name="CalendarIcon" variantName="x">
+        <IconBlock name="Calendar" variantName="x">
           <StoriesIcon.Calendar size={40} variant="x" />
         </IconBlock>
 
-        <IconBlock name="CameraIcon" variantName="solid">
+        <IconBlock name="Camera" variantName="solid">
           <StoriesIcon.Camera size={40} />
         </IconBlock>
 
-        <IconBlock name="CameraIcon" variantName="border">
+        <IconBlock name="Camera" variantName="border">
           <StoriesIcon.Camera size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="ChartIcon" variantName="pie">
+        <IconBlock name="Chart" variantName="pie">
           <StoriesIcon.Chart size={40} variant="pie" />
         </IconBlock>
 
-        <IconBlock name="ChartIcon" variantName="doughnut">
+        <IconBlock name="Chart" variantName="doughnut">
           <StoriesIcon.Chart size={40} variant="doughnut" />
         </IconBlock>
 
-        <IconBlock name="ChartIcon" variantName="bar">
+        <IconBlock name="Chart" variantName="bar">
           <StoriesIcon.Chart size={40} variant="bar" />
         </IconBlock>
 
-        <IconBlock name="CheckIcon" variantName="single">
+        <IconBlock name="Check" variantName="single">
           <StoriesIcon.Check size={40} />
         </IconBlock>
 
-        <IconBlock name="CheckIcon" variantName="double">
+        <IconBlock name="Check" variantName="double">
           <StoriesIcon.Check size={40} variant="double" />
         </IconBlock>
 
-        <IconBlock name="ClipIcon">
+        <IconBlock name="Clip">
           <StoriesIcon.Clip size={40} />
         </IconBlock>
 
-        <IconBlock name="ClockIcon" variantName="solid">
+        <IconBlock name="Clock" variantName="solid">
           <StoriesIcon.Clock size={40} />
         </IconBlock>
 
-        <IconBlock name="ClockIcon" variantName="border">
+        <IconBlock name="Clock" variantName="border">
           <StoriesIcon.Clock size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="ClockIcon" variantName="history">
+        <IconBlock name="Clock" variantName="history">
           <StoriesIcon.Clock size={40} variant="history" />
         </IconBlock>
 
-        <IconBlock name="CloseIcon" variantName="default">
+        <IconBlock name="Close" variantName="default">
           <StoriesIcon.Close size={40} />
         </IconBlock>
 
-        <IconBlock name="CloseIcon" variantName="circle">
+        <IconBlock name="Close" variantName="circle">
           <StoriesIcon.Close size={40} variant="circle" />
         </IconBlock>
 
-        <IconBlock name="CopyIcon" variantName="default">
+        <IconBlock name="Copy" variantName="default">
           <StoriesIcon.Copy size={40} />
         </IconBlock>
 
-        <IconBlock name="CopyIcon" variantName="alt">
+        <IconBlock name="Copy" variantName="alt">
           <StoriesIcon.Copy size={40} variant="alt" />
         </IconBlock>
 
-        <IconBlock name="DefaultImageIcon">
+        <IconBlock name="DefaultImage">
           <StoriesIcon.DefaultImage size={40} />
         </IconBlock>
 
-        <IconBlock name="DocIcon" variantName="solid">
+        <IconBlock name="Doc" variantName="solid">
           <StoriesIcon.Doc size={40} />
         </IconBlock>
 
-        <IconBlock name="DocIcon" variantName="border">
+        <IconBlock name="Doc" variantName="border">
           <StoriesIcon.Doc size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="DocIcon" variantName="blank">
+        <IconBlock name="Doc" variantName="blank">
           <StoriesIcon.Doc size={40} variant="blank" />
         </IconBlock>
 
-        <IconBlock name="DocIcon" variantName="plus">
+        <IconBlock name="Doc" variantName="plus">
           <StoriesIcon.Doc size={40} variant="plus" />
         </IconBlock>
 
-        <IconBlock name="DotIcon" variantName="active">
+        <IconBlock name="Dot" variantName="active">
           <StoriesIcon.Dot size={40} />
         </IconBlock>
 
-        <IconBlock name="DotIcon" variantName="inactive">
+        <IconBlock name="Dot" variantName="inactive">
           <StoriesIcon.Dot size={40} variant="inactive" />
         </IconBlock>
 
-        <IconBlock name="DownloadIcon" variantName="default">
+        <IconBlock name="Download" variantName="default">
           <StoriesIcon.Download size={40} />
         </IconBlock>
 
-        <IconBlock name="DownloadIcon" variantName="upload">
+        <IconBlock name="Download" variantName="upload">
           <StoriesIcon.Download size={40} variant="upload" />
         </IconBlock>
 
-        <IconBlock name="EditIcon" variantName="default">
+        <IconBlock name="Edit" variantName="default">
           <StoriesIcon.Edit size={40} />
         </IconBlock>
 
-        <IconBlock name="EditIcon" variantName="box">
+        <IconBlock name="Edit" variantName="box">
           <StoriesIcon.Edit size={40} variant="box" />
         </IconBlock>
 
-        <IconBlock name="EllipsisIcon">
+        <IconBlock name="Ellipsis">
           <StoriesIcon.Ellipsis size={40} />
         </IconBlock>
 
-        <IconBlock name="ExcelIcon">
+        <IconBlock name="Excel">
           <StoriesIcon.Excel size={40} />
         </IconBlock>
 
-        <IconBlock name="ExtendIcon" variantName="default">
+        <IconBlock name="Extend" variantName="default">
           <StoriesIcon.Extend size={40} />
         </IconBlock>
 
-        <IconBlock name="ExtendIcon" variantName="alt">
+        <IconBlock name="Extend" variantName="alt">
           <StoriesIcon.Extend size={40} variant="alt" />
         </IconBlock>
 
-        <IconBlock name="ExtensionIcon" variantName="solid">
+        <IconBlock name="Extension" variantName="solid">
           <StoriesIcon.Extension size={40} />
         </IconBlock>
 
-        <IconBlock name="ExtensionIcon" variantName="border">
+        <IconBlock name="Extension" variantName="border">
           <StoriesIcon.Extension size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="EmojiIcon" variantName="solid">
+        <IconBlock name="Emoji" variantName="solid">
           <StoriesIcon.Emoji size={40} />
         </IconBlock>
 
-        <IconBlock name="EmojiIcon" variantName="border">
+        <IconBlock name="Emoji" variantName="border">
           <StoriesIcon.Emoji size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="EmojiIcon" variantName="add">
+        <IconBlock name="Emoji" variantName="add">
           <StoriesIcon.Emoji size={40} variant="add" />
         </IconBlock>
 
-        <IconBlock name="ErrorIcon">
+        <IconBlock name="Error">
           <StoriesIcon.Error size={40} />
         </IconBlock>
 
-        <IconBlock name="FlieDriveIcon">
+        <IconBlock name="FlieDrive">
           <StoriesIcon.FileDrive size={40} />
         </IconBlock>
 
-        <IconBlock name="FilterIcon" variantName="default">
+        <IconBlock name="Filter" variantName="default">
           <StoriesIcon.Filter size={40} variant="default" />
         </IconBlock>
 
-        <IconBlock name="FilterIcon" variantName="chevron">
+        <IconBlock name="Filter" variantName="chevron">
           <StoriesIcon.Filter size={40} variant="chevron" />
         </IconBlock>
 
-        <IconBlock name="FlagIcon" variantName="default">
+        <IconBlock name="Flag" variantName="default">
           <StoriesIcon.Flag size={40} />
         </IconBlock>
 
-        <IconBlock name="FlagIcon" variantName="alt">
+        <IconBlock name="Flag" variantName="alt">
           <StoriesIcon.Flag size={40} variant="alt" />
         </IconBlock>
 
-        <IconBlock name="FolderIcon">
+        <IconBlock name="Folder">
           <StoriesIcon.Folder size={40} />
         </IconBlock>
 
-        <IconBlock name="FullscreenIcon" variantName="default">
+        <IconBlock name="Fullscreen" variantName="default">
           <StoriesIcon.Fullscreen size={40} />
         </IconBlock>
 
-        <IconBlock name="FullscreenIcon" variantName="exit">
+        <IconBlock name="Fullscreen" variantName="exit">
           <StoriesIcon.Fullscreen size={40} variant="exit" />
         </IconBlock>
 
-        <IconBlock name="GarbageIcon" variantName="solid">
+        <IconBlock name="Garbage" variantName="solid">
           <StoriesIcon.Garbage size={40} />
         </IconBlock>
 
-        <IconBlock name="GarbageIcon" variantName="border">
+        <IconBlock name="Garbage" variantName="border">
           <StoriesIcon.Garbage size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="GridIcon" variantName="card">
+        <IconBlock name="Grid" variantName="card">
           <StoriesIcon.Grid size={40} />
         </IconBlock>
 
-        <IconBlock name="GridIcon" variantName="row">
+        <IconBlock name="Grid" variantName="row">
           <StoriesIcon.Grid size={40} variant="row" />
         </IconBlock>
 
-        <IconBlock name="InfoMarkIcon">
+        <IconBlock name="InfoMark">
           <StoriesIcon.InfoMark size={40} />
         </IconBlock>
 
-        <IconBlock name="LinkExternalIcon">
+        <IconBlock name="LinkExternal">
           <StoriesIcon.LinkExternal size={40} />
         </IconBlock>
 
-        <IconBlock name="LinkIcon">
+        <IconBlock name="Link">
           <StoriesIcon.Link size={40} />
         </IconBlock>
 
-        <IconBlock name="LockIcon" variantName="locked">
+        <IconBlock name="Lock" variantName="locked">
           <StoriesIcon.Lock size={40} />
         </IconBlock>
 
-        <IconBlock name="LockIcon" variantName="open">
+        <IconBlock name="Lock" variantName="open">
           <StoriesIcon.Lock size={40} variant="open" />
         </IconBlock>
 
-        <IconBlock name="LogoutIcon">
+        <IconBlock name="Logout">
           <StoriesIcon.Logout size={40} />
         </IconBlock>
 
-        <IconBlock name="MailIcon" variantName="solid">
+        <IconBlock name="Mail" variantName="solid">
           <StoriesIcon.Mail size={40} />
         </IconBlock>
 
-        <IconBlock name="MailIcon" variantName="border">
+        <IconBlock name="Mail" variantName="border">
           <StoriesIcon.Mail size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="MailIcon" variantName="outgoing">
+        <IconBlock name="Mail" variantName="outgoing">
           <StoriesIcon.Mail size={40} variant="outgoing" />
         </IconBlock>
 
-        <IconBlock name="MailIcon" variantName="incoming">
+        <IconBlock name="Mail" variantName="incoming">
           <StoriesIcon.Mail size={40} variant="incoming" />
         </IconBlock>
 
-        <IconBlock name="MapPinIcon" variantName="solid">
+        <IconBlock name="MapPin" variantName="solid">
           <StoriesIcon.MapPin size={40} />
         </IconBlock>
 
-        <IconBlock name="MapPinIcon" variantName="border">
+        <IconBlock name="MapPin" variantName="border">
           <StoriesIcon.MapPin size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="MemoIcon" variantName="default">
+        <IconBlock name="Memo" variantName="default">
           <StoriesIcon.Memo size={40} />
         </IconBlock>
 
-        <IconBlock name="MemoIcon" variantName="tail">
+        <IconBlock name="Memo" variantName="tail">
           <StoriesIcon.Memo size={40} variant="tail" />
         </IconBlock>
 
-        <IconBlock name="PhoneIcon">
+        <IconBlock name="Phone">
           <StoriesIcon.Phone size={40} />
         </IconBlock>
 
-        <IconBlock name="PlusIcon" variantName="default">
+        <IconBlock name="Plus" variantName="default">
           <StoriesIcon.Plus size={40} />
         </IconBlock>
 
-        <IconBlock name="PlusIcon" variantName="circle">
+        <IconBlock name="Plus" variantName="circle">
           <StoriesIcon.Plus size={40} variant="circle" />
         </IconBlock>
 
-        <IconBlock name="QuestionMarkIcon" variantName="default">
+        <IconBlock name="QuestionMark" variantName="default">
           <StoriesIcon.QuestionMark size={40} />
         </IconBlock>
 
-        <IconBlock name="QuestionMarkIcon" variantName="solid">
+        <IconBlock name="QuestionMark" variantName="solid">
           <StoriesIcon.QuestionMark size={40} variant="solid" />
         </IconBlock>
 
-        <IconBlock name="QuestionMarkIcon" variantName="border">
+        <IconBlock name="QuestionMark" variantName="border">
           <StoriesIcon.QuestionMark size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="RefreshIcon">
+        <IconBlock name="Refresh">
           <StoriesIcon.Refresh size={40} />
         </IconBlock>
 
-        <IconBlock name="RejectIcon">
+        <IconBlock name="Reject">
           <StoriesIcon.Reject size={40} />
         </IconBlock>
 
-        <IconBlock name="ReturnIcon">
+        <IconBlock name="Return">
           <StoriesIcon.Return size={40} />
         </IconBlock>
 
-        <IconBlock name="SearchIcon">
+        <IconBlock name="Search">
           <StoriesIcon.Search size={40} />
         </IconBlock>
 
-        <IconBlock name="SendIcon">
+        <IconBlock name="Send">
           <StoriesIcon.Send size={40} />
         </IconBlock>
 
-        <IconBlock name="SettingIcon">
+        <IconBlock name="Setting">
           <StoriesIcon.Setting size={40} />
         </IconBlock>
 
-        <IconBlock name="SideBarIcon">
+        <IconBlock name="SideBar">
           <StoriesIcon.SideBar size={40} />
         </IconBlock>
 
-        <IconBlock name="SliderIcon" variantName="default">
+        <IconBlock name="Slider" variantName="default">
           <StoriesIcon.Slider size={40} />
         </IconBlock>
 
-        <IconBlock name="SliderIcon" variantName="alt">
+        <IconBlock name="Slider" variantName="alt">
           <StoriesIcon.Slider size={40} variant="alt" />
         </IconBlock>
 
-        <IconBlock name="TagIcon" variantName="solid">
+        <IconBlock name="Tag" variantName="solid">
           <StoriesIcon.Tag size={40} />
         </IconBlock>
 
-        <IconBlock name="TagIcon" variantName="border">
+        <IconBlock name="Tag" variantName="border">
           <StoriesIcon.Tag size={40} variant="border" />
         </IconBlock>
 
-        <IconBlock name="ThumbIcon" variantName="sobad">
+        <IconBlock name="Thumb" variantName="sobad">
           <StoriesIcon.Thumb size={40} variant="sobad" />
         </IconBlock>
 
-        <IconBlock name="ThumbIcon" variantName="bad">
+        <IconBlock name="Thumb" variantName="bad">
           <StoriesIcon.Thumb size={40} variant="bad" />
         </IconBlock>
 
-        <IconBlock name="ThumbIcon" variantName="soso">
+        <IconBlock name="Thumb" variantName="soso">
           <StoriesIcon.Thumb size={40} variant="soso" />
         </IconBlock>
 
-        <IconBlock name="ThumbIcon" variantName="good">
+        <IconBlock name="Thumb" variantName="good">
           <StoriesIcon.Thumb size={40} variant="good" />
         </IconBlock>
 
-        <IconBlock name="ThumbIcon" variantName="sogood">
+        <IconBlock name="Thumb" variantName="sogood">
           <StoriesIcon.Thumb size={40} variant="sogood" />
         </IconBlock>
 
-        <IconBlock name="UpDownArrowIcon">
+        <IconBlock name="UpDownArrow">
           <StoriesIcon.UpDownArrow size={40} />
         </IconBlock>
 
-        <IconBlock name="UserIcon" variantName="general">
+        <IconBlock name="User" variantName="general">
           <StoriesIcon.User size={40} variant="general" />
         </IconBlock>
 
-        <IconBlock name="UserIcon" variantName="manager">
+        <IconBlock name="User" variantName="manager">
           <StoriesIcon.User size={40} variant="manager" />
         </IconBlock>
 
-        <IconBlock name="UserIcon" variantName="owner">
+        <IconBlock name="User" variantName="owner">
           <StoriesIcon.User size={40} variant="owner" />
         </IconBlock>
 
-        <IconBlock name="UserIcon" variantName="setMember">
+        <IconBlock name="User" variantName="setMember">
           <StoriesIcon.User size={40} variant="setMember" />
         </IconBlock>
 
-        <IconBlock name="UserIcon" variantName="evaluable">
+        <IconBlock name="User" variantName="evaluable">
           <StoriesIcon.User size={40} variant="evaluable" />
         </IconBlock>
 
-        <IconBlock name="UserIcon" variantName="rejected">
+        <IconBlock name="User" variantName="rejected">
           <StoriesIcon.User size={40} variant="rejected" />
         </IconBlock>
 
-        <IconBlock name="UserIcon" variantName="all">
+        <IconBlock name="User" variantName="all">
           <StoriesIcon.User size={40} variant="all" />
         </IconBlock>
 
-        <IconBlock name="VisionIcon" variantName="vision">
+        <IconBlock name="Vision" variantName="vision">
           <StoriesIcon.Vision size={40} variant="vision" />
         </IconBlock>
 
-        <IconBlock name="VisionIcon" variantName="invision">
+        <IconBlock name="Vision" variantName="invision">
           <StoriesIcon.Vision size={40} variant="invision" />
         </IconBlock>
 
-        <IconBlock name="ZipDownloadIcon">
+        <IconBlock name="ZipDownload">
           <StoriesIcon.ZipDownload size={40} />
         </IconBlock>
       </div>
