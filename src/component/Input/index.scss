@@ -9,6 +9,10 @@
   transition: all 0.2s ease-out;
   box-sizing: border-box;
 
+  &:focus-within {
+    border-color: $gray_7;
+  }
+
   &:hover,
   &:active {
     border-color: $gray_7;
