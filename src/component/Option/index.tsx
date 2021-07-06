@@ -29,7 +29,7 @@ export const OptionItem: React.FC<IOptionItemProps> = ({
         variant="quiet"
         size="sm"
         fullWidth
-        label={{ labelIcon: icon, labelText: text }}
+        label={{ labelLeadingIcon: icon, labelText: text }}
         disabled={disabled}
         loading={loading}
       />
