@@ -72,7 +72,7 @@ export const Size = () => {
 
       <Divider size={40} />
 
-      <Tab size="md">
+      <Tab>
         <TabItem
           label="medium"
           width={100}
@@ -89,7 +89,7 @@ export const Size = () => {
 
       <Divider size={40} />
 
-      <Tab size="md">
+      <Tab>
         <TabItem
           label="width: 120px"
           width={120}
@@ -106,7 +106,7 @@ export const Size = () => {
 
       <Divider size={40} />
 
-      <Tab size="md">
+      <Tab>
         <TabItem
           label="width: 200px"
           width={200}
@@ -145,7 +145,7 @@ export const Variant = () => {
 
       <Divider size={40} />
 
-      <Tab size="md" variant="underline">
+      <Tab variant="underline">
         <TabItem
           label="1번"
           onClick={() => setSelect(false)}
@@ -184,7 +184,7 @@ export const Disabled = () => {
 
       <Divider size={40} />
 
-      <Tab size="md" variant="underline">
+      <Tab variant="underline">
         <TabItem
           label="1번"
           onClick={() => setSelect(false)}
