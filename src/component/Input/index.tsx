@@ -17,7 +17,7 @@ export interface IInputRef {
   reset: () => void;
 }
 
-export const Input = React.forwardRef<IInputRef, IInputProps>(
+export const Input = React.forwardRef<IInputRef | undefined, IInputProps>(
   (
     {
       className,
