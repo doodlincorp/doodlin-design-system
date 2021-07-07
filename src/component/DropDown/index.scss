@@ -1,0 +1,82 @@
+@import "../../index.scss";
+
+._DROP_DOWN_ {
+  position: relative;
+  width: max-content;
+  .item-area {
+    position: absolute;
+    z-index: 600;
+    top: calc(100% + 4px);
+    width: 180px;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid $blue_gray;
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: $shadow-option;
+    ._DROP_DOWN_ {
+      width: 100%;
+    }
+    &.left {
+      right: 0;
+    }
+    &.right {
+      left: 0;
+    }
+    &.maxLeft,
+    &.maxRight {
+      top: 0px;
+    }
+    &.maxLeft {
+      left: 0;
+      transform: translateX(calc(-100% - 8px));
+    }
+    &.maxRight {
+      right: 0;
+      transform: translateX(calc(100% + 8px));
+    }
+  }
+}
+
+._DROP_ITEM_ {
+  .emoji {
+    margin-right: 8px;
+  }
+  button._BUTTON_ {
+    border-radius: 6px;
+  }
+  &.danger {
+    button._BUTTON_ {
+      color: $red_7;
+      svg {
+        #icon__fill {
+          fill: $red_7;
+        }
+        #icon__stroke {
+          stroke: $red_7;
+        }
+      }
+      &:hover {
+        background-color: $warning_red_1;
+        color: $red_7;
+        svg {
+          #icon__fill {
+            fill: $red_7;
+          }
+          #icon__stroke {
+            stroke: $red_7;
+          }
+        }
+      }
+      &:active {
+        background-color: $warning_red_2;
+      }
+    }
+  }
+  button {
+    justify-content: flex-start;
+    &.loading {
+      justify-content: center;
+    }
+  }
+}

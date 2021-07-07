@@ -11,9 +11,11 @@ export { default as Modal } from "./component/Modal";
 export { default as Tooltip } from "./component/Tooltip";
 export { default as Icon } from "./component/Icon";
 export { default as CustomSelect } from "./component/CustomSelect";
+export { default as SelectBox } from "./component/SelectBox";
 export { default as Toggle } from "./component/Toggle";
 export { default as Callout } from "./component/Callout";
-export { default as Option, OptionItem } from "./component/Option";
+export { default as DropDown } from "./component/DropDown";
+export { default as DropItem } from "./component/DropDown/DropItem";
 export { default as Divider } from "./component/Divider";
 
 export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositionIcon";
