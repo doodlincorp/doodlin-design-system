@@ -16,3 +16,12 @@ export const Default = () => {
     </div>
   );
 };
+
+export const Disabled = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ padding: 20 }}>
+      <Toggle onClick={() => setOpen(!open)} open={open} disabled />
+    </div>
+  );
+};
