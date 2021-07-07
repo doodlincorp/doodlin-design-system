@@ -1,0 +1,51 @@
+@import "../../index.scss";
+
+// 상위 div에 width, height값 입력 필요
+.Avatar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  &.circle {
+    border-radius: 50%;
+    .image {
+      &::after {
+        border-radius: 50%;
+      }
+    }
+  }
+  .image {
+    height: 100%;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid rgba($color: #000000, $alpha: 0.1);
+    }
+    img {
+      display: inline-block;
+      width: 100%;
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .default-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    padding: 0;
+    background: $gray_6;
+    color: #fff;
+    &.circle {
+      border-radius: 50%;
+    }
+  }
+}

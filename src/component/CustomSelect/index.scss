@@ -2,17 +2,17 @@
 
 ._CUSTOM_SELECT_ {
   position: relative;
+  font-size: 1.4rem;
   .current {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid $gray_4;
-    border-radius: 4px;
-    height: 32px;
-    padding-left: 16px;
+    background-color: $gray_1;
+    border-radius: 6px;
+    height: 28px;
+    padding-left: 10px;
     padding-right: 12px;
 
-    font-size: 14px;
     box-sizing: border-box;
 
     cursor: pointer;
@@ -23,29 +23,34 @@
 
     &:hover,
     &.selected {
-      border: 1px solid $gray_6;
+      background-color: $gray_3;
       #icon__fill {
         fill: $gray_8;
         transition: 0.1s ease-out;
       }
     }
+    & > div {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
   }
   .options {
     position: absolute;
     width: 100%;
-    border: 1px solid $gray_6;
+    border: 1px solid $blue_gray;
     border-radius: 4px;
     top: calc(100% + 4px);
     z-index: 10;
     background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 8px 20px rgba(0, 0, 0, 0.24);
     box-sizing: border-box;
     padding: 4px;
     user-select: none;
 
     .option {
-      font-size: 14px;
-      font-weight: normal;
       height: 32px;
       border-radius: 4px;
       box-sizing: border-box;
@@ -56,7 +61,7 @@
         background-color: $gray_3;
       }
       & > div {
-        padding: 0 12px;
+        padding: 0 10px;
         cursor: pointer;
         display: flex;
         align-items: center;

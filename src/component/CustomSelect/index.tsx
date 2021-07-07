@@ -27,7 +27,7 @@ const CustomSelect: <T>(
   const optionsView = options.map((o, i) => (
     <div
       className={cn("option", {
-        selected: o === value,
+        selected: JSON.stringify(o) === JSON.stringify(value),
       })}
       onClick={(e) => {
         setOptionOpen(false);
@@ -49,7 +49,7 @@ const CustomSelect: <T>(
         }}
       >
         {getCurrentViewFunc(value)}
-        <ArrowIcon color={"gray_6"} size={20} rotate={270} variant="solid" />
+        <ArrowIcon color={"gray_6"} size={16} rotate={270} variant="chevron" />
       </div>
       {optionOpen && <div className="options">{optionsView}</div>}
     </div>
