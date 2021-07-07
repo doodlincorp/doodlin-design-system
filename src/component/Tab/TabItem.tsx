@@ -23,7 +23,11 @@ const TabItem: React.FC<ITabItemProps> = ({
 }) => {
   return (
     <div
-      className={cn("_TABITEM_", { selected, iconOnly: !label, disabled })}
+      className={cn("_TABITEM_", className, {
+        selected,
+        iconOnly: !label,
+        disabled,
+      })}
       onClick={onClick}
       style={{ width: width }}
       {...props}

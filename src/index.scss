@@ -8,34 +8,34 @@ $left: "&#xE000;";
 $font: "Spoqa Han Sans Neo", "sans-serif";
 
 // Font Weight
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-bold: 600;
+$font_weight_light: 300;
+$font_weight_regular: 400;
+$font_weight_medium: 500;
+$font_weight_bold: 600;
 
 // Font Size
-$font-size-xx-small: 1.2rem;
-$font-size-x-small: 1.3rem;
-$font-size-small: 1.4rem;
-$font-size-medium: 1.6rem;
-$font-size-large: 1.8rem;
-$font-size-x-large: 2.1rem;
-$font-size-xx-large: 2.4rem;
-$font-size-xxx-large: 3.6rem;
-$font-size-xxxx-large: 4.8rem;
+$font_size_xx_small: 1.2rem;
+$font_size_x_small: 1.3rem;
+$font_size_small: 1.4rem;
+$font_size_medium: 1.6rem;
+$font_size_large: 1.8rem;
+$font_size_x_large: 2.1rem;
+$font_size_xx_large: 2.4rem;
+$font_size_xxx_large: 3.6rem;
+$font_size_xxxx_large: 4.8rem;
 
 // Line Height
-$line-height-medium: 1.5em;
-$line-height-large: 1.75em;
+$line_height_medium: 1.5em;
+$line_height_large: 1.75em;
 
 // Spacer
-$spacer-xx-small: 0.4rem;
-$spacer-x-small: 0.8rem;
-$spacer-small: 1.2rem;
-$spacer-medium: 1.6rem;
-$spacer-large: 2rem;
-$spacer-x-large: 2.8rem;
-$spacer-xx-large: 6rem;
+$spacer_xx_small: 0.4rem;
+$spacer_x_small: 0.8rem;
+$spacer_small: 1.2rem;
+$spacer_medium: 1.6rem;
+$spacer_large: 2rem;
+$spacer_x_large: 2.8rem;
+$spacer_xx_large: 6rem;
 
 /////////////////* Color */////////////////
 
@@ -102,10 +102,10 @@ $shadow_7: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 8px 20px rgba(0, 0, 0, 0.24);
 $shadow_inner: inset 0px 2px 3px rgba(0, 0, 0, 0.12);
 
 // Container
-$login-container-width: 772px;
+$login_container_width: 772px;
 
 // Transition Variables
-$button-hover-transition: ease-in-out 0.2s;
+$button_hover_transition: ease-out 0.1s;
 
 // Mixin
 // * $WH: Width, height value (e.g. 160px)

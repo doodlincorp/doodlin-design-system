@@ -149,7 +149,7 @@ export const shadow_inner = `inset 0px 2px 3px rgba(0, 0, 0, 0.12)`;
 export const login_container_width = `772px`;
 
 // Transition Variables
-export const button_hover_transition = `ease-in-out 0.2s`;
+export const button_hover_transition = `ease-out 0.1s`;
 
 // Mixin
 // * $WH: Width, height value (e.g. 160px)
