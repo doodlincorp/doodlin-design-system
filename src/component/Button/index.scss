@@ -11,7 +11,6 @@
   font: inherit;
   text-align: center;
   font-weight: $font-weight-medium;
-
   cursor: pointer;
   white-space: nowrap;
   user-select: none;
@@ -61,7 +60,6 @@
       width: 28px;
       height: 28px;
       padding: 0;
-
     }
   }
 
@@ -179,7 +177,8 @@
     }
   }
 
-  ._BUTTON_leading-icon, ._BUTTON_tailing-icon {
+  ._BUTTON_leading-icon,
+  ._BUTTON_tailing-icon {
     display: flex;
     align-items: center;
   }
@@ -260,7 +259,8 @@
         }
       }
     }
-    &.ghost.lg, &.ghost.xl {
+    &.ghost.lg,
+    &.ghost.xl {
       border-width: 2px;
     }
     &.ghost.loading,
@@ -292,7 +292,8 @@
         }
       }
     }
-    &.ghost.lg, &.ghost.xl {
+    &.ghost.lg,
+    &.ghost.xl {
       border-width: 2px;
     }
     &.ghost.loading,
@@ -378,7 +379,8 @@
       background-color: $gray_2;
       color: $gray_5;
     }
-    ._BUTTON_leading-icon, ._BUTTON_tailing-icon {
+    ._BUTTON_leading-icon,
+    ._BUTTON_tailing-icon {
       svg {
         opacity: 0.3;
       }
@@ -390,10 +392,13 @@
       &:hover,
       &:active {
         background-color: transparent;
-        border-color: $gray_2 ;
+        border-color: $gray_2;
         color: $gray_5;
       }
-      &.core, &.danger, &.basic, &.light {
+      &.core,
+      &.danger,
+      &.basic,
+      &.light {
         svg {
           #icon__stroke {
             stroke: $gray_8;
@@ -420,7 +425,10 @@
           }
         }
       }
-      &.core, &.danger, &.basic, &.light  {
+      &.core,
+      &.danger,
+      &.basic,
+      &.light {
         svg {
           #icon__stroke {
             stroke: $gray_8;
@@ -447,7 +455,10 @@
     }
     &.textonly {
       color: $gray_5;
-      &.core, &.danger, &.basic, &.light  {
+      &.core,
+      &.danger,
+      &.basic,
+      &.light {
         background-color: transparent;
         svg {
           #icon__stroke {

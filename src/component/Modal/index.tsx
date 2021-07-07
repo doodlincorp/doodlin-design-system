@@ -12,9 +12,10 @@ export interface IModalProps {
   footer?: {
     cancelBtn?: React.ReactElement;
     submitBtn?: React.ReactElement;
-    footerStyle?: "start" | "center" | "end" | "space-between";
+    BtnAlign?: "start" | "center" | "end" | "space-between";
   };
   zIndex?: number;
+  width?: number;
 }
 
 const Modal: React.FC<IModalProps> = ({
@@ -24,19 +25,22 @@ const Modal: React.FC<IModalProps> = ({
   footer,
   closeBtn,
   zIndex,
+  width,
 }) => {
   return (
     <div className="_MODAL_" style={{ zIndex: zIndex }}>
       <div className={cn("modal-content-box", className)}>
         {closeBtn && (
           <div className="close-btn" onClick={closeBtn}>
-            <CloseIcon color="white" />
+            <CloseIcon size={20} />
           </div>
         )}
         {header && <div className="modal-header">{header.Text}</div>}
-        <div className="modal-content">{children}</div>
+        <div className="modal-content" style={{ width: width }}>
+          {children}
+        </div>
         {footer && (
-          <div className={cn("modal-btn-area", footer.footerStyle || "end")}>
+          <div className={cn("footer", footer.BtnAlign || "end")}>
             {footer.cancelBtn}
             {footer.submitBtn}
           </div>
