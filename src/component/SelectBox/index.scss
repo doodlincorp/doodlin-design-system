@@ -1,6 +1,22 @@
 @import "../../index.scss";
 
 ._SELECT_BOX_._CUSTOM_SELECT_ {
+  &.line {
+    .current {
+      background: transparent;
+      transition: none;
+      transition: border-color 0.1s ease-out;
+      border: solid 1px transparent;
+      &:hover,
+      &.selected {
+        border-color: $gray_4;
+        background: transparent;
+      }
+      &.selected {
+        border-color: $blue_gray;
+      }
+    }
+  }
   .current .current-view {
     .icon {
       font-size: 1.6rem;
