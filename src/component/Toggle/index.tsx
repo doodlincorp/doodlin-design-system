@@ -6,17 +6,19 @@ export interface IToggleProps {
   className?: string;
   open: boolean;
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+  disabled?: boolean;
 }
 
 const Toggle: React.FC<IToggleProps> = ({
   className,
   onClick,
   open,
+  disabled,
   ...props
 }) => {
   return (
     <div
-      className={cn("_TOGGLE_", className, { open })}
+      className={cn("_TOGGLE_", className, { open, disabled })}
       onClick={onClick}
       {...props}
     >
