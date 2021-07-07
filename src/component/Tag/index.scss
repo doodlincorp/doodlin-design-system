@@ -1,0 +1,87 @@
+@import "../../index.scss";
+
+._TAG_ {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  .default,
+  .referral {
+    display: flex;
+    align-items: center;
+    transition: $button_hover_transition;
+  }
+  .default {
+    background-color: $gray_2;
+    color: $gray_7;
+    &:hover {
+      background-color: $gray_3;
+    }
+    &:active {
+      background-color: $gray_4;
+    }
+    &.selected {
+      background-color: $gray_7;
+      color: #fff;
+      .dds-icon {
+        #icon__fill {
+          fill: #fff;
+          transition: $button_hover_transition;
+        }
+      }
+    }
+    .close-btn {
+      display: flex;
+      align-items: center;
+      margin-left: 4px;
+    }
+    // Size
+    &.sm {
+      height: 20px;
+      padding: 0 4px;
+      border-radius: 4px;
+      font-size: $font_size_xx-small;
+    }
+    &.md {
+      height: 24px;
+      padding: 0 6px;
+    }
+    &.lg {
+      height: 28px;
+      padding: 0 8px;
+    }
+    &.md,
+    &.lg {
+      border-radius: 6px;
+      font-size: $font_size_small;
+    }
+  }
+  .referral {
+    background-color: $referral_blue_1;
+    color: $referral_blue_7;
+    font-weight: $font-weight-medium;
+    &:hover {
+      background-color: $referral_blue_7;
+      color: #fff;
+    }
+    &:active {
+      background-color: $blue_8;
+      color: #fff;
+    }
+    // Size
+    &.sm {
+      height: 20px;
+      padding: 0 4px;
+      border-radius: 4px;
+      font-size: $font_size_xx-small;
+    }
+    &.lg {
+      height: 28px;
+      padding: 0 8px;
+    }
+    &.lg {
+      border-radius: 6px;
+      font-size: $font_size_small;
+    }
+  }
+}

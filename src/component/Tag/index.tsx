@@ -1,0 +1,44 @@
+import React, { HTMLAttributes } from "react";
+import cn from "classnames";
+import "./index.scss";
+import Icon from "../Icon";
+
+export interface ITagProps extends HTMLAttributes<HTMLDivElement> {
+  className?: string;
+  variant?: "default" | "referral";
+  size?: "sm" | "md" | "lg";
+  closeBtn?: boolean;
+  selected?: boolean;
+  onClickCloseBtn?: () => void;
+}
+
+const Tag: React.FC<ITagProps> = ({
+  className,
+  children,
+  variant = "default",
+  size = "sm",
+  closeBtn,
+  selected,
+  onClick,
+  onClickCloseBtn,
+  ...props
+}) => {
+  return (
+    <div className={cn("_TAG_", className)} onClick={onClick} {...props}>
+      {variant === "default" ? (
+        <div className={cn("default", size, closeBtn, { selected })}>
+          #{children}
+          {closeBtn && (
+            <div className="close-btn" onClick={onClickCloseBtn}>
+              <Icon.Close className="close-icon" variant="circle" />
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className={cn("referral", size)}>{children}</div>
+      )}
+    </div>
+  );
+};
+
+export default Tag;
