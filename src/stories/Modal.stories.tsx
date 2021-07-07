@@ -3,7 +3,6 @@ import Button from "../component/Button";
 import { SearchIcon } from "../component/Icon/SearchIcon";
 import Input from "../component/Input";
 import Modal from "../component/Modal";
-import Text from "../component/Text";
 import "../reset.scss";
 
 export default {
