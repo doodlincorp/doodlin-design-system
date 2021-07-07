@@ -1,9 +1,9 @@
 import React from "react";
-import "#/style/@common/ProfileIcon.scss";
+import "./index.scss";
 import cn from "classnames";
 import { getAvatarColorById } from "../../utils/colorGenerate";
 
-const ProfileIcon: React.FC<{
+const Avatar: React.FC<{
   src: string | null;
   userId?: number;
   name?: string;
@@ -29,4 +29,4 @@ const ProfileIcon: React.FC<{
   );
 };
 
-export default ProfileIcon;
+export default Avatar;
