@@ -53,4 +53,7 @@ export const colorMap: IColorMap = {
   // Refferal Color
   referral_blue_1: "#E8EFF7",
   referral_blue_7: "#1864AB",
+
+  // Transparent
+  transparent: "transparent",
 };

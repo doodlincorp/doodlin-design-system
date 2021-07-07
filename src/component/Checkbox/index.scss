@@ -1,0 +1,56 @@
+@import "../../index.scss";
+
+._CHECKBOX_ {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  &:hover {
+    .btn {
+      background-color: $gray_1;
+      box-shadow: 0 0 0 1.5px inset $gray_6;
+    }
+  }
+  &.onlyBtn {
+    .label {
+      padding: 0;
+    }
+  }
+  .btn {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    background-color: #fff;
+    box-shadow: 0 0 0 1.5px inset $gray_5;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.1s ease-out;
+    &.selected {
+      background-color: $blue_5;
+      box-shadow: 0 0 0 1px inset $blue_5;
+    }
+    &.circle {
+      border-radius: 50%;
+    }
+    &.disabled {
+      background-color: $gray_2;
+      box-shadow: 0 0 0 1.5px inset $gray_4;
+      cursor: not-allowed;
+    }
+    &.md,
+    &.lg {
+      border-radius: 6px;
+    }
+  }
+  .label {
+    padding-left: 8px;
+    cursor: pointer;
+    user-select: none;
+    &.disabled {
+      cursor: not-allowed;
+      color: $gray_5;
+    }
+  }
+}
