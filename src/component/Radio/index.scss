@@ -1,0 +1,64 @@
+@import "../../index.scss";
+
+._RADIO_ {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  &:hover {
+    .btn {
+      background-color: $gray_1;
+      box-shadow: 0 0 0 1.5px inset $gray_6;
+    }
+  }
+  &.onlyBtn {
+    .label {
+      padding: 0;
+    }
+  }
+  .btn {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    background-color: #fff;
+    box-shadow: 0 0 0 1.5px inset $gray_5;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.1s ease-out;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background-color: $blue_5;
+      border-radius: 50%;
+      opacity: 0;
+    }
+    &.selected {
+      background-color: #fff;
+      box-shadow: 0 0 0 1px inset $blue_5;
+      &::after {
+        opacity: 1;
+      }
+    }
+    &.disabled {
+      background-color: $gray_2;
+      box-shadow: 0 0 0 1.5px inset $gray_4;
+      cursor: not-allowed;
+    }
+  }
+  .label {
+    padding-left: 8px;
+    cursor: pointer;
+    user-select: none;
+    &.disabled {
+      cursor: not-allowed;
+      color: $gray_5;
+    }
+  }
+}

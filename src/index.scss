@@ -41,62 +41,65 @@ $spacer-xx-large: 6rem;
 
 // Primary Blue
 $blue_0: #f3f9ff;
-$blue_1: #E6F2FF;
-$blue_2: #C5E1FF;
-$blue_3: #92C7FF;
-$blue_4: #5FACFF;
-$blue_5: #1184FF;
-$blue_6: #0C6CD3;
-$blue_7: #004C9E;
+$blue_1: #e6f2ff;
+$blue_2: #c5e1ff;
+$blue_3: #92c7ff;
+$blue_4: #5facff;
+$blue_5: #1184ff;
+$blue_6: #0c6cd3;
+$blue_7: #004c9e;
 $blue_8: #003267;
 
 // Gray
 $white: #fff;
-$gray_0: #F9F9FB;
-$gray_1: #EFEFF2;
-$gray_2: #EBEBEE;
-$gray_3: #E0E0E5;
-$gray_4: #CACACC;
-$gray_5: #B1B1B3;
+$gray_0: #f9f9fb;
+$gray_1: #efeff2;
+$gray_2: #ebebee;
+$gray_3: #e0e0e5;
+$gray_4: #cacacc;
+$gray_5: #b1b1b3;
 $gray_6: #767679;
 $gray_7: #444348;
-$gray_8: #15141A;
-$blue_gray: #8F8F9C;
+$gray_8: #15141a;
+$blue_gray: #8f8f9c;
 
 // System Color
-$active_green: #69DB7C;
-$inactive_red: #FF8787;
-$warning_red_1: #FFF0EE;
-$warning_red_2: #F8D0D1;
+$active_green: #69db7c;
+$inactive_red: #ff8787;
+$warning_red_1: #fff0ee;
+$warning_red_2: #f8d0d1;
 
 // Green
-$green: #34C759;
-$thumbs_green: #40C057;
-$text_green: #00A21D;
+$green: #34c759;
+$thumbs_green: #40c057;
+$text_green: #00a21d;
 
 // Red
-$red_5: #FF6B6B;
-$red_6: #FA5252;
-$red_7: #F03E3E;
-$red_8: #E03131;
-$red_9: #C92A2A;
-$red_10: #A51111;
+$red_5: #ff6b6b;
+$red_6: #fa5252;
+$red_7: #f03e3e;
+$red_8: #e03131;
+$red_9: #c92a2a;
+$red_10: #a51111;
 
 // Orange
-$orange_1: #FFECE2;
-$interview_orange_7: #F38119;
+$orange_1: #ffece2;
+$interview_orange_7: #f38119;
 
 // Refferal Color
-$referral_blue_1: #E8EFF7;
-$referral_blue_7: #1864AB;
+$referral_blue_1: #e8eff7;
+$referral_blue_7: #1864ab;
 
 // Shadow
-$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-$shadow-md0: 0 4px 8px rgba(0, 0, 0, 0.12);
-$shadow-md1: 0 2px 4px rgba(0, 0, 0, 0.08);
-$shadow-lg0: 0 5px 30px rgba(0, 0, 0, 0.12);
-$shadow-lg1: 0 5px 15px rgba(0, 0, 0, 0.08);
-$shadow-option: 0 2px 6px rgba(0, 0, 0, 0.16);
+$shadow_1: 0px 0px 1px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.24);
+$shadow_2: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 0px 16px rgba(0, 0, 0, 0.12);
+$shadow_3: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 1px 1px rgba(0, 0, 0, 0.06);
+$shadow_4: 0px 1px 1px rgba(0, 0, 0, 0.06), 0px 3px 12px rgba(0, 0, 0, 0.15);
+$shadow_5: 0px 4px 12px rgba(0, 0, 0, 0.16), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 1px 4px rgba(0, 0, 0, 0.08);
+$shadow_6: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 3px 12px rgba(0, 0, 0, 0.36);
+$shadow_7: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 8px 20px rgba(0, 0, 0, 0.24);
+$shadow_inner: inset 0px 2px 3px rgba(0, 0, 0, 0.12);
 
 // Container
 $login-container-width: 772px;
@@ -154,10 +157,7 @@ $button-hover-transition: ease-in-out 0.2s;
 // * $fc: font-color (e.g. #111)
 // * $dis-bgc: disabled background-color
 // * $dis-fc: disabled font-color
-@mixin button-color(
-  $bgc: $gray_7,
-  $fc: white,
-) {
+@mixin button-color($bgc: $gray_7, $fc: white) {
   background: $bgc;
   color: $fc;
   &:hover {
@@ -165,14 +165,11 @@ $button-hover-transition: ease-in-out 0.2s;
       color: $gray_8;
     } @else if $bgc == $gray_7 {
       background: $gray_8;
-    } 
-    @else if $bgc == $blue_5 {
+    } @else if $bgc == $blue_5 {
       background: $blue_6;
-    }
-    @else if $bgc == $red_7 {
+    } @else if $bgc == $red_7 {
       background: $red_8;
-    }
-    @else {
+    } @else {
       background: darken($bgc, 10%);
     }
   }
@@ -181,14 +178,11 @@ $button-hover-transition: ease-in-out 0.2s;
       background: $gray_4;
     } @else if $bgc == $gray_7 {
       background: $gray_7;
-    } 
-    @else if $bgc == $blue_5 {
+    } @else if $bgc == $blue_5 {
       background: $blue_7;
-    }
-    @else if $bgc == $red_7 {
+    } @else if $bgc == $red_7 {
       background: $red_9;
-    } 
-    @else {
+    } @else {
       background: lighten($bgc, 5%);
     }
   }
@@ -219,18 +213,17 @@ $button-hover-transition: ease-in-out 0.2s;
     }
     &:active {
       @if $bgc == $gray_1 {
-      // buttonType="light"
+        // buttonType="light"
         background: $gray_3;
       } @else if $bgc == $blue_5 {
         // buttonType="core"
         background: $blue_6;
         border-color: $blue_6;
-      }@else if $bgc == $red_7 {
+      } @else if $bgc == $red_7 {
         // buttonType="danger"
         background: $red_9;
         border-color: $red_9;
-      } 
-      @else {
+      } @else {
         background: darken($bgc, 15%);
         border-color: darken($bgc, 15%);
       }
@@ -258,15 +251,13 @@ $button-hover-transition: ease-in-out 0.2s;
       }
     }
     &:active {
-       @if $bgc == $blue_5 {
-         // buttonType="core"
+      @if $bgc == $blue_5 {
+        // buttonType="core"
         background: $blue_6;
-      }
-      @else if $bgc == $red_7 {
+      } @else if $bgc == $red_7 {
         // buttonType="danger"
         background: $red_9;
-      }
-      @else {
+      } @else {
         background-color: darken($bgc, 15%);
       }
     }

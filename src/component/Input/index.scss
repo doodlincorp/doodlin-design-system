@@ -94,7 +94,9 @@
     background-color: $gray_1;
     cursor: not-allowed;
     user-select: none;
-    pointer-events: none;
+    ._INPUT_ {
+      cursor: not-allowed;
+    }
     ._INPUT_::placeholder {
       color: $gray_5;
     }
@@ -123,10 +125,10 @@
   }
 
   &.leading {
-    padding-left: 5px;
+    padding-left: 4px;
   }
 
   &.tailing {
-    padding-right: 5px;
+    padding-right: 4px;
   }
 }
