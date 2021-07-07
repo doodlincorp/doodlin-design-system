@@ -1,7 +1,7 @@
 import React from "react";
 import "#/style/@common/ProfileIcon.scss";
 import cn from "classnames";
-import { getRandomColorById } from "#/utils/chart";
+import { getAvatarColorById } from "../../utils/colorGenerate";
 
 const ProfileIcon: React.FC<{
   src: string | null;
@@ -10,7 +10,7 @@ const ProfileIcon: React.FC<{
   variant?: "circle" | "rounded";
 }> = ({ src, userId, name, variant = "circle" }) => {
   return (
-    <div className={cn("ProfileIcon", { circle: variant === "circle" })}>
+    <div className={cn("Avatar", { circle: variant === "circle" })}>
       <div className="image">
         {src ? (
           <img src={src} alt={name ? name[0] : ""} />
@@ -18,7 +18,7 @@ const ProfileIcon: React.FC<{
           <div
             className={cn("default-image", { circle: variant === "circle" })}
             style={{
-              background: getRandomColorById(userId || 0),
+              background: getAvatarColorById(userId || 0),
             }}
           >
             {name ? name[0] : ""}
