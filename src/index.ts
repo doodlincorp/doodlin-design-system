@@ -18,6 +18,7 @@ export { default as DropDown } from "./component/DropDown";
 export { default as DropItem } from "./component/DropDown/DropItem";
 export { default as Divider } from "./component/Divider";
 export { default as Tab } from "./component/Tab";
+export { default as TabItem } from "./component/Tab";
 export { default as Radio } from "./component/Radio";
 export { default as Checkbox } from "./component/Checkbox";
 
