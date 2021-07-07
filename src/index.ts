@@ -15,6 +15,7 @@ export { default as Toggle } from "./component/Toggle";
 export { default as Callout } from "./component/Callout";
 export { default as Option, OptionItem } from "./component/Option";
 export { default as Divider } from "./component/Divider";
+export { default as Tab } from "./component/Tab";
 
 export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositionIcon";
 export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
@@ -150,7 +151,7 @@ export const CustomSpin = (
   WH = `16px`,
   Bsize = `3px`,
   Bc0 = `#fff`,
-  Bc1 = `rgba(255, 255, 255, 0.2)`
+  Bc1 = `rgba(255, 255, 255, 0.2)`,
 ) => `
   width: ${WH};
   height: ${WH};
