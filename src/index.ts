@@ -17,6 +17,7 @@ export { default as Option, OptionItem } from "./component/Option";
 export { default as Divider } from "./component/Divider";
 export { default as Tab } from "./component/Tab";
 export { default as Radio } from "./component/Radio";
+export { default as Checkbox } from "./component/Checkbox";
 
 export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositionIcon";
 export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
