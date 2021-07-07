@@ -22,6 +22,7 @@ export { default as TabItem } from "./component/Tab/TabItem";
 export { default as Radio } from "./component/Radio";
 export { default as Checkbox } from "./component/Checkbox";
 export { default as Avatar } from "./component/Avatar";
+export { default as Tag } from "./component/Tag";
 
 export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositionIcon";
 export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
