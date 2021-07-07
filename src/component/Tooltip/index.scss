@@ -19,7 +19,7 @@
       font-size: 12px;
       font-weight: $font-weight-medium;
       text-align: start;
-      border-radius: 4px;
+      border-radius: 6px;
       white-space: pre-wrap;
       transition: 0.1s ease-out;
       transition-delay: 0.2s;
@@ -42,6 +42,7 @@
       top: calc(100% + 4px);
       line-height: 18px;
       padding: 8px 12px;
+      border-radius: 8px;
       transition: 0.2s ease-out;
       transition-delay: 0.3s;
       &::before {
