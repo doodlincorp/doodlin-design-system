@@ -1,0 +1,20 @@
+@import "../../index.scss";
+
+._SELECT_BOX_._CUSTOM_SELECT_ {
+  .current .current-view {
+    .icon {
+      font-size: 1.6rem;
+      margin-right: 8px;
+    }
+  }
+  .options {
+    .option {
+      .option-view {
+        .icon {
+          font-size: 1.6rem;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

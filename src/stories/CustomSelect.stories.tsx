@@ -14,11 +14,9 @@ export const Default = () => {
       <CustomSelect<number>
         options={[0, 1, 2, 3]}
         value={selectNum}
-        getCurrentViewFunc={(o) => <div className="current-item">{o}</div>}
+        getCurrentViewFunc={(o) => <div>{o}</div>}
         getOptionViewFunc={(o) => (
-          <div className="current-item" onClick={() => setSelectNum(o)}>
-            {o}
-          </div>
+          <div onClick={() => setSelectNum(o)}>{o}</div>
         )}
       />
     </div>
