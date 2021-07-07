@@ -14,7 +14,7 @@
   cursor: pointer;
   white-space: nowrap;
   user-select: none;
-  transition: 0.1s ease-out;
+  transition: $button_hover_transition;
   box-sizing: border-box;
   @include button-color();
 

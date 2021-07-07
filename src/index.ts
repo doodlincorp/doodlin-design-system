@@ -21,6 +21,7 @@ export { default as Tab } from "./component/Tab";
 export { default as TabItem } from "./component/Tab/TabItem";
 export { default as Radio } from "./component/Radio";
 export { default as Checkbox } from "./component/Checkbox";
+export { default as Avatar } from "./component/Avatar";
 
 export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositionIcon";
 export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
@@ -149,7 +150,7 @@ export const shadow_inner = `inset 0px 2px 3px rgba(0, 0, 0, 0.12)`;
 export const login_container_width = `772px`;
 
 // Transition Variables
-export const button_hover_transition = `ease-in-out 0.2s`;
+export const button_hover_transition = `ease-out 0.1s`;
 
 // Mixin
 // * $WH: Width, height value (e.g. 160px)
