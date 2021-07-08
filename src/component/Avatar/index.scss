@@ -1,51 +1,105 @@
 @import "../../index.scss";
 
-// 상위 div에 width, height값 입력 필요
-.Avatar {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  border-radius: 4px;
-  &.circle {
+._AVATAR_CONTAINER_ {
+  // Avatar의 size 속성으로 _AVATAR_의 크기 결정
+  display: inline-block;
+  vertical-align: middle;
+  transition: $button_hover_transition;
+  user-select: none;
+  ._AVATAR_ {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
     border-radius: 50%;
+    box-sizing: border-box;
     .image {
       &::after {
         border-radius: 50%;
       }
     }
-  }
-  .image {
-    height: 100%;
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border: 1px solid rgba($color: #000000, $alpha: 0.1);
+    .image {
+      height: 100%;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid rgba($color: #000000, $alpha: 0.3);
+      }
+      img {
+        display: inline-block;
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
-    img {
-      display: inline-block;
+    .default-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       min-width: 100%;
       height: 100%;
-      object-fit: cover;
+      padding: 0;
+      background: $gray_6;
+      color: #fff;
+      border-radius: 50%;
+      font-weight: $font-weight-medium;
     }
   }
-  .default-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-width: 100%;
-    height: 100%;
-    padding: 0;
-    background: $gray_6;
-    color: #fff;
-    &.circle {
-      border-radius: 50%;
+  // Avatar Size
+  &.xs {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    font-size: $font-size-xx-small;
+  }
+  &.sm {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    font-size: $font-size-small;
+  }
+  &.md {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    font-size: $font-size-large;
+  }
+  &.lg {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    font-size: $font-size-x-large;
+  }
+  &.xl {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    font-size: $font-size-xx-large;
+  }
+  &.lg,
+  &.xl {
+    ._AVATAR_ {
+      .image::after {
+        border-width: 2px;
+      }
+    }
+  }
+  &.xxl {
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
+    font-size: $font-size-xxxx-large;
+    cursor: default;
+    ._AVATAR_ {
+      .image::after {
+        border-width: 3px;
+      }
     }
   }
 }

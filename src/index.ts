@@ -18,8 +18,11 @@ export { default as DropDown } from "./component/DropDown";
 export { default as DropItem } from "./component/DropDown/DropItem";
 export { default as Divider } from "./component/Divider";
 export { default as Tab } from "./component/Tab";
+export { default as TabItem } from "./component/Tab/TabItem";
 export { default as Radio } from "./component/Radio";
 export { default as Checkbox } from "./component/Checkbox";
+export { default as Avatar } from "./component/Avatar";
+export { default as Tag } from "./component/Tag";
 
 export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositionIcon";
 export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
@@ -148,7 +151,7 @@ export const shadow_inner = `inset 0px 2px 3px rgba(0, 0, 0, 0.12)`;
 export const login_container_width = `772px`;
 
 // Transition Variables
-export const button_hover_transition = `ease-in-out 0.2s`;
+export const button_hover_transition = `ease-out 0.1s`;
 
 // Mixin
 // * $WH: Width, height value (e.g. 160px)
@@ -311,8 +314,10 @@ export const button_color = (bgc = gray_7, fc = "white") => {
             ? `
               background: ${red_9};
             `
+            : isSameWithBgcAndGray7
+            ? `background: ${gray_8}`
             : `
-              background-color: ${darken(0.15, bgc)};
+              background-color: ${gray_3};
             `
         }
       }

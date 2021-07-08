@@ -1,7 +1,8 @@
 import { useState } from "@storybook/addons";
 import React from "react";
 import Divider from "../component/Divider";
-import Tab, { TabItem } from "../component/Tab";
+import Tab from "../component/Tab";
+import TabItem from "../component/Tab/TabItem";
 import Icon from "../component/Icon";
 import "../reset.scss";
 

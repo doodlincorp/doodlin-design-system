@@ -15,11 +15,12 @@
   cursor: default;
   .modal-content-box {
     position: relative;
-    width: 464px;
-    min-width: 464px;
+    min-width: 320px;
+    max-width: 648px;
     height: max-content;
     max-height: calc(100vh - 96px);
-    border-radius: 6px;
+    border-radius: 10px;
+    border: 1px solid $gray_6;
     background: #fff;
     box-sizing: border-box;
     .close-btn {
@@ -34,28 +35,28 @@
       width: 28px;
       height: 28px;
 
-      top: 8px;
-      right: -40px;
+      top: 6px;
+      right: 12px;
       cursor: pointer;
     }
   }
   .modal-header {
-    font-size: 14px;
+    font-size: $font-size-small;
     font-weight: $font-weight-medium;
+    text-align: center;
     padding: 12px 20px;
     border-bottom: 1px solid $gray_3;
   }
   .modal-content {
-    padding: 40px 32px;
+    padding: 40px 32px 12px;
     overflow-y: visible;
     box-sizing: border-box;
   }
-  .modal-btn-area {
+  .footer {
     display: flex;
     background-color: #fff;
-    border-radius: 0 0 6px 6px;
-    padding: 12px 20px;
-    border-top: 1px solid $gray_3;
+    border-radius: 0 0 10px 10px;
+    padding: 12px 20px 20px;
     button ~ button {
       margin-left: 8px;
     }
@@ -70,12 +71,6 @@
     }
     &.space-between {
       justify-content: space-between;
-    }
-    .cancel-btn {
-      @include button-color($gray_4, $gray_8);
-    }
-    .submit-btn {
-      @include button-color($blue_5);
     }
   }
 }
