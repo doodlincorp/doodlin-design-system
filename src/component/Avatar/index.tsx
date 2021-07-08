@@ -1,10 +1,9 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import "./index.scss";
 import cn from "classnames";
 import { getAvatarColorById } from "../../utils/colorGenerate";
 
-const Avatar: React.FC<{
-  className?: string;
+export interface IAvatarProps extends HTMLAttributes<HTMLDivElement> {
   src: string | null;
   userId?: number;
   name?: string;
@@ -16,7 +15,17 @@ const Avatar: React.FC<{
     | /*60px*/ "xl"
     | /*150px*/ "xxl";
   customSize?: number;
-}> = ({ className, src, userId, name, size = "sm", customSize }) => {
+}
+
+const Avatar: React.FC<IAvatarProps> = ({
+  className,
+  src,
+  userId,
+  name,
+  size = "sm",
+  customSize,
+  ...props
+}) => {
   return (
     <div
       className={cn("_AVATAR_CONTAINER_", className, size)}
@@ -26,6 +35,7 @@ const Avatar: React.FC<{
         height: customSize && customSize,
         fontSize: customSize && customSize * 0.5,
       }}
+      {...props}
     >
       <div className={cn("_AVATAR_", size)}>
         <div className="image">

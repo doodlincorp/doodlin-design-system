@@ -314,8 +314,10 @@ export const button_color = (bgc = gray_7, fc = "white") => {
             ? `
               background: ${red_9};
             `
+            : isSameWithBgcAndGray7
+            ? `background: ${gray_8}`
             : `
-              background-color: ${darken(0.15, bgc)};
+              background-color: ${gray_3};
             `
         }
       }

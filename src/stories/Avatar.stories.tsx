@@ -72,7 +72,7 @@ export const Size = () => (
       />
     </div>
     <div className="wrapper" style={{ paddingBottom: 20 }}>
-      <Text lineHeight="wide">150px (hover, active 효과 없음)</Text>
+      <Text lineHeight="wide">150px </Text>
       <Avatar size="xxl" src={null} name={"김민수"} />
       <Divider variant="vertical" />
       <Avatar

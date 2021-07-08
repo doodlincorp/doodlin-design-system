@@ -257,8 +257,10 @@ $button_hover_transition: ease-out 0.1s;
       } @else if $bgc == $red_7 {
         // buttonType="danger"
         background: $red_9;
+      } @else if $bgc == $gray_7 {
+        background: $gray_8;
       } @else {
-        background-color: darken($bgc, 15%);
+        background-color: $gray_3;
       }
     }
   }

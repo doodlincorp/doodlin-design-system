@@ -507,7 +507,25 @@ export const WithIcon = () => (
       >
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonType="light"
+          size="xxs"
+          label={{
+            labelLeadingIcon: <Icon.Setting color="gray_7" />,
+            labelText: "설정",
+          }}
+        />
+        <Button
+          variant="quiet"
+          buttonType="light"
+          size="xs"
+          label={{
+            labelLeadingIcon: <Icon.Setting color="gray_7" />,
+            labelText: "설정",
+          }}
+        />
+        <Button
+          variant="quiet"
+          buttonType="light"
           size="sm"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
@@ -516,7 +534,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonType="light"
           size="md"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
@@ -525,7 +543,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonType="light"
           size="lg"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
@@ -534,7 +552,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonType="light"
           size="xl"
           label={{
             labelLeadingIcon: <Icon.Setting color="gray_7" />,
@@ -549,31 +567,37 @@ export const WithIcon = () => (
       >
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonType="light"
+          size="xxs"
+          label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
+        />
+        <Button
+          variant="quiet"
+          buttonType="light"
           size="xs"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonType="light"
           size="sm"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonType="light"
           size="md"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonType="light"
           size="lg"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonType="light"
           size="xl"
           label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
         />
@@ -585,6 +609,12 @@ export const WithIcon = () => (
         className="buttons"
         style={{ display: "flex", alignItems: "center" }}
       >
+        <Button
+          variant="solid"
+          buttonType="light"
+          size="xxs"
+          label={{ labelLeadingIcon: <Icon.Setting />, labelText: "설정" }}
+        />
         <Button
           variant="solid"
           buttonType="light"
@@ -633,6 +663,12 @@ export const WithIcon = () => (
         className="buttons"
         style={{ display: "flex", alignItems: "center" }}
       >
+        <Button
+          variant="solid"
+          buttonType="light"
+          size="xxs"
+          label={{ labelLeadingIcon: <Icon.Setting color="gray_7" /> }}
+        />
         <Button
           variant="solid"
           buttonType="light"
