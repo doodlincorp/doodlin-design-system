@@ -3,6 +3,7 @@ import { Text } from "..";
 import Divider from "../component/Divider";
 import StoriesIcon from "../component/Icon";
 import "../reset.scss";
+import { EColorMap } from "../utils/colorMap";
 
 export default {
   title: "Component/Icon",
@@ -40,10 +41,10 @@ export const Default = () => {
       </div>
       <Text size="xx-small">{name}</Text>
       <Divider />
-      <Text size="xx-small" textColor="gray_6">
+      <Text size="xx-small" textColor={EColorMap.gray_6}>
         variant:{" "}
       </Text>
-      <Text size="xx-small" weight="medium" textColor="blue_6">
+      <Text size="xx-small" weight="medium" textColor={EColorMap.blue_6}>
         {variantName ? (
           variantName
         ) : (
@@ -501,15 +502,25 @@ export const Default = () => {
 export const Rotate = () => {
   return (
     <div style={{ padding: 20 }}>
-      <StoriesIcon.Arrow variant="arrow" size={40} rotate={90} color="red_7" />
+      <StoriesIcon.Arrow
+        variant="arrow"
+        size={40}
+        rotate={90}
+        color={EColorMap.red_7}
+      />
       <Divider variant="vertical" />
-      <StoriesIcon.Arrow variant="arrow" size={40} rotate={45} color="green" />
+      <StoriesIcon.Arrow
+        variant="arrow"
+        size={40}
+        rotate={45}
+        color={EColorMap.green}
+      />
       <Divider variant="vertical" />
       <StoriesIcon.Arrow
         variant="arrow"
         size={40}
         rotate={320}
-        color="blue_7"
+        color={EColorMap.blue_7}
       />
     </div>
   );

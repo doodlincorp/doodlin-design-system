@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
 import { ArrowIcon } from "../Icon/ArrowIcon";
+import { EColorMap } from "../../utils/colorMap";
 
 export interface ICustomSelectProps<T> {
   value: T;
@@ -49,7 +50,12 @@ const CustomSelect: <T>(
         }}
       >
         {getCurrentViewFunc(value)}
-        <ArrowIcon color={"gray_6"} size={16} rotate={270} variant="chevron" />
+        <ArrowIcon
+          color={EColorMap.gray_6}
+          size={16}
+          rotate={270}
+          variant="chevron"
+        />
       </div>
       {optionOpen && <div className="options">{optionsView}</div>}
     </div>

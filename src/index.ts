@@ -26,7 +26,7 @@ export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositio
 export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
 
 export * from "./utils/colorGenerate";
-export * from "./utils/color";
+export * from "./utils/colorMap";
 export * from "./utils/font";
 
 export type TButtonSize = "xxs" | "xs" | "sm" | "md" | "lg" | "xl";

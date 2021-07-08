@@ -3,6 +3,7 @@ import cn from "classnames";
 import "./index.scss";
 import { CloseIcon } from "../Icon/CloseIcon";
 import { InfoMarkIcon } from "../Icon/InfoMarkIcon";
+import { EColorMap } from "../../utils/colorMap";
 
 export interface ICalloutProps {
   className?: string;
@@ -31,7 +32,7 @@ const Callout: React.FC<ICalloutProps> = ({
         {icon && (
           <InfoMarkIcon
             className="icon"
-            color={variant === "info" ? "blue_7" : "red_7"}
+            color={variant === "info" ? EColorMap.blue_7 : EColorMap.red_7}
             size={20}
           />
         )}
@@ -39,7 +40,10 @@ const Callout: React.FC<ICalloutProps> = ({
         <div>{children}</div>
       </div>
       <button className="close-btn" onClick={() => setOpen(false)}>
-        <CloseIcon color={variant === "info" ? "blue_7" : "red_7"} size={20} />
+        <CloseIcon
+          color={variant === "info" ? EColorMap.blue_7 : EColorMap.red_7}
+          size={20}
+        />
       </button>
     </div>
   );

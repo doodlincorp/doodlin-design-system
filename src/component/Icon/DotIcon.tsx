@@ -1,10 +1,10 @@
 import React from "react";
-import { colorMap, IColorMap } from "./colorMap";
+import { EColorMap } from "../../utils/colorMap";
 import "./index.scss";
 import cn from "classnames";
 
 export interface IDotIconProps {
-  color?: keyof IColorMap;
+  color?: EColorMap;
   className?: string;
   size?: number;
   rotate?: number;
@@ -36,7 +36,7 @@ export const DotIcon: React.FC<IDotIconProps> = ({
             cx="12"
             cy="12"
             r="6"
-            fill={color ? colorMap[color] : colorMap.active_green}
+            fill={color || EColorMap.active_green}
           />
         </svg>
       ) : (
@@ -45,7 +45,7 @@ export const DotIcon: React.FC<IDotIconProps> = ({
             cx="12"
             cy="12"
             r="6"
-            fill={color ? colorMap[color] : colorMap.inactive_red}
+            fill={color || EColorMap.inactive_red}
           />
         </svg>
       )}

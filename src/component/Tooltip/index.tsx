@@ -2,6 +2,7 @@ import React from "react";
 import cn from "classnames";
 import "./index.scss";
 import { InfoMarkIcon } from "../../component/Icon/InfoMarkIcon";
+import { EColorMap } from "../../utils/colorMap";
 
 export interface ITooltipProps {
   className?: string;
@@ -33,7 +34,7 @@ const Tooltip: React.FC<ITooltipProps> = ({
         {tooltipText.length > 0 && (
           <div className="tooltip-box">
             {variant === "tail" && (
-              <InfoMarkIcon className="icon" color="blue_4" />
+              <InfoMarkIcon className="icon" color={EColorMap.blue_4} />
             )}
             {tooltipText}
           </div>

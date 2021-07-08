@@ -1,10 +1,10 @@
 import React from "react";
-import { colorMap, IColorMap } from "./colorMap";
+import { EColorMap } from "../../utils/colorMap";
 import "./index.scss";
 import cn from "classnames";
 
 export interface ISideBarIconProps {
-  color?: keyof IColorMap;
+  color?: EColorMap;
   className?: string;
   size?: number;
   rotate?: number;
@@ -34,7 +34,7 @@ export const SideBarIcon: React.FC<ISideBarIconProps> = ({
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M4 3H20C21.103 3 22 3.897 22 5V19C22 20.103 21.103 21 20 21H12H10H4C2.897 21 2 20.103 2 19V5C2 3.897 2.897 3 4 3ZM4 7V19H10V7H4ZM12 7V19H20.002L20 5V7H12ZM8 10H6V12H8V10ZM8 14H6V16H8V14Z"
-          fill={color ? colorMap[color] : colorMap.gray_8}
+          fill={color || EColorMap.gray_8}
         />
       </svg>
     </i>

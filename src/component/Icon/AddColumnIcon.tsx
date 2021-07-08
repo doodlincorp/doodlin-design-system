@@ -1,10 +1,10 @@
 import React from "react";
-import { colorMap, IColorMap } from "./colorMap";
+import { EColorMap } from "../../utils/colorMap";
 import "./index.scss";
 import cn from "classnames";
 
 export interface IAddColumnIconProps {
-  color?: keyof IColorMap;
+  color?: EColorMap;
   className?: string;
   size?: number;
   rotate?: number;
@@ -34,7 +34,7 @@ export const AddColumnIcon: React.FC<IAddColumnIconProps> = ({
           fillRule="evenodd"
           clipRule="evenodd"
           d="M6 5H10V19H6V5ZM4 5C4 3.89543 4.89543 3 6 3H10C11.1046 3 12 3.89543 12 5V19C12 20.1046 11.1046 21 10 21H6C4.89543 21 4 20.1046 4 19V5ZM16 3H18V5H20V7H18V9H16V7H14V5H16V3Z"
-          fill={color ? colorMap[color] : colorMap.gray_8}
+          fill={color || EColorMap.gray_8}
         />
       </svg>
     </i>

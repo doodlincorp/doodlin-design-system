@@ -2,13 +2,13 @@ import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 import "./index.scss";
 import { TFontSize } from "../..";
-import { colorMap, IColorMap } from "../Icon/colorMap";
+import { EColorMap } from "../../utils/colorMap";
 
 export interface ITextProps
   extends HTMLAttributes<
     HTMLDivElement | HTMLSpanElement | HTMLHeadingElement
   > {
-  textColor?: keyof IColorMap;
+  textColor?: EColorMap;
   className?: string;
   variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "block" | "inline";
   weight?: "light" | "regular" | "medium" | "bold";
@@ -38,9 +38,9 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
-            `text-align-${align}`
+            `text-align-${align}`,
           )}
-          style={{ color: textColor ? colorMap[textColor] : undefined }}
+          style={{ color: textColor }}
           {...props}
         >
           {children}
@@ -55,9 +55,9 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
-            `text-align-${align}`
+            `text-align-${align}`,
           )}
-          style={{ color: textColor ? colorMap[textColor] : undefined }}
+          style={{ color: textColor }}
           {...props}
         >
           {children}
@@ -72,9 +72,9 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
-            `text-align-${align}`
+            `text-align-${align}`,
           )}
-          style={{ color: textColor ? colorMap[textColor] : undefined }}
+          style={{ color: textColor }}
           {...props}
         >
           {children}
@@ -89,9 +89,9 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
-            `text-align-${align}`
+            `text-align-${align}`,
           )}
-          style={{ color: textColor ? colorMap[textColor] : undefined }}
+          style={{ color: textColor }}
           {...props}
         >
           {children}
@@ -106,9 +106,9 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
-            `text-align-${align}`
+            `text-align-${align}`,
           )}
-          style={{ color: textColor ? colorMap[textColor] : undefined }}
+          style={{ color: textColor }}
           {...props}
         >
           {children}
@@ -123,9 +123,9 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
-            `text-align-${align}`
+            `text-align-${align}`,
           )}
-          style={{ color: textColor ? colorMap[textColor] : undefined }}
+          style={{ color: textColor }}
           {...props}
         >
           {children}
@@ -140,9 +140,9 @@ const Text: React.FC<ITextProps> = ({
             `font-size-${size}`,
             `font-weight-${weight}`,
             `line-height-${lineHeight}`,
-            `text-align-${align}`
+            `text-align-${align}`,
           )}
-          style={{ color: textColor ? colorMap[textColor] : undefined }}
+          style={{ color: textColor }}
           {...props}
         >
           {children}

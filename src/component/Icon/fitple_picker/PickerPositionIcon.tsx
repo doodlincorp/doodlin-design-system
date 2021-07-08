@@ -1,10 +1,10 @@
 import React from "react";
-import { colorMap, IColorMap } from "../colorMap";
+import { EColorMap } from "../../../utils/colorMap";
 import "../index.scss";
 import cn from "classnames";
 
 export interface IPickerPositionIconProps {
-  color?: keyof IColorMap;
+  color?: EColorMap;
   className?: string;
   size?: number;
   rotate?: number;
@@ -43,7 +43,7 @@ export const PickerPositionIcon: React.FC<IPickerPositionIconProps> = ({
           <path
             id="icon__fill"
             d="M0 3C0 1.89543 0.895431 1 2 1H6V15H2C0.89543 15 0 14.1046 0 13V3Z"
-            fill={color ? colorMap[color] : colorMap.gray_5}
+            fill={color || EColorMap.gray_5}
           />
           <rect
             id="icon__stroke"
@@ -52,7 +52,7 @@ export const PickerPositionIcon: React.FC<IPickerPositionIconProps> = ({
             width="15"
             height="13"
             rx="1.5"
-            stroke={color ? colorMap[color] : colorMap.gray_5}
+            stroke={color || EColorMap.gray_5}
           />
         </svg>
       )}
@@ -71,12 +71,12 @@ export const PickerPositionIcon: React.FC<IPickerPositionIconProps> = ({
             width="15"
             height="13"
             rx="1.5"
-            stroke={color ? colorMap[color] : colorMap.gray_5}
+            stroke={color || EColorMap.gray_5}
           />
           <path
             id="icon__fill"
             d="M10 1H14C15.1046 1 16 1.89543 16 3V13C16 14.1046 15.1046 15 14 15H10V1Z"
-            fill={color ? colorMap[color] : colorMap.gray_5}
+            fill={color || EColorMap.gray_5}
           />
         </svg>
       )}
@@ -95,12 +95,12 @@ export const PickerPositionIcon: React.FC<IPickerPositionIconProps> = ({
             width="15"
             height="13"
             rx="1.5"
-            stroke={color ? colorMap[color] : colorMap.gray_5}
+            stroke={color || EColorMap.gray_5}
           />
           <path
             id="icon__fill"
             d="M0 3C0 1.89543 0.895431 1 2 1H14C15.1046 1 16 1.89543 16 3V7H0V3Z"
-            fill={color ? colorMap[color] : colorMap.gray_5}
+            fill={color || EColorMap.gray_5}
           />
         </svg>
       )}
@@ -119,12 +119,12 @@ export const PickerPositionIcon: React.FC<IPickerPositionIconProps> = ({
             width="15"
             height="13"
             rx="1.5"
-            stroke={color ? colorMap[color] : colorMap.gray_5}
+            stroke={color || EColorMap.gray_5}
           />
           <path
             id="icon__fill"
             d="M0 9H16V13C16 14.1046 15.1046 15 14 15H2C0.895431 15 0 14.1046 0 13V9Z"
-            fill={color ? colorMap[color] : colorMap.gray_5}
+            fill={color || EColorMap.gray_5}
           />
         </svg>
       )}

@@ -1,12 +1,12 @@
 import React from "react";
 import "./index.scss";
 import cn from "classnames";
-import { colorMap, IColorMap } from "../Icon/colorMap";
+import { EColorMap } from "../../utils/colorMap";
 
 export interface IDividerProps {
   className?: string;
   variant?: "default" | "vertical";
-  color?: keyof IColorMap;
+  color?: EColorMap;
   size?: number;
   width?: number;
   height?: number;
@@ -24,7 +24,7 @@ const Divider: React.FC<IDividerProps> = ({
     <hr
       className={cn("_DIVIDER_", className, variant)}
       style={{
-        backgroundColor: `${color ? colorMap[color] : colorMap.gray_2}`,
+        backgroundColor: `${color || EColorMap.gray_2}`,
         margin: `${variant === "default" ? `${size}px` : 0} ${
           variant === "vertical" ? `${size}px` : 0
         }`,

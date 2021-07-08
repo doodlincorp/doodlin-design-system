@@ -1,10 +1,10 @@
 import React from "react";
-import { colorMap, IColorMap } from "./colorMap";
+import { EColorMap } from "../../utils/colorMap";
 import "./index.scss";
 import cn from "classnames";
 
 export interface IArchiveIConProps {
-  color?: keyof IColorMap;
+  color?: EColorMap;
   className?: string;
   size?: number;
   rotate?: number;
@@ -32,7 +32,7 @@ export const ArchiveIcon: React.FC<IArchiveIConProps> = ({
         <path
           id="icon__fill"
           d="M20 3H4C2.897 3 2 3.897 2 5V13V14V19C2 20.104 2.896 21 4 21H20C21.104 21 22 20.104 22 19V14V13V5C22 3.897 21.103 3 20 3ZM19 12H16H15.858C15.412 13.722 13.861 15 12 15C10.139 15 8.588 13.722 8.142 12H8H4V5H20V12H19Z"
-          fill={color ? colorMap[color] : colorMap.gray_8}
+          fill={color || EColorMap.gray_8}
         />
       </svg>
     </i>

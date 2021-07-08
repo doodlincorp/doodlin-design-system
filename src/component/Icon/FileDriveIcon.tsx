@@ -1,10 +1,10 @@
 import React from "react";
-import { colorMap, IColorMap } from "./colorMap";
+import { EColorMap } from "../../utils/colorMap";
 import "./index.scss";
 import cn from "classnames";
 
 export interface IFileDriveIconProps {
-  color?: keyof IColorMap;
+  color?: EColorMap;
   className?: string;
   size?: number;
   rotate?: number;
@@ -34,7 +34,7 @@ export const FileDriveIcon: React.FC<IFileDriveIconProps> = ({
           fillRule="evenodd"
           clipRule="evenodd"
           d="M19 4H5L5 14H19V4ZM5 20V16H19V20H5ZM5 2C3.89543 2 3 2.89543 3 4V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V4C21 2.89543 20.1046 2 19 2H5ZM17 17H15V19H17V17Z"
-          fill={color ? colorMap[color] : colorMap.gray_8}
+          fill={color || EColorMap.gray_8}
         />
       </svg>
     </i>

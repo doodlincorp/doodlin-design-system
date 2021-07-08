@@ -1,10 +1,10 @@
 import React from "react";
-import { colorMap, IColorMap } from "./colorMap";
+import { EColorMap } from "../../utils/colorMap";
 import "./index.scss";
 import cn from "classnames";
 
 export interface IUpDownArrowIconProps {
-  color?: keyof IColorMap;
+  color?: EColorMap;
   className?: string;
   size?: number;
   rotate?: number;
@@ -34,7 +34,7 @@ export const UpDownArrowIcon: React.FC<IUpDownArrowIconProps> = ({
           fillRule="evenodd"
           clipRule="evenodd"
           d="M12 3L6 9H18L12 3ZM12 21L18 15L6 15L12 21Z"
-          fill={color ? colorMap[color] : colorMap.gray_8}
+          fill={color || EColorMap.gray_8}
         />
       </svg>
     </i>

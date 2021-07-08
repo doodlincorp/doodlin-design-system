@@ -5,6 +5,7 @@ import Text from "../Text";
 import { TFontSize } from "../..";
 import { CheckIcon } from "../Icon/CheckIcon";
 import { HTMLAttributes } from "react";
+import { EColorMap } from "../../utils/colorMap";
 
 export interface ICheckboxProps extends HTMLAttributes<HTMLDivElement> {
   selected: boolean;
@@ -42,7 +43,10 @@ const Checkbox: React.FC<ICheckboxProps> = ({
         })}
         style={{ width: size, minWidth: size, height: size }}
       >
-        <CheckIcon size={size} color={selected ? "white" : "transparent"} />
+        <CheckIcon
+          size={size}
+          color={selected ? EColorMap.white : EColorMap.transparent}
+        />
       </div>
       <Text
         className={cn("label", { disabled })}

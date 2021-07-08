@@ -1,10 +1,10 @@
 import React from "react";
-import { colorMap, IColorMap } from "./colorMap";
+import { EColorMap } from "../../utils/colorMap";
 import "./index.scss";
 import cn from "classnames";
 
 export interface IFilterIconProps {
-  color?: keyof IColorMap;
+  color?: EColorMap;
   className?: string;
   size?: number;
   rotate?: number;
@@ -37,7 +37,7 @@ export const FilterIcon: React.FC<IFilterIconProps> = ({
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M14 14V20L10 22V14L3.58579 7.58579C3.21071 7.21071 3 6.70201 3 6.17157V4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V6.17157C21 6.70201 20.7893 7.21071 20.4142 7.58579L14 14Z"
-            fill={color ? colorMap[color] : colorMap.gray_8}
+            fill={color || EColorMap.gray_8}
           />
         </svg>
       ) : (
@@ -47,7 +47,7 @@ export const FilterIcon: React.FC<IFilterIconProps> = ({
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M14 20V14L20.4142 7.58579C20.7893 7.21071 21 6.70201 21 6.17157V4C21 3.44772 20.5523 3 20 3H4C3.44772 3 3 3.44772 3 4V6.17157C3 6.70201 3.21071 7.21071 3.58579 7.58579L10 14V22L14 20ZM40.414 12L34.707 17.707L33.293 16.293L37.586 12L33.293 7.70703L34.707 6.29303L40.414 12Z"
-            fill={color ? colorMap[color] : colorMap.gray_8}
+            fill={color || EColorMap.gray_8}
           />
         </svg>
       )}

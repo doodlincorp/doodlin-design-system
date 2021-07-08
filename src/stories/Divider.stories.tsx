@@ -3,6 +3,7 @@ import Callout from "../component/Callout";
 import Divider from "../component/Divider";
 import Text from "../component/Text";
 import "../reset.scss";
+import { EColorMap } from "../utils/colorMap";
 
 export default {
   title: "Component/Divider",
@@ -104,21 +105,21 @@ export const Color = () => {
       <article style={{ paddingBottom: 60 }}>
         <Text>
           위
-          <Divider color="red_7" />
+          <Divider color={EColorMap.red_7} />
           아래
         </Text>
       </article>
       <article style={{ paddingBottom: 60 }}>
         <Text>
           위
-          <Divider color="green_6" />
+          <Divider color={EColorMap.green} />
           아래
         </Text>
       </article>
       <article style={{ paddingBottom: 60 }}>
         <Text>
           위
-          <Divider color="blue_7" />
+          <Divider color={EColorMap.blue_7} />
           아래
         </Text>
       </article>

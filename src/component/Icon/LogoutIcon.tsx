@@ -1,10 +1,10 @@
 import React from "react";
-import { colorMap, IColorMap } from "./colorMap";
+import { EColorMap } from "../../utils/colorMap";
 import "./index.scss";
 import cn from "classnames";
 
 export interface ILogoutIconProps {
-  color?: keyof IColorMap;
+  color?: EColorMap;
   className?: string;
   size?: number;
   rotate?: number;
@@ -34,7 +34,7 @@ export const LogoutIcon: React.FC<ILogoutIconProps> = ({
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M13 3H4C2.897 3 2 3.897 2 5V19C2 20.103 2.897 21 4 21H13C14.103 21 15 20.103 15 19V15H13V19H4V5H13V9H15V5C15 3.897 14.103 3 13 3ZM17 11H8V13H17V16L22 12L17 8V11Z"
-          fill={color ? colorMap[color] : colorMap.gray_8}
+          fill={color || EColorMap.gray_8}
         />
       </svg>
     </i>
