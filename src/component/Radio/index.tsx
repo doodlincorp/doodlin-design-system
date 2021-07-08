@@ -3,11 +3,10 @@ import cn from "classnames";
 import "./index.scss";
 import Text from "../Text";
 import { TFontSize } from "../..";
+import { HTMLAttributes } from "react";
 
-export interface IRadioProps {
-  className?: string;
-  selected?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+export interface IRadioProps extends HTMLAttributes<HTMLDivElement> {
+  selected: boolean;
   disabled?: boolean;
   label?: string;
   labelSize?: TFontSize;
@@ -16,7 +15,6 @@ export interface IRadioProps {
 
 const Radio: React.FC<IRadioProps> = ({
   className,
-  onClick,
   selected,
   disabled,
   label,
@@ -25,11 +23,7 @@ const Radio: React.FC<IRadioProps> = ({
   ...props
 }) => {
   return (
-    <div
-      className={cn("_RADIO_", className, { onlyBtn: !label })}
-      onClick={onClick}
-      {...props}
-    >
+    <div className={cn("_RADIO_", className, { onlyBtn: !label })} {...props}>
       <div className={cn("btn", { selected, disabled })}></div>
       <Text
         className={cn("label", { disabled })}

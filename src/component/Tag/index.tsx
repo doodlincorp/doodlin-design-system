@@ -19,17 +19,22 @@ const Tag: React.FC<ITagProps> = ({
   size = "sm",
   closeBtn,
   selected,
-  onClick,
   onClickCloseBtn,
   ...props
 }) => {
   return (
-    <div className={cn("_TAG_", className)} onClick={onClick} {...props}>
+    <div className={cn("_TAG_", className)} {...props}>
       {variant === "default" ? (
         <div className={cn("default", size, closeBtn, { selected })}>
           #{children}
           {closeBtn && (
-            <div className="close-btn" onClick={onClickCloseBtn}>
+            <div
+              className="close-btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (onClickCloseBtn) onClickCloseBtn();
+              }}
+            >
               <Icon.Close className="close-icon" variant="circle" />
             </div>
           )}

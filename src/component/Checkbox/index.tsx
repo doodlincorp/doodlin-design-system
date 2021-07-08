@@ -4,11 +4,10 @@ import "./index.scss";
 import Text from "../Text";
 import { TFontSize } from "../..";
 import { CheckIcon } from "../Icon/CheckIcon";
+import { HTMLAttributes } from "react";
 
-export interface ICheckboxProps {
-  className?: string;
-  selected?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+export interface ICheckboxProps extends HTMLAttributes<HTMLDivElement> {
+  selected: boolean;
   disabled?: boolean;
   label?: string;
   labelSize?: TFontSize;
@@ -19,20 +18,18 @@ export interface ICheckboxProps {
 
 const Checkbox: React.FC<ICheckboxProps> = ({
   className,
-  onClick,
   selected,
   disabled,
   label,
   labelSize,
   labelWeight,
-  size,
+  size = 16,
   variant,
   ...props
 }) => {
   return (
     <div
       className={cn("_CHECKBOX_", className, { onlyBtn: !label })}
-      onClick={onClick}
       {...props}
     >
       <div
