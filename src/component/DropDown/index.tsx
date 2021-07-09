@@ -7,6 +7,7 @@ export interface IDropDownProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   placement?: "left" | "right" | "maxLeft" | "maxRight";
   btn: JSX.Element;
+  open?: boolean;
 }
 
 const DropDown: React.FC<IDropDownProps> = ({
@@ -14,6 +15,7 @@ const DropDown: React.FC<IDropDownProps> = ({
   children,
   btn,
   placement = "left",
+  open,
   ...props
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,13 +26,18 @@ const DropDown: React.FC<IDropDownProps> = ({
       <div
         className="toggle"
         onClick={(e) => {
-          setOptionOpen(false);
-          e.stopPropagation();
+          if (open === undefined) {
+            setOptionOpen(false);
+            e.stopPropagation();
+          }
         }}
       >
         {btn}
       </div>
-      {optionOpen && (
+      {open === undefined && optionOpen && (
+        <div className={cn("item-area", placement)}>{children}</div>
+      )}
+      {open !== undefined && open && (
         <div className={cn("item-area", placement)}>{children}</div>
       )}
     </div>
