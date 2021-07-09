@@ -109,6 +109,16 @@
       }
     }
   }
+  .password-toggle-btn:hover {
+    .dds-icon {
+      #icon__fill {
+        fill: $gray_7;
+      }
+      #icon__stroke {
+        stroke: $gray_7;
+      }
+    }
+  }
 }
 
 ._INPUT_ {
