@@ -54,7 +54,13 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
         }}
       >
         {icon && <div className="leading_icon">{icon.leading}</div>}
-        <input ref={inputRef} className={cn("_INPUT_", icon)} {...props} />
+        <input
+          ref={inputRef}
+          className={cn("_INPUT_", icon)}
+          {...props}
+          spellCheck={spellCheck}
+          autoComplete={autoComplete}
+        />
         {icon && icon.tailing}
       </div>
     );
