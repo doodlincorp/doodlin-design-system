@@ -1,9 +1,12 @@
 import React, { InputHTMLAttributes } from "react";
 import cn from "classnames";
 import "./index.scss";
-import { useImperativeHandle, useRef } from "react";
+import { useImperativeHandle, useRef, useState, useEffect } from "react";
+import Icon from "../Icon";
+import { EColorMap } from "../../utils/colorMap";
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  password?: boolean;
   inputSize?: "xs" | "sm" | "md" | "lg" | "xl";
   icon?: {
     leading?: React.ReactElement;
@@ -23,15 +26,17 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
     {
       className,
       inputSize = "md",
+      password,
       disabled,
       spellCheck = "false",
       autoComplete = "off",
       icon,
       ...props
     },
-    ref
+    ref,
   ) => {
     const inputRef = useRef<HTMLInputElement>(null);
+    const [revealPw, setRevealPw] = useState<boolean>(false);
 
     useImperativeHandle(ref, () => {
       return {
@@ -50,6 +55,15 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
       };
     });
 
+    useEffect(() => {
+      if (inputRef.current) {
+        inputRef.current.setSelectionRange(
+          inputRef.current.value.length,
+          inputRef.current.value.length,
+        );
+      }
+    }, [revealPw]);
+
     return (
       <div
         className={cn("_INPUTWRAPPER_", className, inputSize, { disabled })}
@@ -61,14 +75,28 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
         <input
           ref={inputRef}
           className={cn("_INPUT_", icon)}
-          {...props}
+          type={password ? (revealPw ? props.type : "password") : props.type}
           spellCheck={spellCheck}
           autoComplete={autoComplete}
+          {...props}
         />
+        {password && (
+          <button
+            className="password-toggle-btn"
+            onClick={() => {
+              setRevealPw(!revealPw);
+            }}
+          >
+            <Icon.Vision
+              variant={revealPw ? "vision" : "invision"}
+              color={EColorMap.gray_6}
+            />
+          </button>
+        )}
         {icon && icon.tailing}
       </div>
     );
-  }
+  },
 );
 
 export default Input;

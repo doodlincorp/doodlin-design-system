@@ -84,6 +84,14 @@ export const WithIcon = () => (
   </div>
 );
 
+export const PasswordInput = () => {
+  return (
+    <div style={{ padding: 10, maxWidth: 800 }}>
+      <Input inputSize="xl" placeholder="password" password />
+    </div>
+  );
+};
+
 export const Disabled = () => (
   <div style={{ padding: 10, maxWidth: 500 }}>
     <Input
