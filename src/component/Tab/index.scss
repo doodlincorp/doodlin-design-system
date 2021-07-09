@@ -41,14 +41,6 @@
       padding: 0 4px;
       font-weight: $font-weight-medium;
       border-radius: 6px;
-      .dds-icon {
-        #icon__fill {
-          fill: $gray_6;
-        }
-        #icon__stroke {
-          stroke: $gray_6;
-        }
-      }
       &.selected {
         color: $gray_8;
         background-color: #fff;
