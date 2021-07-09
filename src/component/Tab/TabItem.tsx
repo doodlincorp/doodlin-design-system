@@ -2,7 +2,8 @@ import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 import "./index.scss";
 
-export interface ITabItemProps extends HTMLAttributes<HTMLDivElement> {
+export interface ITabItemProps
+  extends HTMLAttributes<HTMLDivElement | HTMLButtonElement> {
   className?: string;
   label?: string;
   width?: number;
