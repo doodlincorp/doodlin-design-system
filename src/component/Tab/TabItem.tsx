@@ -1,9 +1,9 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
 import "./index.scss";
+import { ButtonHTMLAttributes } from "react";
 
-export interface ITabItemProps
-  extends HTMLAttributes<HTMLDivElement | HTMLButtonElement> {
+export interface ITabItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   label?: string;
   width?: number;
@@ -23,7 +23,7 @@ const TabItem: React.FC<ITabItemProps> = ({
   ...props
 }) => {
   return (
-    <div
+    <button
       className={cn("_TABITEM_", className, {
         selected,
         iconOnly: !label,
@@ -36,7 +36,7 @@ const TabItem: React.FC<ITabItemProps> = ({
       {icon?.leading && <div className="leading-icon">{icon.leading}</div>}
       {label}
       {icon?.tailing && <div className="tailing-icon">{icon.tailing}</div>}
-    </div>
+    </button>
   );
 };
 
