@@ -40,10 +40,19 @@
 
 ._DROP_ITEM_ {
   .emoji {
-    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 1.3rem;
+    margin-right: 4px;
   }
   button._BUTTON_ {
     border-radius: 6px;
+    .dds-icon {
+      margin-right: 4px;
+    }
   }
   &.danger {
     button._BUTTON_ {
