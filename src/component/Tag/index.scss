@@ -37,23 +37,21 @@
     }
     // Size
     &.sm {
-      height: 20px;
-      padding: 0 4px;
+      padding: 2.5px 4px;
       border-radius: 4px;
       font-size: $font_size_xx-small;
     }
     &.md {
-      height: 24px;
-      padding: 0 6px;
+      padding: 3.5px 6px;
+      font-size: $font_size_xx-small;
     }
     &.lg {
-      height: 28px;
-      padding: 0 8px;
+      padding: 5.5px 8px;
+      font-size: $font_size_small;
     }
     &.md,
     &.lg {
       border-radius: 6px;
-      font-size: $font_size_small;
     }
   }
   .referral {
@@ -70,16 +68,12 @@
     }
     // Size
     &.sm {
-      height: 20px;
-      padding: 0 4px;
+      padding: 2.5px 4px;
       border-radius: 4px;
       font-size: $font_size_xx-small;
     }
     &.lg {
-      height: 28px;
-      padding: 0 8px;
-    }
-    &.lg {
+      padding: 5.5px 8px;
       border-radius: 6px;
       font-size: $font_size_small;
     }
