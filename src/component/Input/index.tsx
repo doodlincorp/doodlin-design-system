@@ -15,6 +15,7 @@ export interface IInputRef {
   focus: () => void;
   get: () => string;
   reset: () => void;
+  rawRef: () => React.RefObject<HTMLInputElement>;
 }
 
 export const Input = React.forwardRef<IInputRef, IInputProps>(
@@ -28,7 +29,7 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
       icon,
       ...props
     },
-    ref,
+    ref
   ) => {
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -42,6 +43,9 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
         },
         reset: () => {
           if (inputRef.current) inputRef.current.value = "";
+        },
+        rawRef: () => {
+          return inputRef;
         },
       };
     });
@@ -64,7 +68,7 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
         {icon && icon.tailing}
       </div>
     );
-  },
+  }
 );
 
 export default Input;
