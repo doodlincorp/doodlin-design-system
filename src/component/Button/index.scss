@@ -61,6 +61,14 @@
       height: 28px;
       padding: 0;
     }
+    .dds-icon {
+      width: 20px !important;
+      height: 20px !important;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 
   &.sm {
