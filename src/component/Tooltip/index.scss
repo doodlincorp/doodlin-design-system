@@ -21,7 +21,7 @@
       text-align: start;
       border-radius: 4px;
       white-space: pre-wrap;
-      transition: 0.1s ease-out;
+      transition: $button_hover_transition;
       transition-delay: 0.2s;
       pointer-events: none;
       user-select: none;
