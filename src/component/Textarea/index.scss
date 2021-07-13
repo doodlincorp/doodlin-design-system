@@ -5,12 +5,11 @@
   padding: 12px 16px;
   font-size: $font-size-medium;
   line-height: $line-height-medium;
-  border-radius: 4px;
-  border: 1px solid $gray_4;
+  border-radius: 8px;
+  border: 1px solid $blue_gray;
+  background-color: #fff;
 
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
+  transition: all 0.2s ease-out;
   box-sizing: border-box;
   resize: none;
 
@@ -35,11 +34,10 @@
   &:hover,
   &:active,
   &:focus {
-    border: 1px solid $gray_6;
+    border-color: $gray_7;
   }
   &:focus {
     outline: none;
-    box-shadow: $shadow_1;
   }
 
   & + & {
