@@ -1,0 +1,14 @@
+@import "../../index.scss";
+
+._BADGE_ {
+  display: inline-block;
+  padding: 3px 6px;
+  font-size: $font_size_xx-small;
+  font-weight: $font_weight_medium;
+  color: $gray_7;
+  background-color: #fff;
+  box-shadow: $shadow-1;
+  user-select: none;
+  border-radius: 4px;
+  vertical-align: middle;
+}

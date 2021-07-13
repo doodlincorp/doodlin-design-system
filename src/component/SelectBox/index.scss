@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 ._SELECT_BOX_._CUSTOM_SELECT_ {
-  &.line {
+  &.quiet {
     .current {
       background: transparent;
       transition: none;
@@ -14,6 +14,22 @@
       }
       &.selected {
         border-color: $blue_gray;
+      }
+    }
+  }
+  &.border {
+    .current {
+      background: transparent;
+      transition: none;
+      transition: border-color 0.1s ease-out;
+      border: solid 1px $gray_3;
+      &:hover,
+      &.selected {
+        border-color: $gray_5;
+        background: transparent;
+      }
+      &.selected {
+        box-shadow: $shadow_3;
       }
     }
   }

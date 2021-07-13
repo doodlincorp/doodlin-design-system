@@ -51,7 +51,22 @@ export const Variant = () => {
       />
       <br />
       <SelectBox<ISelectBoxItem>
-        variant="line"
+        variant="border"
+        options={[
+          {
+            text: "안녕하세요",
+          },
+          {
+            icon: "👩",
+            text: "헬로",
+          },
+        ]}
+        value={selectedOption}
+        selectFunc={(o) => setSelectOption(o)}
+      />
+      <br />
+      <SelectBox<ISelectBoxItem>
+        variant="quiet"
         options={[
           {
             text: "안녕하세요",

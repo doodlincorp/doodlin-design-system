@@ -13,7 +13,7 @@ export interface ISelectBoxProps<T extends ISelectBoxItem> {
   value: T;
   options: T[];
   className?: string;
-  variant?: "default" | "line";
+  variant?: "solid" | "border" | "quiet";
   selectFunc: (o: T) => void;
 }
 
@@ -24,7 +24,7 @@ const SelectBox: <T extends ISelectBoxItem>(
   options,
   className,
   selectFunc,
-  variant = "default",
+  variant = "solid",
 }) => {
   return (
     <CustomSelect
