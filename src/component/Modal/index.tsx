@@ -29,16 +29,17 @@ const Modal: React.FC<IModalProps> = ({
 }) => {
   return (
     <div className="_MODAL_" style={{ zIndex: zIndex }}>
-      <div className={cn("modal-content-box", className)}>
+      <div
+        className={cn("modal-content-box", className)}
+        style={{ width: width }}
+      >
         {closeBtn && (
           <div className="close-btn" onClick={closeBtn}>
             <CloseIcon size={20} />
           </div>
         )}
         {header && <div className="modal-header">{header.Text}</div>}
-        <div className="modal-content" style={{ width: width }}>
-          {children}
-        </div>
+        <div className="modal-content">{children}</div>
         {footer && (
           <div className={cn("footer", footer.BtnAlign || "end")}>
             {footer.cancelBtn}
