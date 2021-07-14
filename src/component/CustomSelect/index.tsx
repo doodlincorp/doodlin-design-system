@@ -64,6 +64,7 @@ const CustomSelect: <T>(
       >
         {getCurrentViewFunc(value)}
         <ArrowIcon
+          className="chevron-icon"
           color={EColorMap.gray_6}
           size={16}
           rotate={270}
