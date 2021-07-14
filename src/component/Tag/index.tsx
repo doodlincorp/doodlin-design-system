@@ -29,13 +29,13 @@ const Tag: React.FC<ITagProps> = ({
           #{children}
           {closeBtn && (
             <div
-              className="close-btn"
+              className="tag-close-btn"
               onClick={(e) => {
                 e.stopPropagation();
                 if (onClickCloseBtn) onClickCloseBtn();
               }}
             >
-              <Icon.Close className="close-icon" variant="circle" />
+              <Icon.Close variant="circle" />
             </div>
           )}
         </div>
