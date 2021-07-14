@@ -47,7 +47,9 @@ const SelectBox: <T extends ISelectBoxItem>(
         <div className={cn("option-view")} onClick={() => selectFunc(o)}>
           {o.icon &&
             (isObjectEqual(o, value) ? (
-              <CheckIcon />
+              <div className="icon">
+                <CheckIcon />
+              </div>
             ) : (
               <div
                 className={cn("icon", { imoji: typeof o.icon === "string" })}
