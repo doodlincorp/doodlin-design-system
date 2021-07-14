@@ -48,14 +48,16 @@ const Checkbox: React.FC<ICheckboxProps> = ({
           color={selected ? EColorMap.white : EColorMap.transparent}
         />
       </div>
-      <Text
-        className={cn("label", { disabled })}
-        variant="inline"
-        size={labelSize}
-        weight={labelWeight}
-      >
-        {label}
-      </Text>
+      {label && (
+        <Text
+          className={cn("label", { disabled })}
+          variant="inline"
+          size={labelSize}
+          weight={labelWeight}
+        >
+          {label}
+        </Text>
+      )}
     </div>
   );
 };
