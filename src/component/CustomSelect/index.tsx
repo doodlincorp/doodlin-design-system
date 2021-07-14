@@ -13,6 +13,19 @@ export interface ICustomSelectProps<T> {
   getOptionViewFunc: (v: T) => JSX.Element;
 }
 
+export function isObjectEqual<T>(first: T, second: T, cnt?: number): boolean {
+  if (cnt && cnt > 2) return true;
+  if (typeof first !== typeof second) return false;
+  if (typeof first === "object") {
+    for (const key in first) {
+      if (!isObjectEqual(first[key], second[key], (cnt || 0) + 1)) return false;
+    }
+  } else if (typeof first !== "function") {
+    if (first !== second) return false;
+  }
+  return true;
+}
+
 const CustomSelect: <T>(
   p: ICustomSelectProps<T>,
 ) => React.ReactElement<ICustomSelectProps<T>> = ({
@@ -28,7 +41,7 @@ const CustomSelect: <T>(
   const optionsView = options.map((o, i) => (
     <div
       className={cn("option", {
-        selected: JSON.stringify(o) === JSON.stringify(value),
+        selected: isObjectEqual(o, value),
       })}
       onClick={(e) => {
         setOptionOpen(false);

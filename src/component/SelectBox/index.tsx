@@ -1,5 +1,5 @@
 import React from "react";
-import CustomSelect from "../CustomSelect";
+import CustomSelect, { isObjectEqual } from "../CustomSelect";
 import { CheckIcon } from "../Icon/CheckIcon";
 import cn from "classnames";
 import "./index.scss";
@@ -46,7 +46,7 @@ const SelectBox: <T extends ISelectBoxItem>(
       getOptionViewFunc={(o) => (
         <div className={cn("option-view")} onClick={() => selectFunc(o)}>
           {o.icon &&
-            (JSON.stringify(o) === JSON.stringify(value) ? (
+            (isObjectEqual(o, value) ? (
               <CheckIcon />
             ) : (
               <div
