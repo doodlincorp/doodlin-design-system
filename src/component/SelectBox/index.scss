@@ -1,6 +1,21 @@
 @import "../../index.scss";
 
 ._SELECT_BOX_._CUSTOM_SELECT_ {
+  &.xs {
+    .current {
+      height: 24px;
+    }
+  }
+  &.md {
+    .current {
+      height: 32px;
+    }
+  }
+  &.lg {
+    .current {
+      height: 36px;
+    }
+  }
   &.quiet {
     .current {
       background: transparent;
