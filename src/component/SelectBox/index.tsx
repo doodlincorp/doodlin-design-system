@@ -15,6 +15,7 @@ export interface ISelectBoxProps<T extends ISelectBoxItem> {
   className?: string;
   variant?: "solid" | "border" | "quiet";
   selectFunc: (o: T) => void;
+  size?: "xs" | "sm" | "md" | "lg";
 }
 
 const SelectBox: <T extends ISelectBoxItem>(
@@ -25,11 +26,12 @@ const SelectBox: <T extends ISelectBoxItem>(
   className,
   selectFunc,
   variant = "solid",
+  size = "sm",
 }) => {
   return (
     <CustomSelect
       value={value}
-      className={cn("_SELECT_BOX_", className, variant)}
+      className={cn("_SELECT_BOX_", className, variant, size)}
       options={options}
       getCurrentViewFunc={(v) => (
         <div className="current-view">

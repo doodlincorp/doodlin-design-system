@@ -82,3 +82,72 @@ export const Variant = () => {
     </div>
   );
 };
+
+export const Size = () => {
+  const [selectedOption, setSelectOption] = useState<ISelectBoxItem>({
+    text: "안녕하세요",
+  });
+  return (
+    <div style={{ padding: 20, width: 200 }}>
+      <SelectBox<ISelectBoxItem>
+        size="xs"
+        options={[
+          {
+            text: "안녕하세요",
+          },
+          {
+            icon: "👩",
+            text: "헬로",
+          },
+        ]}
+        value={selectedOption}
+        selectFunc={(o) => setSelectOption(o)}
+      />
+      <br />
+      <SelectBox<ISelectBoxItem>
+        size="sm"
+        options={[
+          {
+            text: "안녕하세요",
+          },
+          {
+            icon: "👩",
+            text: "헬로",
+          },
+        ]}
+        value={selectedOption}
+        selectFunc={(o) => setSelectOption(o)}
+      />
+      <br />
+      <SelectBox<ISelectBoxItem>
+        size="md"
+        options={[
+          {
+            text: "안녕하세요",
+          },
+          {
+            icon: "👩",
+            text: "헬로",
+          },
+        ]}
+        value={selectedOption}
+        selectFunc={(o) => setSelectOption(o)}
+      />
+      <br />
+      <SelectBox<ISelectBoxItem>
+        size="lg"
+        options={[
+          {
+            text: "안녕하세요",
+          },
+          {
+            icon: "👩",
+            text: "헬로",
+          },
+        ]}
+        value={selectedOption}
+        selectFunc={(o) => setSelectOption(o)}
+      />
+    </div>
+  );
+};
