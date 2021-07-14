@@ -9,11 +9,13 @@
   &.md {
     .current {
       height: 32px;
+      border-radius: 8px;
     }
   }
   &.lg {
     .current {
       height: 36px;
+      border-radius: 8px;
     }
   }
   &.quiet {
@@ -55,7 +57,9 @@
     }
   }
   .options {
+    border-radius: 8px;
     .option {
+      border-radius: 6px;
       .option-view {
         .icon {
           font-size: 1.6rem;
