@@ -11,6 +11,7 @@ export interface IRadioProps extends HTMLAttributes<HTMLDivElement> {
   label?: string;
   labelSize?: TFontSize;
   labelWeight?: "light" | "regular" | "medium" | "bold";
+  variant?: "default" | "red";
 }
 
 const Radio: React.FC<IRadioProps> = ({
@@ -20,11 +21,12 @@ const Radio: React.FC<IRadioProps> = ({
   label,
   labelSize,
   labelWeight,
+  variant = "default",
   ...props
 }) => {
   return (
     <div className={cn("_RADIO_", className, { onlyBtn: !label })} {...props}>
-      <div className={cn("btn", { selected, disabled })}></div>
+      <div className={cn("btn", variant, { selected, disabled })}></div>
       <Text
         className={cn("label", { disabled })}
         variant="inline"

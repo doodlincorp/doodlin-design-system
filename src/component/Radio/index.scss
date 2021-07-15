@@ -51,6 +51,14 @@
       box-shadow: 0 0 0 1.5px inset $gray_4;
       cursor: not-allowed;
     }
+    &.red {
+      &::after {
+        background: $red_8;
+      }
+      &.selected {
+        box-shadow: 0 0 0 1px inset $red_8;
+      }
+    }
   }
   .label {
     padding-left: 8px;
