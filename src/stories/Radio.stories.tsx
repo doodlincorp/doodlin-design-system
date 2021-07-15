@@ -1,5 +1,6 @@
 import { useState } from "@storybook/addons";
 import React from "react";
+import Divider from "../component/Divider";
 import Radio from "../component/Radio";
 import "../reset.scss";
 
@@ -24,6 +25,28 @@ export const WithLabel = () => {
       <Radio
         label="라디오 버튼"
         labelSize="small"
+        onClick={() => setSelected(!selected)}
+        selected={selected}
+      />
+    </div>
+  );
+};
+
+export const Variant = () => {
+  const [selected, setSelected] = useState(false);
+  return (
+    <div style={{ padding: 20 }}>
+      <Radio
+        label="default"
+        labelSize="small"
+        onClick={() => setSelected(!selected)}
+        selected={selected}
+      />
+      <Divider />
+      <Radio
+        label="red"
+        labelSize="small"
+        variant="red"
         onClick={() => setSelected(!selected)}
         selected={selected}
       />
