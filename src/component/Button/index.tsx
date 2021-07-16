@@ -28,7 +28,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       fullWidth,
       loading,
       rounded,
-      buttonType = "light",
+      buttonType = "basic",
       label,
       ...restProps
     } = props;
@@ -69,7 +69,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
         </span>
       </button>
     );
-  },
+  }
 );
 
 export default Button;
