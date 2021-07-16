@@ -7,7 +7,7 @@
     position: absolute;
     z-index: 600;
     top: calc(100% + 4px);
-    width: 180px;
+    min-width: 180px;
     padding: 4px;
     background: #fff;
     border: 1px solid $blue_gray;
@@ -46,7 +46,6 @@
     width: 20px;
     height: 20px;
     font-size: 1.3rem;
-    margin-right: 4px;
   }
   button._BUTTON_ {
     border-radius: 6px;

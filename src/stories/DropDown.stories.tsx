@@ -27,7 +27,10 @@ export const Default = () => {
       >
         <DropDown btn={<Button>option</Button>}>
           <DropItem text="hello 소환" />
-          <DropItem text="아이콘과 함께" icon={<EditIcon />} />
+          <DropItem
+            text="아이콘과 함께아이콘과 함께아이콘과 함께"
+            icon={<EditIcon />}
+          />
           <DropItem text="로딩중" loading />
           <Divider />
           <DropItem text="비활성화" icon={<SettingIcon />} disabled />

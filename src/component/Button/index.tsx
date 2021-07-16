@@ -28,7 +28,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       fullWidth,
       loading,
       rounded,
-      buttonType = "basic",
+      buttonType = "light",
       label,
       ...restProps
     } = props;
@@ -52,11 +52,15 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
           {label ? (
             <>
               {label.labelLeadingIcon && (
-                <div className="_BUTTON_leading-icon">{label.labelLeadingIcon}</div>
+                <div className="_BUTTON_leading-icon">
+                  {label.labelLeadingIcon}
+                </div>
               )}
               {label.labelText}
               {label.labelTailingIcon && (
-                <div className="_BUTTON_tailing-icon">{label.labelTailingIcon}</div>
+                <div className="_BUTTON_tailing-icon">
+                  {label.labelTailingIcon}
+                </div>
               )}
             </>
           ) : (
@@ -65,7 +69,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
         </span>
       </button>
     );
-  }
+  },
 );
 
 export default Button;
