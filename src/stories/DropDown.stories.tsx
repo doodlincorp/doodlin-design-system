@@ -62,3 +62,72 @@ export const Default = () => {
     </>
   );
 };
+
+export const Size = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <div
+        style={{
+          padding: 20,
+        }}
+      >
+        <DropDown width={200} placement="right" btn={<Button>200px</Button>}>
+          <DropItem text="hello 소환" />
+          <DropItem text="아이콘과 함께" icon={<EditIcon />} />
+          <DropItem text="로딩중" loading />
+          <Divider />
+          <DropItem text="비활성화" icon={<SettingIcon />} disabled />
+          <DropItem
+            className="delete"
+            text="삭제"
+            icon={<GarbageIcon />}
+            variant="danger"
+          />
+          <DropItem className="delete" text="삭제" icon={"👩"} />
+        </DropDown>
+      </div>
+      <div
+        style={{
+          padding: 20,
+        }}
+      >
+        <DropDown width={400} placement="right" btn={<Button>400px</Button>}>
+          <DropItem text="hello 소환" />
+          <DropItem text="아이콘과 함께" icon={<EditIcon />} />
+          <DropItem text="로딩중" loading />
+          <Divider />
+          <DropItem text="비활성화" icon={<SettingIcon />} disabled />
+          <DropItem
+            className="delete"
+            text="삭제"
+            icon={<GarbageIcon />}
+            variant="danger"
+          />
+          <DropItem className="delete" text="삭제" icon={"👩"} />
+        </DropDown>
+      </div>
+      <div
+        style={{
+          padding: 20,
+        }}
+      >
+        <DropDown width={600} placement="right" btn={<Button>600px</Button>}>
+          <DropItem text="hello 소환" />
+          <DropItem text="아이콘과 함께" icon={<EditIcon />} />
+          <DropItem text="로딩중" loading />
+          <Divider />
+          <DropItem text="비활성화" icon={<SettingIcon />} disabled />
+          <DropItem
+            className="delete"
+            text="삭제"
+            icon={<GarbageIcon />}
+            variant="danger"
+          />
+          <DropItem className="delete" text="삭제" icon={"👩"} />
+        </DropDown>
+      </div>
+    </>
+  );
+};
