@@ -70,7 +70,7 @@ export const UserIcon: React.FC<IUserIconProps> = ({
             fill={color || EColorMap.gray_8}
           />
         </svg>
-      )}{" "}
+      )}
       {variant === "manager" && (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
