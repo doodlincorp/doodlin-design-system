@@ -467,6 +467,10 @@ export const Default = () => {
           <StoriesIcon.User size={40} variant="owner" />
         </IconBlock>
 
+        <IconBlock name="User" variantName="team">
+          <StoriesIcon.User size={40} variant="team" />
+        </IconBlock>
+
         <IconBlock name="User" variantName="setMember">
           <StoriesIcon.User size={40} variant="setMember" />
         </IconBlock>
