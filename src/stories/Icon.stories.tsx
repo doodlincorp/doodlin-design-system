@@ -363,6 +363,10 @@ export const Default = () => {
           <StoriesIcon.Memo size={40} variant="tail" />
         </IconBlock>
 
+        <IconBlock name="Memo" variantName="note">
+          <StoriesIcon.Memo size={40} variant="note" />
+        </IconBlock>
+
         <IconBlock name="Phone">
           <StoriesIcon.Phone size={40} />
         </IconBlock>

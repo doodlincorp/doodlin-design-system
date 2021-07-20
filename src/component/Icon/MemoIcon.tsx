@@ -9,7 +9,7 @@ export interface IMemoIconProps {
   size?: number;
   rotate?: number;
   flip?: boolean;
-  variant?: "default" | "tail";
+  variant?: "default" | "tail" | "note";
 }
 
 export const MemoIcon: React.FC<IMemoIconProps> = ({
@@ -40,6 +40,27 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
           <path
             id="icon__fill"
             d="M4 4.66675H12V6.00008H4V4.66675ZM4 7.33341H12V8.66675H4V7.33341ZM4 10.0001H8V11.3334H4V10.0001Z"
+            fill={color || EColorMap.gray_8}
+          />
+        </svg>
+      </i>
+    );
+  }
+  if (variant === "note") {
+    return (
+      <i
+        className={cn("dds-icon", className, { flip })}
+        style={{
+          width: size,
+          minWidth: size,
+          height: size,
+          transform: `rotate(${rotate}deg)`,
+        }}
+      >
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            d="M19 3H5C3.897 3 3 3.897 3 5V19C3 20.103 3.897 21 5 21H13C13.131 21 13.26 20.974 13.381 20.924C13.502 20.874 13.613 20.801 13.707 20.707L20.707 13.707C20.793 13.621 20.854 13.52 20.903 13.414C20.917 13.384 20.925 13.353 20.936 13.321C20.964 13.237 20.982 13.151 20.987 13.062C20.989 13.041 21 13.021 21 13V5C21 3.897 20.103 3 19 3ZM5 5H19V12H13C12.447 12 12 12.448 12 13V19H5V5ZM14 17.586V14H17.586L14 17.586Z"
             fill={color || EColorMap.gray_8}
           />
         </svg>
