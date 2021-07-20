@@ -87,6 +87,10 @@ export const WithIcon = () => (
 export const PasswordInput = () => {
   return (
     <div style={{ padding: 10, maxWidth: 800 }}>
+      <Input inputSize="xs" placeholder="password" password />
+      <Input inputSize="sm" placeholder="password" password />
+      <Input inputSize="md" placeholder="password" password />
+      <Input inputSize="lg" placeholder="password" password />
       <Input inputSize="xl" placeholder="password" password />
     </div>
   );
