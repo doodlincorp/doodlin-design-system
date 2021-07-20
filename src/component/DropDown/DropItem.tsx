@@ -26,7 +26,7 @@ const DropItem: React.FC<IDropItemProps> = ({
         className={className}
         variant="quiet"
         buttonType="light"
-        size="sm"
+        size="xs"
         fullWidth
         label={{
           labelLeadingIcon:
