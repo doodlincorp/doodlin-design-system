@@ -1,6 +1,7 @@
 @import "../../index.scss";
 
 ._SELECT_BOX_._CUSTOM_SELECT_ {
+  font-weight: $font-weight-medium;
   &.xs {
     .current {
       height: 24px;
