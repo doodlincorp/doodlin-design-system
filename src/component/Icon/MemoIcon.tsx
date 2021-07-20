@@ -20,17 +20,17 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
   flip,
   variant = "default",
 }) => {
-  if (variant === "default") {
-    return (
-      <i
-        className={cn("dds-icon", className, { flip })}
-        style={{
-          width: size,
-          minWidth: size,
-          height: size,
-          transform: `rotate(${rotate}deg)`,
-        }}
-      >
+  return (
+    <i
+      className={cn("dds-icon", className, { flip })}
+      style={{
+        width: size,
+        minWidth: size,
+        height: size,
+        transform: `rotate(${rotate}deg)`,
+      }}
+    >
+      {variant === "default" && (
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -43,20 +43,8 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
             fill={color || EColorMap.gray_8}
           />
         </svg>
-      </i>
-    );
-  }
-  if (variant === "note") {
-    return (
-      <i
-        className={cn("dds-icon", className, { flip })}
-        style={{
-          width: size,
-          minWidth: size,
-          height: size,
-          transform: `rotate(${rotate}deg)`,
-        }}
-      >
+      )}
+      {variant === "note" && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -64,28 +52,19 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
             fill={color || EColorMap.gray_8}
           />
         </svg>
-      </i>
-    );
-  }
-  return (
-    <i
-      className={cn("dds-icon", className, { flip })}
-      style={{
-        width: size,
-        minWidth: size,
-        height: size,
-        transform: `rotate(${rotate}deg)`,
-      }}
-    >
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          id="icon__fill"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M4 2H20C21.103 2 22 2.897 22 4V16C22 17.103 21.103 18 20 18H7.333L2 22V4C2 2.897 2.897 2 4 2ZM6.667 16H20V4H4V18L6.667 16ZM17 7H7V9H17V7ZM14 11H7V13H14V11Z"
-          fill={color || EColorMap.gray_8}
-        />
-      </svg>
+      )}
+
+      {variant === "tail" && (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4 2H20C21.103 2 22 2.897 22 4V16C22 17.103 21.103 18 20 18H7.333L2 22V4C2 2.897 2.897 2 4 2ZM6.667 16H20V4H4V18L6.667 16ZM17 7H7V9H17V7ZM14 11H7V13H14V11Z"
+            fill={color || EColorMap.gray_8}
+          />
+        </svg>
+      )}
     </i>
   );
 };
