@@ -38,6 +38,42 @@ export const Default = () => {
             icon={{ tailing: <SearchIcon /> }}
             placeholder="다양한 키워드로 검색해 보세요"
           />
+          <Input
+            icon={{ tailing: <SearchIcon /> }}
+            placeholder="다양한 키워드로 검색해 보세요"
+          />
+          <Input
+            icon={{ tailing: <SearchIcon /> }}
+            placeholder="다양한 키워드로 검색해 보세요"
+          />
+          <Input
+            icon={{ tailing: <SearchIcon /> }}
+            placeholder="다양한 키워드로 검색해 보세요"
+          />
+          <Input
+            icon={{ tailing: <SearchIcon /> }}
+            placeholder="다양한 키워드로 검색해 보세요"
+          />
+          <Input
+            icon={{ tailing: <SearchIcon /> }}
+            placeholder="다양한 키워드로 검색해 보세요"
+          />
+          <Input
+            icon={{ tailing: <SearchIcon /> }}
+            placeholder="다양한 키워드로 검색해 보세요"
+          />
+          <Input
+            icon={{ tailing: <SearchIcon /> }}
+            placeholder="다양한 키워드로 검색해 보세요"
+          />
+          <Input
+            icon={{ tailing: <SearchIcon /> }}
+            placeholder="다양한 키워드로 검색해 보세요"
+          />
+          <Input
+            icon={{ tailing: <SearchIcon /> }}
+            placeholder="다양한 키워드로 검색해 보세요"
+          />
         </Modal>
       )}
     </div>

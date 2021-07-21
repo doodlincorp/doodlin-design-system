@@ -17,7 +17,6 @@
     position: relative;
     min-width: 320px;
     height: max-content;
-    max-height: calc(100vh - 96px);
     border-radius: 10px;
     border: 1px solid $gray_6;
     background: #fff;
@@ -49,7 +48,12 @@
   }
   .modal-content {
     padding: 40px 32px 12px;
-    overflow-y: visible;
+    // 42px: modal-header height
+    // 68px: footer height
+    // 40px: modal top, bottom margin
+    max-height: calc(100vh - 42px - 68px - 40px);
+    overflow-y: auto;
+    overflow-x: hidden;
     box-sizing: border-box;
   }
   .footer {
