@@ -499,6 +499,14 @@ export const Default = () => {
           <StoriesIcon.Vision size={40} variant="invision" />
         </IconBlock>
 
+        <IconBlock name="Window" variantName="maximize">
+          <StoriesIcon.Window size={40} variant="maximize" />
+        </IconBlock>
+
+        <IconBlock name="Window" variantName="minimize">
+          <StoriesIcon.Window size={40} variant="minimize" />
+        </IconBlock>
+
         <IconBlock name="ZipDownload">
           <StoriesIcon.ZipDownload size={40} />
         </IconBlock>

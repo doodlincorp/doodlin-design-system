@@ -55,6 +55,7 @@ import { EmojiIcon } from "./EmojiIcon";
 import { DotIcon } from "./DotIcon";
 import { AllIcon } from "./AllIcon";
 import { SideBarIcon } from "./SideBarIcon";
+import { WindowIcon } from "./WindowIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -171,6 +172,7 @@ const Icon = {
   ZipDownload: ZipDownloadIcon,
   Link: LinkIcon,
   LinkExternal: LinkExternalIcon,
+  Window: WindowIcon,
 };
 
 export default Icon;
