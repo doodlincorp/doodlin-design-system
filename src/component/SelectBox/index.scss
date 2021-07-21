@@ -61,6 +61,10 @@
     border-radius: 8px;
     .option {
       border-radius: 6px;
+      &.selected {
+        background-color: transparent;
+        color: $gray_6;
+      }
       .option-view {
         .icon {
           font-size: 1.6rem;
