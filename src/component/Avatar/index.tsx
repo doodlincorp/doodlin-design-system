@@ -2,6 +2,7 @@ import React, { HTMLAttributes } from "react";
 import "./index.scss";
 import cn from "classnames";
 import { getAvatarColorById } from "../../utils/colorGenerate";
+import { EColorMap } from "../../utils/colorMap";
 
 export interface IAvatarProps extends HTMLAttributes<HTMLDivElement> {
   src: string | null;
@@ -47,7 +48,10 @@ const Avatar: React.FC<IAvatarProps> = ({
             <div
               className={cn("default-image")}
               style={{
-                background: getAvatarColorById(userId || 0),
+                background:
+                  variant === "workspace"
+                    ? undefined
+                    : getAvatarColorById(userId || 0),
               }}
             >
               {name ? name[0] : ""}

@@ -84,6 +84,41 @@ export const Size = () => (
   </div>
 );
 
+export const Variant = () => (
+  <div style={{ padding: 20 }}>
+    <div className="wrapper" style={{ paddingBottom: 20 }}>
+      <Avatar variant="profile" size="xs" src={null} name={"김민수"} />
+      <Divider variant="vertical" />
+      <Avatar variant="workspace" size="xs" src={null} name={"김민수"} />
+    </div>
+    <div className="wrapper" style={{ paddingBottom: 20 }}>
+      <Avatar variant="profile" size="sm" src={null} name={"김민수"} />
+      <Divider variant="vertical" />
+      <Avatar variant="workspace" size="sm" src={null} name={"김민수"} />
+    </div>
+    <div className="wrapper" style={{ paddingBottom: 20 }}>
+      <Avatar variant="profile" size="md" src={null} name={"김민수"} />
+      <Divider variant="vertical" />
+      <Avatar variant="workspace" size="md" src={null} name={"김민수"} />
+    </div>
+    <div className="wrapper" style={{ paddingBottom: 20 }}>
+      <Avatar variant="profile" size="lg" src={null} name={"김민수"} />
+      <Divider variant="vertical" />
+      <Avatar variant="workspace" size="lg" src={null} name={"김민수"} />
+    </div>
+    <div className="wrapper" style={{ paddingBottom: 20 }}>
+      <Avatar variant="profile" size="xl" src={null} name={"김민수"} />
+      <Divider variant="vertical" />
+      <Avatar variant="workspace" size="xl" src={null} name={"김민수"} />
+    </div>
+    <div className="wrapper" style={{ paddingBottom: 20 }}>
+      <Avatar variant="profile" size="xxl" src={null} name={"김민수"} />
+      <Divider variant="vertical" />
+      <Avatar variant="workspace" size="xxl" src={null} name={"김민수"} />
+    </div>
+  </div>
+);
+
 export const CustomSize = () => (
   <div style={{ padding: 20 }}>
     <Avatar customSize={56} src={null} name={"김민수"} />

@@ -45,55 +45,86 @@
       min-width: 100%;
       height: 100%;
       padding: 0;
-      background: $gray_6;
       color: #fff;
-      border-radius: 50%;
       font-weight: $font-weight-medium;
     }
   }
   // Avatar Size
+
+  &.workspace ._AVATAR_ {
+    box-shadow: $shadow_3;
+    .default-image {
+      color: $gray_8;
+    }
+    .image::after {
+      border: none;
+    }
+  }
+
   &.xs {
     width: 24px;
     min-width: 24px;
     height: 24px;
     font-size: $font-size-xx-small;
-    &.workspace {
+    &.workspace ._AVATAR_ {
       border-radius: 6px;
+      .image::after {
+        border-radius: 6px;
+      }
     }
   }
   &.sm {
     width: 32px;
     min-width: 32px;
     height: 32px;
-    font-size: $font-size-small; font-size: $font-size-xx-small;
-    &.workspace {
+    font-size: $font-size-small; 
+
+    &.workspace ._AVATAR_ {
       border-radius: 8px;
+      .image::after {
+        border-radius: 8px;
+      }
     }
   }
   &.md {
     width: 40px;
     min-width: 40px;
     height: 40px;
-    font-size: $font-size-large; font-size: $font-size-xx-small;
-    &.workspace {
+    font-size: $font-size-large; 
+
+    &.workspace ._AVATAR_ {
       border-radius: 10px;
+
+      .image::after {
+        border-radius: 10px;
+      }
     }
   }
   &.lg {
     width: 48px;
     min-width: 48px;
     height: 48px;
-    font-size: $font-size-x-large; font-size: $font-size-xx-small;
-    &.workspace {
+    font-size: $font-size-x-large; 
+
+    &.workspace ._AVATAR_ {
       border-radius: 14px;
+
+      .image::after {
+        border-radius: 14px;
+      }
     }
   }
   &.xl {
     width: 60px;
     min-width: 60px;
     height: 60px;
-    font-size: $font-size-xx-large;&.workspace {
+    font-size: $font-size-xx-large;
+    &.workspace ._AVATAR_  {
       border-radius: 14px;
+
+      .image::after {
+        border-radius: 14px;
+      }
     }
   }
   &.lg,
@@ -109,8 +140,12 @@
     min-width: 150px;
     height: 150px;
     font-size: $font-size-xxxx-large;
-    cursor: default;&.workspace {
+    cursor: default;
+    &.workspace ._AVATAR_ {
       border-radius: 20px;
+      .image::after {
+        border-radius: 20px;
+      }
     }
     ._AVATAR_ {
       .image::after {

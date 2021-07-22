@@ -502,9 +502,10 @@
   }
 
   // Loading
-  &.loading {
+  &.loading, &.disabled {
     pointer-events: none;
   }
+  
   &.loading::before {
     position: absolute;
     margin: 0 auto;
