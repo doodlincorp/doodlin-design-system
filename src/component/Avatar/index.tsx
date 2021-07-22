@@ -15,6 +15,7 @@ export interface IAvatarProps extends HTMLAttributes<HTMLDivElement> {
     | /*60px*/ "xl"
     | /*150px*/ "xxl";
   customSize?: number;
+  variant?: "profile" | "workspace";
 }
 
 const Avatar: React.FC<IAvatarProps> = ({
@@ -23,12 +24,13 @@ const Avatar: React.FC<IAvatarProps> = ({
   userId,
   name,
   size = "sm",
+  variant = "profile",
   customSize,
   ...props
 }) => {
   return (
     <div
-      className={cn("_AVATAR_CONTAINER_", className, size)}
+      className={cn("_AVATAR_CONTAINER_", className, size, variant)}
       style={{
         width: customSize && customSize,
         minWidth: customSize && customSize,

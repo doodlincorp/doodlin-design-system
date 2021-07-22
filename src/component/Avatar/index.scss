@@ -57,30 +57,44 @@
     min-width: 24px;
     height: 24px;
     font-size: $font-size-xx-small;
+    &.workspace {
+      border-radius: 6px;
+    }
   }
   &.sm {
     width: 32px;
     min-width: 32px;
     height: 32px;
-    font-size: $font-size-small;
+    font-size: $font-size-small; font-size: $font-size-xx-small;
+    &.workspace {
+      border-radius: 8px;
+    }
   }
   &.md {
     width: 40px;
     min-width: 40px;
     height: 40px;
-    font-size: $font-size-large;
+    font-size: $font-size-large; font-size: $font-size-xx-small;
+    &.workspace {
+      border-radius: 10px;
+    }
   }
   &.lg {
     width: 48px;
     min-width: 48px;
     height: 48px;
-    font-size: $font-size-x-large;
+    font-size: $font-size-x-large; font-size: $font-size-xx-small;
+    &.workspace {
+      border-radius: 14px;
+    }
   }
   &.xl {
     width: 60px;
     min-width: 60px;
     height: 60px;
-    font-size: $font-size-xx-large;
+    font-size: $font-size-xx-large;&.workspace {
+      border-radius: 14px;
+    }
   }
   &.lg,
   &.xl {
@@ -95,7 +109,9 @@
     min-width: 150px;
     height: 150px;
     font-size: $font-size-xxxx-large;
-    cursor: default;
+    cursor: default;&.workspace {
+      border-radius: 20px;
+    }
     ._AVATAR_ {
       .image::after {
         border-width: 3px;
