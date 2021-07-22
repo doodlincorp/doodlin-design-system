@@ -78,7 +78,6 @@
     min-width: 32px;
     height: 32px;
     font-size: $font-size-small; 
-
     &.workspace ._AVATAR_ {
       border-radius: 8px;
       .image::after {
@@ -91,10 +90,8 @@
     min-width: 40px;
     height: 40px;
     font-size: $font-size-large; 
-
     &.workspace ._AVATAR_ {
       border-radius: 10px;
-
       .image::after {
         border-radius: 10px;
       }
@@ -142,6 +139,7 @@
     font-size: $font-size-xxxx-large;
     cursor: default;
     &.workspace ._AVATAR_ {
+      box-shadow: $shadow_4;
       border-radius: 20px;
       .image::after {
         border-radius: 20px;

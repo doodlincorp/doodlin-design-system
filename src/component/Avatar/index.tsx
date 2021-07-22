@@ -31,11 +31,22 @@ const Avatar: React.FC<IAvatarProps> = ({
 }) => {
   return (
     <div
-      className={cn("_AVATAR_CONTAINER_", className, size, variant)}
+      className={cn(
+        "_AVATAR_CONTAINER_",
+        className,
+        !customSize
+          ? size
+          : customSize > 60
+          ? "xxl"
+          : customSize > 40
+          ? "lg"
+          : "sm",
+        variant,
+      )}
       style={{
-        width: customSize && customSize,
-        minWidth: customSize && customSize,
-        height: customSize && customSize,
+        width: customSize,
+        minWidth: customSize,
+        height: customSize,
         fontSize: customSize && customSize * 0.5,
       }}
       {...props}
