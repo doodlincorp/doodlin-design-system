@@ -56,6 +56,8 @@ import { DotIcon } from "./DotIcon";
 import { AllIcon } from "./AllIcon";
 import { SideBarIcon } from "./SideBarIcon";
 import { WindowIcon } from "./WindowIcon";
+import { ClickModeIcon } from "./ClickModeIcon";
+import { DockIcon } from "./DockIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -125,12 +127,14 @@ const Icon = {
   Camera: CameraIcon,
   Chart: ChartIcon,
   Check: CheckIcon,
+  ClickMode: ClickModeIcon,
   Clip: ClipIcon,
   Clock: ClockIcon,
   Close: CloseIcon,
   Copy: CopyIcon,
   DefaultImage: DefaultImageIcon,
   Doc: DocIcon,
+  Dock: DockIcon,
   Dot: DotIcon,
   FileDrive: FileDriveIcon,
   QuestionMark: QuestionMarkIcon,

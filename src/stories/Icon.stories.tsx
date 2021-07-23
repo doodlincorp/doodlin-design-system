@@ -143,6 +143,10 @@ export const Default = () => {
           <StoriesIcon.Check size={40} variant="double" />
         </IconBlock>
 
+        <IconBlock name="ClickMode">
+          <StoriesIcon.ClickMode size={40} />
+        </IconBlock>
+
         <IconBlock name="Clip">
           <StoriesIcon.Clip size={40} />
         </IconBlock>
@@ -193,6 +197,10 @@ export const Default = () => {
 
         <IconBlock name="Doc" variantName="plus">
           <StoriesIcon.Doc size={40} variant="plus" />
+        </IconBlock>
+
+        <IconBlock name="Dock">
+          <StoriesIcon.Dock size={40} />
         </IconBlock>
 
         <IconBlock name="Dot" variantName="active">
