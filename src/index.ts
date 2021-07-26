@@ -24,9 +24,6 @@ export { default as Avatar } from "./component/Avatar";
 export { default as Tag } from "./component/Tag";
 export { default as Badge } from "./component/Badge";
 
-export { PickerPositionIcon } from "./component/Icon/fitple_picker/PickerPositionIcon";
-export { PickerToggleIcon } from "./component/Icon/fitple_picker/PickerToggleIcon";
-
 export * from "./utils/colorGenerate";
 export * from "./utils/colorMap";
 export * from "./utils/font";

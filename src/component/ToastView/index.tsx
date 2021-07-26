@@ -31,7 +31,6 @@ const ToastView: React.FC<IToastViewProps> = ({
         className="close-btn"
         size="xs"
         variant="quiet"
-        label={{ labelIcon: <Icon.Close /> }}
         onClick={closeFunc}
       />
     </div>
