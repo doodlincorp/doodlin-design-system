@@ -315,8 +315,12 @@ export const Default = () => {
           <StoriesIcon.Grid size={40} variant="row" />
         </IconBlock>
 
-        <IconBlock name="InfoMark">
+        <IconBlock name="InfoMark" variantName="border">
           <StoriesIcon.InfoMark size={40} />
+        </IconBlock>
+
+        <IconBlock name="InfoMark" variantName="solid">
+          <StoriesIcon.InfoMark size={40} variant="solid" />
         </IconBlock>
 
         <IconBlock name="LinkExternal">
