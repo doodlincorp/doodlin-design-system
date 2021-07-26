@@ -209,7 +209,8 @@
   }
 
   &.textonly {
-    padding: 0;
+    padding: 4px;
+    height: max-content;
   }
 
   // Variant
@@ -502,10 +503,11 @@
   }
 
   // Loading
-  &.loading, &.disabled {
+  &.loading,
+  &.disabled {
     pointer-events: none;
   }
-  
+
   &.loading::before {
     position: absolute;
     margin: 0 auto;
