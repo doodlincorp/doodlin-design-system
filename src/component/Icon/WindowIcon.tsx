@@ -35,7 +35,9 @@ export const WindowIcon: React.FC<IWindowIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            d="M4 21H20C21.103 21 22 20.103 22 19V5C22 3.897 21.103 3 20 3H4C2.897 3 2 3.897 2 5V19C2 20.103 2.897 21 4 21ZM4 19V7H20L20.001 19H4Z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M19 8H5L5 18H19V8ZM3 8V6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V8V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V8Z"
             fill={color || colorMap.gray_8}
           />
         </svg>
