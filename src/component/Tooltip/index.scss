@@ -13,6 +13,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: max-content;
+      height: max-content;
       padding: 4px 8px;
       background-color: $gray_8;
       color: #fff;
@@ -78,8 +79,64 @@
   }
 }
 
+// Placement
+
+._TOOLTIP_.top-left {
+  .target {
+    .tooltip-box {
+      top: unset;
+      left: 0;
+      bottom: calc(100% + 4px);
+      transform: translateX(0);
+    }
+  }
+}
+
+._TOOLTIP_.top {
+  .target {
+    .tooltip-box {
+      top: unset;
+      bottom: calc(100% + 4px);
+    }
+  }
+}
+
+._TOOLTIP_.top-right {
+  .target {
+    direction: rtl;
+    .tooltip-box {
+      top: unset;
+      right: 0;
+      bottom: calc(100% + 4px);
+      transform: translateX(0);
+    }
+  }
+}
+
 ._TOOLTIP_.left {
   .target {
+    .tooltip-box {
+      top: 50%;
+      left: unset;
+      right: calc(100% + 4px);
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+._TOOLTIP_.right {
+  .target {
+    .tooltip-box {
+      top: 50%;
+      left: calc(100% + 4px);
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+._TOOLTIP_.bottom-left {
+  .target {
+    direction: rtl;
     .tooltip-box {
       left: 0;
       transform: translateX(0);
@@ -87,7 +144,7 @@
   }
 }
 
-._TOOLTIP_.right {
+._TOOLTIP_.bottom-right {
   .target {
     direction: rtl;
     .tooltip-box {
