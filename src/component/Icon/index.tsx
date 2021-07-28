@@ -58,6 +58,7 @@ import { SideBarIcon } from "./SideBarIcon";
 import { WindowIcon } from "./WindowIcon";
 import { ClickModeIcon } from "./ClickModeIcon";
 import { DockIcon } from "./DockIcon";
+import { HeadsetIcon } from "./HeadsetIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -152,6 +153,7 @@ const Icon = {
   Fullscreen: FullscreenIcon,
   Garbage: GarbageIcon,
   Grid: GridIcon,
+  Headset: HeadsetIcon,
   InfoMark: InfoMarkIcon,
   Lock: LockIcon,
   Logout: LogoutIcon,
