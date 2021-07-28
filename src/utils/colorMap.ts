@@ -47,6 +47,7 @@ export enum EColorMap {
 
   // Orange
   orange_1 = "#FFECE2",
+  warning_orange = "#FAB005",
   interview_orange_7 = "#F38119",
 
   // Refferal Color
