@@ -2,6 +2,7 @@ import React from "react";
 import { EColorMap } from "../../utils/colorMap";
 import "./index.scss";
 import cn from "classnames";
+import { colorMap } from ".";
 
 export interface ICheckIconProps {
   color?: EColorMap;
@@ -10,7 +11,7 @@ export interface ICheckIconProps {
   rotate?: number;
   flip?: boolean;
 
-  variant?: "single" | "double";
+  variant?: "single" | "double" | "circle";
 }
 
 export const CheckIcon: React.FC<ICheckIconProps> = ({
@@ -51,6 +52,26 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
             clipRule="evenodd"
             d="M6.414 9L9.707 12.293L18 4L19.414 5.414L9.707 15.121L5 10.414L6.414 9ZM6.414 14L9.707 17.293L18 9L19.414 10.414L9.707 20.121L5 15.414L6.414 14Z"
             fill={color || EColorMap.gray_8}
+          />
+        </svg>
+      )}
+
+      {variant === "circle" && (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect
+            id="icon__fill"
+            x="2"
+            y="2"
+            width="20"
+            height="20"
+            rx="10"
+            fill={color || EColorMap.green}
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16.5664 7.19912C17.0366 7.53717 17.1405 8.18804 16.7986 8.65286L11.626 15.6845C11.1981 16.2663 10.3455 16.3324 9.83098 15.8237L7.30831 13.3296C6.89723 12.9232 6.89723 12.2643 7.30831 11.8579C7.71938 11.4515 8.38587 11.4515 8.79694 11.8579L10.5574 13.5984L15.096 7.42866C15.4379 6.96383 16.0963 6.86106 16.5664 7.19912Z"
+            fill="white"
           />
         </svg>
       )}

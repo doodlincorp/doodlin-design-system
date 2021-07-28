@@ -143,6 +143,10 @@ export const Default = () => {
           <StoriesIcon.Check size={40} variant="double" />
         </IconBlock>
 
+        <IconBlock name="Check" variantName="circle">
+          <StoriesIcon.Check size={40} variant="circle" />
+        </IconBlock>
+
         <IconBlock name="ClickMode">
           <StoriesIcon.ClickMode size={40} />
         </IconBlock>
@@ -263,8 +267,12 @@ export const Default = () => {
           <StoriesIcon.Emoji size={40} variant="add" />
         </IconBlock>
 
-        <IconBlock name="Error">
+        <IconBlock name="Error" variantName="triangle">
           <StoriesIcon.Error size={40} />
+        </IconBlock>
+
+        <IconBlock name="Error" variantName="circle">
+          <StoriesIcon.Error size={40} variant="circle" />
         </IconBlock>
 
         <IconBlock name="FlieDrive">
