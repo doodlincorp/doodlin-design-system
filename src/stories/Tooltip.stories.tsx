@@ -29,7 +29,7 @@ export const variant = () => {
       </div>
       <Tooltip
         tooltipText={"안녕하세요.\n문장형 정보 전달을 위한 툴팁입니다. 【ツ】"}
-        variant="tail"
+        variant="_tail"
       >
         <Button size="md">문장형 툴팁</Button>
       </Tooltip>
@@ -39,7 +39,7 @@ export const variant = () => {
 
 export const placement = () => {
   return (
-    <div style={{ padding: 100 }}>
+    <div style={{ padding: 150 }}>
       <div
         style={{
           display: "flex",
@@ -47,13 +47,21 @@ export const placement = () => {
           width: "400px",
         }}
       >
-        <Tooltip tooltipText={"왼쪽 상단 정렬"} placement="top-left">
+        <Tooltip
+          variant="_tail"
+          tooltipText={"왼쪽 상단 정렬"}
+          placement="_top-left"
+        >
           <Button size="md">top left</Button>
         </Tooltip>
-        <Tooltip tooltipText={"위쪽 정렬"} placement="top">
+        <Tooltip variant="_tail" tooltipText={"위쪽 정렬"} placement="_top">
           <Button size="md">top</Button>
         </Tooltip>
-        <Tooltip tooltipText={"오른쪽 상단 정렬"} placement="top-right">
+        <Tooltip
+          variant="_tail"
+          tooltipText={"오른쪽 상단 정렬"}
+          placement="_top-right"
+        >
           <Button size="md">top right</Button>
         </Tooltip>
       </div>
@@ -67,10 +75,10 @@ export const placement = () => {
           width: "400px",
         }}
       >
-        <Tooltip tooltipText={"왼쪽 정렬"} placement="left">
+        <Tooltip variant="_tail" tooltipText={"왼쪽 정렬"} placement="_left">
           <Button size="md">left</Button>
         </Tooltip>
-        <Tooltip tooltipText={"오른쪽 정렬"} placement="right">
+        <Tooltip variant="_tail" tooltipText={"오른쪽 정렬"} placement="_right">
           <Button size="md">right</Button>
         </Tooltip>
       </div>
@@ -84,13 +92,25 @@ export const placement = () => {
           width: "400px",
         }}
       >
-        <Tooltip tooltipText={"왼쪽 하단 정렬"} placement="bottom-left">
+        <Tooltip
+          variant="_tail"
+          tooltipText={"왼쪽 하단 정렬"}
+          placement="_bottom-left"
+        >
           <Button size="md">bottom left</Button>
         </Tooltip>
-        <Tooltip tooltipText={"중앙 하단 정렬"} placement="bottom">
+        <Tooltip
+          variant="_tail"
+          tooltipText={"중앙 하단 정렬"}
+          placement="_bottom"
+        >
           <Button size="md">bottom</Button>
         </Tooltip>
-        <Tooltip tooltipText={"오른쪽 하단 정렬"} placement="bottom-right">
+        <Tooltip
+          variant="_tail"
+          tooltipText={"오른쪽 하단 정렬"}
+          placement="_bottom-right"
+        >
           <Button size="md">bottom right</Button>
         </Tooltip>
       </div>
