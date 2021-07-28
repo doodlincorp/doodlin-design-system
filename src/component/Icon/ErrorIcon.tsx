@@ -41,22 +41,10 @@ export const ErrorIcon: React.FC<IErrorIconProps> = ({
       )}
       {variant === "circle" && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect
+          <path
             id="icon__fill"
-            x="2"
-            y="2"
-            width="20"
-            height="20"
-            rx="10"
-            fill={color || EColorMap.red_6}
-          />
-          <rect
-            x="9.05365"
-            y="7.87524"
-            width="10"
-            height="1.66667"
-            transform="rotate(45 9.05365 7.87524)"
-            fill="white"
+            d="M12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22ZM11 7L13 7L13 13L11 13L11 7ZM11 15L13 15L13 17L11 17L11 15Z"
+            fill={color || EColorMap.gray_8}
           />
         </svg>
       )}
