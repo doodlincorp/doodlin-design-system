@@ -55,7 +55,7 @@ export const Color = () => {
         <Palette name="blue_2" color="#C5E1FF" />
         <Palette name="blue_3" color="#92C7FF" />
         <Palette name="blue_4" color="#5FACFF" />
-        <Palette name="blue_5" color="#1184FF" /> 
+        <Palette name="blue_5" color="#1184FF" />
         <Palette name="blue_6" color="#0C6CD3" />
         <Palette name="blue_7" color="#004C9E" />
         <Palette name="blue_8" color="#003267" />
@@ -88,7 +88,6 @@ export const Color = () => {
         <Palette name="green" color="#34C759" />
         <Palette name="thumbs_green" color="#40C057" />
         <Palette name="text_green" color="#00A21D" />
-
       </div>
 
       <Text>Red</Text>
@@ -104,6 +103,7 @@ export const Color = () => {
       <Text>Orange</Text>
       <div style={{ marginBottom: 30 }}>
         <Palette name="orange_1" color="#FFECE2" />
+        <Palette name="warning_orange" color="#FAB005" />
         <Palette name="interview_orange_7" color="#F38119" />
       </div>
 
