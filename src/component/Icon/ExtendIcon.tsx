@@ -42,8 +42,8 @@ export const ExtendIcon: React.FC<IExtendIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M20 12H18L18 7.41423L14.7071 10.7071L13.2929 9.29289L16.5858 6L12 6V4H18H20L20 6V12ZM6 12H4V18V20H6H12V18H7.41423L10.7071 14.7071L9.29291 13.2929L6 16.5858V12Z"
             fill={color || EColorMap.gray_8}
           />

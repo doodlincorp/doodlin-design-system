@@ -42,8 +42,8 @@ export const GridIcon: React.FC<IGridIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M4 5H20V8H4V5ZM4 10.5H20V13.5H4V10.5ZM20 16H4V19H20V16Z"
             fill={color || EColorMap.gray_8}
           />
