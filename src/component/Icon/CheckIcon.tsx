@@ -37,8 +37,8 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17.4797 6.23894C18.0439 6.64461 18.1686 7.42565 17.7583 7.98344L11.5513 16.4214C11.0377 17.1196 10.0146 17.1989 9.39718 16.5885L6.36997 13.5956C5.87668 13.1079 5.87668 12.3172 6.36997 11.8295C6.86326 11.3418 7.66304 11.3418 8.15633 11.8295L10.2689 13.9181L15.7152 6.51439C16.1255 5.9566 16.9155 5.83328 17.4797 6.23894Z"
             fill={color || EColorMap.gray_8}
           />
@@ -59,11 +59,13 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
       {variant === "circle" && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
+
             id="icon__fill"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16.7986 9.15286C17.1405 8.68804 17.0366 8.03717 16.5664 7.69912C16.0963 7.36106 15.4379 7.46383 15.096 7.92866L10.5574 14.0984L8.79694 12.3579C8.38587 11.9515 7.71938 11.9515 7.30831 12.3579C6.89723 12.7643 6.89723 13.4232 7.30831 13.8296L9.83098 16.3237C10.3455 16.8324 11.1981 16.7663 11.626 16.1845L16.7986 9.15286Z"
             fill={color || EColorMap.green}
+
           />
         </svg>
       )}

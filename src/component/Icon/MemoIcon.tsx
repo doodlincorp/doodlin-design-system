@@ -58,8 +58,8 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M4 2H20C21.103 2 22 2.897 22 4V16C22 17.103 21.103 18 20 18H7.333L2 22V4C2 2.897 2.897 2 4 2ZM6.667 16H20V4H4V18L6.667 16ZM17 7H7V9H17V7ZM14 11H7V13H14V11Z"
             fill={color || EColorMap.gray_8}
           />
