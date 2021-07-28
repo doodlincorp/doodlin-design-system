@@ -37,8 +37,8 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17.4797 6.23894C18.0439 6.64461 18.1686 7.42565 17.7583 7.98344L11.5513 16.4214C11.0377 17.1196 10.0146 17.1989 9.39718 16.5885L6.36997 13.5956C5.87668 13.1079 5.87668 12.3172 6.36997 11.8295C6.86326 11.3418 7.66304 11.3418 8.15633 11.8295L10.2689 13.9181L15.7152 6.51439C16.1255 5.9566 16.9155 5.83328 17.4797 6.23894Z"
             fill={color || EColorMap.gray_8}
           />
@@ -68,8 +68,8 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
             fill={color || EColorMap.green}
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M16.5664 7.19912C17.0366 7.53717 17.1405 8.18804 16.7986 8.65286L11.626 15.6845C11.1981 16.2663 10.3455 16.3324 9.83098 15.8237L7.30831 13.3296C6.89723 12.9232 6.89723 12.2643 7.30831 11.8579C7.71938 11.4515 8.38587 11.4515 8.79694 11.8579L10.5574 13.5984L15.096 7.42866C15.4379 6.96383 16.0963 6.86106 16.5664 7.19912Z"
             fill="white"
           />
