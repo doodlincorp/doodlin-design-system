@@ -1,4 +1,4 @@
-//import "./reset.scss";
+import "./reset.scss";
 import "./index.scss";
 export { default as Button } from "./component/Button";
 export { default as Input } from "./component/Input";
