@@ -391,7 +391,12 @@
     ._BUTTON_leading-icon,
     ._BUTTON_tailing-icon {
       svg {
-        opacity: 0.3;
+        #icon__stroke {
+          stroke: $gray_5 !important;
+        }
+        #icon__fill {
+          fill: $gray_5 !important;
+        }
       }
     }
     &.ghost {
