@@ -343,12 +343,20 @@ export const Default = () => {
           <StoriesIcon.Link size={40} />
         </IconBlock>
 
-        <IconBlock name="Lock" variantName="locked">
-          <StoriesIcon.Lock size={40} />
+        <IconBlock name="Lock" variantName="solid-lock">
+          <StoriesIcon.Lock size={40} variant="solid-lock" />
         </IconBlock>
 
-        <IconBlock name="Lock" variantName="open">
-          <StoriesIcon.Lock size={40} variant="open" />
+        <IconBlock name="Lock" variantName="solid-unlock">
+          <StoriesIcon.Lock size={40} variant="solid-unlock" />
+        </IconBlock>
+
+        <IconBlock name="Lock" variantName="border-lock">
+          <StoriesIcon.Lock size={40} variant="border-lock" />
+        </IconBlock>
+
+        <IconBlock name="Lock" variantName="border-unlock">
+          <StoriesIcon.Lock size={40} variant="border-unlock" />
         </IconBlock>
 
         <IconBlock name="Logout">
