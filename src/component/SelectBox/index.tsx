@@ -46,19 +46,20 @@ const SelectBox: <T extends ISelectBoxItem>(
       )}
       getOptionViewFunc={(o) => (
         <div className={cn("option-view")} onClick={() => selectFunc(o)}>
-          {isObjectEqual(o, value) ? (
+          {isObjectEqual(o, value) && (
             <div className="icon">
               <CheckIcon color={EColorMap.gray_6} />
             </div>
-          ) : (
-            o.icon && (
+            )
+          }
+          {o.icon && (
               <div
                 className={cn("icon", { imoji: typeof o.icon === "string" })}
               >
                 {o.icon}
               </div>
             )
-          )}
+          }
           <div className="txt">{o.text}</div>
         </div>
       )}
