@@ -4,6 +4,7 @@ import "./index.scss";
 import { useImperativeHandle, useRef, useState, useEffect } from "react";
 import Icon from "../Icon";
 import { EColorMap } from "../../utils/colorMap";
+import Text from "../Text";
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   password?: boolean;
@@ -12,6 +13,8 @@ export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
     leading?: React.ReactElement;
     tailing?: React.ReactElement;
   };
+  error?: boolean;
+  errorMessage?: string;
 }
 
 export interface IInputRef {
@@ -31,6 +34,8 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
       spellCheck = "false",
       autoComplete = "off",
       icon,
+      error,
+      errorMessage,
       ...props
     },
     ref,
@@ -65,36 +70,55 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
     }, [revealPw]);
 
     return (
-      <div
-        className={cn("_INPUTWRAPPER_", className, inputSize, { disabled })}
-        onClick={() => {
-          if (inputRef.current) inputRef.current.focus();
-        }}
-      >
-        {icon && <div className="leading_icon">{icon.leading}</div>}
-        <input
-          ref={inputRef}
-          className={cn("_INPUT_", icon, { tailing: password })}
-          type={password ? (revealPw ? props.type : "password") : props.type}
-          spellCheck={spellCheck}
-          autoComplete={autoComplete}
-          {...props}
-        />
-        {password && (
-          <button
-            className="password-toggle-btn"
-            onClick={() => {
-              setRevealPw(!revealPw);
-            }}
+      <>
+        <div
+          className={cn("_INPUTWRAPPER_", className, inputSize, {
+            disabled,
+            error,
+          })}
+          onClick={() => {
+            if (inputRef.current) inputRef.current.focus();
+          }}
+        >
+          {icon && <div className="leading_icon">{icon.leading}</div>}
+          <input
+            ref={inputRef}
+            className={cn("_INPUT_", icon, { tailing: password })}
+            type={password ? (revealPw ? props.type : "password") : props.type}
+            spellCheck={spellCheck}
+            autoComplete={autoComplete}
+            {...props}
+          />
+          {password && (
+            <button
+              className="password-toggle-btn"
+              onClick={() => {
+                setRevealPw(!revealPw);
+              }}
+            >
+              <Icon.Vision
+                variant={revealPw ? "vision" : "invision"}
+                color={EColorMap.gray_6}
+              />
+            </button>
+          )}
+          {icon && icon.tailing}
+        </div>
+        {error && (
+          <Text
+            className="error-message"
+            size="x-small"
+            textColor={EColorMap.red_8}
           >
-            <Icon.Vision
-              variant={revealPw ? "vision" : "invision"}
-              color={EColorMap.gray_6}
+            <Icon.InfoMark
+              className="icon"
+              rotate={180}
+              color={EColorMap.red_8}
             />
-          </button>
+            {errorMessage}
+          </Text>
         )}
-        {icon && icon.tailing}
-      </div>
+      </>
     );
   },
 );

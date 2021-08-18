@@ -25,6 +25,9 @@
     margin-top: 20px;
   }
 
+  &.error {
+    border-color: $red_8;
+  }
   // Size
   &.xs {
     height: 28px;
@@ -142,5 +145,15 @@
 
   &.tailing {
     padding-right: 4px;
+  }
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  user-select: none;
+  .icon {
+    margin-right: 4px;
   }
 }
