@@ -143,6 +143,10 @@ export const Default = () => {
           <StoriesIcon.Check size={40} variant="double" />
         </IconBlock>
 
+        <IconBlock name="Check" variantName="alt">
+          <StoriesIcon.Check size={40} variant="alt" />
+        </IconBlock>
+
         <IconBlock name="Check" variantName="circle">
           <StoriesIcon.Check size={40} variant="circle" />
         </IconBlock>
@@ -175,12 +179,24 @@ export const Default = () => {
           <StoriesIcon.Close size={40} variant="circle" />
         </IconBlock>
 
+        <IconBlock name="Coin" variantName="default">
+          <StoriesIcon.Coin size={40} variant="default" />
+        </IconBlock>
+
+        <IconBlock name="Coin" variantName="disabled">
+          <StoriesIcon.Coin size={40} variant="disabled" />
+        </IconBlock>
+
         <IconBlock name="Copy" variantName="default">
           <StoriesIcon.Copy size={40} />
         </IconBlock>
 
         <IconBlock name="Copy" variantName="alt">
           <StoriesIcon.Copy size={40} variant="alt" />
+        </IconBlock>
+
+        <IconBlock name="CreditCard">
+          <StoriesIcon.CreditCard size={40} />
         </IconBlock>
 
         <IconBlock name="DefaultImage">

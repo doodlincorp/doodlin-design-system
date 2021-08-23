@@ -59,6 +59,8 @@ import { WindowIcon } from "./WindowIcon";
 import { ClickModeIcon } from "./ClickModeIcon";
 import { DockIcon } from "./DockIcon";
 import { HeadsetIcon } from "./HeadsetIcon";
+import { CoinIcon } from "./CoinIcon";
+import { CreditCardIcon } from "./CreditCardIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -132,7 +134,9 @@ const Icon = {
   Clip: ClipIcon,
   Clock: ClockIcon,
   Close: CloseIcon,
+  Coin: CoinIcon,
   Copy: CopyIcon,
+  CreditCard: CreditCardIcon,
   DefaultImage: DefaultImageIcon,
   Doc: DocIcon,
   Dock: DockIcon,
