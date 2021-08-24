@@ -14,7 +14,6 @@ export interface ICoinIconProps {
 }
 
 export const CoinIcon: React.FC<ICoinIconProps> = ({
-  color,
   className,
   size = 16,
   rotate,
