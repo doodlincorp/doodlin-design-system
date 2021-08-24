@@ -20,7 +20,7 @@ export const CoinIcon: React.FC<ICoinIconProps> = ({
   rotate,
   flip,
 
-  variant = "single",
+  variant = "default",
 }) => {
   return (
     <i
