@@ -3,18 +3,13 @@
 ._INPUTWRAPPER_ {
   position: relative;
   height: max-content;
-  & ~ & {
-    margin-top: 8px;
-  }
   &.error {
     ._wrapper {
       border-color: $red_8;
     }
   }
   &.errorMessage {
-    ._wrapper {
-      margin-bottom: 24px;
-    }
+    margin-bottom: 24px;
   }
 }
 
