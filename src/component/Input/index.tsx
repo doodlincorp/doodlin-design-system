@@ -70,17 +70,16 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
     }, [revealPw]);
 
     return (
-      <>
+      <div className={cn("_INPUTWRAPPER_", className, { error, errorMessage })}>
         <div
-          className={cn("_INPUTWRAPPER_", className, inputSize, {
+          className={cn("_wrapper", inputSize, {
             disabled,
-            error,
           })}
           onClick={() => {
             if (inputRef.current) inputRef.current.focus();
           }}
         >
-          {icon && <div className="leading_icon">{icon.leading}</div>}
+          {icon && icon.leading}
           <input
             ref={inputRef}
             className={cn("_INPUT_", icon, { tailing: password })}
@@ -91,7 +90,7 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
           />
           {password && (
             <button
-              className="password-toggle-btn"
+              className="_password-toggle-btn"
               onClick={() => {
                 setRevealPw(!revealPw);
               }}
@@ -104,21 +103,21 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
           )}
           {icon && icon.tailing}
         </div>
-        {error && (
+        {errorMessage && (
           <Text
-            className="error-message"
+            className="_error-message"
             size="x-small"
             textColor={EColorMap.red_8}
           >
             <Icon.InfoMark
-              className="icon"
+              className="_icon"
               rotate={180}
               color={EColorMap.red_8}
             />
             {errorMessage}
           </Text>
         )}
-      </>
+      </div>
     );
   },
 );

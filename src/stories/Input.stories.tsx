@@ -154,10 +154,26 @@ export const Error = () => {
   return (
     <div style={{ padding: 10, maxWidth: 800 }}>
       <Input inputSize="xs" error errorMessage="올바른 정보를 입력해 주세요" />
+
       <Input inputSize="sm" error errorMessage="올바른 정보를 입력해 주세요" />
+
       <Input inputSize="md" error errorMessage="올바른 정보를 입력해 주세요" />
+
       <Input inputSize="lg" error errorMessage="올바른 정보를 입력해 주세요" />
+
       <Input inputSize="xl" error errorMessage="올바른 정보를 입력해 주세요" />
+
+      <Divider size={40} />
+
+      <Input inputSize="xs" error />
+
+      <Input inputSize="sm" error />
+
+      <Input inputSize="md" error />
+
+      <Input inputSize="lg" error />
+
+      <Input inputSize="xl" error />
     </div>
   );
 };
