@@ -36,7 +36,8 @@
   }
 }
 
-._TOOLTIP_.tail {
+._TOOLTIP_._info,
+._TOOLTIP_._question {
   ._target {
     ._tooltip-box {
       align-items: flex-start;
@@ -90,7 +91,8 @@
       transform: translateX(0);
     }
   }
-  &.tail {
+  &._info,
+  &._question {
     ._target {
       ._tooltip-box::before {
         left: 10%;
@@ -115,7 +117,8 @@
       bottom: calc(100% + 4px);
     }
   }
-  &.tail {
+  &._info,
+  &._question {
     ._target {
       ._tooltip-box::before {
         top: 100%;
@@ -142,7 +145,8 @@
       transform: translateX(0);
     }
   }
-  &.tail {
+  &._info,
+  &._question {
     ._target {
       ._tooltip-box::before {
         left: 90%;
@@ -169,7 +173,8 @@
       transform: translate(0, -50%);
     }
   }
-  &.tail {
+  &._info,
+  &._question {
     ._target {
       ._tooltip-box::before {
         top: 50%;
@@ -197,7 +202,8 @@
       transform: translate(0, -50%);
     }
   }
-  &.tail {
+  &._info,
+  &._question {
     ._target {
       ._tooltip-box::before {
         top: 50%;
@@ -225,7 +231,8 @@
       transform: translateX(0);
     }
   }
-  &.tail {
+  &._info,
+  &._question {
     ._target {
       ._tooltip-box::before {
         left: 10%;
@@ -242,7 +249,8 @@
       transform: translateX(0);
     }
   }
-  &.tail {
+  &._info,
+  &._question {
     ._target {
       ._tooltip-box::before {
         left: 90%;

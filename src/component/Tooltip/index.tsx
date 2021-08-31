@@ -3,10 +3,11 @@ import cn from "classnames";
 import "./index.scss";
 import { InfoMarkIcon } from "../../component/Icon/InfoMarkIcon";
 import { EColorMap } from "../../utils/colorMap";
+import Icon from "../Icon";
 
 export interface ITooltipProps {
   className?: string;
-  variant?: "_box" | "_tail";
+  variant?: "_box" | "_info" | "_question";
   tooltipText: string;
   placement?:
     | "_top-left"
@@ -29,18 +30,21 @@ const Tooltip: React.FC<ITooltipProps> = ({
   // trigger = "hover",
 }) => {
   return (
-    <div
-      className={cn("_TOOLTIP_", className, placement, {
-        tail: variant === "_tail",
-      })}
-    >
+    <div className={cn("_TOOLTIP_", className, placement, variant)}>
       <div className="_target">
         {children}
 
         {tooltipText.length > 0 && (
           <div className="_tooltip-box">
-            {variant === "_tail" && (
-              <InfoMarkIcon className="_icon" color={EColorMap.blue_4} />
+            {variant === "_info" && (
+              <Icon.InfoMark className="_icon" color={EColorMap.blue_4} />
+            )}
+            {variant === "_question" && (
+              <Icon.QuestionMark
+                variant="border"
+                className="_icon"
+                color={EColorMap.blue_4}
+              />
             )}
             {tooltipText}
           </div>
