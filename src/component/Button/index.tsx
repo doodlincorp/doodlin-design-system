@@ -5,8 +5,8 @@ import { TButtonSize } from "../..";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: TButtonSize;
-  variant?: "ghost" | "solid" | "quiet" | "textonly";
-  buttonType?: "basic" | "light" | "core" | "danger";
+  variant?: "ghost" | "solid" | "quiet" | "minimal";
+  buttonColor?: "black" | "gray" | "blue" | "red";
   fullWidth?: boolean;
   loading?: boolean;
   rounded?: boolean;
@@ -28,13 +28,13 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       fullWidth,
       loading,
       rounded,
-      buttonType = "basic",
+      buttonColor = "black",
       label,
       ...restProps
     } = props;
     return (
       <button
-        className={cn(`_BUTTON_`, className, size, variant, buttonType, {
+        className={cn(`_BUTTON_`, className, size, variant, buttonColor, {
           loading,
           rounded,
           disabled,
@@ -42,6 +42,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
           iconOnly: label && !label.labelText,
         })}
         ref={ref}
+        disabled={disabled}
         {...restProps}
       >
         <span
@@ -69,7 +70,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
         </span>
       </button>
     );
-  }
+  },
 );
 
 export default Button;
