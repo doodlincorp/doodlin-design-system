@@ -124,7 +124,8 @@
     padding: 0 16px;
     border-radius: 10px;
     font-size: $font-size-medium;
-    &.ghost.light {
+    &.ghost,
+    &.ghost.gray {
       border-width: 2px;
     }
     &.rounded {
@@ -157,7 +158,8 @@
     padding: 0 32px;
     border-radius: 14px;
     font-size: $font-size-large;
-    &.ghost.light {
+    &.ghost,
+    &.ghost.gray {
       border-width: 2px;
     }
     &.rounded {
@@ -208,7 +210,7 @@
     }
   }
 
-  &.textonly {
+  &.minimal {
     padding: 4px;
     height: max-content;
   }
@@ -219,7 +221,7 @@
   }
 
   // ButtonType
-  &.basic {
+  &.black {
     svg {
       #icon__stroke {
         stroke: #fff;
@@ -245,7 +247,7 @@
       background-color: $gray_8;
     }
   }
-  &.core {
+  &.blue {
     @include button-color($blue_5);
     svg {
       #icon__stroke {
@@ -277,7 +279,7 @@
       background-color: $blue_5;
     }
   }
-  &.danger {
+  &.red {
     @include button-color($red_7);
     svg {
       #icon__stroke {
@@ -310,7 +312,7 @@
       background-color: $red_7;
     }
   }
-  &.light {
+  &.gray {
     @include button-color($gray_1, $gray_8);
     &.solid {
       background-color: $gray_1;
@@ -322,9 +324,9 @@
       }
     }
   }
-  &.basic,
-  &.core,
-  &.danger {
+  &.black,
+  &.blue,
+  &.red {
     &.solid {
       svg {
         #icon__stroke {
@@ -340,8 +342,8 @@
   }
 
   // Variant with Icon
-  &.textonly {
-    &.basic:hover {
+  &.minimal {
+    &.black:hover {
       svg {
         #icon__stroke {
           stroke: $gray_8;
@@ -353,7 +355,7 @@
         }
       }
     }
-    &.core:hover {
+    &.blue:hover {
       svg {
         #icon__stroke {
           stroke: $blue_5;
@@ -365,7 +367,7 @@
         }
       }
     }
-    &.danger:hover {
+    &.red:hover {
       svg {
         #icon__stroke {
           stroke: $red_7;
@@ -409,10 +411,10 @@
         border-color: $gray_2;
         color: $gray_5;
       }
-      &.core,
-      &.danger,
-      &.basic,
-      &.light {
+      &.blue,
+      &.red,
+      &.black,
+      &.gray {
         svg {
           #icon__stroke {
             stroke: $gray_8;
@@ -439,10 +441,10 @@
           }
         }
       }
-      &.core,
-      &.danger,
-      &.basic,
-      &.light {
+      &.blue,
+      &.red,
+      &.black,
+      &.gray {
         svg {
           #icon__stroke {
             stroke: $gray_8;
@@ -467,12 +469,12 @@
         background-color: $gray_1;
       }
     }
-    &.textonly {
+    &.minimal {
       color: $gray_5;
-      &.core,
-      &.danger,
-      &.basic,
-      &.light {
+      &.blue,
+      &.red,
+      &.black,
+      &.gray {
         background-color: transparent;
         svg {
           #icon__stroke {
@@ -508,8 +510,7 @@
   }
 
   // Loading
-  &.loading,
-  &.disabled {
+  &.loading {
     pointer-events: none;
   }
 
@@ -554,70 +555,70 @@
     @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 
-  &.loading.xs.basic::before,
-  &.loading.xs.core::before,
-  &.loading.xs.danger::before {
+  &.loading.xs.black::before,
+  &.loading.xs.blue::before,
+  &.loading.xs.red::before {
     @include CustomSpin(14px, 2px);
   }
-  &.loading.sm.basic::before,
-  &.loading.sm.core::before,
-  &.loading.sm.danger::before,
-  &.loading.md.basic::before,
-  &.loading.md.core::before,
-  &.loading.md.danger::before {
+  &.loading.sm.black::before,
+  &.loading.sm.blue::before,
+  &.loading.sm.red::before,
+  &.loading.md.black::before,
+  &.loading.md.blue::before,
+  &.loading.md.red::before {
     @include CustomSpin(16px, 2px);
   }
 
-  &.loading.lg.basic::before,
-  &.loading.lg.core::before,
-  &.loading.lg.danger::before {
+  &.loading.lg.black::before,
+  &.loading.lg.blue::before,
+  &.loading.lg.red::before {
     @include CustomSpin(18px, 3px);
   }
-  &.loading.xl.basic::before,
-  &.loading.xl.core::before,
-  &.loading.xl.danger::before {
+  &.loading.xl.black::before,
+  &.loading.xl.blue::before,
+  &.loading.xl.red::before {
     @include CustomSpin(24px, 3px);
   }
 
-  &.loading.xs.basic.quiet::before {
+  &.loading.xs.black.quiet::before {
     @include CustomSpin(14px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
-  &.loading.sm.basic.quiet::before,
-  &.loading.md.basic.quiet::before {
+  &.loading.sm.black.quiet::before,
+  &.loading.md.black.quiet::before {
     @include CustomSpin(16px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
-  &.loading.lg.basic.quiet::before {
+  &.loading.lg.black.quiet::before {
     @include CustomSpin(18px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
-  &.loading.xl.basic.quiet::before {
+  &.loading.xl.black.quiet::before {
     @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 
-  &.loading.xs.light.solid::before {
+  &.loading.xs.gray.solid::before {
     @include CustomSpin(14px, 2px, $Bc0: $gray_8, $Bc1: $gray_4);
   }
-  &.loading.sm.light.solid::before,
-  &.loading.md.light.solid::before {
+  &.loading.sm.gray.solid::before,
+  &.loading.md.gray.solid::before {
     @include CustomSpin(16px, 2px, $Bc0: $gray_8, $Bc1: $gray_4);
   }
-  &.loading.lg.light.solid::before {
+  &.loading.lg.gray.solid::before {
     @include CustomSpin(18px, 3px, $Bc0: $gray_8, $Bc1: $gray_4);
   }
-  &.loading.xl.light.solid::before {
+  &.loading.xl.gray.solid::before {
     @include CustomSpin(24px, 3px, $Bc0: $gray_8, $Bc1: $gray_4);
   }
 
-  &.loading.xs.textonly::before {
+  &.loading.xs.minimal::before {
     @include CustomSpin(14px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
-  &.loading.sm.textonly::before,
-  &.loading.md.textonly::before {
+  &.loading.sm.minimal::before,
+  &.loading.md.minimal::before {
     @include CustomSpin(16px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
-  &.loading.lg.textonly::before {
+  &.loading.lg.minimal::before {
     @include CustomSpin(18px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
-  &.loading.xl.textonly::before {
+  &.loading.xl.minimal::before {
     @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 
