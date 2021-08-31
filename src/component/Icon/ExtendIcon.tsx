@@ -9,7 +9,7 @@ export interface IExtendIconProps {
   size?: number;
   rotate?: number;
   flip?: boolean;
-  variant?: "default" | "alt";
+  variant?: "default" | "alt" | "shrink";
 }
 
 export const ExtendIcon: React.FC<IExtendIconProps> = ({
@@ -30,7 +30,7 @@ export const ExtendIcon: React.FC<IExtendIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "default" ? (
+      {variant === "default" && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -38,13 +38,25 @@ export const ExtendIcon: React.FC<IExtendIconProps> = ({
             fill={color || EColorMap.gray_8}
           />
         </svg>
-      ) : (
+      )}
+      {variant === "alt" && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
             fillRule="evenodd"
             clipRule="evenodd"
             d="M20 12H18L18 7.41423L14.7071 10.7071L13.2929 9.29289L16.5858 6L12 6V4H18H20L20 6V12ZM6 12H4V18V20H6H12V18H7.41423L10.7071 14.7071L9.29291 13.2929L6 16.5858V12Z"
+            fill={color || EColorMap.gray_8}
+          />
+        </svg>
+      )}
+      {variant === "shrink" && (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M13 3H15V7.5858L19.5858 3L21 4.41421L16.4142 9H21V11H15H13V9V3ZM11 21H9.00001L9.00001 16.4142L4.41421 21L3 19.5858L7.58579 15L3 15V13L9.00001 13H11V15L11 21Z"
             fill={color || EColorMap.gray_8}
           />
         </svg>

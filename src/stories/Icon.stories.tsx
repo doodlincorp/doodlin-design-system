@@ -263,6 +263,10 @@ export const Default = () => {
           <StoriesIcon.Extend size={40} variant="alt" />
         </IconBlock>
 
+        <IconBlock name="Extend" variantName="shrink">
+          <StoriesIcon.Extend size={40} variant="shrink" />
+        </IconBlock>
+
         <IconBlock name="Extension" variantName="solid">
           <StoriesIcon.Extension size={40} />
         </IconBlock>
