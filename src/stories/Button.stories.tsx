@@ -3,6 +3,7 @@ import Icon from "../component/Icon";
 import { EColorMap } from "../utils/colorMap";
 import Button from "../component/Button";
 import "../reset.scss";
+import Divider from "../component/Divider";
 
 export default {
   title: "Component/Button",
@@ -17,21 +18,21 @@ export const Default = () => (
 
 export const Size = () => (
   <div style={{ padding: 20 }}>
-    <Button size="xxs" label={{ labelText: "tiny" }} />
-    <Button size="xs" label={{ labelText: "extra-small" }} />
-    <Button size="sm" label={{ labelText: "small" }} />
-    <Button size="md" label={{ labelText: "medium" }} />
-    <Button size="lg" label={{ labelText: "large" }} />
-    <Button size="xl" label={{ labelText: "extra-large" }} />
+    <Button size="xxs" label={{ labelText: "xxs" }} />
+    <Button size="xs" label={{ labelText: "xs" }} />
+    <Button size="sm" label={{ labelText: "sm" }} />
+    <Button size="md" label={{ labelText: "md" }} />
+    <Button size="lg" label={{ labelText: "lg" }} />
+    <Button size="xl" label={{ labelText: "xl" }} />
   </div>
 );
 
 export const Type = () => (
   <div style={{ padding: 20 }}>
-    <Button size="md" buttonType="light" label={{ labelText: "light" }} />
-    <Button size="md" buttonType="basic" label={{ labelText: "basic" }} />
-    <Button size="md" buttonType="core" label={{ labelText: "core" }} />
-    <Button size="md" buttonType="danger" label={{ labelText: "danger" }} />
+    <Button size="md" buttonColor="gray" label={{ labelText: "gray" }} />
+    <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
+    <Button size="md" buttonColor="blue" label={{ labelText: "blue" }} />
+    <Button size="md" buttonColor="red" label={{ labelText: "red" }} />
   </div>
 );
 
@@ -39,23 +40,23 @@ export const Rounded = () => (
   <div style={{ padding: 20 }}>
     <Button
       size="md"
-      buttonType="light"
+      buttonColor="gray"
       rounded
-      label={{ labelText: "light" }}
+      label={{ labelText: "gray" }}
     />
     <Button
       size="md"
-      buttonType="basic"
+      buttonColor="black"
       rounded
-      label={{ labelText: "basic" }}
+      label={{ labelText: "black" }}
     />
-    <Button size="md" buttonType="core" rounded label={{ labelText: "core" }} />
     <Button
       size="md"
-      buttonType="danger"
+      buttonColor="blue"
       rounded
-      label={{ labelText: "danger" }}
+      label={{ labelText: "blue" }}
     />
+    <Button size="md" buttonColor="red" rounded label={{ labelText: "red" }} />
   </div>
 );
 
@@ -63,36 +64,36 @@ export const Variant = () => (
   <div style={{ padding: 20 }}>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Solid</h1>
-      <Button size="md" buttonType="light" label={{ labelText: "light" }} />
-      <Button size="md" buttonType="basic" label={{ labelText: "basic" }} />
-      <Button size="md" buttonType="core" label={{ labelText: "core" }} />
-      <Button size="md" buttonType="danger" label={{ labelText: "danger" }} />
+      <Button size="md" buttonColor="gray" label={{ labelText: "gray" }} />
+      <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
+      <Button size="md" buttonColor="blue" label={{ labelText: "blue" }} />
+      <Button size="md" buttonColor="red" label={{ labelText: "red" }} />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Ghost</h1>
       <Button
         size="md"
         variant="ghost"
-        buttonType="light"
-        label={{ labelText: "light" }}
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
       />
       <Button
         size="md"
         variant="ghost"
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        buttonColor="black"
+        label={{ labelText: "black" }}
       />
       <Button
         size="md"
         variant="ghost"
-        buttonType="core"
-        label={{ labelText: "core" }}
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
       />
       <Button
         size="md"
         variant="ghost"
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        buttonColor="red"
+        label={{ labelText: "red" }}
       />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
@@ -100,53 +101,53 @@ export const Variant = () => (
       <Button
         size="md"
         variant="quiet"
-        buttonType="light"
-        label={{ labelText: "light" }}
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
       />
       <Button
         size="md"
         variant="quiet"
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        buttonColor="black"
+        label={{ labelText: "black" }}
       />
       <Button
         size="md"
         variant="quiet"
-        buttonType="core"
-        label={{ labelText: "core" }}
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
       />
       <Button
         size="md"
         variant="quiet"
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        buttonColor="red"
+        label={{ labelText: "red" }}
       />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
-      <h1 style={{ marginBottom: 12 }}>Text only</h1>
+      <h1 style={{ marginBottom: 12 }}>Minimal</h1>
       <Button
         size="md"
-        variant="textonly"
-        buttonType="light"
-        label={{ labelText: "light" }}
+        variant="minimal"
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
       />
       <Button
         size="md"
-        variant="textonly"
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        variant="minimal"
+        buttonColor="black"
+        label={{ labelText: "black" }}
       />
       <Button
         size="md"
-        variant="textonly"
-        buttonType="core"
-        label={{ labelText: "core" }}
+        variant="minimal"
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
       />
       <Button
         size="md"
-        variant="textonly"
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        variant="minimal"
+        buttonColor="red"
+        label={{ labelText: "red" }}
       />
     </div>
   </div>
@@ -159,26 +160,26 @@ export const Loading = () => (
       <Button
         size="md"
         loading
-        buttonType="light"
-        label={{ labelText: "light" }}
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
       />
       <Button
         size="md"
         loading
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        buttonColor="black"
+        label={{ labelText: "black" }}
       />
       <Button
         size="md"
         loading
-        buttonType="core"
-        label={{ labelText: "core" }}
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
       />
       <Button
         size="md"
         loading
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        buttonColor="red"
+        label={{ labelText: "red" }}
       />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
@@ -186,29 +187,29 @@ export const Loading = () => (
       <Button
         size="md"
         variant="ghost"
-        buttonType="light"
-        label={{ labelText: "light" }}
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
         loading
       />
       <Button
         size="md"
         variant="ghost"
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        buttonColor="black"
+        label={{ labelText: "black" }}
         loading
       />
       <Button
         size="md"
         variant="ghost"
-        buttonType="core"
-        label={{ labelText: "core" }}
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
         loading
       />
       <Button
         size="md"
         variant="ghost"
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        buttonColor="red"
+        label={{ labelText: "red" }}
         loading
       />
     </div>
@@ -218,60 +219,60 @@ export const Loading = () => (
         size="md"
         loading
         variant="quiet"
-        buttonType="light"
-        label={{ labelText: "light" }}
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
       />
       <Button
         size="md"
         loading
         variant="quiet"
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        buttonColor="black"
+        label={{ labelText: "black" }}
       />
       <Button
         size="md"
         loading
         variant="quiet"
-        buttonType="core"
-        label={{ labelText: "core" }}
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
       />
       <Button
         size="md"
         loading
         variant="quiet"
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        buttonColor="red"
+        label={{ labelText: "red" }}
       />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Text only</h1>
       <Button
         size="md"
-        variant="textonly"
+        variant="minimal"
         loading
-        buttonType="light"
-        label={{ labelText: "light" }}
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
       />
       <Button
         size="md"
-        variant="textonly"
+        variant="minimal"
         loading
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        buttonColor="black"
+        label={{ labelText: "black" }}
       />
       <Button
         size="md"
-        variant="textonly"
+        variant="minimal"
         loading
-        buttonType="core"
-        label={{ labelText: "core" }}
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
       />
       <Button
         size="md"
-        variant="textonly"
+        variant="minimal"
         loading
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        buttonColor="red"
+        label={{ labelText: "red" }}
       />
     </div>
   </div>
@@ -281,21 +282,21 @@ export const FullWidth = () => (
   <div style={{ padding: 20 }}>
     <Button
       size="md"
-      buttonType="basic"
+      buttonColor="black"
       fullWidth
-      label={{ labelText: "basic" }}
+      label={{ labelText: "black" }}
     />
     <Button
       size="md"
-      buttonType="core"
+      buttonColor="blue"
       fullWidth
-      label={{ labelText: "core" }}
+      label={{ labelText: "blue" }}
     />
     <Button
       size="md"
-      buttonType="danger"
+      buttonColor="red"
       fullWidth
-      label={{ labelText: "danger" }}
+      label={{ labelText: "red" }}
     />
   </div>
 );
@@ -307,26 +308,26 @@ export const Disabled = () => (
       <Button
         size="md"
         disabled
-        buttonType="light"
-        label={{ labelText: "light" }}
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
       />
       <Button
         size="md"
         disabled
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        buttonColor="black"
+        label={{ labelText: "black" }}
       />
       <Button
         size="md"
         disabled
-        buttonType="core"
-        label={{ labelText: "core" }}
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
       />
       <Button
         size="md"
         disabled
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        buttonColor="red"
+        label={{ labelText: "red" }}
       />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
@@ -335,29 +336,29 @@ export const Disabled = () => (
         size="md"
         variant="ghost"
         disabled
-        buttonType="light"
-        label={{ labelText: "light" }}
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
       />
       <Button
         size="md"
         variant="ghost"
         disabled
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        buttonColor="black"
+        label={{ labelText: "black" }}
       />
       <Button
         size="md"
         variant="ghost"
         disabled
-        buttonType="core"
-        label={{ labelText: "core" }}
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
       />
       <Button
         size="md"
         variant="ghost"
         disabled
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        buttonColor="red"
+        label={{ labelText: "red" }}
       />
     </div>
     <div className="article" style={{ marginBottom: 28 }}>
@@ -366,29 +367,29 @@ export const Disabled = () => (
         size="md"
         variant="quiet"
         disabled
-        buttonType="light"
-        label={{ labelText: "light" }}
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
       />
       <Button
         size="md"
         variant="quiet"
         disabled
-        buttonType="basic"
-        label={{ labelText: "basic" }}
+        buttonColor="black"
+        label={{ labelText: "black" }}
       />
       <Button
         size="md"
         variant="quiet"
         disabled
-        buttonType="core"
-        label={{ labelText: "core" }}
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
       />
       <Button
         size="md"
         variant="quiet"
         disabled
-        buttonType="danger"
-        label={{ labelText: "danger" }}
+        buttonColor="red"
+        label={{ labelText: "red" }}
       />
     </div>
   </div>
@@ -404,7 +405,7 @@ export const WithIcon = () => (
       >
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="xxs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -413,7 +414,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="xs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -422,7 +423,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="sm"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -431,7 +432,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="md"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -440,7 +441,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="lg"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -449,7 +450,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="xl"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -464,7 +465,7 @@ export const WithIcon = () => (
       >
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="xxs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -472,7 +473,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="xs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -480,7 +481,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="sm"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -488,7 +489,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="md"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -496,7 +497,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="lg"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -504,7 +505,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           size="xl"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -520,7 +521,7 @@ export const WithIcon = () => (
       >
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="xxs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -529,7 +530,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="xs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -538,7 +539,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="sm"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -547,7 +548,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="md"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -556,7 +557,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="lg"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -565,7 +566,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="xl"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -580,7 +581,7 @@ export const WithIcon = () => (
       >
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="xxs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -588,7 +589,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="xs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -596,7 +597,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="sm"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -604,7 +605,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="md"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -612,7 +613,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="lg"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -620,7 +621,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           size="xl"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -636,19 +637,19 @@ export const WithIcon = () => (
       >
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="xxs"
           label={{ labelLeadingIcon: <Icon.Setting />, labelText: "설정" }}
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="xs"
           label={{ labelLeadingIcon: <Icon.Setting />, labelText: "설정" }}
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="sm"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -657,7 +658,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="md"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -666,7 +667,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="lg"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -675,7 +676,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="xl"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -690,7 +691,7 @@ export const WithIcon = () => (
       >
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="xxs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -698,7 +699,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="xs"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -706,7 +707,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="sm"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -714,7 +715,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="md"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -722,7 +723,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="lg"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -730,7 +731,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           size="xl"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
@@ -746,7 +747,7 @@ export const WithIcon = () => (
       >
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -754,7 +755,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="basic"
+          buttonColor="black"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -762,7 +763,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="core"
+          buttonColor="blue"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -770,7 +771,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="ghost"
-          buttonType="danger"
+          buttonColor="red"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -784,7 +785,7 @@ export const WithIcon = () => (
       >
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -792,7 +793,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonColor="black"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -800,7 +801,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="core"
+          buttonColor="blue"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -808,7 +809,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="quiet"
-          buttonType="danger"
+          buttonColor="red"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -822,7 +823,7 @@ export const WithIcon = () => (
       >
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -830,7 +831,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="basic"
+          buttonColor="black"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -838,7 +839,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="core"
+          buttonColor="blue"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -846,7 +847,7 @@ export const WithIcon = () => (
         />
         <Button
           variant="solid"
-          buttonType="danger"
+          buttonColor="red"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -859,32 +860,32 @@ export const WithIcon = () => (
         style={{ display: "flex", alignItems: "center", marginTop: 8 }}
       >
         <Button
-          variant="textonly"
-          buttonType="light"
+          variant="minimal"
+          buttonColor="gray"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
           }}
         />
         <Button
-          variant="textonly"
-          buttonType="basic"
+          variant="minimal"
+          buttonColor="black"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
           }}
         />
         <Button
-          variant="textonly"
-          buttonType="core"
+          variant="minimal"
+          buttonColor="blue"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
           }}
         />
         <Button
-          variant="textonly"
-          buttonType="danger"
+          variant="minimal"
+          buttonColor="red"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
             labelText: "설정",
@@ -900,28 +901,28 @@ export const WithIcon = () => (
       >
         <Button
           variant="ghost"
-          buttonType="light"
+          buttonColor="gray"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
         />
         <Button
           variant="ghost"
-          buttonType="basic"
+          buttonColor="black"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
         />
         <Button
           variant="ghost"
-          buttonType="core"
+          buttonColor="blue"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
         />
         <Button
           variant="ghost"
-          buttonType="danger"
+          buttonColor="red"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
@@ -934,28 +935,28 @@ export const WithIcon = () => (
       >
         <Button
           variant="quiet"
-          buttonType="light"
+          buttonColor="gray"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
         />
         <Button
           variant="quiet"
-          buttonType="basic"
+          buttonColor="black"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
         />
         <Button
           variant="quiet"
-          buttonType="core"
+          buttonColor="blue"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
         />
         <Button
           variant="quiet"
-          buttonType="danger"
+          buttonColor="red"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
@@ -968,28 +969,28 @@ export const WithIcon = () => (
       >
         <Button
           variant="solid"
-          buttonType="light"
+          buttonColor="gray"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
         />
         <Button
           variant="solid"
-          buttonType="basic"
+          buttonColor="black"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
         />
         <Button
           variant="solid"
-          buttonType="core"
+          buttonColor="blue"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}
         />
         <Button
           variant="solid"
-          buttonType="danger"
+          buttonColor="red"
           label={{
             labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
           }}

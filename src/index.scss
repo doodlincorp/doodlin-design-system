@@ -264,7 +264,7 @@ $button_hover_transition: ease-out 0.1s;
       }
     }
   }
-  &.textonly {
+  &.minimal {
     background: transparent;
     @if $bgc == $gray_1 {
       color: $gray_8;
