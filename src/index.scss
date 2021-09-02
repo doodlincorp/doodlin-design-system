@@ -194,16 +194,16 @@ $button_hover_transition: ease-out 0.1s;
     border-style: solid;
     color: $bgc;
     @if $bgc == $gray_1 {
-      // buttonType="light"
+      // buttonColor="gray"
       border-color: $gray_4;
       color: $gray_8;
     } @else if $bgc == $gray_7 {
-      // buttonType="basic"
+      // buttonColor="black"
       color: $gray_8;
     }
     &:hover {
       @if $bgc == $gray_1 {
-        // buttonType="light"
+        // buttonColor="gray"
         background-color: $gray_1;
       } @else {
         background: $bgc;
@@ -213,14 +213,14 @@ $button_hover_transition: ease-out 0.1s;
     }
     &:active {
       @if $bgc == $gray_1 {
-        // buttonType="light"
+        // buttonColor="gray"
         background: $gray_3;
       } @else if $bgc == $blue_5 {
-        // buttonType="core"
+        // buttonColor="blue"
         background: $blue_6;
         border-color: $blue_6;
       } @else if $bgc == $red_7 {
-        // buttonType="danger"
+        // buttonColor="red"
         background: $red_9;
         border-color: $red_9;
       } @else {
@@ -233,17 +233,17 @@ $button_hover_transition: ease-out 0.1s;
   &.quiet {
     background: transparent;
     @if $bgc == $gray_1 {
-      // buttonType="light"
+      // buttonColor="gray"
       color: $gray_8;
     } @else if $bgc == $gray_7 {
-      // buttonType="basic"
+      // buttonColor="black"
       color: $gray_8;
     } @else {
       color: $bgc;
     }
     &:hover {
       @if $bgc == $gray_1 {
-        // buttonType="light"
+        // buttonColor="gray"
         background: $gray_1;
       } @else {
         background: $bgc;
@@ -252,10 +252,10 @@ $button_hover_transition: ease-out 0.1s;
     }
     &:active {
       @if $bgc == $blue_5 {
-        // buttonType="core"
+        // buttonColor="blue"
         background: $blue_6;
       } @else if $bgc == $red_7 {
-        // buttonType="danger"
+        // buttonColor="red"
         background: $red_9;
       } @else if $bgc == $gray_7 {
         background: $gray_8;

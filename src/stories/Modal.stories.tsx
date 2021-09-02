@@ -23,14 +23,14 @@ export const Default = () => {
           footer={{
             cancelBtn: (
               <Button
-                buttonType="light"
+                buttonColor="gray"
                 onClick={() => setOpen(false)}
                 variant="ghost"
               >
                 취소
               </Button>
             ),
-            submitBtn: <Button buttonType="core">확인</Button>,
+            submitBtn: <Button buttonColor="blue">확인</Button>,
             BtnAlign: "end",
           }}
         >

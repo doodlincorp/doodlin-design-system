@@ -25,7 +25,7 @@ const DropItem: React.FC<IDropItemProps> = ({
       <Button
         className={className}
         variant="quiet"
-        buttonType="light"
+        buttonColor="gray"
         size="xs"
         fullWidth
         label={{
