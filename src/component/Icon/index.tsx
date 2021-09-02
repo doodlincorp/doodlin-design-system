@@ -61,6 +61,7 @@ import { DockIcon } from "./DockIcon";
 import { HeadsetIcon } from "./HeadsetIcon";
 import { CoinIcon } from "./CoinIcon";
 import { CreditCardIcon } from "./CreditCardIcon";
+import { SixDotIcon } from "./SixDotIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -173,6 +174,7 @@ const Icon = {
   Send: SendIcon,
   Setting: SettingIcon,
   SideBar: SideBarIcon,
+  SixDot: SixDotIcon,
   Slider: SliderIcon,
   Thumb: ThumbIcon,
   Tag: TagIcon,

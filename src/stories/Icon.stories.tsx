@@ -471,6 +471,10 @@ export const Default = () => {
           <StoriesIcon.SideBar size={40} />
         </IconBlock>
 
+        <IconBlock name="SixDot">
+          <StoriesIcon.SixDot size={40} />
+        </IconBlock>
+
         <IconBlock name="Slider" variantName="default">
           <StoriesIcon.Slider size={40} />
         </IconBlock>
