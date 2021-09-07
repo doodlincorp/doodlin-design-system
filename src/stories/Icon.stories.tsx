@@ -451,6 +451,14 @@ export const Default = () => {
           <StoriesIcon.Reject size={40} />
         </IconBlock>
 
+        <IconBlock name="Reply" variantName="solid">
+          <StoriesIcon.Reply size={40} variant="solid" />
+        </IconBlock>
+
+        <IconBlock name="Reply" variantName="border">
+          <StoriesIcon.Reply size={40} variant="border" />
+        </IconBlock>
+
         <IconBlock name="Return">
           <StoriesIcon.Return size={40} />
         </IconBlock>

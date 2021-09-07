@@ -62,6 +62,7 @@ import { HeadsetIcon } from "./HeadsetIcon";
 import { CoinIcon } from "./CoinIcon";
 import { CreditCardIcon } from "./CreditCardIcon";
 import { SixDotIcon } from "./SixDotIcon";
+import { ReplyIcon } from "./ReplyIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -169,6 +170,7 @@ const Icon = {
   Plus: PlusIcon,
   Refresh: RefreshIcon,
   Reject: RejectIcon,
+  Reply: ReplyIcon,
   Return: ReturnIcon,
   Search: SearchIcon,
   Send: SendIcon,
