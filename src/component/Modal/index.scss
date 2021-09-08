@@ -37,14 +37,22 @@
       top: 6px;
       right: 12px;
       cursor: pointer;
+      &.alt {
+        top: 12px;
+      }
     }
   }
   .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: $font-size-small;
     font-weight: $font-weight-medium;
-    text-align: center;
     padding: 12px 20px;
     border-bottom: 1px solid $gray_3;
+    &.alt {
+      justify-content: flex-start;
+    }
   }
   .modal-content {
     padding: 40px 32px 12px;
@@ -55,6 +63,9 @@
     overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
+    &.alt {
+      padding: 40px;
+    }
   }
   .footer {
     display: flex;

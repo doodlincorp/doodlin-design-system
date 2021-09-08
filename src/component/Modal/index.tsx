@@ -2,9 +2,11 @@ import React from "react";
 import cn from "classnames";
 import "./index.scss";
 import { CloseIcon } from "../Icon/CloseIcon";
+import logo from "../../asset/greeting-logo.svg";
 
 export interface IModalProps {
   className?: string;
+  variant?: "default" | "alt";
   closeBtn?: () => void;
   header?: {
     Text?: string;
@@ -26,6 +28,7 @@ const Modal: React.FC<IModalProps> = ({
   closeBtn,
   zIndex,
   width,
+  variant = "default",
 }) => {
   return (
     <div className="_MODAL_" style={{ zIndex: zIndex }}>
@@ -34,12 +37,27 @@ const Modal: React.FC<IModalProps> = ({
         style={{ width: width }}
       >
         {closeBtn && (
-          <div className="close-btn" onClick={closeBtn}>
+          <div
+            className={cn("close-btn", { alt: variant === "alt" })}
+            onClick={closeBtn}
+          >
             <CloseIcon size={20} />
           </div>
         )}
-        {header && <div className="modal-header">{header.Text}</div>}
-        <div className="modal-content">{children}</div>
+
+        {header ? (
+          <div className="modal-header">{header.Text}</div>
+        ) : (
+          variant === "alt" && (
+            <div className="modal-header alt">
+              <img src={logo} />
+            </div>
+          )
+        )}
+
+        <div className={cn("modal-content", { alt: variant === "alt" })}>
+          {children}
+        </div>
         {footer && (
           <div className={cn("footer", footer.BtnAlign || "end")}>
             {footer.cancelBtn}
