@@ -50,7 +50,7 @@ const Modal: React.FC<IModalProps> = ({
         ) : (
           variant === "alt" && (
             <div className="modal-header alt">
-              <img src={logo} />
+              <img src={logo} alt="greeting logo" />
             </div>
           )
         )}
