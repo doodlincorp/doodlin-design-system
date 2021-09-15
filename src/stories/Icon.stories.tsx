@@ -581,7 +581,7 @@ export const Default = () => {
 
 export const Rotate = () => {
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ display: "flex", alignItems: "center", padding: 20 }}>
       <StoriesIcon.Arrow
         variant="arrow"
         size={40}
@@ -608,7 +608,7 @@ export const Rotate = () => {
 
 export const Flip = () => {
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ display: "flex", alignItems: "center", padding: 20 }}>
       <StoriesIcon.AddColumn size={40} />
       <Divider variant="vertical" />
       <StoriesIcon.AddColumn size={40} flip />
