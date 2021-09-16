@@ -66,9 +66,11 @@
         }
       }
       .leading-icon {
+        display: flex;
         margin-right: 4px;
       }
       .tailing-icon {
+        display: flex;
         margin-left: 4px;
       }
       &.iconOnly {
@@ -127,9 +129,11 @@
         }
       }
       .leading-icon {
+        display: flex;
         margin-right: 4px;
       }
       .tailing-icon {
+        display: flex;
         margin-left: 4px;
       }
       &.iconOnly {
