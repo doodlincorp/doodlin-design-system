@@ -15,6 +15,14 @@
     text-align: center;
     cursor: pointer;
     transition: $button_hover_transition;
+    .dds-icon {
+      #icon__fill {
+        fill: $gray_6;
+      }
+      #icon__stroke {
+        stroke: $gray_6;
+      }
+    }
     &:hover {
       background-color: $gray_3;
     }
@@ -50,6 +58,14 @@
         background-color: #fff;
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15),
           0px 1px 1px rgba(0, 0, 0, 0.06);
+        .dds-icon {
+          #icon__fill {
+            fill: $gray_8;
+          }
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+        }
       }
       &.disabled {
         background-color: transparent;
