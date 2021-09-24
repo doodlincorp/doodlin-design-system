@@ -32,7 +32,7 @@
       box-shadow: 0 0 0 1px inset $blue_5;
     }
     &.circle {
-      border-radius: 50%;
+      border-radius: 50% !important;
     }
     &.disabled {
       background-color: $gray_2;

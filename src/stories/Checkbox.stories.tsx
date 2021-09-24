@@ -68,6 +68,16 @@ export const WithLabel = () => {
         onClick={() => setSelected(!selected)}
         selected={selected}
       />
+      <Divider />
+      <Checkbox
+        size={24}
+        variant="circle"
+        label="체크박스"
+        labelSize="large"
+        labelWeight="medium"
+        onClick={() => setSelected(!selected)}
+        selected={selected}
+      />
     </div>
   );
 };
