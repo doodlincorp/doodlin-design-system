@@ -30,15 +30,21 @@
       background: none;
       outline: none;
       border: none;
+      border-radius: 6px;
 
       width: 28px;
       height: 28px;
 
       top: 6px;
-      right: 12px;
+      right: 8px;
       cursor: pointer;
+      transition: $button_hover_transition;
       &.alt {
         top: 12px;
+        right: 12px;
+      }
+      &:hover {
+        background-color: $gray_1;
       }
     }
   }

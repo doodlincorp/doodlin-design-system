@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from "../component/Button";
-import { SearchIcon } from "../component/Icon/SearchIcon";
-import Input from "../component/Input";
+import Text from "../component/Text";
 import Modal from "../component/Modal";
 import "../reset.scss";
 
@@ -18,9 +17,9 @@ export const Default = () => {
       {open && (
         <Modal
           variant="default"
+          header={{ Text: "기본 모달" }}
           width={400}
           closeBtn={() => setOpen(false)}
-          header={{ Text: "기본 모달" }}
           footer={{
             cancelBtn: (
               <Button
@@ -35,99 +34,57 @@ export const Default = () => {
             BtnAlign: "end",
           }}
         >
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
+          <Text lineHeight="narrow">가장 기본이 되는 모달입니다.</Text>
         </Modal>
       )}
     </div>
   );
 };
 
-export const Variant = () => {
+export const Alt = () => {
   const [open, setOpen] = useState(false);
   return (
     <div style={{ padding: 20 }}>
       <Button onClick={() => setOpen(true)}>모달 열기</Button>
       {open && (
         <Modal width={400} variant="alt" closeBtn={() => setOpen(false)}>
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
-          <Input
-            icon={{ tailing: <SearchIcon /> }}
-            placeholder="다양한 키워드로 검색해 보세요"
-          />
+          <Text lineHeight="narrow">
+            그리팅이 유저에게 회사 차원에서 공지할 때 쓰이는 모달입니다.
+          </Text>
+        </Modal>
+      )}
+    </div>
+  );
+};
+
+export const AlertConfirm = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ padding: 20 }}>
+      <Button onClick={() => setOpen(true)}>모달 열기</Button>
+      {open && (
+        <Modal
+          width={400}
+          closeBtn={() => setOpen(false)}
+          footer={{
+            cancelBtn: (
+              <Button
+                buttonColor="gray"
+                onClick={() => setOpen(false)}
+                variant="ghost"
+              >
+                취소
+              </Button>
+            ),
+            submitBtn: <Button buttonColor="blue">확인</Button>,
+            BtnAlign: "end",
+          }}
+        >
+          <Text lineHeight="narrow">
+            기본 모달에서 header 속성만 지우면
+            <br />
+            얼럿, 컨펌 모달이 됩니다.
+          </Text>
         </Modal>
       )}
     </div>
