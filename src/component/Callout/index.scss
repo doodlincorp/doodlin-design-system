@@ -9,24 +9,24 @@
   padding: 16px 20px;
   border-radius: 6px;
   color: $blue_7;
-  .left {
+  ._left {
     display: flex;
     align-items: center;
-    .icon {
+    ._icon {
       margin-right: 8px;
     }
   }
   &.several {
     align-items: flex-start;
-    .left {
+    ._left {
       align-items: flex-start;
     }
   }
   &.danger {
     background: $warning_red_1;
     color: $red_7;
-    .left {
-      .icon {
+    ._left {
+      ._icon {
         transform: rotate(180deg);
       }
     }

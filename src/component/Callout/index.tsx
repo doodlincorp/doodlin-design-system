@@ -28,10 +28,10 @@ const Callout: React.FC<ICalloutProps> = ({
       className={cn("_CALLOUT_", className, variant, { several })}
       {...props}
     >
-      <div className="left">
+      <div className="_left">
         {icon && (
           <InfoMarkIcon
-            className="icon"
+            className="_icon"
             color={variant === "info" ? EColorMap.blue_7 : EColorMap.red_7}
             size={20}
           />
@@ -39,7 +39,7 @@ const Callout: React.FC<ICalloutProps> = ({
 
         <div>{children}</div>
       </div>
-      <button className="close-btn" onClick={() => setOpen(false)}>
+      <button className="_close-btn" onClick={() => setOpen(false)}>
         <CloseIcon
           color={variant === "info" ? EColorMap.blue_7 : EColorMap.red_7}
           size={20}
