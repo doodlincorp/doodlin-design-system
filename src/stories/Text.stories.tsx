@@ -66,16 +66,16 @@ export const Variant = () => {
         <Text variant="h4">Font Weight</Text>
       </header>
       <Text variant="block" weight="light">
-        font-weight: light
+        light (300)
       </Text>
       <Text variant="block" weight="regular">
-        font-weight: regular
+        regular (400)
       </Text>
       <Text variant="block" weight="medium">
-        font-weight: medium
+        medium (500)
       </Text>
       <Text variant="block" weight="bold">
-        font-weight: bold
+        bold (600)
       </Text>
 
       <header style={{ color: "#1C7ED6", paddingTop: 48, paddingBottom: 8 }}>
