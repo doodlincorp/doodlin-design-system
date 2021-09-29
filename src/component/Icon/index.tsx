@@ -63,6 +63,7 @@ import { CoinIcon } from "./CoinIcon";
 import { CreditCardIcon } from "./CreditCardIcon";
 import { SixDotIcon } from "./SixDotIcon";
 import { ReplyIcon } from "./ReplyIcon";
+import { MegaphoneIcon } from "./MegaphoneIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -165,6 +166,7 @@ const Icon = {
   Logout: LogoutIcon,
   Mail: MailIcon,
   MapPin: MapPinIcon,
+  Megaphone: MegaphoneIcon,
   Memo: MemoIcon,
   Phone: PhoneIcon,
   Plus: PlusIcon,

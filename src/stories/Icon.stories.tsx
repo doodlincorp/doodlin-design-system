@@ -399,12 +399,28 @@ export const Default = () => {
           <StoriesIcon.Mail size={40} variant="incoming" />
         </IconBlock>
 
+        <IconBlock name="Mail" variantName="open">
+          <StoriesIcon.Mail size={40} variant="open" />
+        </IconBlock>
+
+        <IconBlock name="Mail" variantName="reservation">
+          <StoriesIcon.Mail size={40} variant="reservation" />
+        </IconBlock>
+
+        <IconBlock name="Mail" variantName="cancel">
+          <StoriesIcon.Mail size={40} variant="cancel" />
+        </IconBlock>
+
         <IconBlock name="MapPin" variantName="solid">
           <StoriesIcon.MapPin size={40} />
         </IconBlock>
 
         <IconBlock name="MapPin" variantName="border">
           <StoriesIcon.MapPin size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="Megaphone">
+          <StoriesIcon.Megaphone size={40} />
         </IconBlock>
 
         <IconBlock name="Memo" variantName="default">
