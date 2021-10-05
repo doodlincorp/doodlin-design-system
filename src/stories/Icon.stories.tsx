@@ -75,10 +75,6 @@ export const Default = () => {
           <StoriesIcon.Align size={40} variant="list" />
         </IconBlock>
 
-        <IconBlock name="All">
-          <StoriesIcon.All size={40} />
-        </IconBlock>
-
         <IconBlock name="ApplicnatList">
           <StoriesIcon.ApplicantList size={40} />
         </IconBlock>

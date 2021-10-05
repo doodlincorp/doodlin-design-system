@@ -53,7 +53,6 @@ import { LockIcon } from "./LockIcon";
 import { VisionIcon } from "./VisionIcon";
 import { EmojiIcon } from "./EmojiIcon";
 import { DotIcon } from "./DotIcon";
-import { AllIcon } from "./AllIcon";
 import { SideBarIcon } from "./SideBarIcon";
 import { WindowIcon } from "./WindowIcon";
 import { ClickModeIcon } from "./ClickModeIcon";
@@ -125,7 +124,6 @@ export const colorMap: IColorMap = {
 const Icon = {
   AddColumn: AddColumnIcon,
   Align: AlignIcon,
-  All: AllIcon,
   ApplicantList: ApplicantListIcon,
   Archive: ArchiveIcon,
   Arrow: ArrowIcon,
