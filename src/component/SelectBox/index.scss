@@ -2,18 +2,18 @@
 
 ._SELECT_BOX_._CUSTOM_SELECT_ {
   font-weight: $font-weight-medium;
-  &.xs {
+  &.xxs {
     .current {
       height: 24px;
     }
   }
-  &.md {
+  &.sm {
     .current {
       height: 32px;
       border-radius: 8px;
     }
   }
-  &.lg {
+  &.md {
     .current {
       height: 36px;
       border-radius: 8px;

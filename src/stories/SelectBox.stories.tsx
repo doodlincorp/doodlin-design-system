@@ -90,6 +90,21 @@ export const Size = () => {
   return (
     <div style={{ padding: 20, width: 200 }}>
       <SelectBox<ISelectBoxItem>
+        size="xxs"
+        options={[
+          {
+            text: "안녕하세요",
+          },
+          {
+            icon: "👩",
+            text: "헬로",
+          },
+        ]}
+        value={selectedOption}
+        selectFunc={(o) => setSelectOption(o)}
+      />
+      <br />
+      <SelectBox<ISelectBoxItem>
         size="xs"
         options={[
           {
@@ -121,21 +136,6 @@ export const Size = () => {
       <br />
       <SelectBox<ISelectBoxItem>
         size="md"
-        options={[
-          {
-            text: "안녕하세요",
-          },
-          {
-            icon: "👩",
-            text: "헬로",
-          },
-        ]}
-        value={selectedOption}
-        selectFunc={(o) => setSelectOption(o)}
-      />
-      <br />
-      <SelectBox<ISelectBoxItem>
-        size="lg"
         options={[
           {
             text: "안녕하세요",
