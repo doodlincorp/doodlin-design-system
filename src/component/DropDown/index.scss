@@ -1,22 +1,25 @@
 @import "../../index.scss";
 
+.isolated-dropdown-item-area {
+  position: absolute;
+  z-index: 600;
+  top: 0;
+  left: 0;
+  min-width: 180px;
+  width: max-content;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid $blue_gray;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: $shadow-7;
+}
+
 ._DROP_DOWN_ {
   position: relative;
-  width: max-content;
   .item-area {
-    position: absolute;
-    z-index: 600;
+    @extend .isolated-dropdown-item-area;
     top: calc(100% + 4px);
-    min-width: 180px;
-    padding: 4px;
-    background: #fff;
-    border: 1px solid $blue_gray;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: $shadow-7;
-    ._DROP_DOWN_ {
-      width: 100%;
-    }
     &.left {
       right: 0;
     }

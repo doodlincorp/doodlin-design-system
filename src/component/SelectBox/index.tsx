@@ -17,7 +17,7 @@ export interface ISelectBoxProps<T extends ISelectBoxItem> {
   variant?: "solid" | "border" | "quiet";
   selectFunc: (o: T) => void;
   size?: "xxs" | "xs" | "sm" | "md";
-  portalDomNode?: HTMLElement;
+  usingPortalNode?: boolean;
 }
 
 const SelectBox: <T extends ISelectBoxItem>(
@@ -29,7 +29,7 @@ const SelectBox: <T extends ISelectBoxItem>(
   selectFunc,
   variant = "solid",
   size = "xs",
-  portalDomNode,
+  usingPortalNode,
 }) => {
   return (
     <CustomSelect
@@ -64,7 +64,7 @@ const SelectBox: <T extends ISelectBoxItem>(
           <div className="txt">{o.text}</div>
         </div>
       )}
-      portalDomNode={portalDomNode}
+      usingPortalNode={usingPortalNode}
     />
   );
 };

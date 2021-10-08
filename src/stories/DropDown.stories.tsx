@@ -14,7 +14,6 @@ export default {
 
 export const Default = () => {
   const [open, setOpen] = useState(false);
-
   return (
     <>
       <div
@@ -25,7 +24,7 @@ export const Default = () => {
           marginLeft: 200,
         }}
       >
-        <DropDown btn={<Button>option</Button>}>
+        <DropDown btn={<Button>option</Button>} placement="maxLeft">
           <DropItem text="hello 소환" />
           <DropItem text="아이콘과 함께" icon={<EditIcon />} />
           <DropItem text="로딩중" loading />
@@ -59,13 +58,106 @@ export const Default = () => {
           <DropItem text="닫기" onClick={() => setOpen(false)} />
         </DropDown>
       </div>
+      <div
+        style={{
+          width: 800,
+          height: 600,
+          backgroundColor: "aliceblue",
+          position: "relative",
+          overflow: "auto",
+        }}
+      >
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div
+          style={{
+            width: 640,
+            height: 480,
+            backgroundColor: "violet",
+            position: "relative",
+            overflow: "auto",
+          }}
+        >
+          with portal
+          <br />
+          <br />
+          <br />
+          scrolling
+          <br />
+          <br />
+          <br />
+          scrolling
+          <DropDown
+            placement="maxRight"
+            style={{ position: "absolute", right: 0 }}
+            btn={<Button>나를 눌러!</Button>}
+            usingPortalNode={true}
+          >
+            <DropItem text="hello 소환" />
+            <DropItem className="delete" text="삭제" icon={"👩"} />
+          </DropDown>
+          <br />
+          <br />
+          <br />
+          scrolling
+          <br />
+          <br />
+          <br />
+          scrolling
+          <br />
+          <br />
+          <br />
+          scrolling
+          <br />
+          <br />
+          <br />
+          scrolling
+          <br />
+          <br />
+          <br />
+          scrolling
+          <br />
+          <br />
+          <br />
+          scrolling
+          <br />
+          <br />
+          <br />
+          scrolling
+          <br />
+          <br />
+          <br />
+          scrolling
+        </div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+        <div>outer scrolling</div>
+      </div>
     </>
   );
 };
 
 export const Size = () => {
-  const [open, setOpen] = useState(false);
-
   return (
     <>
       <div
