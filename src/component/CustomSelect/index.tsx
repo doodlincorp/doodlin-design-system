@@ -4,6 +4,7 @@ import cn from "classnames";
 import "./index.scss";
 import { ArrowIcon } from "../Icon/ArrowIcon";
 import { EColorMap } from "../../utils/colorMap";
+import { createPortal } from "react-dom";
 
 export interface ICustomSelectProps<T> {
   value: T;
@@ -11,6 +12,7 @@ export interface ICustomSelectProps<T> {
   className?: string;
   getCurrentViewFunc: (v: T) => JSX.Element;
   getOptionViewFunc: (v: T) => JSX.Element;
+  portalDomNode?: HTMLElement;
 }
 
 export function isObjectEqual<T>(first: T, second: T, cnt?: number): boolean {
@@ -27,13 +29,14 @@ export function isObjectEqual<T>(first: T, second: T, cnt?: number): boolean {
 }
 
 const CustomSelect: <T>(
-  p: ICustomSelectProps<T>,
+  p: ICustomSelectProps<T>
 ) => React.ReactElement<ICustomSelectProps<T>> = ({
   value,
   options,
   className,
   getOptionViewFunc,
   getCurrentViewFunc,
+  portalDomNode,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [optionOpen, setOptionOpen] = useToggle(ref);
@@ -71,7 +74,13 @@ const CustomSelect: <T>(
           variant="chevron"
         />
       </div>
-      {optionOpen && <div className="options">{optionsView}</div>}
+      {optionOpen && (
+        <div className="options">
+          {portalDomNode
+            ? createPortal(optionsView, portalDomNode)
+            : optionsView}
+        </div>
+      )}
     </div>
   );
 };

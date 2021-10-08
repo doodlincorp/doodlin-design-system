@@ -17,10 +17,11 @@ export interface ISelectBoxProps<T extends ISelectBoxItem> {
   variant?: "solid" | "border" | "quiet";
   selectFunc: (o: T) => void;
   size?: "xxs" | "xs" | "sm" | "md";
+  portalDomNode?: HTMLElement;
 }
 
 const SelectBox: <T extends ISelectBoxItem>(
-  p: ISelectBoxProps<T>,
+  p: ISelectBoxProps<T>
 ) => React.ReactElement<ISelectBoxProps<T>> = ({
   value,
   options,
@@ -28,6 +29,7 @@ const SelectBox: <T extends ISelectBoxItem>(
   selectFunc,
   variant = "solid",
   size = "xs",
+  portalDomNode,
 }) => {
   return (
     <CustomSelect
@@ -62,6 +64,7 @@ const SelectBox: <T extends ISelectBoxItem>(
           <div className="txt">{o.text}</div>
         </div>
       )}
+      portalDomNode={portalDomNode}
     />
   );
 };

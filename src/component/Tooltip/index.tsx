@@ -1,9 +1,9 @@
 import React from "react";
 import cn from "classnames";
 import "./index.scss";
-import { InfoMarkIcon } from "../../component/Icon/InfoMarkIcon";
 import { EColorMap } from "../../utils/colorMap";
 import Icon from "../Icon";
+import { createPortal } from "react-dom";
 
 export interface ITooltipProps {
   className?: string;
@@ -18,8 +18,32 @@ export interface ITooltipProps {
     | "_bottom-left"
     | "_bottom"
     | "_bottom-right";
-  // trigger?: "hover" | "click";
+  portalDomNode?: HTMLElement;
 }
+
+const tooltipBox = ({
+  variant,
+  tooltipText,
+}: {
+  variant: "_box" | "_info" | "_question";
+  tooltipText: string;
+}) => {
+  return (
+    <div className="_tooltip-box">
+      {variant === "_info" && (
+        <Icon.InfoMark className="_icon" color={EColorMap.blue_4} />
+      )}
+      {variant === "_question" && (
+        <Icon.QuestionMark
+          variant="border"
+          className="_icon"
+          color={EColorMap.blue_4}
+        />
+      )}
+      {tooltipText}
+    </div>
+  );
+};
 
 const Tooltip: React.FC<ITooltipProps> = ({
   className,
@@ -27,28 +51,16 @@ const Tooltip: React.FC<ITooltipProps> = ({
   variant = "_box",
   tooltipText,
   placement = "_bottom",
-  // trigger = "hover",
+  portalDomNode,
 }) => {
   return (
     <div className={cn("_TOOLTIP_", className, placement, variant)}>
       <div className="_target">
         {children}
-
-        {tooltipText.length > 0 && (
-          <div className="_tooltip-box">
-            {variant === "_info" && (
-              <Icon.InfoMark className="_icon" color={EColorMap.blue_4} />
-            )}
-            {variant === "_question" && (
-              <Icon.QuestionMark
-                variant="border"
-                className="_icon"
-                color={EColorMap.blue_4}
-              />
-            )}
-            {tooltipText}
-          </div>
-        )}
+        {tooltipText.length > 0 &&
+          (portalDomNode
+            ? createPortal(tooltipBox, portalDomNode)
+            : tooltipBox)}
       </div>
     </div>
   );
