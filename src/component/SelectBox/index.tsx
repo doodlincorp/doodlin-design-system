@@ -1,9 +1,10 @@
 import React from "react";
-import CustomSelect, { isObjectEqual } from "../CustomSelect";
+import CustomSelect from "../CustomSelect";
 import { CheckIcon } from "../Icon/CheckIcon";
 import cn from "classnames";
 import "./index.scss";
 import { EColorMap } from "../../utils/colorMap";
+import { isObjectEqual } from "../CustomSelect/optionsView";
 
 export interface ISelectBoxItem {
   icon?: JSX.Element | string;
@@ -18,6 +19,7 @@ export interface ISelectBoxProps<T extends ISelectBoxItem> {
   selectFunc: (o: T) => void;
   size?: "xxs" | "xs" | "sm" | "md";
   usingPortalNode?: boolean;
+  a11yStateSetter?: React.Dispatch<React.SetStateAction<T>>;
 }
 
 const SelectBox: <T extends ISelectBoxItem>(
@@ -30,6 +32,7 @@ const SelectBox: <T extends ISelectBoxItem>(
   variant = "solid",
   size = "xs",
   usingPortalNode,
+  a11yStateSetter,
 }) => {
   return (
     <CustomSelect
@@ -65,6 +68,7 @@ const SelectBox: <T extends ISelectBoxItem>(
         </div>
       )}
       usingPortalNode={usingPortalNode}
+      a11yStateSetter={a11yStateSetter}
     />
   );
 };

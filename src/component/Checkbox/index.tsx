@@ -7,7 +7,7 @@ import { CheckIcon } from "../Icon/CheckIcon";
 import { HTMLAttributes } from "react";
 import { EColorMap } from "../../utils/colorMap";
 
-export interface ICheckboxProps extends HTMLAttributes<HTMLDivElement> {
+export interface ICheckboxProps extends HTMLAttributes<HTMLButtonElement> {
   selected: boolean;
   disabled?: boolean;
   label?: string;
@@ -29,11 +29,13 @@ const Checkbox: React.FC<ICheckboxProps> = ({
   ...props
 }) => {
   return (
-    <div
+    <button
+      tabIndex={!label ? -1 : disabled === true ? -1 : 0}
       className={cn("_CHECKBOX_", className, { onlyBtn: !label })}
       {...props}
     >
       <div
+        tabIndex={!label && !disabled ? 0 : -1}
         className={cn("btn", variant, {
           selected,
           disabled,
@@ -58,7 +60,7 @@ const Checkbox: React.FC<ICheckboxProps> = ({
           {label}
         </Text>
       )}
-    </div>
+    </button>
   );
 };
 export default Checkbox;

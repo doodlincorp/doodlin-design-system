@@ -7,11 +7,11 @@ import React, {
 } from "react";
 import cn from "classnames";
 import "./index.scss";
-import { useToggle } from "dhj-hooks";
 import { createPortal } from "react-dom";
 import { getOffset } from "../../utils/offset";
 import { debounce } from "../../utils/debounce";
 import { usePortalNode } from "../../hooks/usePortalNode";
+import { useToggle } from "../../hooks";
 
 export interface IDropDownProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -35,7 +35,7 @@ const DropDown: React.FC<IDropDownProps> = ({
   const ref = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const dropdownItemsRef = useRef<HTMLDivElement>(null);
-  const [optionOpen, setOptionOpen] = useToggle(ref);
+  const [optionOpen, setOptionOpen] = useToggle(ref, dropdownItemsRef);
   const [offset, setOffset] = useState({ top: 0, left: 0 });
   const [visibility, setVisibility] = useState<"visible" | "hidden">("hidden");
   const portalNode = usePortalNode(usingPortalNode);

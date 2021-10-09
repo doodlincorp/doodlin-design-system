@@ -36,9 +36,9 @@
   &:focus {
     border-color: $gray_7;
   }
-  &:focus {
-    outline: none;
-  }
+  // &:focus {
+  //   outline: none;
+  // }
 
   & + & {
     margin-top: 20px;

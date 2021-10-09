@@ -1,4 +1,3 @@
-import { useToggle } from "dhj-hooks";
 import React, { useEffect, useRef, useState } from "react";
 import cn from "classnames";
 import "./index.scss";
@@ -8,7 +7,8 @@ import { createPortal } from "react-dom";
 import { usePortalNode } from "../../hooks/usePortalNode";
 import { debounce } from "../../utils/debounce";
 import { getOffset } from "../../utils/offset";
-
+import { OptionsView } from "./optionsView";
+import { useToggle } from "../../hooks";
 export interface ICustomSelectProps<T> {
   value: T;
   options: T[];
@@ -16,19 +16,7 @@ export interface ICustomSelectProps<T> {
   getCurrentViewFunc: (v: T) => JSX.Element;
   getOptionViewFunc: (v: T) => JSX.Element;
   usingPortalNode?: boolean;
-}
-
-export function isObjectEqual<T>(first: T, second: T, cnt?: number): boolean {
-  if (cnt && cnt > 2) return true;
-  if (typeof first !== typeof second) return false;
-  if (typeof first === "object") {
-    for (const key in first) {
-      if (!isObjectEqual(first[key], second[key], (cnt || 0) + 1)) return false;
-    }
-  } else if (typeof first !== "function") {
-    if (first !== second) return false;
-  }
-  return true;
+  a11yStateSetter?: React.Dispatch<React.SetStateAction<T>>;
 }
 
 const CustomSelect: <T>(
@@ -40,19 +28,21 @@ const CustomSelect: <T>(
   getOptionViewFunc,
   getCurrentViewFunc,
   usingPortalNode,
+  a11yStateSetter,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [optionOpen, setOptionOpen] = useToggle(ref);
+  const optionsViewRef = useRef<HTMLDivElement>(null);
+  const [optionOpen, setOptionOpen] = useToggle(ref, optionsViewRef);
   const [offset, setOffset] = useState({ top: 0, left: 0 });
   const [visibility, setVisibility] = useState<"visible" | "hidden">("hidden");
   const portalNode = usePortalNode(usingPortalNode);
-  const optionsViewRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setVisibility("hidden");
     const update = () => {
       if (optionOpen) {
         const offset_ = getOffset(ref.current as HTMLElement);
+        offset_.top += (ref.current?.offsetHeight || 0) + 5;
         setOffset(offset_);
         setVisibility("visible");
       }
@@ -78,25 +68,11 @@ const CustomSelect: <T>(
     };
   }, [optionOpen]);
 
-  const optionsView = options.map((o, i) => (
-    <div
-      className={cn("option", {
-        selected: isObjectEqual(o, value),
-      })}
-      onClick={(e) => {
-        setOptionOpen(false);
-        e.stopPropagation();
-      }}
-      key={i}
-    >
-      {getOptionViewFunc(o)}
-    </div>
-  ));
-
   return (
     <div className={cn("_CUSTOM_SELECT_", className)} ref={ref}>
-      <div
+      <button
         className={cn("current", { selected: optionOpen })}
+        tabIndex={0}
         onClick={(e) => {
           setOptionOpen();
           e.stopPropagation();
@@ -107,10 +83,10 @@ const CustomSelect: <T>(
           className="chevron-icon"
           color={EColorMap.gray_6}
           size={16}
-          rotate={270}
+          rotate={optionOpen ? 90 : 270}
           variant="chevron"
         />
-      </div>
+      </button>
       {optionOpen &&
         (usingPortalNode ? (
           createPortal(
@@ -124,12 +100,26 @@ const CustomSelect: <T>(
                 visibility,
               }}
             >
-              {optionsView}
+              <OptionsView
+                options={options}
+                getOptionViewFunc={getOptionViewFunc}
+                setOptionOpen={setOptionOpen}
+                value={value}
+                a11yStateSetter={a11yStateSetter}
+              />
             </div>,
             portalNode
           )
         ) : (
-          <div className="options">{optionsView}</div>
+          <div className="options">
+            <OptionsView
+              options={options}
+              getOptionViewFunc={getOptionViewFunc}
+              setOptionOpen={setOptionOpen}
+              value={value}
+              a11yStateSetter={a11yStateSetter}
+            />
+          </div>
         ))}
     </div>
   );

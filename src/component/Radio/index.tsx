@@ -26,7 +26,10 @@ const Radio: React.FC<IRadioProps> = ({
 }) => {
   return (
     <div className={cn("_RADIO_", className, { onlyBtn: !label })} {...props}>
-      <div className={cn("btn", variant, { selected, disabled })}></div>
+      <button
+        tabIndex={disabled ? -1 : 0}
+        className={cn("btn", variant, { selected, disabled })}
+      />
       <Text
         className={cn("label", { disabled })}
         variant="inline"

@@ -25,6 +25,7 @@ export const Default = () => {
         ]}
         value={selectedOption}
         selectFunc={(o) => setSelectOption(o)}
+        a11yStateSetter={setSelectOption}
       />
     </div>
   );
@@ -48,6 +49,7 @@ export const Variant = () => {
         ]}
         value={selectedOption}
         selectFunc={(o) => setSelectOption(o)}
+        a11yStateSetter={setSelectOption}
       />
       <br />
       <SelectBox<ISelectBoxItem>
@@ -63,6 +65,7 @@ export const Variant = () => {
         ]}
         value={selectedOption}
         selectFunc={(o) => setSelectOption(o)}
+        a11yStateSetter={setSelectOption}
       />
       <br />
       <SelectBox<ISelectBoxItem>
@@ -78,6 +81,7 @@ export const Variant = () => {
         ]}
         value={selectedOption}
         selectFunc={(o) => setSelectOption(o)}
+        a11yStateSetter={setSelectOption}
       />
     </div>
   );
@@ -102,6 +106,7 @@ export const Size = () => {
         ]}
         value={selectedOption}
         selectFunc={(o) => setSelectOption(o)}
+        a11yStateSetter={setSelectOption}
       />
       <br />
       <SelectBox<ISelectBoxItem>
@@ -117,6 +122,7 @@ export const Size = () => {
         ]}
         value={selectedOption}
         selectFunc={(o) => setSelectOption(o)}
+        a11yStateSetter={setSelectOption}
       />
       <br />
       <SelectBox<ISelectBoxItem>
@@ -132,6 +138,7 @@ export const Size = () => {
         ]}
         value={selectedOption}
         selectFunc={(o) => setSelectOption(o)}
+        a11yStateSetter={setSelectOption}
       />
       <br />
       <SelectBox<ISelectBoxItem>
@@ -147,6 +154,7 @@ export const Size = () => {
         ]}
         value={selectedOption}
         selectFunc={(o) => setSelectOption(o)}
+        a11yStateSetter={setSelectOption}
       />
     </div>
   );

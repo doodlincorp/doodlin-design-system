@@ -57,10 +57,22 @@ const Tooltip: React.FC<ITooltipProps> = ({
     <div className={cn("_TOOLTIP_", className, placement, variant)}>
       <div className="_target">
         {children}
-        {tooltipText.length > 0 &&
-          (portalDomNode
-            ? createPortal(tooltipBox, portalDomNode)
-            : tooltipBox)}
+
+        {tooltipText.length > 0 && (
+          <div className="_tooltip-box">
+            {variant === "_info" && (
+              <Icon.InfoMark className="_icon" color={EColorMap.blue_4} />
+            )}
+            {variant === "_question" && (
+              <Icon.QuestionMark
+                variant="border"
+                className="_icon"
+                color={EColorMap.blue_4}
+              />
+            )}
+            {tooltipText}
+          </div>
+        )}
       </div>
     </div>
   );

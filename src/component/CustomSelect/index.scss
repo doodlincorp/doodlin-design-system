@@ -19,6 +19,9 @@
     &:hover {
       background-color: $gray_1;
     }
+    &.hover {
+      background-color: $gray_1;
+    }
     &.selected {
       background-color: $gray_3;
     }
@@ -50,10 +53,11 @@
     box-sizing: border-box;
     cursor: pointer;
     appearance: none;
-    outline: none;
+    // outline: none;
     position: relative;
     transition: all 0.1s ease-out;
     user-select: none;
+    width: 100%;
 
     &:hover,
     &.selected {
