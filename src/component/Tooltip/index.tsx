@@ -96,7 +96,8 @@ const TooltipBox = ({
       }
       setOffset(offset_);
     }
-  }, [placement]);
+    // object의 위치가 변할 수 있으므로 hovered도 감지 대상에 포함한다.
+  }, [placement, hovered]);
   return (
     <div
       ref={ref}

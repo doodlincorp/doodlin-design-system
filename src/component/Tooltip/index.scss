@@ -2,6 +2,7 @@
 
 .isolated-tooltip-box {
   position: fixed;
+  z-index: 500;
   width: max-content;
   height: max-content;
   padding: 4px 8px;
