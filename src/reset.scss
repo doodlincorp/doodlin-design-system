@@ -104,13 +104,13 @@ html {
 a {
   background-color: transparent;
   text-decoration: none;
-  // outline: none;
+  outline: none;
   color: inherit;
   &:active,
   &:hover {
     text-decoration: none;
     color: inherit;
-    // outline: 0;
+    outline: 0;
   }
 }
 
@@ -131,7 +131,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  // outline: none;
+  outline: none;
   border: none;
   background: none;
   padding: 0;
