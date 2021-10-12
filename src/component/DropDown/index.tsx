@@ -115,7 +115,7 @@ const DropDown: React.FC<IDropDownProps> = ({
             >
               {children}
             </div>,
-            portalNode
+            portalNode.current!
           )
         ) : (
           <div className={cn("item-area", placement)} style={{ width }}>

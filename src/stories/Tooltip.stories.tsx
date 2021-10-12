@@ -11,11 +11,22 @@ export default {
 
 export const Default = () => {
   return (
-    <div style={{ padding: 20 }}>
-      <Tooltip tooltipText={"【ツ】"}>
-        <Button size="md">커서를 올려보세요!</Button>
-      </Tooltip>
-    </div>
+    <>
+      <div style={{ padding: 20 }}>
+        <Tooltip tooltipText={"【ツ】"} placement="_right">
+          <Button size="md">커서를 올려보세요!</Button>
+        </Tooltip>
+      </div>
+      <div style={{ padding: 20 }}>
+        <Tooltip
+          tooltipText={"【ツ】"}
+          usingPortalNode={true}
+          placement="_right"
+        >
+          <Button size="md">portal Node사용</Button>
+        </Tooltip>
+      </div>
+    </>
   );
 };
 

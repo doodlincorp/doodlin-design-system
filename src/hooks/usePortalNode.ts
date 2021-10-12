@@ -13,13 +13,13 @@ const usePortalNode = (usingPortal?: boolean) => {
     }
     return () => {
       if (usingPortal) {
-        if (portalNode.current) {
-          document.body.removeChild(portalNode.current);
+        if (div) {
+          document.body.removeChild(div);
         }
       }
     };
   }, [usingPortal]);
-  return portalNode.current!;
+  return portalNode;
 };
 
 export { usePortalNode };

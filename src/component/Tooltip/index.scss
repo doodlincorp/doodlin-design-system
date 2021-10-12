@@ -1,5 +1,27 @@
 @import "../../index.scss";
 
+.isolated-tooltip-box {
+  position: fixed;
+  width: max-content;
+  height: max-content;
+  padding: 4px 8px;
+  background-color: $gray_8;
+  color: #fff;
+  font-size: 12px;
+  font-weight: $font-weight-medium;
+  text-align: start;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  transition: $button_hover_transition;
+  transition-delay: 0.2s;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  &.appear {
+    opacity: 1;
+  }
+}
+
 ._TOOLTIP_ {
   display: inline-block;
   ._target {
