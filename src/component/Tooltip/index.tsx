@@ -47,6 +47,7 @@ const TooltipBox = ({
     top: 0,
   });
   useEffect(() => {
+    if (!hovered) return;
     if (targetRef && targetRef.current) {
       const offset_ = getOffset(targetRef.current);
       switch (placement) {
