@@ -11,7 +11,7 @@ import { createPortal } from "react-dom";
 import { getOffset } from "../../utils/offset";
 import { debounce } from "../../utils/debounce";
 import { usePortalNode } from "../../hooks/usePortalNode";
-import { useToggle } from "../../hooks";
+import { useToggle } from "doodlin-hooks";
 
 export interface IDropDownProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -101,7 +101,7 @@ const DropDown: React.FC<IDropDownProps> = ({
         {cloneElement(btn, { ref: buttonRef })}
       </div>
       {(open || optionOpen) &&
-        (usingPortalNode ? (
+        (usingPortalNode && portalNode && portalNode.current ? (
           createPortal(
             <div
               className={cn("isolated-dropdown-item-area", placement)}
@@ -115,7 +115,7 @@ const DropDown: React.FC<IDropDownProps> = ({
             >
               {children}
             </div>,
-            portalNode.current!
+            portalNode.current
           )
         ) : (
           <div className={cn("item-area", placement)} style={{ width }}>

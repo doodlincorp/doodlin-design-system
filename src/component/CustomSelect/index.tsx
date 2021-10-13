@@ -8,7 +8,7 @@ import { usePortalNode } from "../../hooks/usePortalNode";
 import { debounce } from "../../utils/debounce";
 import { getOffset } from "../../utils/offset";
 import { OptionsView } from "./optionsView";
-import { useToggle } from "../../hooks";
+import { useToggle } from "doodlin-hooks";
 export interface ICustomSelectProps<T> {
   value: T;
   options: T[];
@@ -88,7 +88,7 @@ const CustomSelect: <T>(
         />
       </button>
       {optionOpen &&
-        (usingPortalNode ? (
+        (usingPortalNode && portalNode && portalNode.current ? (
           createPortal(
             <div
               className="isolated-customselect-options"
@@ -108,7 +108,7 @@ const CustomSelect: <T>(
                 a11yStateSetter={a11yStateSetter}
               />
             </div>,
-            portalNode
+            portalNode.current
           )
         ) : (
           <div className="options">

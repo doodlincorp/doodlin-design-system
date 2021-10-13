@@ -5578,6 +5578,18 @@ domutils@^2.5.2, domutils@^2.6.0, domutils@^2.7.0:
     domelementtype "^2.2.0"
     domhandler "^4.2.0"
 
+doodlin-hooks@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/doodlin-hooks/-/doodlin-hooks-0.1.7.tgz#2098a6a4c1a2dfd32827c2f43ee3ccce034ba9e7"
+  integrity sha512-rJdhi0dsvXWAJiqvHecimBNrdBrDgGu5M2fYxfXg0F/uNk1WksxyK7FUyU5Au164zPV9tJG0shaJHuBItAXWOQ==
+  dependencies:
+    doodlin-string "^0.1.0"
+
+doodlin-string@^0.1.0:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/doodlin-string/-/doodlin-string-0.1.9.tgz#7e7540559f7970d789b40ad61c821455abc59106"
+  integrity sha512-+XkZtzaf81inWscrMRHKWH96i/BXhCbj/q/cPyNxbvu/9ZaXC/hhDX/vv23Zyj0Iu+aUGay/PHCcI/KTu1AU+A==
+
 dot-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/dot-case/-/dot-case-3.0.4.tgz#9b2b670d00a431667a8a75ba29cd1b98809ce751"
