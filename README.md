@@ -33,3 +33,5 @@ yarn publish # npm에 배포할 때.
 ### 특이사항
 
 - DropDown과 CustomSelect, SelectBox, Tooltip 컴포넌트는 usingPortalNode을 켤 수 있는데, 이것을 켜면 팝오버되는 컴포넌트가 부모 컴포넌트와 동떨어진 portal의 형태로 동작합니다. (가림 현상 해소 등으로 사용 가능)
+
+- DropDown컴포넌트의 usingPortalNode를 true로 설정하면 open={} 속성을 사용하면 정상적으로 동작하지 않을 수 있다. 당분간은 uncontrolled로 쓰시길...
