@@ -107,8 +107,28 @@ export const Default = () => {
           <StoriesIcon.Calendar size={40} variant="check" />
         </IconBlock>
 
+        <IconBlock name="Calendar" variantName="request">
+          <StoriesIcon.Calendar size={40} variant="request" />
+        </IconBlock>
+
+        <IconBlock name="Calendar" variantName="change-request">
+          <StoriesIcon.Calendar size={40} variant="change-request" />
+        </IconBlock>
+
+        <IconBlock name="Calendar" variantName="scheduled">
+          <StoriesIcon.Calendar size={40} variant="scheduled" />
+        </IconBlock>
+
+        <IconBlock name="Calendar" variantName="finish">
+          <StoriesIcon.Calendar size={40} variant="finish" />
+        </IconBlock>
+
         <IconBlock name="Calendar" variantName="x">
           <StoriesIcon.Calendar size={40} variant="x" />
+        </IconBlock>
+
+        <IconBlock name="Calendar" variantName="edit">
+          <StoriesIcon.Calendar size={40} variant="edit" />
         </IconBlock>
 
         <IconBlock name="Camera" variantName="solid">
