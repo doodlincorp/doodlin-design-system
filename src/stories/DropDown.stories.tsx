@@ -220,6 +220,49 @@ export const Size = () => {
           <DropItem className="delete" text="삭제" icon={"👩"} />
         </DropDown>
       </div>
+      <Divider />
+      <div
+        style={{
+          padding: 20,
+        }}
+      >
+        <DropDown placement="right" btn={<Button>xs</Button>}>
+          <DropItem size="xs" text="hello 소환" />
+          <DropItem size="xs" text="아이콘과 함께" icon={<EditIcon />} />
+          <DropItem size="xs" text="로딩중" loading />
+          <Divider />
+          <DropItem size="xs" text="비활성화" icon={<SettingIcon />} disabled />
+          <DropItem
+            size="xs"
+            className="delete"
+            text="삭제"
+            icon={<GarbageIcon />}
+            variant="danger"
+          />
+          <DropItem size="xs" className="delete" text="삭제" icon={"👩"} />
+        </DropDown>
+      </div>
+      <div
+        style={{
+          padding: 20,
+        }}
+      >
+        <DropDown placement="right" btn={<Button>sm</Button>}>
+          <DropItem size="sm" text="hello 소환" />
+          <DropItem size="sm" text="아이콘과 함께" icon={<EditIcon />} />
+          <DropItem size="sm" text="로딩중" loading />
+          <Divider />
+          <DropItem size="sm" text="비활성화" icon={<SettingIcon />} disabled />
+          <DropItem
+            size="sm"
+            className="delete"
+            text="삭제"
+            icon={<GarbageIcon />}
+            variant="danger"
+          />
+          <DropItem size="sm" className="delete" text="삭제" icon={"👩"} />
+        </DropDown>
+      </div>
     </>
   );
 };
