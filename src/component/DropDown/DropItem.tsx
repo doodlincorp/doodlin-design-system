@@ -9,6 +9,7 @@ export interface IDropItemProps extends HTMLAttributes<HTMLDivElement> {
   loading?: boolean;
   disabled?: boolean;
   variant?: "basic" | "danger";
+  size?: string;
 }
 
 const DropItem: React.FC<IDropItemProps> = ({
@@ -18,6 +19,7 @@ const DropItem: React.FC<IDropItemProps> = ({
   disabled,
   loading,
   variant,
+  size = "xs",
   ...props
 }) => {
   return (
@@ -26,7 +28,7 @@ const DropItem: React.FC<IDropItemProps> = ({
         className={className}
         variant="quiet"
         buttonColor="gray"
-        size="xs"
+        size={size === "sm" ? "sm" : "xs"}
         fullWidth
         label={{
           labelLeadingIcon:
