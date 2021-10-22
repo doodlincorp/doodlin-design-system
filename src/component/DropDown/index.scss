@@ -15,6 +15,7 @@
 
 ._DROP_DOWN_ {
   position: relative;
+  width: max-content;
   .item-area {
     @extend .isolated-dropdown-item-area;
     top: calc(100% + 4px);
