@@ -133,15 +133,18 @@ export const Disabled = () => (
 export const InputTextarea = () => {
   return (
     <div style={{ padding: 10, maxWidth: 800 }}>
-      <Textarea placeholder="높이를 넘어가면 스크롤이 생기는 입력창입니다"></Textarea>
       <Textarea
-        placeholder="높이를 넘어가면 자동으로 늘어나고 싶은 입력창입니다"
+        style={{ height: 200 }}
+        placeholder="높이를 넘어가면 스크롤이 생기는 입력창입니다"
+      ></Textarea>
+      <Textarea
+        placeholder="높이를 넘어가면 자동으로 늘어나는 입력창입니다"
         borderType="single-line"
         rows={1}
         areaType="autosize"
       ></Textarea>
       <Textarea
-        placeholder="높이를 넘어가면 자동으로 늘어나고 싶은 입력창입니다"
+        placeholder="높이를 넘어가면 자동으로 늘어나는 입력창입니다"
         borderType="underline"
         rows={1}
         areaType="autosize"
