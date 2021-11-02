@@ -98,6 +98,7 @@ const CustomSelect: <T>(
                 top: offset.top,
                 left: offset.left,
                 visibility,
+                zIndex: 10000000,
               }}
             >
               <OptionsView
