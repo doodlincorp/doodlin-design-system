@@ -40,7 +40,10 @@
 
 ._CUSTOM_SELECT_ {
   position: relative;
-  font-size: 1.4rem;
+
+  & > * {
+    font-size: 1.4rem;
+  }
   .current {
     display: flex;
     align-items: center;
