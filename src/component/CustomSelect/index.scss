@@ -12,6 +12,9 @@
   box-sizing: border-box;
   padding: 4px;
   user-select: none;
+  & > * {
+    font-size: 1.4rem;
+  }
   .option {
     height: 28px;
     border-radius: 6px;
