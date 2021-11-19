@@ -507,6 +507,18 @@ export const Default = () => {
           <StoriesIcon.Setting size={40} />
         </IconBlock>
 
+        <IconBlock name="ShapeIcon" variantName="circle">
+          <StoriesIcon.Shape size={40} variant="circle" />
+        </IconBlock>
+
+        <IconBlock name="ShapeIcon" variantName="triangle">
+          <StoriesIcon.Shape size={40} variant="triangle" />
+        </IconBlock>
+
+        <IconBlock name="ShapeIcon" variantName="x">
+          <StoriesIcon.Shape size={40} variant="x" />
+        </IconBlock>
+
         <IconBlock name="SideBar">
           <StoriesIcon.SideBar size={40} />
         </IconBlock>
