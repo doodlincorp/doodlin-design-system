@@ -63,6 +63,7 @@ import { CreditCardIcon } from "./CreditCardIcon";
 import { SixDotIcon } from "./SixDotIcon";
 import { ReplyIcon } from "./ReplyIcon";
 import { MegaphoneIcon } from "./MegaphoneIcon";
+import { ShapeIcon } from "./ShapeIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -175,6 +176,7 @@ const Icon = {
   Search: SearchIcon,
   Send: SendIcon,
   Setting: SettingIcon,
+  Shape: ShapeIcon,
   SideBar: SideBarIcon,
   SixDot: SixDotIcon,
   Slider: SliderIcon,
