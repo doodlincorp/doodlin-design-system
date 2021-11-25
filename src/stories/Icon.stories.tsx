@@ -99,6 +99,14 @@ export const Default = () => {
           <StoriesIcon.Arrow size={40} variant="solid" />
         </IconBlock>
 
+        <IconBlock name="Book" variantName="solid">
+          <StoriesIcon.Book size={40} variant="solid" />
+        </IconBlock>
+
+        <IconBlock name="Book" variantName="border">
+          <StoriesIcon.Book size={40} variant="border" />
+        </IconBlock>
+
         <IconBlock name="Calendar" variantName="default">
           <StoriesIcon.Calendar size={40} />
         </IconBlock>
@@ -541,6 +549,10 @@ export const Default = () => {
 
         <IconBlock name="Tag" variantName="border">
           <StoriesIcon.Tag size={40} variant="border" />
+        </IconBlock>
+
+        <IconBlock name="Template">
+          <StoriesIcon.Template size={40} />
         </IconBlock>
 
         <IconBlock name="Thumb" variantName="sobad">
