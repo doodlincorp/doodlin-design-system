@@ -40,10 +40,6 @@ export type TFontSize =
   | "xxx-large"
   | "xxxx-large";
 
-// Spoqa chevron
-export const right = `&#xE001;`;
-export const left = `&#xE000;`;
-
 // Spacer
 export const spacer_xx_small = `0.4rem`;
 export const spacer_x_small = `0.8rem`;

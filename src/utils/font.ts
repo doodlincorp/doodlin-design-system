@@ -1,5 +1,7 @@
 // Font Family
-export const fontFamily = `"Spoqa Han Sans Neo", "sans_serif"`;
+export const fontFamily = `Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+"Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+"Malgun Gothic", sans-serif`;
 
 export enum EFontWeight {
   light = 300,
