@@ -1,17 +1,15 @@
 /////////////////* Fonts */////////////////
 
-// Spoqa chevron
-$right: "&#xE001;";
-$left: "&#xE000;";
-
 // Font Family
-$font: "Spoqa Han Sans Neo", "sans-serif";
+$font: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+  "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+  "Malgun Gothic", sans-serif;
 
 // Font Weight
 $font_weight_light: 300;
 $font_weight_regular: 400;
 $font_weight_medium: 500;
-$font_weight_bold: 600;
+$font_weight_bold: 700;
 
 // Font Size
 $font_size_xx_small: 1.2rem;

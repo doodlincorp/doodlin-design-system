@@ -1,4 +1,4 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 html,
 body,
@@ -93,7 +93,9 @@ video {
 
 html {
   font-size: 62.5%;
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
   -webkit-font-smoothing: antialiased; // Safari, Chrome only
   -moz-osx-font-smoothing: grayscale; // Safari, Chrome only
   body {

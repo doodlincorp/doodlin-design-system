@@ -75,7 +75,7 @@ export const Variant = () => {
         medium (500)
       </Text>
       <Text variant="block" weight="bold">
-        bold (600)
+        bold (700)
       </Text>
 
       <header style={{ color: "#1C7ED6", paddingTop: 48, paddingBottom: 8 }}>
