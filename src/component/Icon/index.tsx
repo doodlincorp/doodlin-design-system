@@ -64,6 +64,8 @@ import { SixDotIcon } from "./SixDotIcon";
 import { ReplyIcon } from "./ReplyIcon";
 import { MegaphoneIcon } from "./MegaphoneIcon";
 import { ShapeIcon } from "./ShapeIcon";
+import { BookIcon } from "./BookIcon";
+import { TemplateIcon } from "./TemplateIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -128,6 +130,7 @@ const Icon = {
   ApplicantList: ApplicantListIcon,
   Archive: ArchiveIcon,
   Arrow: ArrowIcon,
+  Book: BookIcon,
   Calendar: CalendarIcon,
   Camera: CameraIcon,
   Chart: ChartIcon,
@@ -180,6 +183,7 @@ const Icon = {
   SideBar: SideBarIcon,
   SixDot: SixDotIcon,
   Slider: SliderIcon,
+  Template: TemplateIcon,
   Thumb: ThumbIcon,
   Tag: TagIcon,
   User: UserIcon,
