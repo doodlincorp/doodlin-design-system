@@ -31,9 +31,14 @@ export const UpDownArrowIcon: React.FC<IUpDownArrowIconProps> = ({
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="icon__fill"
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M12 3L6 9H18L12 3ZM12 21L18 15L6 15L12 21Z"
+          className="first-arrow"
+          d="M6 9L12 3L18 9H6Z"
+          fill={color || EColorMap.gray_8}
+        />
+        <path
+          id="icon__fill"
+          className="second-arrow"
+          d="M18 15L12 21L6 15L18 15Z"
           fill={color || EColorMap.gray_8}
         />
       </svg>
