@@ -14,6 +14,7 @@
   user-select: none;
   & > * {
     font-size: 1.4rem;
+    line-height: 1em;
   }
   .option {
     height: 28px;
@@ -46,6 +47,7 @@
 
   & > * {
     font-size: 1.4rem;
+    line-height: 1em;
   }
   .current {
     display: flex;
