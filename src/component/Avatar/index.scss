@@ -47,6 +47,7 @@
       padding: 0;
       color: #fff;
       font-weight: $font-weight-medium;
+      line-height: 1em;
     }
   }
   // Avatar Size
@@ -77,7 +78,7 @@
     width: 32px;
     min-width: 32px;
     height: 32px;
-    font-size: $font-size-small; 
+    font-size: $font-size-small;
     &.workspace ._AVATAR_ {
       border-radius: 8px;
       .image::after {
@@ -89,7 +90,7 @@
     width: 40px;
     min-width: 40px;
     height: 40px;
-    font-size: $font-size-large; 
+    font-size: $font-size-large;
     &.workspace ._AVATAR_ {
       border-radius: 10px;
       .image::after {
@@ -101,7 +102,7 @@
     width: 48px;
     min-width: 48px;
     height: 48px;
-    font-size: $font-size-x-large; 
+    font-size: $font-size-x-large;
 
     &.workspace ._AVATAR_ {
       border-radius: 14px;
@@ -116,7 +117,7 @@
     min-width: 60px;
     height: 60px;
     font-size: $font-size-xx-large;
-    &.workspace ._AVATAR_  {
+    &.workspace ._AVATAR_ {
       border-radius: 14px;
 
       .image::after {
