@@ -1,12 +1,24 @@
 import React, { ButtonHTMLAttributes, useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
-import { TButtonSize } from "../..";
+import styled from 'styled-components'
+import { EColorMap, TButtonSize } from "../..";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: TButtonSize;
   variant?: "ghost" | "solid" | "quiet" | "minimal";
   buttonColor?: "black" | "gray" | "blue" | "red";
+  colorOption?: {
+    font?: EColorMap,
+    default?: EColorMap,
+    hover?: EColorMap,
+    active?: EColorMap,
+    icon?: {
+      default?: EColorMap,
+      hover?: EColorMap,
+      active?: EColorMap,
+    }
+  }
   fullWidth?: boolean;
   loading?: boolean;
   rounded?: boolean;
@@ -29,11 +41,49 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       loading,
       rounded,
       buttonColor = "black",
+      colorOption,
       label,
       ...restProps
     } = props;
+
+
+    var bgc = colorOption?.default;
+    var hover = colorOption?.hover;
+    var active = colorOption?.active;
+    var font = colorOption?.font;
+    var iconColor = colorOption?.icon;
+
+    const Btn = styled.button`
+      &._BUTTON_.${variant}{
+        ${(bgc && `background-color: ${bgc};`)}
+        ${(font && `color: ${font};`)}
+
+        
+        ${(iconColor?.default && `
+        i > svg #icon__fill {
+          fill: ${iconColor.default};
+        }`)}
+
+        &:hover{
+          ${(hover && `background-color: ${hover};`)}
+          ${(iconColor?.hover && `
+          i > svg #icon__fill {
+            fill: ${iconColor.hover};
+          }`)}
+        }
+
+        &:active{
+          ${(active && `background-color: ${active};`)}
+          ${(iconColor?.active && `
+          i > svg #icon__fill {
+            fill: ${iconColor.active};
+          }`)}
+        }
+      }
+`
+
     return (
-      <button
+      <Btn
         className={cn(`_BUTTON_`, className, size, variant, buttonColor, {
           loading,
           rounded,
@@ -68,7 +118,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
             children
           )}
         </span>
-      </button>
+      </Btn>
     );
   },
 );
