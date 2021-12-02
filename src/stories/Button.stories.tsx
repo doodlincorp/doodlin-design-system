@@ -66,6 +66,30 @@ export const ColorOption = () => (
   </div>
 );
 
+
+export const Spacer = () => (
+  <div style={{ padding: 20 }}>
+    <div className="article" style={{ marginBottom: 28 }}>
+      <h1 style={{ marginBottom: 12 }}>With spacer(default, margin-left: 8px)</h1>
+      <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
+      <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
+      <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
+      <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
+      <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
+    </div>
+
+    <div className="article" style={{ marginBottom: 28 }}>
+      <h1 style={{ marginBottom: 12 }}>Without spacer(no margin left)</h1>
+      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
+      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
+      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
+      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
+      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
+    </div>
+  </div>
+);
+
+
 export const Rounded = () => (
   <div style={{ padding: 20 }}>
     <Button
