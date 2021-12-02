@@ -36,6 +36,36 @@ export const Type = () => (
   </div>
 );
 
+export const ColorOption = () => (
+  <div style={{ padding: 20, display: "flex", alignItems: "center" }}>
+    <Button
+      size="md"
+      label={{ labelText: "custom" }}
+      colorOption={{
+        font: EColorMap.blue_5,
+        default: EColorMap.blue_1,
+        hover: EColorMap.blue_2,
+        active: EColorMap.blue_3
+      }}
+
+    />
+    <Button
+      size="md"
+      label={{ labelLeadingIcon: <Icon.Edit /> }}
+      colorOption={{
+        default: EColorMap.blue_1,
+        hover: EColorMap.blue_2,
+        active: EColorMap.blue_3,
+        icon: {
+          default: EColorMap.blue_5,
+          hover: EColorMap.blue_6,
+          active: EColorMap.blue_7,
+        }
+      }}
+    />
+  </div>
+);
+
 export const Rounded = () => (
   <div style={{ padding: 20 }}>
     <Button
