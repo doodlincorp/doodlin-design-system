@@ -4,8 +4,6 @@ import Divider from "../component/Divider";
 import StoriesIcon from "../component/Icon";
 import "../reset.scss";
 import { EColorMap } from "../utils/colorMap";
-import { execFunc } from "../utils/utils";
-
 
 export default {
   title: "Component/Icon",
@@ -55,6 +53,10 @@ export const Default = () => {
       </Text>
     </div>
   );
+
+  const execFunc = (func, props) => {
+    return func(props);
+  }
 
   const IconList = {
     "AddColumn": [
@@ -383,7 +385,7 @@ export const Default = () => {
         {icons}
 
 
-       
+
       </div>
     </div>
   );
