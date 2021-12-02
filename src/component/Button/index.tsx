@@ -19,6 +19,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
       active?: EColorMap,
     }
   }
+  spacer?: boolean;
   fullWidth?: boolean;
   loading?: boolean;
   rounded?: boolean;
@@ -37,6 +38,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       size = "md",
       variant = "solid",
       disabled,
+      spacer = true,
       fullWidth,
       loading,
       rounded,
@@ -55,6 +57,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
 
     const Btn = styled.button`
       &._BUTTON_.${variant}{
+        ${(!spacer && "margin-left: 0px;")}
         ${(bgc && `background-color: ${bgc};`)}
         ${(font && `color: ${font};`)}
 
