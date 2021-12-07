@@ -1,24 +1,24 @@
 import React, { ButtonHTMLAttributes, useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
-import styled from 'styled-components'
+import styled from "styled-components";
 import { EColorMap, TButtonSize } from "../..";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: TButtonSize;
-  variant?: "ghost" | "solid" | "quiet" | "minimal";
+  variant?: "ghost" | "solid" | "quiet" | "minimal" | "minimal2";
   buttonColor?: "black" | "gray" | "blue" | "red";
   colorOption?: {
-    font?: EColorMap,
-    default?: EColorMap,
-    hover?: EColorMap,
-    active?: EColorMap,
+    font?: EColorMap;
+    default?: EColorMap;
+    hover?: EColorMap;
+    active?: EColorMap;
     icon?: {
-      default?: EColorMap,
-      hover?: EColorMap,
-      active?: EColorMap,
-    }
-  }
+      default?: EColorMap;
+      hover?: EColorMap;
+      active?: EColorMap;
+    };
+  };
   spacer?: boolean;
   fullWidth?: boolean;
   loading?: boolean;
@@ -48,7 +48,6 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       ...restProps
     } = props;
 
-
     var bgc = colorOption?.default;
     var hover = colorOption?.hover;
     var active = colorOption?.active;
@@ -56,34 +55,36 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
     var iconColor = colorOption?.icon;
 
     const Btn = styled.button`
-      &._BUTTON_.${variant}{
-        ${(!spacer && "margin-left: 0px;")}
-        ${(bgc && `background-color: ${bgc};`)}
-        ${(font && `color: ${font};`)}
+      &._BUTTON_.${variant} {
+        ${!spacer && "margin-left: 0px;"}
+        ${bgc && `background-color: ${bgc};`}
+        ${font && `color: ${font};`}
 
-        
-        ${(iconColor?.default && `
+        ${iconColor?.default &&
+        `
         i > svg #icon__fill {
           fill: ${iconColor.default};
-        }`)}
+        }`}
 
-        &:hover{
-          ${(hover && `background-color: ${hover};`)}
-          ${(iconColor?.hover && `
+        &:hover {
+          ${hover && `background-color: ${hover};`}
+          ${iconColor?.hover &&
+          `
           i > svg #icon__fill {
             fill: ${iconColor.hover};
-          }`)}
+          }`}
         }
 
-        &:active{
-          ${(active && `background-color: ${active};`)}
-          ${(iconColor?.active && `
+        &:active {
+          ${active && `background-color: ${active};`}
+          ${iconColor?.active &&
+          `
           i > svg #icon__fill {
             fill: ${iconColor.active};
-          }`)}
+          }`}
         }
       }
-`
+    `;
 
     return (
       <Btn
@@ -123,7 +124,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
         </span>
       </Btn>
     );
-  },
+  }
 );
 
 export default Button;

@@ -275,4 +275,27 @@ $button_hover_transition: ease-out 0.1s;
       text-decoration: underline;
     }
   }
+  &.minimal2 {
+    background: transparent;
+    @if $bgc == $gray_1 {
+      color: $gray_6;
+    } @else if $bgc == $gray_7 {
+      color: $gray_6;
+    } @else {
+      color: $bgc;
+    }
+    &:hover {
+      @if $bgc == $blue_5 {
+        // buttonColor="blue"
+        color: $blue_6;
+      } @else if $bgc == $red_7 {
+        // buttonColor="red"
+        color: $red_9;
+      } @else if $bgc == $gray_7 {
+        color: $gray_8;
+      } @else {
+        color: $gray_8;
+      }
+    }
+  }
 }
