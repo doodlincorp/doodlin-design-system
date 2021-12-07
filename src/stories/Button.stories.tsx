@@ -45,9 +45,8 @@ export const ColorOption = () => (
         font: EColorMap.blue_5,
         default: EColorMap.blue_1,
         hover: EColorMap.blue_2,
-        active: EColorMap.blue_3
+        active: EColorMap.blue_3,
       }}
-
     />
     <Button
       size="md"
@@ -60,17 +59,18 @@ export const ColorOption = () => (
           default: EColorMap.blue_5,
           hover: EColorMap.blue_6,
           active: EColorMap.blue_7,
-        }
+        },
       }}
     />
   </div>
 );
 
-
 export const Spacer = () => (
   <div style={{ padding: 20 }}>
     <div className="article" style={{ marginBottom: 28 }}>
-      <h1 style={{ marginBottom: 12 }}>With spacer(default, margin-left: 8px)</h1>
+      <h1 style={{ marginBottom: 12 }}>
+        With spacer(default, margin-left: 8px)
+      </h1>
       <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
       <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
       <Button size="md" buttonColor="black" label={{ labelText: "black" }} />
@@ -80,15 +80,39 @@ export const Spacer = () => (
 
     <div className="article" style={{ marginBottom: 28 }}>
       <h1 style={{ marginBottom: 12 }}>Without spacer(no margin left)</h1>
-      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
-      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
-      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
-      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
-      <Button size="md" spacer={false} buttonColor="black" label={{ labelText: "black" }} />
+      <Button
+        size="md"
+        spacer={false}
+        buttonColor="black"
+        label={{ labelText: "black" }}
+      />
+      <Button
+        size="md"
+        spacer={false}
+        buttonColor="black"
+        label={{ labelText: "black" }}
+      />
+      <Button
+        size="md"
+        spacer={false}
+        buttonColor="black"
+        label={{ labelText: "black" }}
+      />
+      <Button
+        size="md"
+        spacer={false}
+        buttonColor="black"
+        label={{ labelText: "black" }}
+      />
+      <Button
+        size="md"
+        spacer={false}
+        buttonColor="black"
+        label={{ labelText: "black" }}
+      />
     </div>
   </div>
 );
-
 
 export const Rounded = () => (
   <div style={{ padding: 20 }}>
@@ -200,6 +224,33 @@ export const Variant = () => (
       <Button
         size="md"
         variant="minimal"
+        buttonColor="red"
+        label={{ labelText: "red" }}
+      />
+    </div>
+    <div className="article" style={{ marginBottom: 28 }}>
+      <h1 style={{ marginBottom: 12 }}>Minimal 2</h1>
+      <Button
+        size="md"
+        variant="minimal2"
+        buttonColor="gray"
+        label={{ labelText: "gray" }}
+      />
+      <Button
+        size="md"
+        variant="minimal2"
+        buttonColor="black"
+        label={{ labelText: "black" }}
+      />
+      <Button
+        size="md"
+        variant="minimal2"
+        buttonColor="blue"
+        label={{ labelText: "blue" }}
+      />
+      <Button
+        size="md"
+        variant="minimal2"
         buttonColor="red"
         label={{ labelText: "red" }}
       />

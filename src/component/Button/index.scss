@@ -28,7 +28,7 @@
     align-items: center;
     line-height: 1em;
   }
-  
+
   & + & {
     margin-left: 8px;
   }
@@ -384,6 +384,45 @@
     }
   }
 
+  &.minimal2 {
+    &.black:hover {
+      svg {
+        #icon__stroke {
+          stroke: $gray_8;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: $gray_8;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+    &.blue:hover {
+      svg {
+        #icon__stroke {
+          stroke: $blue_5;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: $blue_5;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+    &.red:hover {
+      svg {
+        #icon__stroke {
+          stroke: $red_7;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: $red_7;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+  }
+
   // Disabled
   &.disabled {
     background-color: $gray_2;
@@ -491,6 +530,34 @@
       &:hover {
         background-color: transparent;
         text-decoration: none;
+        svg {
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+          #icon__fill {
+            fill: $gray_8;
+          }
+        }
+      }
+    }
+    &.minimal2 {
+      color: $gray_5;
+      &.blue,
+      &.red,
+      &.black,
+      &.gray {
+        background-color: transparent;
+        svg {
+          #icon__stroke {
+            stroke: $gray_8;
+          }
+          #icon__fill {
+            fill: $gray_8;
+          }
+        }
+      }
+      &:hover {
+        background-color: transparent;
         svg {
           #icon__stroke {
             stroke: $gray_8;
@@ -622,6 +689,20 @@
     @include CustomSpin(18px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
   &.loading.xl.minimal::before {
+    @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+
+  &.loading.xs.minimal2::before {
+    @include CustomSpin(14px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.sm.minimal2::before,
+  &.loading.md.minimal2::before {
+    @include CustomSpin(16px, 2px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.lg.minimal2::before {
+    @include CustomSpin(18px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
+  }
+  &.loading.xl.minimal2::before {
     @include CustomSpin(24px, 3px, $Bc0: $gray_7, $Bc1: $gray_2);
   }
 
