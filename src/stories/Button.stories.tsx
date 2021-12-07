@@ -998,6 +998,44 @@ export const WithIcon = () => (
         />
       </div>
 
+      <div
+        className="buttons"
+        style={{ display: "flex", alignItems: "center", marginTop: 8 }}
+      >
+        <Button
+          variant="minimal2"
+          buttonColor="gray"
+          label={{
+            labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
+            labelText: "설정",
+          }}
+        />
+        <Button
+          variant="minimal2"
+          buttonColor="black"
+          label={{
+            labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
+            labelText: "설정",
+          }}
+        />
+        <Button
+          variant="minimal2"
+          buttonColor="blue"
+          label={{
+            labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
+            labelText: "설정",
+          }}
+        />
+        <Button
+          variant="minimal2"
+          buttonColor="red"
+          label={{
+            labelLeadingIcon: <Icon.Setting color={EColorMap.gray_7} />,
+            labelText: "설정",
+          }}
+        />
+      </div>
+
       <br />
 
       <div

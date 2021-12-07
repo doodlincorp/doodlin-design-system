@@ -278,9 +278,11 @@ $button_hover_transition: ease-out 0.1s;
   &.minimal2 {
     background: transparent;
     @if $bgc == $gray_1 {
+      // buttonColor="gray"
       color: $gray_6;
     } @else if $bgc == $gray_7 {
-      color: $gray_6;
+      // buttonColor="black"
+      color: $gray_8;
     } @else {
       color: $bgc;
     }
@@ -292,6 +294,9 @@ $button_hover_transition: ease-out 0.1s;
         // buttonColor="red"
         color: $red_9;
       } @else if $bgc == $gray_7 {
+        color: $gray_8;
+      } @else if $bgc == $gray_1 {
+        // buttonColor="gray"
         color: $gray_8;
       } @else {
         color: $gray_8;

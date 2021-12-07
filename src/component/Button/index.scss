@@ -218,6 +218,11 @@
     height: max-content;
   }
 
+  &.minimal2 {
+    padding: 4px;
+    height: max-content;
+  }
+
   // Variant
   &.solid {
     @include button-color();
@@ -326,6 +331,20 @@
         background-color: $gray_4;
       }
     }
+    &.minimal2 {
+      &:hover {
+        svg {
+          #icon__stroke {
+            stroke: $gray_8;
+            transition: 0.1s ease-out;
+          }
+          #icon__fill {
+            fill: $gray_8;
+            transition: 0.1s ease-out;
+          }
+        }
+      }
+    }
   }
   &.black,
   &.blue,
@@ -400,11 +419,11 @@
     &.blue:hover {
       svg {
         #icon__stroke {
-          stroke: $blue_5;
+          stroke: $blue_6;
           transition: 0.1s ease-out;
         }
         #icon__fill {
-          fill: $blue_5;
+          fill: $blue_6;
           transition: 0.1s ease-out;
         }
       }
@@ -412,11 +431,11 @@
     &.red:hover {
       svg {
         #icon__stroke {
-          stroke: $red_7;
+          stroke: $red_9;
           transition: 0.1s ease-out;
         }
         #icon__fill {
-          fill: $red_7;
+          fill: $red_9;
           transition: 0.1s ease-out;
         }
       }
@@ -549,10 +568,10 @@
         background-color: transparent;
         svg {
           #icon__stroke {
-            stroke: $gray_8;
+            stroke: $gray_6;
           }
           #icon__fill {
-            fill: $gray_8;
+            fill: $gray_6;
           }
         }
       }
