@@ -219,8 +219,8 @@
   }
 
   &.minimal2 {
-    padding: 4px;
-    height: max-content;
+    padding: 0;
+    height: 28px;
   }
 
   // Variant
@@ -332,6 +332,16 @@
       }
     }
     &.minimal2 {
+      svg {
+        #icon__stroke {
+          stroke: $gray_6;
+          transition: 0.1s ease-out;
+        }
+        #icon__fill {
+          fill: $gray_6;
+          transition: 0.1s ease-out;
+        }
+      }
       &:hover {
         svg {
           #icon__stroke {
