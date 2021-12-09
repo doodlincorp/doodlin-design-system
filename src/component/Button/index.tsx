@@ -21,7 +21,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "ghost" | "solid" | "quiet" | "minimal";
   buttonColor?: "black" | "gray" | "blue" | "red";
   colorOption?: IColorOption;
-  spacer: boolean;
+  spacer?: boolean;
   fullWidth?: boolean;
   loading?: boolean;
   rounded?: boolean;
