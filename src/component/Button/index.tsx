@@ -1,25 +1,27 @@
 import React, { ButtonHTMLAttributes, useRef } from "react";
 import cn from "classnames";
 import "./index.scss";
-import styled from "styled-components";
 import { EColorMap, TButtonSize } from "../..";
+import styled from "@emotion/styled";
+
+export interface IColorOption {
+  font?: EColorMap,
+  default?: EColorMap,
+  hover?: EColorMap,
+  active?: EColorMap,
+  icon?: {
+    default?: EColorMap,
+    hover?: EColorMap,
+    active?: EColorMap,
+  }
+}
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: TButtonSize;
-  variant?: "ghost" | "solid" | "quiet" | "minimal" | "minimal2";
+  variant?: "ghost" | "solid" | "quiet" | "minimal";
   buttonColor?: "black" | "gray" | "blue" | "red";
-  colorOption?: {
-    font?: EColorMap;
-    default?: EColorMap;
-    hover?: EColorMap;
-    active?: EColorMap;
-    icon?: {
-      default?: EColorMap;
-      hover?: EColorMap;
-      active?: EColorMap;
-    };
-  };
-  spacer?: boolean;
+  colorOption?: IColorOption;
+  spacer: boolean;
   fullWidth?: boolean;
   loading?: boolean;
   rounded?: boolean;
@@ -29,6 +31,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     labelText?: string;
   };
 }
+
 
 const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
   (props, ref) => {
@@ -48,43 +51,34 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       ...restProps
     } = props;
 
-    var bgc = colorOption?.default;
-    var hover = colorOption?.hover;
-    var active = colorOption?.active;
-    var font = colorOption?.font;
-    var iconColor = colorOption?.icon;
-
     const Btn = styled.button`
-      &._BUTTON_.${variant} {
-        ${!spacer && "margin-left: 0px;"}
-        ${bgc && `background-color: ${bgc};`}
-        ${font && `color: ${font};`}
-
-        ${iconColor?.default &&
-        `
+    &._BUTTON_.${variant}{
+      ${(!(spacer) && "margin-left: 0px;")}
+      ${((colorOption?.default) && `background-color: ${colorOption?.default}; `)}
+      ${(colorOption?.font && `color: ${colorOption?.font};`)}
+    
+      ${(colorOption?.icon?.default && `
+      i > svg #icon__fill {
+        fill: ${colorOption?.icon?.default};
+      }`)}
+    
+      &:hover{
+        ${(colorOption?.hover && `background-color: ${colorOption?.hover};`)}
+        ${(colorOption?.icon?.hover && `
         i > svg #icon__fill {
-          fill: ${iconColor.default};
-        }`}
-
-        &:hover {
-          ${hover && `background-color: ${hover};`}
-          ${iconColor?.hover &&
-          `
-          i > svg #icon__fill {
-            fill: ${iconColor.hover};
-          }`}
-        }
-
-        &:active {
-          ${active && `background-color: ${active};`}
-          ${iconColor?.active &&
-          `
-          i > svg #icon__fill {
-            fill: ${iconColor.active};
-          }`}
-        }
+          fill: ${colorOption?.icon?.hover};
+        }`)}
       }
-    `;
+    
+      &:active{
+        ${(colorOption?.active && `background-color: ${colorOption?.active};`)}
+        ${(colorOption?.icon?.active && `
+        i > svg #icon__fill {
+          fill: ${colorOption?.icon?.active};
+        }`)}
+      }
+    }
+    `
 
     return (
       <Btn
