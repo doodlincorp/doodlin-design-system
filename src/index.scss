@@ -242,7 +242,7 @@ $button_hover_transition: ease-out 0.1s;
     &:hover {
       @if $bgc == $gray_1 {
         // buttonColor="gray"
-        background: $gray_1;
+        background: rgba(117, 117, 139, 0.13);
       } @else {
         background: $bgc;
         color: #fff;
@@ -258,7 +258,7 @@ $button_hover_transition: ease-out 0.1s;
       } @else if $bgc == $gray_7 {
         background: $gray_8;
       } @else {
-        background-color: $gray_3;
+        background: rgba(117, 117, 139, 0.26);
       }
     }
   }
