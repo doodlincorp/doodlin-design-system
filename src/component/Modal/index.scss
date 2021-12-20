@@ -1,97 +1,83 @@
 @import "../../index.scss";
 
 ._MODAL_ {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1300;
-  background-color: rgba(#000, 0.4);
-  //user-select: none;
-  //cursor: default;
-  .modal-content-box {
-    position: relative;
-    min-width: 320px;
-    height: max-content;
-    border-radius: 10px;
-    border: 1px solid $gray_6;
-    background: #fff;
-    box-sizing: border-box;
-    box-shadow: $shadow-6;
-    .close-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      background: none;
-      outline: none;
-      border: none;
-      border-radius: 6px;
-
-      width: 28px;
-      height: 28px;
-
-      top: 6px;
-      right: 8px;
-      cursor: pointer;
-      transition: $button_hover_transition;
-      &.alt {
-        top: 12px;
-        right: 12px;
-      }
-      &:hover {
-        background-color: $gray_1;
-      }
-    }
-  }
-  .modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: $font-size-small;
-    font-weight: $font-weight-medium;
-    padding: 12px 20px;
-    border-bottom: 1px solid $gray_3;
-    &.alt {
-      justify-content: flex-start;
-    }
-  }
-  .modal-content {
-    padding: 40px 32px 12px;
-    // 42px: modal-header height
-    // 68px: footer height
-    // 40px: modal top, bottom margin
-    max-height: calc(100vh - 42px - 68px - 40px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    &.alt {
-      padding: 40px;
-    }
-  }
-  .footer {
-    display: flex;
-    background-color: #fff;
-    border-radius: 0 0 10px 10px;
-    padding: 12px 20px 20px;
-    button ~ button {
-      margin-left: 8px;
-    }
-    &.start {
-      justify-content: flex-start;
-    }
-    &.center {
-      justify-content: center;
-    }
-    &.end {
-      justify-content: flex-end;
-    }
-    &.space-between {
-      justify-content: space-between;
-    }
-  }
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1300;
+	background-color: rgba(#000, 0.4);
+	//user-select: none;
+	//cursor: default;
+	.modal-content-box {
+		position: relative;
+		min-width: 320px;
+		height: max-content;
+		border-radius: 10px;
+		border: 1px solid $gray_6;
+		background: #fff;
+		box-sizing: border-box;
+		box-shadow: $shadow-6;
+		.close-btn {
+			position: absolute;
+			top: 6px;
+			right: 8px;
+			cursor: pointer;
+			transition: $button_hover_transition;
+			&.alt {
+				top: 12px;
+				right: 12px;
+			}
+		}
+	}
+	.modal-header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: $font-size-small;
+		font-weight: $font-weight-medium;
+		padding: 12px 20px;
+		border-bottom: 1px solid $gray_3;
+		&.alt {
+			justify-content: flex-start;
+		}
+	}
+	.modal-content {
+		padding: 40px 32px 12px;
+		// 42px: modal-header height
+		// 68px: footer height
+		// 40px: modal top, bottom margin
+		max-height: calc(100vh - 42px - 68px - 40px);
+		overflow-y: auto;
+		overflow-x: hidden;
+		box-sizing: border-box;
+		&.alt {
+			padding: 40px;
+		}
+	}
+	.footer {
+		display: flex;
+		background-color: #fff;
+		border-radius: 0 0 10px 10px;
+		padding: 12px 20px 20px;
+		button ~ button {
+			margin-left: 8px;
+		}
+		&.start {
+			justify-content: flex-start;
+		}
+		&.center {
+			justify-content: center;
+		}
+		&.end {
+			justify-content: flex-end;
+		}
+		&.space-between {
+			justify-content: space-between;
+		}
+	}
 }
