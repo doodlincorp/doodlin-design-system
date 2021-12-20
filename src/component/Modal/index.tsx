@@ -43,11 +43,9 @@ const Modal: React.FC<IModalProps> = ({
             label={{
               labelLeadingIcon: <CloseIcon size={20} />
             }}
-            variant="minimal"
+            variant="quiet"
             size="xs"
-            colorOption={{
-              hover: EColorMap.gray_1
-            }}
+            buttonColor="gray"
             onClick={closeBtn}
           ></Button>
         )}
