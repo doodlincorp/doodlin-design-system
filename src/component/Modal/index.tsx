@@ -2,6 +2,8 @@ import React from "react";
 import cn from "classnames";
 import "./index.scss";
 import { CloseIcon } from "../Icon/CloseIcon";
+import Button from "../Button";
+import { EColorMap } from "../..";
 
 export interface IModalProps {
   className?: string;
@@ -36,12 +38,18 @@ const Modal: React.FC<IModalProps> = ({
         style={{ width: width }}
       >
         {closeBtn && (
-          <div
+          <Button
             className={cn("close-btn", { alt: variant === "alt" })}
+            label={{
+              labelLeadingIcon: <CloseIcon size={20} />
+            }}
+            variant="minimal"
+            size="xs"
+            colorOption={{
+              hover: EColorMap.gray_1
+            }}
             onClick={closeBtn}
-          >
-            <CloseIcon size={20} />
-          </div>
+          ></Button>
         )}
 
         {header ? (
