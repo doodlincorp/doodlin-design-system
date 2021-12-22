@@ -10,7 +10,7 @@ import { ClipIcon } from "./ClipIcon";
 import { ClockIcon } from "./ClockIcon";
 import { CloseIcon } from "./CloseIcon";
 import { CopyIcon } from "./CopyIcon";
-import { DefaultImageIcon } from "./DefaultImageIcon";
+import { ImageIcon } from "./ImageIcon";
 import { SliderIcon } from "./SliderIcon";
 import { DocIcon } from "./DocIcon";
 import { DownloadIcon } from "./DownloadIcon";
@@ -66,6 +66,23 @@ import { MegaphoneIcon } from "./MegaphoneIcon";
 import { ShapeIcon } from "./ShapeIcon";
 import { BookIcon } from "./BookIcon";
 import { TemplateIcon } from "./TemplateIcon";
+import { BellIcon } from "./BellIcon";
+import { DeviceIcon } from "./DeviceIcon";
+import { TextAlignIcon } from "./TextAlignIcon";
+import { ShareIcon } from "./ShareIcon";
+import { ShieldIcon } from "./ShieldIcon";
+import { HeaderIcon } from "./HeaderIcon";
+import { TextIcon } from "./TextIcon";
+import { BoldIcon } from "./BoldIcon";
+import { ItalicIcon } from "./ItalicIcon";
+import { UnderlineIcon } from "./UnderlineIcon";
+import { FontColorIcon } from "./FontColorIcon";
+import { BannerIcon } from "./BannerIcon";
+import { CardIcon } from "./CardIcon";
+import { MenuIcon } from "./MenuIcon";
+import { CarouselIcon } from "./CarouselIcon";
+import { DividerIcon } from "./DividerIcon";
+import { EarthIcon } from "./EarthIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -130,9 +147,14 @@ const Icon = {
   ApplicantList: ApplicantListIcon,
   Archive: ArchiveIcon,
   Arrow: ArrowIcon,
+  Banner: BannerIcon,
+  Bell: BellIcon,
+  Bold: BoldIcon,
   Book: BookIcon,
   Calendar: CalendarIcon,
   Camera: CameraIcon,
+  Card: CardIcon,
+  Carousel: CarouselIcon,
   Chart: ChartIcon,
   Check: CheckIcon,
   ClickMode: ClickModeIcon,
@@ -142,13 +164,15 @@ const Icon = {
   Coin: CoinIcon,
   Copy: CopyIcon,
   CreditCard: CreditCardIcon,
-  DefaultImage: DefaultImageIcon,
+  Device: DeviceIcon,
+  Divider: DividerIcon,
   Doc: DocIcon,
   Dock: DockIcon,
   Dot: DotIcon,
   FileDrive: FileDriveIcon,
   QuestionMark: QuestionMarkIcon,
   Download: DownloadIcon,
+  Earth: EarthIcon,
   Edit: EditIcon,
   Ellipsis: EllipsisIcon,
   Emoji: EmojiIcon,
@@ -159,17 +183,22 @@ const Icon = {
   Filter: FilterIcon,
   Flag: FlagIcon,
   Folder: FolderIcon,
+  FontColor: FontColorIcon,
   Fullscreen: FullscreenIcon,
   Garbage: GarbageIcon,
   Grid: GridIcon,
+  Header: HeaderIcon,
   Headset: HeadsetIcon,
+  Image: ImageIcon,
   InfoMark: InfoMarkIcon,
+  Italic: ItalicIcon,
   Lock: LockIcon,
   Logout: LogoutIcon,
   Mail: MailIcon,
   MapPin: MapPinIcon,
   Megaphone: MegaphoneIcon,
   Memo: MemoIcon,
+  Menu: MenuIcon,
   Phone: PhoneIcon,
   Plus: PlusIcon,
   Refresh: RefreshIcon,
@@ -180,11 +209,16 @@ const Icon = {
   Send: SendIcon,
   Setting: SettingIcon,
   Shape: ShapeIcon,
+  Share: ShareIcon,
+  Shield: ShieldIcon,
   SideBar: SideBarIcon,
   SixDot: SixDotIcon,
   Slider: SliderIcon,
   Template: TemplateIcon,
+  TextAlign: TextAlignIcon,
+  Text: TextIcon,
   Thumb: ThumbIcon,
+  Underline: UnderlineIcon,
   Tag: TagIcon,
   User: UserIcon,
   UpDownArrow: UpDownArrowIcon,

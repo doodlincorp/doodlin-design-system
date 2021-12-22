@@ -9,7 +9,7 @@ export interface IDotIconProps {
   size?: number;
   rotate?: number;
   flip?: boolean;
-  variant?: "active" | "inactive";
+  variant?: "active" | "active-internal" | "inactive";
 }
 
 export const DotIcon: React.FC<IDotIconProps> = ({
@@ -30,7 +30,7 @@ export const DotIcon: React.FC<IDotIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "active" ? (
+      {variant === "active" && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle
             cx="12"
@@ -39,7 +39,21 @@ export const DotIcon: React.FC<IDotIconProps> = ({
             fill={color || EColorMap.active_green}
           />
         </svg>
-      ) : (
+      )}
+
+      {variant === "active-internal" && (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z"
+            fill={color || EColorMap.active_green}
+          />
+        </svg>
+      )}
+
+      {variant === "inactive" && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle
             cx="12"
