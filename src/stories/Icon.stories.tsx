@@ -42,9 +42,14 @@ export const Default = () => {
       <Text size="xx-small">{name}</Text>
       <Divider />
       <Text size="xx-small" textColor={EColorMap.gray_6}>
-        variant:{" "}
+        variant:
       </Text>
-      <Text size="xx-small" weight="medium" textColor={EColorMap.blue_6}>
+      <Text
+        size="xx-small"
+        weight="medium"
+        lineHeight="narrow"
+        textColor={EColorMap.blue_6}
+      >
         {variantName ? (
           variantName
         ) : (
@@ -56,33 +61,26 @@ export const Default = () => {
 
   const execFunc = (func, props) => {
     return func(props);
-  }
+  };
 
   const IconList = {
-    "AddColumn": [
-      ""
-    ],
-    "Align": [
-      "kanban",
-      "list"
-    ],
-    "ApplicantList": [
-      ""
-    ],
-    "Archive": [
-      ""
-    ],
-    "Arrow": [
-      "arrow",
-      "chevron",
-      "chevron-alt",
-      "solid"
-    ],
-    "Book": [
+    AddColumn: [""],
+    Align: ["kanban", "list"],
+    ApplicantList: [""],
+    Archive: [""],
+    Arrow: ["arrow", "chevron", "chevron-alt", "solid"],
+    Banner: [""],
+    Bell: [""],
+    Bold: [""],
+    Book: [
       "solid",
-      "border"
+      "border",
+      "solid-add",
+      "border-add",
+      "solid-added",
+      "border-added",
     ],
-    "Calendar": [
+    Calendar: [
       "default",
       "check",
       "request",
@@ -90,234 +88,88 @@ export const Default = () => {
       "scheduled",
       "finish",
       "x",
-      "edit"
+      "edit",
     ],
-    "Camera": [
-      "solid",
-      "border"
-    ],
-    "Chart": [
-      "pie",
-      "doughnut",
-      "bar",
-    ],
-    "Check": [
-      "single",
-      "double",
-      "alt",
-      "circle"
-    ],
-    "ClickMode": [
-      ""
-    ],
-    "Clip": [
-      ""
-    ],
-    "Clock": [
-      "solid",
-      "border",
-      "history",
-    ],
-    "Close": [
-
-      "default",
-      "circle"
-    ],
-    "Coin": [
-      "default",
-      "disabled"
-    ],
-    "Copy": [
-      "default",
-      "alt"
-    ],
-    "CreditCard": [
-      ""
-    ],
-    "DefaultImage": [
-      ""
-    ],
-    "Doc": [
-      "solid",
-      "border",
-      "blank",
-      "plus"
-    ],
-    "Dock": [
-      ""
-    ],
-    "Dot": [
-      "active",
-      "inactive"
-    ],
-    "Download": [
-      "default",
-      "upload"
-    ],
-    "Edit": [
-      "default",
-      "box"
-    ],
-    "Ellipsis": [
-      ""
-    ],
-    "Excel": [
-      ""
-    ],
-    "Extend": [
-      "default",
-      "alt",
-      "shrink"
-    ],
-    "Extension": [
-      "solid",
-      "border"
-    ],
-    "Emoji": [
-      "solid",
-      "border",
-      "add"
-    ],
-    "Error": [
-      "triangle",
-      "circle"
-    ],
-    "FlieDrive": [
-      ""
-    ],
-    "Filter": [
-      "default",
-      "chevron"
-    ],
-    "Flag": [
-      "default",
-      "alt"
-    ],
-    "Folder": [
-      ""
-    ],
-    "Fullscreen": [
-      "default",
-      "exit"
-    ],
-    "Garbage": [
-      "solid",
-      "border"
-    ],
-    "Grid": [
-      "card",
-      "row"
-    ],
-    "Headset": [
-      ""
-    ],
-    "InfoMark": [
-      "border",
-      "solid"
-    ],
-    "LinkExternal": [
-      ""
-    ],
-    "Link": [
-      ""
-    ],
-    "Lock": [
-      "solid-lock",
-      "solid-unlock",
-      "border-lock",
-      "border-unlock"
-    ],
-    "Logout": [
-      ""
-    ],
-    "Mail": [
+    Camera: ["solid", "border"],
+    Card: [""],
+    Carousel: [""],
+    Chart: ["pie", "doughnut", "bar"],
+    Check: ["single", "double", "alt", "circle"],
+    ClickMode: [""],
+    Clip: [""],
+    Clock: ["solid", "border", "history"],
+    Close: ["default", "circle"],
+    Coin: ["default", "disabled"],
+    Copy: ["default", "alt"],
+    CreditCard: [""],
+    Device: ["pc", "mobile"],
+    Divider: [""],
+    Doc: ["solid", "border", "blank", "plus"],
+    Dock: [""],
+    Dot: ["active", "active-internal", "inactive"],
+    Download: ["default", "upload"],
+    Earth: [""],
+    Edit: ["default", "box"],
+    Ellipsis: [""],
+    Excel: [""],
+    Extend: ["default", "alt", "shrink"],
+    Extension: ["solid", "border"],
+    Emoji: ["solid", "border", "add"],
+    Error: ["triangle", "circle"],
+    FlieDrive: [""],
+    Filter: ["default", "chevron"],
+    Flag: ["default", "alt"],
+    Folder: ["solid", "solid-add", "border", "border-add"],
+    FontColor: [""],
+    Fullscreen: ["default", "exit"],
+    Garbage: ["solid", "border"],
+    Grid: ["card", "row"],
+    Header: [""],
+    Headset: [""],
+    Image: ["default", "add"],
+    InfoMark: ["border", "solid"],
+    Italic: [""],
+    LinkExternal: [""],
+    Link: [""],
+    Lock: ["solid-lock", "solid-unlock", "border-lock", "border-unlock"],
+    Logout: [""],
+    Mail: [
       "solid",
       "border",
       "outgoing",
       "incoming",
       "open",
       "reservation",
-      "cancel"
+      "cancel",
     ],
-    "MapPin": [
-      "solid",
-      "border"
-    ],
-    "Megaphone": [
-      ""
-    ],
-    "Memo": [
-      "default",
-      "tail",
-      "note"
-    ],
-    "Phone": [
-      ""
-    ],
-    "Plus": [
-      "default",
-      "circle"
-    ],
-    "QuestionMark": [
-      "default",
-      "solid",
-      "border"
-    ],
-    "Refresh": [
-      ""
-    ],
-    "Reject": [
-      ""
-    ],
-    "Reply": [
-      "solid",
-      "border"
-    ],
-    "Return": [
-      ""
-    ],
-    "Search": [
-      ""
-    ],
-    "Send": [
-      ""
-    ],
-    "Setting": [
-      ""
-    ],
-    "ShapeIcon": [
-      "circle",
-      "triangle",
-      "x"
-    ],
-    "SideBar": [
-      ""
-    ],
-    "SixDot": [
-      ""
-    ],
-    "Slider": [
-      "default",
-      "alt"
-    ],
-    "Tag": [
-      "solid",
-      "border"
-    ],
-    "Template": [
-      ""
-    ],
-    "Thumb": [
-      "sobad",
-      "bad",
-      "soso",
-      "good",
-      "sogood"
-    ],
-    "UpDownArrow": [
-      ""
-    ],
-    "User": [
+    MapPin: ["solid", "border"],
+    Megaphone: [""],
+    Memo: ["default", "tail", "note"],
+    Menu: [""],
+    Phone: [""],
+    Plus: ["default", "circle"],
+    QuestionMark: ["default", "solid", "border"],
+    Refresh: [""],
+    Reject: [""],
+    Reply: ["solid", "border"],
+    Return: [""],
+    Search: [""],
+    Send: [""],
+    Setting: [""],
+    Shape: ["circle", "triangle", "x"],
+    Share: ["linkedin", "facebook", "kakaotalk"],
+    Shield: ["check", "question", "virus"],
+    SideBar: [""],
+    SixDot: [""],
+    Slider: ["default", "alt"],
+    Tag: ["solid", "border"],
+    Template: [""],
+    TextAlign: ["left", "center", "right", "justify"],
+    Text: [""],
+    Thumb: ["sobad", "bad", "soso", "good", "sogood"],
+    Underline: [""],
+    UpDownArrow: [""],
+    User: [
       "general",
       "manager",
       "owner",
@@ -325,52 +177,42 @@ export const Default = () => {
       "setMember",
       "evaluable",
       "rejected",
-      "all"
+      "all",
     ],
-    "Vision": [
-      "vision",
-      "invision"
-    ],
-    "Window": [
-      "maximize",
-      "minimize"
-    ],
-    "ZipDownload": [
-      ""
-    ]
-  }
+    Vision: ["vision", "invision"],
+    Window: ["maximize", "minimize"],
+    ZipDownload: [""],
+  };
 
   const [icons, setIcons] = useState<typeof IconBlock[]>();
 
   useEffect(() => {
     var a = [];
-    Object.entries(StoriesIcon).sort().forEach((e) => {
+    Object.entries(StoriesIcon)
+      .sort()
+      .forEach((e) => {
+        var name = e[0];
+        var icon = e[1];
 
-      var name = e[0];
-      var icon = e[1];
+        var iconList: [] = IconList[name];
 
-      var iconList: [] = IconList[name];
+        console.log(iconList);
 
-      console.log(iconList);
-
-      if (iconList === undefined) {
-
-      } else {
-        iconList.forEach((variant) => {
-          a.push(
-            <IconBlock name={name} variantName={variant}>
-              {execFunc(icon, { size: 40, variant: variant })}
-            </IconBlock>
-          )
-        })
-      }
-    })
+        if (iconList === undefined) {
+        } else {
+          iconList.forEach((variant) => {
+            a.push(
+              <IconBlock name={name} variantName={variant}>
+                {execFunc(icon, { size: 40, variant: variant })}
+              </IconBlock>,
+            );
+          });
+        }
+      });
 
     setIcons(a);
-    return () => {
-
-    }
-  }, [])
+    return () => {};
+  }, []);
 
   return (
     <div style={{ padding: 20 }}>
@@ -383,9 +225,6 @@ export const Default = () => {
         }}
       >
         {icons}
-
-
-
       </div>
     </div>
   );
