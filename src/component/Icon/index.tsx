@@ -81,7 +81,7 @@ import { BannerIcon } from "./BannerIcon";
 import { CardIcon } from "./CardIcon";
 import { MenuIcon } from "./MenuIcon";
 import { CarouselIcon } from "./CarouselIcon";
-import { DividerIcon } from "./DividerIcon";
+import { MinusIcon } from "./MinusIcon";
 import { EarthIcon } from "./EarthIcon";
 
 export interface IColorMap {
@@ -165,7 +165,7 @@ const Icon = {
   Copy: CopyIcon,
   CreditCard: CreditCardIcon,
   Device: DeviceIcon,
-  Divider: DividerIcon,
+  Minus: MinusIcon,
   Doc: DocIcon,
   Dock: DockIcon,
   Dot: DotIcon,
