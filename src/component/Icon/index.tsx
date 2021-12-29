@@ -83,6 +83,7 @@ import { MenuIcon } from "./MenuIcon";
 import { CarouselIcon } from "./CarouselIcon";
 import { MinusIcon } from "./MinusIcon";
 import { EarthIcon } from "./EarthIcon";
+import { YoutubeIcon } from "./YoutubeIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -223,6 +224,7 @@ const Icon = {
   User: UserIcon,
   UpDownArrow: UpDownArrowIcon,
   Vision: VisionIcon,
+  Youtube: YoutubeIcon,
   ZipDownload: ZipDownloadIcon,
   Link: LinkIcon,
   LinkExternal: LinkExternalIcon,
