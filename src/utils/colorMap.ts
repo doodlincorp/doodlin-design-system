@@ -54,6 +54,10 @@ export enum EColorMap {
   referral_blue_1 = "#E8EFF7",
   referral_blue_7 = "#1864AB",
 
+  // Editor Color
+  gray_career_main = "#212529",
+  gray_career_sub = "#6F777F",
+
   // Transparent
   transparent = "transparent",
 }
