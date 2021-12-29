@@ -181,6 +181,7 @@ export const Default = () => {
     ],
     Vision: ["vision", "invision"],
     Window: ["maximize", "minimize"],
+    Youtube: [""],
     ZipDownload: [""],
   };
 
