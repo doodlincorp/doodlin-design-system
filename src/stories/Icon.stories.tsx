@@ -71,6 +71,7 @@ export const Default = () => {
     Arrow: ["arrow", "chevron", "chevron-alt", "solid"],
     Banner: [""],
     Bell: [""],
+    Blank: [""],
     Bold: [""],
     Book: [
       "solid",
