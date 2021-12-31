@@ -84,6 +84,7 @@ import { CarouselIcon } from "./CarouselIcon";
 import { MinusIcon } from "./MinusIcon";
 import { EarthIcon } from "./EarthIcon";
 import { YoutubeIcon } from "./YoutubeIcon";
+import { BlankIcon } from "./BlankIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -150,6 +151,7 @@ const Icon = {
   Arrow: ArrowIcon,
   Banner: BannerIcon,
   Bell: BellIcon,
+  Blank: BlankIcon,
   Bold: BoldIcon,
   Book: BookIcon,
   Calendar: CalendarIcon,
