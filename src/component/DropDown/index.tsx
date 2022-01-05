@@ -21,6 +21,7 @@ export interface IDropDownProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
   width?: number;
   usingPortalNode?: boolean;
+  zIndex?: number;
 }
 
 export interface IDropDownRef {
@@ -37,6 +38,7 @@ const DropDown = React.forwardRef<IDropDownRef, IDropDownProps>(
       open,
       width,
       usingPortalNode,
+      zIndex,
       ...props
     },
     externalRef
@@ -130,6 +132,7 @@ const DropDown = React.forwardRef<IDropDownRef, IDropDownProps>(
                   top: offset.top,
                   left: offset.left,
                   visibility,
+                  zIndex: zIndex ?? 600,
                 }}
               >
                 {children}
