@@ -41,6 +41,15 @@ export const FontColorIcon: React.FC<IFontColorIconProps> = ({
           height="3"
           fill={color || EColorMap.gray_8}
         />
+        <rect
+          x="5.25"
+          y="18.25"
+          width="13.5"
+          height="2.5"
+          stroke="black"
+          stroke-opacity="0.2"
+          stroke-width="0.5"
+        />
       </svg>
     </i>
   );
