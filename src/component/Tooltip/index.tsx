@@ -8,7 +8,7 @@ import { usePortalNode } from "../../hooks/usePortalNode";
 import classNames from "classnames";
 import { getOffset } from "../../utils/offset";
 
-type IPlacement =
+type Placement =
   | "_top-left"
   | "_top"
   | "_top-right"
@@ -18,12 +18,11 @@ type IPlacement =
   | "_bottom"
   | "_bottom-right";
 
-export interface ITooltipProps {
+export interface TooltipProps {
   className?: string;
   variant?: "_box" | "_info" | "_question";
   tooltipText: string;
-  placement?: IPlacement;
-  usingPortalNode?: boolean;
+  placement?: Placement;
 }
 
 const TooltipBox = ({
@@ -38,7 +37,7 @@ const TooltipBox = ({
   tooltipText: string;
   isolated: boolean;
   hovered: boolean;
-  placement?: IPlacement;
+  placement?: Placement;
   targetRef?: React.RefObject<HTMLElement>;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -126,15 +125,14 @@ const TooltipBox = ({
   );
 };
 
-const Tooltip: React.FC<ITooltipProps> = ({
+const Tooltip: React.FC<TooltipProps> = ({
   className,
   children,
   variant = "_box",
   tooltipText,
   placement = "_bottom",
-  usingPortalNode,
 }) => {
-  const portalNode = usePortalNode(usingPortalNode);
+  const portalNode = usePortalNode("tooltip-portal");
   const [portal, setPortal] = useState<React.ReactPortal | null>(null);
   const [hovered, setHovered] = useState(false); // portal node에만 영향
   const ref = React.useRef<HTMLDivElement>(null);
@@ -171,7 +169,7 @@ const Tooltip: React.FC<ITooltipProps> = ({
       <div className="_target">
         {children}
         {tooltipText.length > 0 &&
-          (usingPortalNode && portal ? (
+          (portal ? (
             portal
           ) : (
             <TooltipBox
