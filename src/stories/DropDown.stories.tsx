@@ -25,7 +25,10 @@ export const Default = () => {
         }}
       >
         <DropDown btn={<Button>option</Button>} placement="maxLeft">
-          <DropItem text="hello 소환" />
+          <DropItem
+            text="hello 소환 (로그 찍힘)"
+            onClick={() => console.log("Hello!")}
+          />
           <DropItem text="아이콘과 함께" icon={<EditIcon />} />
           <DropItem text="로딩중" loading />
           <Divider />
@@ -53,7 +56,6 @@ export const Default = () => {
               open controlled component
             </Button>
           }
-          open={open}
         >
           <DropItem text="닫기" onClick={() => setOpen(false)} />
         </DropDown>
@@ -100,7 +102,6 @@ export const Default = () => {
             placement="maxRight"
             style={{ position: "absolute", right: 0 }}
             btn={<Button>나를 눌러!</Button>}
-            usingPortalNode={true}
           >
             <DropItem text="hello 소환" />
             <DropItem className="delete" text="삭제" icon={"👩"} />

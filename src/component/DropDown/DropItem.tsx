@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 import Button from "../Button";
 
-export interface IDropItemProps extends HTMLAttributes<HTMLDivElement> {
+interface DropItemProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   text: string;
   icon?: JSX.Element | string;
@@ -12,7 +12,7 @@ export interface IDropItemProps extends HTMLAttributes<HTMLDivElement> {
   size?: string;
 }
 
-const DropItem: React.FC<IDropItemProps> = ({
+const DropItem: React.FC<DropItemProps> = ({
   className,
   text,
   icon,

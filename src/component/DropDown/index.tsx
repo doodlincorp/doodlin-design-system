@@ -11,79 +11,72 @@ import { createPortal } from "react-dom";
 import { getOffset } from "../../utils/offset";
 import { debounce } from "../../utils/debounce";
 import { usePortalNode } from "../../hooks/usePortalNode";
-import { useToggle } from "doodlin-hooks";
-import { useImperativeHandle } from "react";
+import { useOutsideClick } from "doodlin-hooks";
 
-export interface IDropDownProps extends HTMLAttributes<HTMLDivElement> {
+interface DropDownProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   placement?: "left" | "right" | "maxLeft" | "maxRight";
   btn: JSX.Element;
-  open?: boolean;
   width?: number;
-  usingPortalNode?: boolean;
   zIndex?: number;
 }
 
-export interface IDropDownRef {
-  forceClose: () => void;
-}
-
-const DropDown = React.forwardRef<IDropDownRef, IDropDownProps>(
+const DropDown = React.forwardRef<HTMLDivElement, DropDownProps>(
   (
     {
-      className,
       children,
+      className,
       btn,
       placement = "left",
-      open,
       width,
-      usingPortalNode,
       zIndex = 10000000,
       ...props
     },
-    externalRef
+    ref
   ) => {
-    const ref = useRef<HTMLDivElement>(null);
-    const buttonRef = useRef<HTMLButtonElement>(null);
-    const dropdownItemsRef = useRef<HTMLDivElement>(null);
-    const [optionOpen, setOptionOpen] = useToggle(ref, dropdownItemsRef);
+    const dropdownWrapperRef = useRef<HTMLDivElement>(null);
+    const dropdownToggleButtonRef = useRef<HTMLButtonElement>(null);
+    const dropdownItemsWrapperRef = useRef<HTMLDivElement>(null);
+    const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
     const [offset, setOffset] = useState({ top: 0, left: 0 });
     const [visibility, setVisibility] = useState<"visible" | "hidden">(
       "hidden"
     );
-    const portalNode = usePortalNode(usingPortalNode);
+    const portalNode = usePortalNode("dropdown-portal");
 
-    useImperativeHandle(externalRef, () => {
-      return {
-        forceClose: () => {
-          setOptionOpen(false);
-        },
-      };
-    });
+    useOutsideClick(() => {
+      setIsDropdownOpen(false);
+    }, dropdownItemsWrapperRef);
 
     useEffect(() => {
       setVisibility("hidden");
       const update = () => {
-        if (open || optionOpen) {
-          const offset_ = getOffset(ref.current as HTMLElement);
+        if (isDropdownOpen) {
+          const currentOffset = getOffset(
+            dropdownWrapperRef.current as HTMLElement
+          );
           switch (placement) {
             case "left":
-              offset_.top += (buttonRef.current?.offsetHeight || 0) + 4;
-              offset_.left -=
-                (dropdownItemsRef.current?.offsetWidth || 0) -
-                (buttonRef.current?.offsetWidth || 0);
+              currentOffset.top +=
+                (dropdownToggleButtonRef.current?.offsetHeight || 0) + 4;
+              currentOffset.left -=
+                (dropdownItemsWrapperRef.current?.offsetWidth || 0) -
+                (dropdownToggleButtonRef.current?.offsetWidth || 0);
               break;
             case "maxLeft":
-              offset_.left -= (dropdownItemsRef.current?.offsetWidth || 0) + 8;
+              currentOffset.left -=
+                (dropdownItemsWrapperRef.current?.offsetWidth || 0) + 8;
               break;
             case "right":
-              offset_.top += (buttonRef.current?.offsetHeight || 0) + 4;
+              currentOffset.top +=
+                (dropdownToggleButtonRef.current?.offsetHeight || 0) + 4;
               break;
             case "maxRight":
-              offset_.left += (buttonRef.current?.offsetWidth || 0) + 8;
+              currentOffset.left +=
+                (dropdownToggleButtonRef.current?.offsetWidth || 0) + 8;
               break;
           }
-          setOffset(offset_);
+          setOffset(currentOffset);
           setVisibility("visible");
         }
       };
@@ -91,13 +84,15 @@ const DropDown = React.forwardRef<IDropDownRef, IDropDownProps>(
         update();
       }, 100);
       let observer: MutationObserver;
-      if (open || optionOpen) {
+      if (isDropdownOpen) {
         update();
         document.addEventListener("scroll", handler, true);
         // dropdown Item의 width, nested scroll등이 바뀌는 경우 대응
         observer = new MutationObserver(handler);
-        if (dropdownItemsRef.current) {
-          observer.observe(dropdownItemsRef.current, { attributes: true });
+        if (dropdownItemsWrapperRef.current) {
+          observer.observe(dropdownItemsWrapperRef.current, {
+            attributes: true,
+          });
         }
       }
       return () => {
@@ -106,44 +101,44 @@ const DropDown = React.forwardRef<IDropDownRef, IDropDownProps>(
         }
         document.removeEventListener("scroll", handler, true);
       };
-    }, [optionOpen, open]);
+    }, [isDropdownOpen, open]);
 
     return (
-      <div className={cn("_DROP_DOWN_", className)} {...props} ref={ref}>
+      <div
+        className={cn("_DROP_DOWN_", className)}
+        ref={dropdownWrapperRef}
+        {...props}
+      >
         <div
           className="toggle"
           onClick={(e) => {
-            if (open === undefined) {
-              setOptionOpen(false);
-              e.stopPropagation();
-            }
+            setIsDropdownOpen((s) => !s);
+            e.stopPropagation();
           }}
         >
-          {cloneElement(btn, { ref: buttonRef })}
+          {cloneElement(btn, { ref: dropdownToggleButtonRef })}
         </div>
-        {(open || optionOpen) &&
-          (usingPortalNode && portalNode && portalNode.current ? (
-            createPortal(
-              <div
-                className={cn("isolated-dropdown-item-area", placement)}
-                ref={dropdownItemsRef}
-                style={{
-                  width: width,
-                  top: offset.top,
-                  left: offset.left,
-                  visibility,
-                  zIndex: zIndex,
-                }}
-              >
-                {children}
-              </div>,
-              portalNode.current
-            )
-          ) : (
-            <div className={cn("item-area", placement)} style={{ width }}>
+        {isDropdownOpen &&
+          portalNode.current &&
+          createPortal(
+            <div
+              className={cn("isolated-dropdown-item-area", placement)}
+              ref={dropdownItemsWrapperRef}
+              style={{
+                width: width,
+                top: offset.top,
+                left: offset.left,
+                visibility,
+                zIndex: zIndex,
+              }}
+              onClick={() => {
+                setIsDropdownOpen(false);
+              }}
+            >
               {children}
-            </div>
-          ))}
+            </div>,
+            portalNode.current
+          )}
       </div>
     );
   }
