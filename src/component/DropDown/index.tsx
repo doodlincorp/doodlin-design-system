@@ -132,7 +132,7 @@ const DropDown = React.forwardRef<IDropDownRef, IDropDownProps>(
                   top: offset.top,
                   left: offset.left,
                   visibility,
-                  zIndex: zIndex ?? 600,
+                  zIndex: zIndex ?? 10000000,
                 }}
               >
                 {children}
