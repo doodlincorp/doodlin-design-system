@@ -15,7 +15,6 @@ export interface ICustomSelectProps<T> {
   className?: string;
   getCurrentViewFunc: (v: T) => JSX.Element;
   getOptionViewFunc: (v: T) => JSX.Element;
-  usingPortalNode?: boolean;
   a11yStateSetter?: React.Dispatch<React.SetStateAction<T>>;
 }
 
@@ -27,7 +26,6 @@ const CustomSelect: <T>(
   className,
   getOptionViewFunc,
   getCurrentViewFunc,
-  usingPortalNode,
   a11yStateSetter,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -35,7 +33,7 @@ const CustomSelect: <T>(
   const [optionOpen, setOptionOpen] = useToggle(ref, optionsViewRef);
   const [offset, setOffset] = useState({ top: 0, left: 0 });
   const [visibility, setVisibility] = useState<"visible" | "hidden">("hidden");
-  const portalNode = usePortalNode(usingPortalNode);
+  const portalNode = usePortalNode("custom-select-portal");
 
   useEffect(() => {
     setVisibility("hidden");
@@ -88,7 +86,7 @@ const CustomSelect: <T>(
         />
       </button>
       {optionOpen &&
-        (usingPortalNode && portalNode && portalNode.current ? (
+        (portalNode.current ? (
           createPortal(
             <div
               className="isolated-customselect-options"

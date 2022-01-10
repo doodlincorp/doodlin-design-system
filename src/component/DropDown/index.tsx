@@ -13,7 +13,7 @@ import { debounce } from "../../utils/debounce";
 import { usePortalNode } from "../../hooks/usePortalNode";
 import { useOutsideClick } from "doodlin-hooks";
 
-interface DropDownProps extends HTMLAttributes<HTMLDivElement> {
+export interface DropDownProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   placement?: "left" | "right" | "maxLeft" | "maxRight";
   btn: JSX.Element;
