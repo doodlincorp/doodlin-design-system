@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 import Button from "../Button";
 
-interface DropItemProps extends HTMLAttributes<HTMLDivElement> {
+export interface DropItemProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   text: string;
   icon?: JSX.Element | string;
