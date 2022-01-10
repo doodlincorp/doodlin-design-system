@@ -131,7 +131,8 @@ const DropDown = React.forwardRef<HTMLDivElement, DropDownProps>(
                 visibility,
                 zIndex: zIndex,
               }}
-              onClick={() => {
+              onClick={(e) => {
+                e.stopPropagation();
                 setIsDropdownOpen(false);
               }}
             >
