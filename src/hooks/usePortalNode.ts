@@ -1,24 +1,20 @@
 import { useEffect, useRef } from "react";
 
-const usePortalNode = (usingPortal?: boolean) => {
-  const portalNode = useRef<HTMLElement>();
+const usePortalNode = (divId: `${string}-portal`) => {
+  const portalNode = useRef<HTMLElement | null>(null);
   useEffect(() => {
     let div: HTMLDivElement;
-    if (usingPortal) {
-      if (!portalNode.current) {
-        div = document.createElement("div");
-        document.body.appendChild(div);
-        portalNode.current = div;
-      }
+
+    if (document && document.getElementById(divId)) {
+      portalNode.current = document.getElementById(divId);
+    } else {
+      div = document.createElement("div");
+      div.id = divId;
+      document.body.appendChild(div);
+      portalNode.current = div;
     }
-    return () => {
-      if (usingPortal) {
-        if (div) {
-          document.body.removeChild(div);
-        }
-      }
-    };
-  }, [usingPortal]);
+  }, []);
+
   return portalNode;
 };
 
