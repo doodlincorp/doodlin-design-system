@@ -38,7 +38,7 @@ const DropDown = React.forwardRef<IDropDownRef, IDropDownProps>(
       open,
       width,
       usingPortalNode,
-      zIndex,
+      zIndex = 10000000,
       ...props
     },
     externalRef
@@ -132,7 +132,7 @@ const DropDown = React.forwardRef<IDropDownRef, IDropDownProps>(
                   top: offset.top,
                   left: offset.left,
                   visibility,
-                  zIndex: zIndex || 10000000,
+                  zIndex: zIndex,
                 }}
               >
                 {children}
