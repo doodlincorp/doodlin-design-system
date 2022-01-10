@@ -153,17 +153,17 @@ const Tooltip: React.FC<TooltipProps> = ({
       );
     }
   }, [portalNode, hovered]);
-  const handleMouseEnter = () => {
+  const handlePointerEnter = () => {
     setHovered(true);
   };
-  const handleMouseLeave = () => {
+  const handlePointerLeave = () => {
     setHovered(false);
   };
   return (
     <div
       className={cn("_TOOLTIP_", className, placement, variant)}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
       ref={ref}
     >
       <div className="_target">
