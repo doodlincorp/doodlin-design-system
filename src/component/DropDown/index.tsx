@@ -112,8 +112,8 @@ const DropDown = React.forwardRef<HTMLDivElement, DropDownProps>(
         <div
           className="toggle"
           onClick={(e) => {
-            setIsDropdownOpen((s) => !s);
             e.stopPropagation();
+            setIsDropdownOpen((s) => !s);
           }}
         >
           {cloneElement(btn, { ref: dropdownToggleButtonRef })}
