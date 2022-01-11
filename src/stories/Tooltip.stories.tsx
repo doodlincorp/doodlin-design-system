@@ -20,7 +20,6 @@ export const Default = () => {
       <div style={{ padding: 20 }}>
         <Tooltip
           tooltipText={"【ツ】"}
-          usingPortalNode={true}
           placement="_right"
         >
           <Button size="md">portal Node사용</Button>
