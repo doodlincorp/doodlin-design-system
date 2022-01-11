@@ -10,7 +10,11 @@
   background-color: #fff;
   box-shadow: $shadow-7;
   box-sizing: border-box;
-  padding: 4px;
+
+  .solated-customselect-options-inner {
+    padding: 4px;
+    overflow-y: auto;
+  }
   user-select: none;
   & > * {
     font-size: 1.4rem;
