@@ -16,6 +16,7 @@ export interface ICustomSelectProps<T> {
   getCurrentViewFunc: (v: T) => JSX.Element;
   getOptionViewFunc: (v: T) => JSX.Element;
   a11yStateSetter?: React.Dispatch<React.SetStateAction<T>>;
+  maxHeight?: number;
 }
 
 const CustomSelect: <T>(
@@ -27,6 +28,7 @@ const CustomSelect: <T>(
   getOptionViewFunc,
   getCurrentViewFunc,
   a11yStateSetter,
+  maxHeight,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const optionsViewRef = useRef<HTMLDivElement>(null);
@@ -97,15 +99,23 @@ const CustomSelect: <T>(
                 left: offset.left,
                 visibility,
                 zIndex: 10000000,
+                overflow: "hidden",
               }}
             >
-              <OptionsView
-                options={options}
-                getOptionViewFunc={getOptionViewFunc}
-                setOptionOpen={setOptionOpen}
-                value={value}
-                a11yStateSetter={a11yStateSetter}
-              />
+              <div
+                className="solated-customselect-options-inner"
+                style={{
+                  maxHeight: maxHeight || "unset",
+                }}
+              >
+                <OptionsView
+                  options={options}
+                  getOptionViewFunc={getOptionViewFunc}
+                  setOptionOpen={setOptionOpen}
+                  value={value}
+                  a11yStateSetter={a11yStateSetter}
+                />
+              </div>
             </div>,
             portalNode.current
           )
