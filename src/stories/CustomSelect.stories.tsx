@@ -101,7 +101,6 @@ export const Default = () => {
             getOptionViewFunc={(o) => (
               <div onClick={() => setSelectNum(o)}>{o.text}</div>
             )}
-            usingPortalNode={true}
             a11yStateSetter={setSelectNum}
           />
         </div>

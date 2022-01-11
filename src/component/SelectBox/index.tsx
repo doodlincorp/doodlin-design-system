@@ -67,7 +67,6 @@ const SelectBox: <T extends ISelectBoxItem>(
           <div className="txt">{o.text}</div>
         </div>
       )}
-      usingPortalNode={usingPortalNode}
       a11yStateSetter={a11yStateSetter}
     />
   );
