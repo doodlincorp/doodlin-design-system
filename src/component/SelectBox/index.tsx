@@ -18,8 +18,8 @@ export interface ISelectBoxProps<T extends ISelectBoxItem> {
   variant?: "solid" | "border" | "quiet";
   selectFunc: (o: T) => void;
   size?: "xxs" | "xs" | "sm" | "md";
-  usingPortalNode?: boolean;
   a11yStateSetter?: React.Dispatch<React.SetStateAction<T>>;
+  maxHeight?: number;
 }
 
 const SelectBox: <T extends ISelectBoxItem>(
@@ -31,11 +31,12 @@ const SelectBox: <T extends ISelectBoxItem>(
   selectFunc,
   variant = "solid",
   size = "xs",
-  usingPortalNode,
+  maxHeight,
   a11yStateSetter,
 }) => {
   return (
     <CustomSelect
+      maxHeight={maxHeight}
       value={value}
       className={cn("_SELECT_BOX_", className, variant, size)}
       options={options}
