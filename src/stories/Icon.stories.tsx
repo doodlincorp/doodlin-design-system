@@ -158,7 +158,7 @@ export const Default = () => {
     Send: [""],
     Setting: [""],
     Shape: ["circle", "triangle", "x"],
-    Share: ["linkedin", "facebook", "kakaotalk"],
+    Share: ["linkedin", "facebook", "kakaotalk", "twitter"],
     Shield: ["check", "question", "virus"],
     SideBar: [""],
     SixDot: [""],
