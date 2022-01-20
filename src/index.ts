@@ -27,6 +27,7 @@ export { default as Badge } from "./component/Badge";
 export * from "./utils/colorGenerate";
 export * from "./utils/colorMap";
 export * from "./utils/font";
+export * from "./utils/getCssText";
 
 export type TButtonSize = "xxs" | "xs" | "sm" | "md" | "lg" | "xl";
 export type TFontSize =
@@ -61,7 +62,7 @@ export const CustomSpin = (
   WH = `16px`,
   Bsize = `3px`,
   Bc0 = `#fff`,
-  Bc1 = `rgba(255, 255, 255, 0.2)`,
+  Bc1 = `rgba(255, 255, 255, 0.2)`
 ) => `
   width: ${WH};
   height: ${WH};
