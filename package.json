@@ -1,6 +1,6 @@
 {
   "name": "doodlin-design-system",
-  "version": "1.23.0",
+  "version": "1.24.0",
   "description": "Doodlin Design System",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -38,6 +38,7 @@
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
     "node-sass": "^7.0.1",
+    "postcss": "^8.4.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.34.2",
@@ -49,8 +50,7 @@
     "sass-loader": "^10.1.0",
     "storybook-addon-designs": "^5.4.5",
     "styled-components": "^5.3.3",
-    "typescript": "^4.3.5",
-    "postcss": "^8.4.5"
+    "typescript": "^4.3.5"
   },
   "dependencies": {
     "@storybook/addons": "^6.2.9",
