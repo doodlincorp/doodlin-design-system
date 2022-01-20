@@ -85,6 +85,10 @@ import { MinusIcon } from "./MinusIcon";
 import { EarthIcon } from "./EarthIcon";
 import { YoutubeIcon } from "./YoutubeIcon";
 import { BlankIcon } from "./BlankIcon";
+import { PublishIcon } from "./PublishIcon";
+import { PlayIcon } from "./PlayIcon";
+import { PauseIcon } from "./PauseIcon";
+import { HeadingTextIcon } from "./HeadingTextIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -190,6 +194,7 @@ const Icon = {
   Garbage: GarbageIcon,
   Grid: GridIcon,
   Header: HeaderIcon,
+  HeadingText: HeadingTextIcon,
   Headset: HeadsetIcon,
   Image: ImageIcon,
   InfoMark: InfoMarkIcon,
@@ -202,8 +207,11 @@ const Icon = {
   Memo: MemoIcon,
   Menu: MenuIcon,
   Minus: MinusIcon,
+  Pause: PauseIcon,
   Phone: PhoneIcon,
+  Play: PlayIcon,
   Plus: PlusIcon,
+  Publish: PublishIcon,
   Refresh: RefreshIcon,
   Reject: RejectIcon,
   Reply: ReplyIcon,
