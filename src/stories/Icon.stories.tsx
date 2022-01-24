@@ -146,7 +146,7 @@ export const Default = () => {
     MapPin: ["solid", "border"],
     Megaphone: [""],
     Memo: ["default", "tail", "note"],
-    Menu: [""],
+    Menu: ["default", "alt"],
     Minus: ["default", "circle"],
     Pause: [""],
     Phone: [""],
