@@ -152,7 +152,7 @@ export const Default = () => {
     Phone: [""],
     Play: [""],
     Plus: ["default", "circle"],
-    Publish: [""],
+    Publish: ["default", "put-out"],
     QuestionMark: ["default", "solid", "border"],
     Refresh: [""],
     Reject: [""],
