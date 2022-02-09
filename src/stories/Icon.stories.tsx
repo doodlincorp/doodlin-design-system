@@ -95,7 +95,7 @@ export const Default = () => {
     Card: [""],
     Carousel: [""],
     Chart: ["pie", "doughnut", "bar"],
-    Check: ["single", "double", "alt", "circle"],
+    Check: ["single", "double", "alt", "circle", "circle-ghost"],
     ClickMode: [""],
     Clip: [""],
     Clock: ["solid", "border", "history"],
@@ -210,7 +210,7 @@ export const Default = () => {
             a.push(
               <IconBlock name={name} variantName={variant}>
                 {execFunc(icon, { size: 40, variant: variant })}
-              </IconBlock>,
+              </IconBlock>
             );
           });
         }

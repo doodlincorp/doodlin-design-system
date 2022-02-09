@@ -11,7 +11,7 @@ export interface ICheckIconProps {
   rotate?: number;
   flip?: boolean;
 
-  variant?: "single" | "double" | "circle" | "alt";
+  variant?: "single" | "double" | "circle" | "alt" | "circle-ghost";
 }
 
 export const CheckIcon: React.FC<ICheckIconProps> = ({
@@ -73,6 +73,25 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
           <path
             id="icon__fill"
             d="M3 12.3021L3.70651 10.791C5.76449 12.2235 7.7049 13.8238 9.50859 15.5762C12.1165 11.4346 15.1093 7.55809 18.4457 4L20 4.62963C20 4.62963 13.8182 12.8958 10.2327 21C10.2327 21 6.02026 15.4323 3 12.3021Z"
+            fill={color || EColorMap.gray_8}
+          />
+        </svg>
+      )}
+
+      {variant === "circle-ghost" && (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+            fill={color || EColorMap.gray_8}
+          />
+          <path
+            id="icon__fill"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16.5664 7.6955C17.0366 8.02741 17.1405 8.66644 16.7986 9.12281L11.626 16.0266C11.1981 16.5978 10.3455 16.6627 9.83098 16.1633L7.30831 13.7146C6.89723 13.3155 6.89723 12.6686 7.30831 12.2696C7.71938 11.8705 8.38587 11.8705 8.79694 12.2696L10.5574 13.9785L15.096 7.92086C15.4379 7.46449 16.0963 7.36359 16.5664 7.6955Z"
             fill={color || EColorMap.gray_8}
           />
         </svg>
