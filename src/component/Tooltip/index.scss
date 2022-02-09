@@ -1,11 +1,13 @@
 @import "../../index.scss";
 
 .isolated-tooltip-box {
+  display: flex;
+  align-items: center;
   position: fixed;
   z-index: 2147483647;
   width: max-content;
   height: max-content;
-  padding: 4px 8px;
+  padding: 8px 12px;
   background-color: $gray_8;
   color: #fff;
   font-size: 12px;
@@ -13,13 +15,33 @@
   text-align: start;
   border-radius: 4px;
   white-space: pre-wrap;
-  transition: opacity $button_hover_transition;
+  transition: 0.2s opacity $button_hover_transition;
   transition-delay: 0.2s;
   pointer-events: none;
   user-select: none;
   opacity: 0;
   &.appear {
     opacity: 1;
+  }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 0;
+  //   height: 0;
+  //   bottom: 100%;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+
+  //   border-left: 4px solid transparent;
+  //   border-right: 4px solid transparent;
+  //   border-bottom: 5px solid $gray_8;
+  //   pointer-events: none;
+
+  //   transition: 0.2s ease-out;
+  //   transition-delay: 0.3s;
+  // }
+  ._icon {
+    margin-right: 8px;
   }
 }
 

@@ -18,10 +18,7 @@ export const Default = () => {
         </Tooltip>
       </div>
       <div style={{ padding: 20 }}>
-        <Tooltip
-          tooltipText={"【ツ】"}
-          placement="_right"
-        >
+        <Tooltip tooltipText={"【ツ】"} placement="_right">
           <Button size="md">portal Node사용</Button>
         </Tooltip>
       </div>
@@ -41,6 +38,9 @@ export const variant = () => {
       </Tooltip>
       <Divider />
       <Tooltip tooltipText={"Question"} variant="_question">
+        <Button size="md">Question</Button>
+      </Tooltip>
+      <Tooltip tooltipText={"Question"} variant="_question" usingPortalNode>
         <Button size="md">Question</Button>
       </Tooltip>
     </div>
