@@ -127,7 +127,7 @@ export const Default = () => {
     Header: [""],
     HeadingText: [""],
     Headset: [""],
-    Image: ["default", "add"],
+    Image: ["default", "add", "none"],
     InfoMark: ["border", "solid"],
     Italic: [""],
     LinkExternal: [""],
@@ -210,7 +210,7 @@ export const Default = () => {
             a.push(
               <IconBlock name={name} variantName={variant}>
                 {execFunc(icon, { size: 40, variant: variant })}
-              </IconBlock>
+              </IconBlock>,
             );
           });
         }
