@@ -89,6 +89,7 @@ import { PublishIcon } from "./PublishIcon";
 import { PlayIcon } from "./PlayIcon";
 import { PauseIcon } from "./PauseIcon";
 import { HeadingTextIcon } from "./HeadingTextIcon";
+import { ButtonIcon } from "./ButtonIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -158,6 +159,7 @@ const Icon = {
   Blank: BlankIcon,
   Bold: BoldIcon,
   Book: BookIcon,
+  Button: ButtonIcon,
   Calendar: CalendarIcon,
   Camera: CameraIcon,
   Card: CardIcon,
