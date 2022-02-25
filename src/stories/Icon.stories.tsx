@@ -81,6 +81,7 @@ export const Default = () => {
       "solid-added",
       "border-added",
     ],
+    Button: [""],
     Calendar: [
       "default",
       "check",
