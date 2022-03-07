@@ -65,7 +65,7 @@ export const Default = () => {
 
   const IconList = {
     AddColumn: [""],
-    Align: ["kanban", "list"],
+    Align: ["kanban", "list", "left", "center", "right"],
     ApplicantList: [""],
     Archive: [""],
     Arrow: ["arrow", "chevron", "chevron-alt", "solid"],
