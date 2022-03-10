@@ -186,7 +186,7 @@ export const Default = () => {
       "all",
     ],
     Vision: ["vision", "invision"],
-    Window: ["maximize", "minimize"],
+    Window: ["maximize", "minimize", "close"],
     Youtube: [""],
     ZipDownload: [""],
   };

@@ -10,7 +10,7 @@ export interface IWindowIconProps {
   size?: number;
   rotate?: number;
   flip?: boolean;
-  variant?: "maximize" | "minimize";
+  variant?: "maximize" | "minimize" | "close";
 }
 
 export const WindowIcon: React.FC<IWindowIconProps> = ({
@@ -48,6 +48,18 @@ export const WindowIcon: React.FC<IWindowIconProps> = ({
           <path
             id="icon__fill"
             d="M5 11H19V13H5V11Z"
+            fill={color || colorMap.gray_8}
+          />
+        </svg>
+      )}
+
+      {variant === "close" && (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="icon__fill"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M4.8 4H19.2C20.1927 4 21 4.79733 21 5.77778V18.2222C21 19.2027 20.1927 20 19.2 20H4.8C3.8073 20 3 19.2027 3 18.2222V5.77778C3 4.79733 3.8073 4 4.8 4ZM4.8 7.55556V18.2222H19.2009L19.2 7.55556H4.8ZM14.0049 9.59377L15.2637 10.8525L13.2224 12.8938L15.2637 14.935L14.0049 16.1938L11.9637 14.1525L9.92245 16.1938L8.6637 14.935L10.7049 12.8938L8.6637 10.8525L9.92245 9.59377L11.9637 11.635L14.0049 9.59377Z"
             fill={color || colorMap.gray_8}
           />
         </svg>
