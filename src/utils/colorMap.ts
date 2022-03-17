@@ -58,6 +58,34 @@ export enum EColorMap {
   gray_career_main = "#212529",
   gray_career_sub = "#6F777F",
 
+  // Interview Calendar Color
+  calendar_border_1 = "#8FC4E1",
+  calendar_border_2 = "#97CACA",
+  calendar_border_3 = "#ADCE8D",
+  calendar_border_4 = "#E3BE93",
+  calendar_border_5 = "#E3A4B7",
+  calendar_border_6 = "#CF9FE0",
+  calendar_border_7 = "#AF9FE1",
+  calendar_border_8 = "#A2A5E1",
+
+  calendar_text_1 = "#13557B",
+  calendar_text_2 = "#205F6D",
+  calendar_text_3 = "#3D5427",
+  calendar_text_4 = "#73370E",
+  calendar_text_5 = "#822F48",
+  calendar_text_6 = "#76338D",
+  calendar_text_7 = "#5D3E9C",
+  calendar_text_8 = "#4044A1",
+
+  calendar_bg_1 = "#E2EFF6",
+  calendar_bg_2 = "#DEF1F0",
+  calendar_bg_3 = "#EAF7DE",
+  calendar_bg_4 = "#F8EFE5",
+  calendar_bg_5 = "#F5E3E9",
+  calendar_bg_6 = "#F3E0FA",
+  calendar_bg_7 = "#E5DFFA",
+  calendar_bg_8 = "#DFE0F6",
+
   // Transparent
   transparent = "transparent",
 }
