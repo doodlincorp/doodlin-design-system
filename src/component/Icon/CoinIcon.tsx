@@ -1,16 +1,18 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface ICoinIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
 
-  variant?: "default" | "disabled";
+  variant?: 'default' | 'disabled'
 }
 
 export const CoinIcon: React.FC<ICoinIconProps> = ({
@@ -19,11 +21,11 @@ export const CoinIcon: React.FC<ICoinIconProps> = ({
   rotate,
   flip,
 
-  variant = "default",
+  variant = 'default',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -31,7 +33,7 @@ export const CoinIcon: React.FC<ICoinIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "default" && (
+      {variant === 'default' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <ellipse cx="12" cy="12" rx="10" ry="10" fill="#FFCA42" />
           <circle cx="12" cy="12" r="7.2377" fill="#FFE090" />
@@ -67,7 +69,7 @@ export const CoinIcon: React.FC<ICoinIconProps> = ({
         </svg>
       )}
 
-      {variant === "disabled" && (
+      {variant === 'disabled' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <ellipse cx="12" cy="12" rx="10" ry="10" fill="#DBDBDE" />
           <circle cx="12" cy="12" r="7.2377" fill="#EFEFF2" />
@@ -103,5 +105,5 @@ export const CoinIcon: React.FC<ICoinIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

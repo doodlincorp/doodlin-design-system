@@ -1,35 +1,37 @@
-import React, { ButtonHTMLAttributes, useMemo, useRef } from "react";
-import cn from "classnames";
-import "./index.scss";
-import { EColorMap, TButtonSize } from "../..";
-import styled from "@emotion/styled";
+import React, { ButtonHTMLAttributes, useMemo } from 'react'
+import cn from 'classnames'
+import styled from '@emotion/styled'
+
+import './index.scss'
+
+import { EColorMap, TButtonSize } from '../..'
 
 export interface IColorOption {
-  font?: EColorMap;
-  default?: EColorMap;
-  hover?: EColorMap;
-  active?: EColorMap;
+  font?: EColorMap
+  default?: EColorMap
+  hover?: EColorMap
+  active?: EColorMap
   icon?: {
-    default?: EColorMap;
-    hover?: EColorMap;
-    active?: EColorMap;
-  };
+    default?: EColorMap
+    hover?: EColorMap
+    active?: EColorMap
+  }
 }
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: TButtonSize;
-  variant?: "ghost" | "solid" | "quiet" | "minimal" | "minimal2";
-  buttonColor?: "black" | "gray" | "blue" | "red";
-  colorOption?: IColorOption;
-  spacer?: boolean;
-  fullWidth?: boolean;
-  loading?: boolean;
-  rounded?: boolean;
+  size?: TButtonSize
+  variant?: 'ghost' | 'solid' | 'quiet' | 'minimal' | 'minimal2'
+  buttonColor?: 'black' | 'gray' | 'blue' | 'red'
+  colorOption?: IColorOption
+  spacer?: boolean
+  fullWidth?: boolean
+  loading?: boolean
+  rounded?: boolean
   label?: {
-    labelLeadingIcon?: React.ReactElement;
-    labelTailingIcon?: React.ReactElement;
-    labelText?: string;
-  };
+    labelLeadingIcon?: React.ReactElement
+    labelTailingIcon?: React.ReactElement
+    labelText?: string
+  }
 }
 
 const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
@@ -37,23 +39,23 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
     const {
       className,
       children,
-      size = "md",
-      variant = "solid",
+      size = 'md',
+      variant = 'solid',
       disabled,
       spacer = true,
       fullWidth,
       loading,
       rounded,
-      buttonColor = "black",
+      buttonColor = 'black',
       colorOption,
       label,
       ...restProps
-    } = props;
+    } = props
 
     const Btn = useMemo(
       () => styled.button`
         &._BUTTON_.${variant} {
-          ${!spacer && "margin-left: 0px;"}
+          ${!spacer && 'margin-left: 0px;'}
           ${colorOption?.default &&
           `background-color: ${colorOption?.default}; `}
       ${colorOption?.font && `color: ${colorOption?.font};`}
@@ -84,8 +86,8 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
           }
         }
       `,
-      [variant, colorOption]
-    );
+      [variant, colorOption],
+    )
 
     return (
       <Btn
@@ -124,8 +126,8 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
           )}
         </span>
       </Btn>
-    );
-  }
-);
+    )
+  },
+)
 
-export default Button;
+export default Button

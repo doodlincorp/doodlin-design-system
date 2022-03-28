@@ -2,14 +2,14 @@ import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
 
 export function isObjectEqual<T>(first: T, second: T, cnt?: number): boolean {
-  if (cnt && cnt > 2) return true;
-  if (typeof first !== typeof second) return false;
+  if (cnt && cnt > 2) {return true;}
+  if (typeof first !== typeof second) {return false;}
   if (typeof first === "object") {
     for (const key in first) {
-      if (!isObjectEqual(first[key], second[key], (cnt || 0) + 1)) return false;
+      if (!isObjectEqual(first[key], second[key], (cnt || 0) + 1)) {return false;}
     }
   } else if (typeof first !== "function") {
-    if (first !== second) return false;
+    if (first !== second) {return false;}
   }
   return true;
 }
@@ -28,7 +28,7 @@ export const OptionsView = <T,>({
   a11yStateSetter?: React.Dispatch<React.SetStateAction<T>>;
 }) => {
   const [temporarySelected, setTemporarySelected] = useState(() => {
-    if (value) return options.findIndex((o) => isObjectEqual(o, value));
+    if (value) {return options.findIndex((o) => isObjectEqual(o, value));}
     return -1;
   });
   useEffect(() => {

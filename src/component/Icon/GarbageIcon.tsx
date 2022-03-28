@@ -1,16 +1,18 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IGarbageIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
 
-  variant?: "solid" | "border";
+  variant?: 'solid' | 'border'
 }
 
 export const GarbageIcon: React.FC<IGarbageIconProps> = ({
@@ -20,11 +22,11 @@ export const GarbageIcon: React.FC<IGarbageIconProps> = ({
   rotate,
   flip,
 
-  variant = "solid",
+  variant = 'solid',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -32,7 +34,7 @@ export const GarbageIcon: React.FC<IGarbageIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "solid" && (
+      {variant === 'solid' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -41,7 +43,7 @@ export const GarbageIcon: React.FC<IGarbageIconProps> = ({
           />
         </svg>
       )}
-      {variant === "border" && (
+      {variant === 'border' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -51,5 +53,5 @@ export const GarbageIcon: React.FC<IGarbageIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

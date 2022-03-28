@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IClockIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "solid" | "border" | "history";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'solid' | 'border' | 'history'
 }
 
 export const ClockIcon: React.FC<IClockIconProps> = ({
@@ -18,11 +20,11 @@ export const ClockIcon: React.FC<IClockIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "solid",
+  variant = 'solid',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const ClockIcon: React.FC<IClockIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "solid" && (
+      {variant === 'solid' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -40,7 +42,7 @@ export const ClockIcon: React.FC<IClockIconProps> = ({
         </svg>
       )}
 
-      {variant === "border" && (
+      {variant === 'border' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -52,7 +54,7 @@ export const ClockIcon: React.FC<IClockIconProps> = ({
         </svg>
       )}
 
-      {variant === "history" && (
+      {variant === 'history' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -64,5 +66,5 @@ export const ClockIcon: React.FC<IClockIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

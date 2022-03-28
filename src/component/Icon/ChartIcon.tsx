@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IChartIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "pie" | "doughnut" | "bar";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'pie' | 'doughnut' | 'bar'
 }
 
 export const ChartIcon: React.FC<IChartIconProps> = ({
@@ -18,11 +20,11 @@ export const ChartIcon: React.FC<IChartIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "pie",
+  variant = 'pie',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const ChartIcon: React.FC<IChartIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "pie" && (
+      {variant === 'pie' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -41,7 +43,7 @@ export const ChartIcon: React.FC<IChartIconProps> = ({
           />
         </svg>
       )}
-      {variant === "doughnut" && (
+      {variant === 'doughnut' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -52,7 +54,7 @@ export const ChartIcon: React.FC<IChartIconProps> = ({
           />
         </svg>
       )}
-      {variant === "bar" && (
+      {variant === 'bar' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -64,5 +66,5 @@ export const ChartIcon: React.FC<IChartIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

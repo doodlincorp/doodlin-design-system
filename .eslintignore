@@ -1,0 +1,8 @@
+.storybook
+.vscode
+
+build
+node_modules
+
+**/*.stories.tsx
+yarn.lock

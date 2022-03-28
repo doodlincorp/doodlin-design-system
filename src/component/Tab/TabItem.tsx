@@ -1,7 +1,6 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import cn from "classnames";
 import "./index.scss";
-import { ButtonHTMLAttributes } from "react";
 
 export interface ITabItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;

@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IDocumentIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "solid" | "border" | "blank" | "plus";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'solid' | 'border' | 'blank' | 'plus'
 }
 
 export const DocIcon: React.FC<IDocumentIconProps> = ({
@@ -18,11 +20,11 @@ export const DocIcon: React.FC<IDocumentIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "solid",
+  variant = 'solid',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const DocIcon: React.FC<IDocumentIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "solid" && (
+      {variant === 'solid' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -39,7 +41,7 @@ export const DocIcon: React.FC<IDocumentIconProps> = ({
           />
         </svg>
       )}
-      {variant === "border" && (
+      {variant === 'border' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -50,7 +52,7 @@ export const DocIcon: React.FC<IDocumentIconProps> = ({
           />
         </svg>
       )}
-      {variant === "blank" && (
+      {variant === 'blank' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -59,7 +61,7 @@ export const DocIcon: React.FC<IDocumentIconProps> = ({
           />
         </svg>
       )}
-      {variant === "plus" && (
+      {variant === 'plus' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -69,5 +71,5 @@ export const DocIcon: React.FC<IDocumentIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

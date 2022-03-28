@@ -1,16 +1,18 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IArrowIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
 
-  variant?: "arrow" | "chevron" | "chevron-alt" | "solid";
+  variant?: 'arrow' | 'chevron' | 'chevron-alt' | 'solid'
 }
 
 export const ArrowIcon: React.FC<IArrowIconProps> = ({
@@ -19,11 +21,11 @@ export const ArrowIcon: React.FC<IArrowIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "chevron",
+  variant = 'chevron',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -31,7 +33,7 @@ export const ArrowIcon: React.FC<IArrowIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "arrow" ? (
+      {variant === 'arrow' ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -39,7 +41,7 @@ export const ArrowIcon: React.FC<IArrowIconProps> = ({
             fill={color || EColorMap.gray_8}
           />
         </svg>
-      ) : variant === "chevron" ? (
+      ) : variant === 'chevron' ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -47,7 +49,7 @@ export const ArrowIcon: React.FC<IArrowIconProps> = ({
             fill={color || EColorMap.gray_8}
           />
         </svg>
-      ) : variant === "chevron-alt" ? (
+      ) : variant === 'chevron-alt' ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fillRule="evenodd"
@@ -67,5 +69,5 @@ export const ArrowIcon: React.FC<IArrowIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

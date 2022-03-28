@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IVisionIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "vision" | "invision";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'vision' | 'invision'
 }
 
 export const VisionIcon: React.FC<IVisionIconProps> = ({
@@ -18,11 +20,11 @@ export const VisionIcon: React.FC<IVisionIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "vision",
+  variant = 'vision',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const VisionIcon: React.FC<IVisionIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "vision" ? (
+      {variant === 'vision' ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -52,5 +54,5 @@ export const VisionIcon: React.FC<IVisionIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

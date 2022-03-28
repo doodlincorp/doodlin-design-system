@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IExtensionIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "solid" | "border";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'solid' | 'border'
 }
 
 export const ExtensionIcon: React.FC<IExtensionIconProps> = ({
@@ -18,11 +20,11 @@ export const ExtensionIcon: React.FC<IExtensionIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "solid",
+  variant = 'solid',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const ExtensionIcon: React.FC<IExtensionIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "solid" ? (
+      {variant === 'solid' ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -48,5 +50,5 @@ export const ExtensionIcon: React.FC<IExtensionIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

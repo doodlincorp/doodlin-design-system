@@ -1,16 +1,19 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
-import { colorMap } from ".";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
+
+import { colorMap } from '.'
 
 export interface IWindowIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "maximize" | "minimize" | "close";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'maximize' | 'minimize' | 'close'
 }
 
 export const WindowIcon: React.FC<IWindowIconProps> = ({
@@ -19,11 +22,11 @@ export const WindowIcon: React.FC<IWindowIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "maximize",
+  variant = 'maximize',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -31,7 +34,7 @@ export const WindowIcon: React.FC<IWindowIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "maximize" && (
+      {variant === 'maximize' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -43,7 +46,7 @@ export const WindowIcon: React.FC<IWindowIconProps> = ({
         </svg>
       )}
 
-      {variant === "minimize" && (
+      {variant === 'minimize' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -53,7 +56,7 @@ export const WindowIcon: React.FC<IWindowIconProps> = ({
         </svg>
       )}
 
-      {variant === "close" && (
+      {variant === 'close' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -65,5 +68,5 @@ export const WindowIcon: React.FC<IWindowIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

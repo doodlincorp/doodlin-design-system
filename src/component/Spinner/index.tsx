@@ -1,5 +1,6 @@
 import React from "react";
 import cn from "classnames";
+
 import "./index.scss";
 import { TButtonSize } from "../..";
 

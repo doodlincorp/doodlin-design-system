@@ -1,7 +1,8 @@
 import React from "react";
+import cn from "classnames";
+
 import CustomSelect from "../CustomSelect";
 import { CheckIcon } from "../Icon/CheckIcon";
-import cn from "classnames";
 import "./index.scss";
 import { EColorMap } from "../../utils/colorMap";
 import { isObjectEqual } from "../CustomSelect/optionsView";

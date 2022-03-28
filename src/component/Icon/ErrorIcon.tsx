@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IErrorIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "triangle" | "circle";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'triangle' | 'circle'
 }
 
 export const ErrorIcon: React.FC<IErrorIconProps> = ({
@@ -18,11 +20,11 @@ export const ErrorIcon: React.FC<IErrorIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "triangle",
+  variant = 'triangle',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const ErrorIcon: React.FC<IErrorIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "triangle" && (
+      {variant === 'triangle' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -39,7 +41,7 @@ export const ErrorIcon: React.FC<IErrorIconProps> = ({
           />
         </svg>
       )}
-      {variant === "circle" && (
+      {variant === 'circle' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -49,5 +51,5 @@ export const ErrorIcon: React.FC<IErrorIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

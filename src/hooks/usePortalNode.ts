@@ -1,21 +1,21 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react'
 
 const usePortalNode = (divId: `${string}-portal`) => {
-  const portalNode = useRef<HTMLElement | null>(null);
+  const portalNode = useRef<HTMLElement | null>(null)
   useEffect(() => {
-    let div: HTMLDivElement;
+    let div: HTMLDivElement
 
     if (document && document.getElementById(divId)) {
-      portalNode.current = document.getElementById(divId);
+      portalNode.current = document.getElementById(divId)
     } else {
-      div = document.createElement("div");
-      div.id = divId;
-      document.body.appendChild(div);
-      portalNode.current = div;
+      div = document.createElement('div')
+      div.id = divId
+      document.body.appendChild(div)
+      portalNode.current = div
     }
-  }, []);
+  }, [])
 
-  return portalNode;
-};
+  return portalNode
+}
 
-export { usePortalNode };
+export { usePortalNode }

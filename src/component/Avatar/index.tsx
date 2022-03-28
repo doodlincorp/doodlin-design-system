@@ -1,6 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import "./index.scss";
 import cn from "classnames";
+
 import { getAvatarColorById } from "../../utils/colorGenerate";
 import { EColorMap } from "../../utils/colorMap";
 

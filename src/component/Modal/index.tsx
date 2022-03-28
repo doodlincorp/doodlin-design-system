@@ -1,5 +1,6 @@
 import React from "react";
 import cn from "classnames";
+
 import "./index.scss";
 import { CloseIcon } from "../Icon/CloseIcon";
 import Button from "../Button";
@@ -47,7 +48,7 @@ const Modal: React.FC<IModalProps> = ({
             size="xs"
             buttonColor="gray"
             onClick={closeBtn}
-          ></Button>
+           />
         )}
 
         {header ? (

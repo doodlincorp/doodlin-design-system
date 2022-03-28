@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IShareIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "linkedin" | "facebook" | "kakaotalk" | "twitter";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'linkedin' | 'facebook' | 'kakaotalk' | 'twitter'
 }
 
 export const ShareIcon: React.FC<IShareIconProps> = ({
@@ -18,11 +20,11 @@ export const ShareIcon: React.FC<IShareIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "linkedin",
+  variant = 'linkedin',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const ShareIcon: React.FC<IShareIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "linkedin" && (
+      {variant === 'linkedin' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -42,7 +44,7 @@ export const ShareIcon: React.FC<IShareIconProps> = ({
         </svg>
       )}
 
-      {variant === "facebook" && (
+      {variant === 'facebook' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -54,7 +56,7 @@ export const ShareIcon: React.FC<IShareIconProps> = ({
         </svg>
       )}
 
-      {variant === "kakaotalk" && (
+      {variant === 'kakaotalk' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -66,7 +68,7 @@ export const ShareIcon: React.FC<IShareIconProps> = ({
         </svg>
       )}
 
-      {variant === "twitter" && (
+      {variant === 'twitter' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -76,5 +78,5 @@ export const ShareIcon: React.FC<IShareIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

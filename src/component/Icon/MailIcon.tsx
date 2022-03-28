@@ -1,22 +1,24 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IMailIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
   variant?:
-    | "solid"
-    | "border"
-    | "outgoing"
-    | "incoming"
-    | "open"
-    | "reservation"
-    | "cancel";
+    | 'solid'
+    | 'border'
+    | 'outgoing'
+    | 'incoming'
+    | 'open'
+    | 'reservation'
+    | 'cancel'
 }
 
 export const MailIcon: React.FC<IMailIconProps> = ({
@@ -25,11 +27,11 @@ export const MailIcon: React.FC<IMailIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "solid",
+  variant = 'solid',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -37,7 +39,7 @@ export const MailIcon: React.FC<IMailIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "solid" && (
+      {variant === 'solid' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -46,7 +48,7 @@ export const MailIcon: React.FC<IMailIconProps> = ({
           />
         </svg>
       )}
-      {variant === "border" && (
+      {variant === 'border' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -55,7 +57,7 @@ export const MailIcon: React.FC<IMailIconProps> = ({
           />
         </svg>
       )}
-      {variant === "outgoing" && (
+      {variant === 'outgoing' && (
         <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill_alt"
@@ -69,7 +71,7 @@ export const MailIcon: React.FC<IMailIconProps> = ({
           />
         </svg>
       )}
-      {variant === "incoming" && (
+      {variant === 'incoming' && (
         <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill_alt"
@@ -83,7 +85,7 @@ export const MailIcon: React.FC<IMailIconProps> = ({
           />
         </svg>
       )}
-      {variant === "open" && (
+      {variant === 'open' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -92,7 +94,7 @@ export const MailIcon: React.FC<IMailIconProps> = ({
           />
         </svg>
       )}
-      {variant === "reservation" && (
+      {variant === 'reservation' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -103,7 +105,7 @@ export const MailIcon: React.FC<IMailIconProps> = ({
           />
         </svg>
       )}
-      {variant === "cancel" && (
+      {variant === 'cancel' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <svg
             viewBox="0 0 24 24"
@@ -128,5 +130,5 @@ export const MailIcon: React.FC<IMailIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

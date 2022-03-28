@@ -1,6 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import "./index.scss";
 import cn from "classnames";
+
 import { TButtonSize } from "../..";
 
 export interface ISkeletonBtnProps extends HTMLAttributes<HTMLDivElement> {

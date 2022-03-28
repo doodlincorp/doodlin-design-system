@@ -1,5 +1,6 @@
 import React, { HTMLAttributes } from "react";
 import cn from "classnames";
+
 import "./index.scss";
 import { TFontSize } from "../..";
 import { EColorMap } from "../../utils/colorMap";

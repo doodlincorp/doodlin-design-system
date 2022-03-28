@@ -22,7 +22,7 @@ const Toggle: React.FC<IToggleProps> = ({
       onClick={onClick}
       {...props}
     >
-      <div className="toggle-circle"></div>
+      <div className="toggle-circle" />
     </div>
   );
 };

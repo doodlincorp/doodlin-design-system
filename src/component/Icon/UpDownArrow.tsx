@@ -1,14 +1,16 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IUpDownArrowIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
 }
 
 export const UpDownArrowIcon: React.FC<IUpDownArrowIconProps> = ({
@@ -20,7 +22,7 @@ export const UpDownArrowIcon: React.FC<IUpDownArrowIconProps> = ({
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -43,5 +45,5 @@ export const UpDownArrowIcon: React.FC<IUpDownArrowIconProps> = ({
         />
       </svg>
     </i>
-  );
-};
+  )
+}
