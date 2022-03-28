@@ -1,26 +1,30 @@
-import React, { useEffect, useRef, useState } from "react";
-import cn from "classnames";
-import "./index.scss";
-import { ArrowIcon } from "../Icon/ArrowIcon";
-import { EColorMap } from "../../utils/colorMap";
-import { createPortal } from "react-dom";
-import { usePortalNode } from "../../hooks/usePortalNode";
-import { debounce } from "../../utils/debounce";
-import { getOffset } from "../../utils/offset";
-import { OptionsView } from "./optionsView";
-import { useToggle } from "doodlin-hooks";
+import React, { useEffect, useRef, useState } from 'react'
+import cn from 'classnames'
+import { createPortal } from 'react-dom'
+import { useToggle } from 'doodlin-hooks'
+
+import './index.scss'
+
+import { ArrowIcon } from '../Icon/ArrowIcon'
+import { EColorMap } from '../../utils/colorMap'
+import { usePortalNode } from '../../hooks/usePortalNode'
+import { debounce } from '../../utils/debounce'
+import { getOffset } from '../../utils/offset'
+
+import { OptionsView } from './optionsView'
+
 export interface ICustomSelectProps<T> {
-  value: T;
-  options: T[];
-  className?: string;
-  getCurrentViewFunc: (v: T) => JSX.Element;
-  getOptionViewFunc: (v: T) => JSX.Element;
-  a11yStateSetter?: React.Dispatch<React.SetStateAction<T>>;
-  maxHeight?: number;
+  value: T
+  options: T[]
+  className?: string
+  getCurrentViewFunc: (v: T) => JSX.Element
+  getOptionViewFunc: (v: T) => JSX.Element
+  a11yStateSetter?: React.Dispatch<React.SetStateAction<T>>
+  maxHeight?: number
 }
 
 const CustomSelect: <T>(
-  p: ICustomSelectProps<T>
+  p: ICustomSelectProps<T>,
 ) => React.ReactElement<ICustomSelectProps<T>> = ({
   value,
   options,
@@ -30,52 +34,52 @@ const CustomSelect: <T>(
   a11yStateSetter,
   maxHeight,
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const optionsViewRef = useRef<HTMLDivElement>(null);
-  const [optionOpen, setOptionOpen] = useToggle(ref, optionsViewRef);
-  const [offset, setOffset] = useState({ top: 0, left: 0 });
-  const [visibility, setVisibility] = useState<"visible" | "hidden">("hidden");
-  const portalNode = usePortalNode("custom-select-portal");
+  const ref = useRef<HTMLDivElement>(null)
+  const optionsViewRef = useRef<HTMLDivElement>(null)
+  const [optionOpen, setOptionOpen] = useToggle(ref, optionsViewRef)
+  const [offset, setOffset] = useState({ top: 0, left: 0 })
+  const [visibility, setVisibility] = useState<'visible' | 'hidden'>('hidden')
+  const portalNode = usePortalNode('custom-select-portal')
 
   useEffect(() => {
-    setVisibility("hidden");
+    setVisibility('hidden')
     const update = () => {
       if (optionOpen) {
-        const offset_ = getOffset(ref.current as HTMLElement);
-        offset_.top += (ref.current?.offsetHeight || 0) + 5;
-        setOffset(offset_);
-        setVisibility("visible");
+        const offset_ = getOffset(ref.current as HTMLElement)
+        offset_.top += (ref.current?.offsetHeight || 0) + 5
+        setOffset(offset_)
+        setVisibility('visible')
       }
-    };
+    }
     const handler = debounce(() => {
-      update();
-    }, 100);
-    let observer: MutationObserver;
+      update()
+    }, 100)
+    let observer: MutationObserver
     if (optionOpen) {
-      update();
-      document.addEventListener("scroll", handler, true);
+      update()
+      document.addEventListener('scroll', handler, true)
       // dropdown Item의 width, nested scroll등이 바뀌는 경우 대응
-      observer = new MutationObserver(handler);
+      observer = new MutationObserver(handler)
       if (ref.current) {
-        observer.observe(ref.current, { attributes: true });
+        observer.observe(ref.current, { attributes: true })
       }
     }
     return () => {
       if (observer) {
-        observer.disconnect();
+        observer.disconnect()
       }
-      document.removeEventListener("scroll", handler, true);
-    };
-  }, [optionOpen]);
+      document.removeEventListener('scroll', handler, true)
+    }
+  }, [optionOpen])
 
   return (
-    <div className={cn("_CUSTOM_SELECT_", className)} ref={ref}>
+    <div className={cn('_CUSTOM_SELECT_', className)} ref={ref}>
       <button
-        className={cn("current", { selected: optionOpen })}
+        className={cn('current', { selected: optionOpen })}
         tabIndex={0}
         onClick={(e) => {
-          setOptionOpen();
-          e.stopPropagation();
+          setOptionOpen()
+          e.stopPropagation()
         }}
       >
         {getCurrentViewFunc(value)}
@@ -99,13 +103,13 @@ const CustomSelect: <T>(
                 left: offset.left,
                 visibility,
                 zIndex: 10000000,
-                overflow: "hidden",
+                overflow: 'hidden',
               }}
             >
               <div
                 className="solated-customselect-options-inner"
                 style={{
-                  maxHeight: maxHeight || "unset",
+                  maxHeight: maxHeight || 'unset',
                 }}
               >
                 <OptionsView
@@ -117,7 +121,7 @@ const CustomSelect: <T>(
                 />
               </div>
             </div>,
-            portalNode.current
+            portalNode.current,
           )
         ) : (
           <div className="options">
@@ -131,7 +135,7 @@ const CustomSelect: <T>(
           </div>
         ))}
     </div>
-  );
-};
+  )
+}
 
-export default CustomSelect;
+export default CustomSelect

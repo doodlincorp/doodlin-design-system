@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IShapeIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "circle" | "triangle" | "x";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'circle' | 'triangle' | 'x'
 }
 
 export const ShapeIcon: React.FC<IShapeIconProps> = ({
@@ -18,11 +20,11 @@ export const ShapeIcon: React.FC<IShapeIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "circle",
+  variant = 'circle',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const ShapeIcon: React.FC<IShapeIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "circle" && (
+      {variant === 'circle' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fillRule="evenodd"
@@ -41,7 +43,7 @@ export const ShapeIcon: React.FC<IShapeIconProps> = ({
           />
         </svg>
       )}
-      {variant === "triangle" && (
+      {variant === 'triangle' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fillRule="evenodd"
@@ -52,7 +54,7 @@ export const ShapeIcon: React.FC<IShapeIconProps> = ({
           />
         </svg>
       )}
-      {variant === "x" && (
+      {variant === 'x' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fillRule="evenodd"
@@ -64,5 +66,5 @@ export const ShapeIcon: React.FC<IShapeIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

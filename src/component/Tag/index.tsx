@@ -1,5 +1,6 @@
 import React, { HTMLAttributes } from "react";
 import cn from "classnames";
+
 import "./index.scss";
 import Icon from "../Icon";
 
@@ -32,7 +33,7 @@ const Tag: React.FC<ITagProps> = ({
               className="tag-close-btn"
               onClick={(e) => {
                 e.stopPropagation();
-                if (onClickCloseBtn) onClickCloseBtn();
+                if (onClickCloseBtn) {onClickCloseBtn();}
               }}
             >
               <Icon.Close variant="circle" />

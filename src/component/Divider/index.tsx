@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.scss";
 import cn from "classnames";
+
 import { EColorMap } from "../../utils/colorMap";
 
 export interface IDividerProps {

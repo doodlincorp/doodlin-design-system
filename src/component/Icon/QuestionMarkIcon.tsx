@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IQuestionMarkIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "default" | "solid" | "border";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'default' | 'solid' | 'border'
 }
 
 export const QuestionMarkIcon: React.FC<IQuestionMarkIconProps> = ({
@@ -18,11 +20,11 @@ export const QuestionMarkIcon: React.FC<IQuestionMarkIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "default",
+  variant = 'default',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const QuestionMarkIcon: React.FC<IQuestionMarkIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "default" && (
+      {variant === 'default' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -41,7 +43,7 @@ export const QuestionMarkIcon: React.FC<IQuestionMarkIconProps> = ({
           />
         </svg>
       )}
-      {variant === "solid" && (
+      {variant === 'solid' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -50,7 +52,7 @@ export const QuestionMarkIcon: React.FC<IQuestionMarkIconProps> = ({
           />
         </svg>
       )}
-      {variant === "border" && (
+      {variant === 'border' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -62,5 +64,5 @@ export const QuestionMarkIcon: React.FC<IQuestionMarkIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

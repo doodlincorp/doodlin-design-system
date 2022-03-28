@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IFilterIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "default" | "chevron";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'default' | 'chevron'
 }
 
 export const FilterIcon: React.FC<IFilterIconProps> = ({
@@ -18,19 +20,19 @@ export const FilterIcon: React.FC<IFilterIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "default",
+  variant = 'default',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
-        width: variant === "chevron" ? size * 2 : size,
-        minWidth: variant === "chevron" ? size * 2 : size,
+        width: variant === 'chevron' ? size * 2 : size,
+        minWidth: variant === 'chevron' ? size * 2 : size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "default" ? (
+      {variant === 'default' ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -52,5 +54,5 @@ export const FilterIcon: React.FC<IFilterIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

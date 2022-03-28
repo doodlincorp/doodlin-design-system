@@ -1,14 +1,16 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface ISixDotIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
 }
 
 export const SixDotIcon: React.FC<ISixDotIconProps> = ({
@@ -20,7 +22,7 @@ export const SixDotIcon: React.FC<ISixDotIconProps> = ({
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -38,5 +40,5 @@ export const SixDotIcon: React.FC<ISixDotIconProps> = ({
         />
       </svg>
     </i>
-  );
-};
+  )
+}

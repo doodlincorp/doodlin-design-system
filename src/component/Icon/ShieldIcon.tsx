@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IShieldIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "check" | "question" | "virus";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'check' | 'question' | 'virus'
 }
 
 export const ShieldIcon: React.FC<IShieldIconProps> = ({
@@ -18,11 +20,11 @@ export const ShieldIcon: React.FC<IShieldIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "check",
+  variant = 'check',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const ShieldIcon: React.FC<IShieldIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "check" && (
+      {variant === 'check' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -59,9 +61,9 @@ export const ShieldIcon: React.FC<IShieldIconProps> = ({
               width="15.5372"
               height="15.3489"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -107,7 +109,7 @@ export const ShieldIcon: React.FC<IShieldIconProps> = ({
         </svg>
       )}
 
-      {variant === "question" && (
+      {variant === 'question' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -138,9 +140,9 @@ export const ShieldIcon: React.FC<IShieldIconProps> = ({
               width="12.4478"
               height="15.5017"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -186,7 +188,7 @@ export const ShieldIcon: React.FC<IShieldIconProps> = ({
         </svg>
       )}
 
-      {variant === "virus" && (
+      {variant === 'virus' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -217,9 +219,9 @@ export const ShieldIcon: React.FC<IShieldIconProps> = ({
               width="8"
               height="16"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -265,5 +267,5 @@ export const ShieldIcon: React.FC<IShieldIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

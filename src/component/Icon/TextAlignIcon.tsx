@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface ITextAlignIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "left" | "center" | "right" | "justify";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'left' | 'center' | 'right' | 'justify'
 }
 
 export const TextAlignIcon: React.FC<ITextAlignIconProps> = ({
@@ -18,11 +20,11 @@ export const TextAlignIcon: React.FC<ITextAlignIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "left",
+  variant = 'left',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const TextAlignIcon: React.FC<ITextAlignIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "left" && (
+      {variant === 'left' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -42,7 +44,7 @@ export const TextAlignIcon: React.FC<ITextAlignIconProps> = ({
         </svg>
       )}
 
-      {variant === "center" && (
+      {variant === 'center' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -54,7 +56,7 @@ export const TextAlignIcon: React.FC<ITextAlignIconProps> = ({
         </svg>
       )}
 
-      {variant === "right" && (
+      {variant === 'right' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -66,7 +68,7 @@ export const TextAlignIcon: React.FC<ITextAlignIconProps> = ({
         </svg>
       )}
 
-      {variant === "justify" && (
+      {variant === 'justify' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -78,5 +80,5 @@ export const TextAlignIcon: React.FC<ITextAlignIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

@@ -1,24 +1,26 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IUserIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
 
   variant?:
-    | "general"
-    | "manager"
-    | "owner"
-    | "setMember"
-    | "evaluable"
-    | "rejected"
-    | "all"
-    | "team";
+    | 'general'
+    | 'manager'
+    | 'owner'
+    | 'setMember'
+    | 'evaluable'
+    | 'rejected'
+    | 'all'
+    | 'team'
 }
 
 export const UserIcon: React.FC<IUserIconProps> = ({
@@ -28,41 +30,41 @@ export const UserIcon: React.FC<IUserIconProps> = ({
   rotate,
   flip,
 
-  variant = "general",
+  variant = 'general',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width:
-          variant === "manager"
+          variant === 'manager'
             ? size * 2
-            : variant === "evaluable"
+            : variant === 'evaluable'
             ? size * 2
-            : variant === "owner"
+            : variant === 'owner'
             ? size * 2
-            : variant === "rejected"
+            : variant === 'rejected'
             ? size * 2
-            : variant === "all"
+            : variant === 'all'
             ? size * 2
             : size,
         minWidth:
-          variant === "manager"
+          variant === 'manager'
             ? size * 2
-            : variant === "evaluable"
+            : variant === 'evaluable'
             ? size * 2
-            : variant === "owner"
+            : variant === 'owner'
             ? size * 2
-            : variant === "rejected"
+            : variant === 'rejected'
             ? size * 2
-            : variant === "all"
+            : variant === 'all'
             ? size * 2
             : size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "general" && (
+      {variant === 'general' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -71,7 +73,7 @@ export const UserIcon: React.FC<IUserIconProps> = ({
           />
         </svg>
       )}
-      {variant === "manager" && (
+      {variant === 'manager' && (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -82,7 +84,7 @@ export const UserIcon: React.FC<IUserIconProps> = ({
           />
         </svg>
       )}
-      {variant === "owner" && (
+      {variant === 'owner' && (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -93,7 +95,7 @@ export const UserIcon: React.FC<IUserIconProps> = ({
           />
         </svg>
       )}
-      {variant === "team" && (
+      {variant === 'team' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -104,7 +106,7 @@ export const UserIcon: React.FC<IUserIconProps> = ({
           />
         </svg>
       )}
-      {variant === "setMember" && (
+      {variant === 'setMember' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -115,7 +117,7 @@ export const UserIcon: React.FC<IUserIconProps> = ({
           />
         </svg>
       )}
-      {variant === "evaluable" && (
+      {variant === 'evaluable' && (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -137,7 +139,7 @@ export const UserIcon: React.FC<IUserIconProps> = ({
           />
         </svg>
       )}
-      {variant === "rejected" && (
+      {variant === 'rejected' && (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -151,7 +153,7 @@ export const UserIcon: React.FC<IUserIconProps> = ({
           />
         </svg>
       )}
-      {variant === "all" && (
+      {variant === 'all' && (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -163,5 +165,5 @@ export const UserIcon: React.FC<IUserIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

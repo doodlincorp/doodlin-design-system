@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IDeviceIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "pc" | "mobile";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'pc' | 'mobile'
 }
 
 export const DeviceIcon: React.FC<IDeviceIconProps> = ({
@@ -18,11 +20,11 @@ export const DeviceIcon: React.FC<IDeviceIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "pc",
+  variant = 'pc',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const DeviceIcon: React.FC<IDeviceIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "pc" && (
+      {variant === 'pc' && (
         <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -41,7 +43,7 @@ export const DeviceIcon: React.FC<IDeviceIconProps> = ({
           />
         </svg>
       )}
-      {variant === "mobile" && (
+      {variant === 'mobile' && (
         <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -53,5 +55,5 @@ export const DeviceIcon: React.FC<IDeviceIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

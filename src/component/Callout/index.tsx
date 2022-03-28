@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import cn from "classnames";
+
 import "./index.scss";
 import { CloseIcon } from "../Icon/CloseIcon";
 import { InfoMarkIcon } from "../Icon/InfoMarkIcon";
@@ -22,7 +23,7 @@ const Callout: React.FC<ICalloutProps> = ({
 }) => {
   const [open, setOpen] = useState(true);
 
-  if (!open) return <></>;
+  if (!open) {return <></>;}
   return (
     <div
       className={cn("_CALLOUT_", className, variant, { several })}

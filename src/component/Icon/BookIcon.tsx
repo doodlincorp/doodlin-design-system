@@ -1,21 +1,23 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IBookIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
   variant?:
-    | "solid"
-    | "border"
-    | "solid-add"
-    | "border-add"
-    | "solid-added"
-    | "border-added";
+    | 'solid'
+    | 'border'
+    | 'solid-add'
+    | 'border-add'
+    | 'solid-added'
+    | 'border-added'
 }
 
 export const BookIcon: React.FC<IBookIconProps> = ({
@@ -24,11 +26,11 @@ export const BookIcon: React.FC<IBookIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "solid",
+  variant = 'solid',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -36,7 +38,7 @@ export const BookIcon: React.FC<IBookIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "solid" && (
+      {variant === 'solid' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -48,7 +50,7 @@ export const BookIcon: React.FC<IBookIconProps> = ({
         </svg>
       )}
 
-      {variant === "solid-add" && (
+      {variant === 'solid-add' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -60,7 +62,7 @@ export const BookIcon: React.FC<IBookIconProps> = ({
         </svg>
       )}
 
-      {variant === "solid-added" && (
+      {variant === 'solid-added' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -80,7 +82,7 @@ export const BookIcon: React.FC<IBookIconProps> = ({
         </svg>
       )}
 
-      {variant === "border" && (
+      {variant === 'border' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -92,7 +94,7 @@ export const BookIcon: React.FC<IBookIconProps> = ({
         </svg>
       )}
 
-      {variant === "border-add" && (
+      {variant === 'border-add' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -104,7 +106,7 @@ export const BookIcon: React.FC<IBookIconProps> = ({
         </svg>
       )}
 
-      {variant === "border-added" && (
+      {variant === 'border-added' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -138,5 +140,5 @@ export const BookIcon: React.FC<IBookIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

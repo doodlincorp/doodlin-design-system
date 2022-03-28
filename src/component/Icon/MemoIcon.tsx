@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IMemoIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "default" | "tail" | "note";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'default' | 'tail' | 'note'
 }
 
 export const MemoIcon: React.FC<IMemoIconProps> = ({
@@ -18,11 +20,11 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "default",
+  variant = 'default',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "default" && (
+      {variant === 'default' && (
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -44,7 +46,7 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
           />
         </svg>
       )}
-      {variant === "note" && (
+      {variant === 'note' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -54,7 +56,7 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
         </svg>
       )}
 
-      {variant === "tail" && (
+      {variant === 'tail' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -66,5 +68,5 @@ export const MemoIcon: React.FC<IMemoIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

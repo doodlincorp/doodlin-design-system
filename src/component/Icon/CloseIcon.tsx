@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface ICloseIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "default" | "circle";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'default' | 'circle'
 }
 
 export const CloseIcon: React.FC<ICloseIconProps> = ({
@@ -18,11 +20,11 @@ export const CloseIcon: React.FC<ICloseIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "default",
+  variant = 'default',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const CloseIcon: React.FC<ICloseIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "default" ? (
+      {variant === 'default' ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -59,5 +61,5 @@ export const CloseIcon: React.FC<ICloseIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

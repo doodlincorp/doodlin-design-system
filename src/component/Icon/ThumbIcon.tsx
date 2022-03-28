@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IThumbIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "sobad" | "bad" | "soso" | "good" | "sogood" | "default";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'sobad' | 'bad' | 'soso' | 'good' | 'sogood' | 'default'
 }
 
 export const ThumbIcon: React.FC<IThumbIconProps> = ({
@@ -18,33 +20,33 @@ export const ThumbIcon: React.FC<IThumbIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "soso",
+  variant = 'soso',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width:
-          variant === "sobad"
+          variant === 'sobad'
             ? size * 2
-            : variant === "sogood"
+            : variant === 'sogood'
             ? size * 2
-            : variant === "soso"
+            : variant === 'soso'
             ? size * 2
             : size,
         minWidth:
-          variant === "sobad"
+          variant === 'sobad'
             ? size * 2
-            : variant === "sogood"
+            : variant === 'sogood'
             ? size * 2
-            : variant === "soso"
+            : variant === 'soso'
             ? size * 2
             : size,
         height: size,
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "sobad" ? (
+      {variant === 'sobad' ? (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -73,7 +75,7 @@ export const ThumbIcon: React.FC<IThumbIconProps> = ({
             fill={color || EColorMap.red_6}
           />
         </svg>
-      ) : variant === "bad" ? (
+      ) : variant === 'bad' ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -89,7 +91,7 @@ export const ThumbIcon: React.FC<IThumbIconProps> = ({
             fill={color || EColorMap.red_6}
           />
         </svg>
-      ) : variant === "soso" ? (
+      ) : variant === 'soso' ? (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -118,7 +120,7 @@ export const ThumbIcon: React.FC<IThumbIconProps> = ({
             fill={color || EColorMap.gray_8}
           />
         </svg>
-      ) : variant === "good" ? (
+      ) : variant === 'good' ? (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -134,7 +136,7 @@ export const ThumbIcon: React.FC<IThumbIconProps> = ({
             fill={color || EColorMap.thumbs_green}
           />
         </svg>
-      ) : variant === "sogood" ? (
+      ) : variant === 'sogood' ? (
         <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -164,8 +166,8 @@ export const ThumbIcon: React.FC<IThumbIconProps> = ({
           />
         </svg>
       ) : (
-        ""
+        ''
       )}
     </i>
-  );
-};
+  )
+}

@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface ILockIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "solid-lock" | "solid-unlock" | "border-lock" | "border-unlock";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'solid-lock' | 'solid-unlock' | 'border-lock' | 'border-unlock'
 }
 
 export const LockIcon: React.FC<ILockIconProps> = ({
@@ -18,11 +20,11 @@ export const LockIcon: React.FC<ILockIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "border-lock",
+  variant = 'border-lock',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const LockIcon: React.FC<ILockIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "border-lock" && (
+      {variant === 'border-lock' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -42,7 +44,7 @@ export const LockIcon: React.FC<ILockIconProps> = ({
         </svg>
       )}
 
-      {variant === "border-unlock" && (
+      {variant === 'border-unlock' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -54,7 +56,7 @@ export const LockIcon: React.FC<ILockIconProps> = ({
         </svg>
       )}
 
-      {variant === "solid-lock" && (
+      {variant === 'solid-lock' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -66,7 +68,7 @@ export const LockIcon: React.FC<ILockIconProps> = ({
         </svg>
       )}
 
-      {variant === "solid-unlock" && (
+      {variant === 'solid-unlock' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -78,5 +80,5 @@ export const LockIcon: React.FC<ILockIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

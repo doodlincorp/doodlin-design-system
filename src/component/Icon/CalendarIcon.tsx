@@ -1,24 +1,26 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface ICalendarIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
 
   variant?:
-    | "default"
-    | "check"
-    | "request"
-    | "change-request"
-    | "scheduled"
-    | "finish"
-    | "x"
-    | "edit";
+    | 'default'
+    | 'check'
+    | 'request'
+    | 'change-request'
+    | 'scheduled'
+    | 'finish'
+    | 'x'
+    | 'edit'
 }
 
 export const CalendarIcon: React.FC<ICalendarIconProps> = ({
@@ -28,11 +30,11 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
   rotate,
   flip,
 
-  variant = "default",
+  variant = 'default',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -40,7 +42,7 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "default" && (
+      {variant === 'default' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -51,7 +53,7 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
           />
         </svg>
       )}
-      {variant === "check" && (
+      {variant === 'check' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -62,7 +64,7 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
           />
         </svg>
       )}
-      {variant === "request" && (
+      {variant === 'request' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -73,7 +75,7 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
           />
         </svg>
       )}
-      {variant === "change-request" && (
+      {variant === 'change-request' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -84,7 +86,7 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
           />
         </svg>
       )}
-      {variant === "scheduled" && (
+      {variant === 'scheduled' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -95,7 +97,7 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
           />
         </svg>
       )}
-      {variant === "finish" && (
+      {variant === 'finish' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -106,7 +108,7 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
           />
         </svg>
       )}
-      {variant === "x" && (
+      {variant === 'x' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -117,7 +119,7 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
           />
         </svg>
       )}
-      {variant === "edit" && (
+      {variant === 'edit' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -129,5 +131,5 @@ export const CalendarIcon: React.FC<ICalendarIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

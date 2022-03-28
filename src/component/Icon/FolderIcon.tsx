@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IFolderIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "solid" | "border" | "solid-add" | "border-add";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'solid' | 'border' | 'solid-add' | 'border-add'
 }
 
 export const FolderIcon: React.FC<IFolderIconProps> = ({
@@ -18,11 +20,11 @@ export const FolderIcon: React.FC<IFolderIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "solid",
+  variant = 'solid',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const FolderIcon: React.FC<IFolderIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "solid" && (
+      {variant === 'solid' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -40,7 +42,7 @@ export const FolderIcon: React.FC<IFolderIconProps> = ({
         </svg>
       )}
 
-      {variant === "solid-add" && (
+      {variant === 'solid-add' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -50,7 +52,7 @@ export const FolderIcon: React.FC<IFolderIconProps> = ({
         </svg>
       )}
 
-      {variant === "border" && (
+      {variant === 'border' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -60,7 +62,7 @@ export const FolderIcon: React.FC<IFolderIconProps> = ({
         </svg>
       )}
 
-      {variant === "border-add" && (
+      {variant === 'border-add' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -72,5 +74,5 @@ export const FolderIcon: React.FC<IFolderIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

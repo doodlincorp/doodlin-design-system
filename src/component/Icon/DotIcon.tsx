@@ -1,15 +1,17 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface IDotIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
-  variant?: "active" | "active-internal" | "inactive";
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
+  variant?: 'active' | 'active-internal' | 'inactive'
 }
 
 export const DotIcon: React.FC<IDotIconProps> = ({
@@ -18,11 +20,11 @@ export const DotIcon: React.FC<IDotIconProps> = ({
   size = 16,
   rotate,
   flip,
-  variant = "active",
+  variant = 'active',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -30,7 +32,7 @@ export const DotIcon: React.FC<IDotIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "active" && (
+      {variant === 'active' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle
             cx="12"
@@ -41,7 +43,7 @@ export const DotIcon: React.FC<IDotIconProps> = ({
         </svg>
       )}
 
-      {variant === "active-internal" && (
+      {variant === 'active-internal' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -53,7 +55,7 @@ export const DotIcon: React.FC<IDotIconProps> = ({
         </svg>
       )}
 
-      {variant === "inactive" && (
+      {variant === 'inactive' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle
             cx="12"
@@ -64,5 +66,5 @@ export const DotIcon: React.FC<IDotIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

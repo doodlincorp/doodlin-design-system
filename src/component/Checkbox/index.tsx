@@ -1,10 +1,10 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
+
 import "./index.scss";
 import Text from "../Text";
 import { TFontSize } from "../..";
 import { CheckIcon } from "../Icon/CheckIcon";
-import { HTMLAttributes } from "react";
 import { EColorMap } from "../../utils/colorMap";
 
 export interface ICheckboxProps extends HTMLAttributes<HTMLButtonElement> {

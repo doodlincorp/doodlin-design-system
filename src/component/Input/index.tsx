@@ -1,7 +1,7 @@
-import React, { InputHTMLAttributes } from "react";
+import React, { InputHTMLAttributes , useImperativeHandle, useRef, useState, useEffect } from "react";
 import cn from "classnames";
+
 import "./index.scss";
-import { useImperativeHandle, useRef, useState, useEffect } from "react";
 import Icon from "../Icon";
 import { EColorMap } from "../../utils/colorMap";
 import Text from "../Text";
@@ -46,13 +46,13 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
     useImperativeHandle(ref, () => {
       return {
         focus: () => {
-          if (inputRef.current) inputRef.current.focus();
+          if (inputRef.current) {inputRef.current.focus();}
         },
         get: () => {
           return inputRef.current?.value || "";
         },
         reset: () => {
-          if (inputRef.current) inputRef.current.value = "";
+          if (inputRef.current) {inputRef.current.value = "";}
         },
         rawRef: () => {
           return inputRef;
@@ -76,7 +76,7 @@ export const Input = React.forwardRef<IInputRef, IInputProps>(
             disabled,
           })}
           onClick={() => {
-            if (inputRef.current) inputRef.current.focus();
+            if (inputRef.current) {inputRef.current.focus();}
           }}
         >
           {icon && icon.leading}

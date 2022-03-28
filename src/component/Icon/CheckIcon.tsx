@@ -1,17 +1,18 @@
-import React from "react";
-import { EColorMap } from "../../utils/colorMap";
-import "./index.scss";
-import cn from "classnames";
-import { colorMap } from ".";
+import React from 'react'
+import cn from 'classnames'
+
+import { EColorMap } from '../../utils/colorMap'
+
+import './index.scss'
 
 export interface ICheckIconProps {
-  color?: EColorMap;
-  className?: string;
-  size?: number;
-  rotate?: number;
-  flip?: boolean;
+  color?: EColorMap
+  className?: string
+  size?: number
+  rotate?: number
+  flip?: boolean
 
-  variant?: "single" | "double" | "circle" | "alt" | "circle-ghost";
+  variant?: 'single' | 'double' | 'circle' | 'alt' | 'circle-ghost'
 }
 
 export const CheckIcon: React.FC<ICheckIconProps> = ({
@@ -21,11 +22,11 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
   rotate,
   flip,
 
-  variant = "single",
+  variant = 'single',
 }) => {
   return (
     <i
-      className={cn("dds-icon", className, { flip })}
+      className={cn('dds-icon', className, { flip })}
       style={{
         width: size,
         minWidth: size,
@@ -33,7 +34,7 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
         transform: `rotate(${rotate}deg)`,
       }}
     >
-      {variant === "single" && (
+      {variant === 'single' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -44,7 +45,7 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
           />
         </svg>
       )}
-      {variant === "double" && (
+      {variant === 'double' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -56,7 +57,7 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
         </svg>
       )}
 
-      {variant === "circle" && (
+      {variant === 'circle' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -68,7 +69,7 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
         </svg>
       )}
 
-      {variant == "alt" && (
+      {variant == 'alt' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -78,7 +79,7 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
         </svg>
       )}
 
-      {variant === "circle-ghost" && (
+      {variant === 'circle-ghost' && (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             id="icon__fill"
@@ -97,5 +98,5 @@ export const CheckIcon: React.FC<ICheckIconProps> = ({
         </svg>
       )}
     </i>
-  );
-};
+  )
+}

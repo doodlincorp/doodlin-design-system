@@ -8,10 +8,11 @@ import React, {
 import cn from "classnames";
 import "./index.scss";
 import { createPortal } from "react-dom";
+import { useOutsideClick } from "doodlin-hooks";
+
 import { getOffset } from "../../utils/offset";
 import { debounce } from "../../utils/debounce";
 import { usePortalNode } from "../../hooks/usePortalNode";
-import { useOutsideClick } from "doodlin-hooks";
 
 export interface DropDownProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
