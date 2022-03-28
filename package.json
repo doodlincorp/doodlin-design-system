@@ -52,6 +52,7 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "node-sass": "^6.0.0",
     "postcss": "^8.4.5",
     "prettier": "^2.6.1",
@@ -88,5 +89,14 @@
     "fs": false,
     "path": false,
     "os": false
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": [
+      "eslint",
+      "stylelint"
+    ],
+    "**/*.{json,yaml,md}": [
+      "prettier --check"
+    ]
   }
 }
