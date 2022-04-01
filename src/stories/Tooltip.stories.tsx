@@ -43,6 +43,10 @@ export const variant = () => {
       <Tooltip tooltipText={"Question"} variant="_question" usingPortalNode>
         <Button size="md">Question</Button>
       </Tooltip>
+      <Divider />
+      <Tooltip tooltipText={"단축키"} variant="_shortcut" shortcutText="⌘+B">
+        <Button size="md">Shortcut</Button>
+      </Tooltip>
     </div>
   );
 };

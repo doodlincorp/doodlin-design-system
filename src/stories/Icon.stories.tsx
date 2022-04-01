@@ -168,11 +168,13 @@ export const Default = () => {
     SideBar: [""],
     SixDot: [""],
     Slider: ["default", "alt"],
+    Strikethrough: [""],
     Tag: ["solid", "border"],
     Template: [""],
     TextAlign: ["left", "center", "right", "justify"],
     Text: [""],
     Thumb: ["sobad", "bad", "soso", "good", "sogood"],
+    Transfer: [""],
     Underline: [""],
     UpDownArrow: [""],
     User: [

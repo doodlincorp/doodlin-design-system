@@ -90,6 +90,8 @@ import { PlayIcon } from "./PlayIcon";
 import { PauseIcon } from "./PauseIcon";
 import { HeadingTextIcon } from "./HeadingTextIcon";
 import { ButtonIcon } from "./ButtonIcon";
+import { StrikethroughIcon } from "./StrikethroughIcon";
+import { TransferIcon } from "./TransferIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -227,10 +229,12 @@ const Icon = {
   SideBar: SideBarIcon,
   SixDot: SixDotIcon,
   Slider: SliderIcon,
+  Strikethrough: StrikethroughIcon,
   Template: TemplateIcon,
   TextAlign: TextAlignIcon,
   Text: TextIcon,
   Thumb: ThumbIcon,
+  Transfer: TransferIcon,
   Underline: UnderlineIcon,
   Tag: TagIcon,
   User: UserIcon,
