@@ -20,10 +20,11 @@ type IPlacement =
 
 export interface ITooltipProps {
   className?: string;
-  variant?: "_box" | "_info" | "_question";
+  variant?: "_box" | "_info" | "_question" | "_shortcut";
   tooltipText: string;
   placement?: IPlacement;
   usingPortalNode?: boolean;
+  shortcutText?: string;
 }
 
 const TooltipBox = ({
@@ -33,13 +34,15 @@ const TooltipBox = ({
   placement,
   hovered,
   targetRef,
+  shortcutText,
 }: {
-  variant: "_box" | "_info" | "_question";
+  variant: "_box" | "_info" | "_question" | "_shortcut";
   tooltipText: string;
   isolated: boolean;
   hovered: boolean;
   placement?: IPlacement;
   targetRef?: React.RefObject<HTMLElement>;
+  shortcutText?: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState<{ left: number; top: number }>({
@@ -104,7 +107,7 @@ const TooltipBox = ({
       ref={ref}
       className={classNames(
         isolated ? "isolated-tooltip-box" : "_tooltip-box",
-        isolated && hovered && "appear"
+        isolated && hovered && "appear",
       )}
       style={{
         left: isolated ? offset.left : undefined,
@@ -122,6 +125,7 @@ const TooltipBox = ({
         />
       )}
       {tooltipText}
+      {variant === "_shortcut" && <p className="_shortcut">{shortcutText}</p>}
     </div>
   );
 };
@@ -133,6 +137,7 @@ const Tooltip: React.FC<ITooltipProps> = ({
   tooltipText,
   placement = "_bottom",
   usingPortalNode,
+  shortcutText,
 }) => {
   const portalNode = usePortalNode("tooltip-portal");
   const [portal, setPortal] = useState<React.ReactPortal | null>(null);
@@ -149,9 +154,10 @@ const Tooltip: React.FC<ITooltipProps> = ({
             hovered={hovered}
             targetRef={ref}
             placement={placement}
+            shortcutText={shortcutText}
           />,
-          portalNode.current!
-        )
+          portalNode.current!,
+        ),
       );
     }
   }, [portalNode, hovered]);
@@ -177,6 +183,7 @@ const Tooltip: React.FC<ITooltipProps> = ({
             <TooltipBox
               variant={variant}
               tooltipText={tooltipText}
+              shortcutText={shortcutText}
               isolated={false}
               hovered={hovered}
             />
