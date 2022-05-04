@@ -107,6 +107,7 @@ export const Default = () => {
     Device: ["pc", "mobile"],
     Doc: ["solid", "border", "blank", "plus"],
     Dock: [""],
+    Door: [""],
     Dot: ["active", "active-internal", "inactive"],
     Download: ["default", "upload"],
     Earth: [""],
