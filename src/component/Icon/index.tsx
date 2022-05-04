@@ -94,6 +94,7 @@ import { StrikethroughIcon } from "./StrikethroughIcon";
 import { TransferIcon } from "./TransferIcon";
 import { DoorIcon } from "./DoorIcon";
 
+
 export interface IColorMap {
   [key: string]: string;
 }
