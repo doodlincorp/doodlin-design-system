@@ -69,7 +69,7 @@ import { TemplateIcon } from "./TemplateIcon";
 import { BellIcon } from "./BellIcon";
 import { DeviceIcon } from "./DeviceIcon";
 import { TextAlignIcon } from "./TextAlignIcon";
-import { ShareIcon } from "./ShareIcon";
+import { SocialIcon } from "./SocialIcon";
 import { ShieldIcon } from "./ShieldIcon";
 import { HeaderIcon } from "./HeaderIcon";
 import { TextIcon } from "./TextIcon";
@@ -93,7 +93,14 @@ import { ButtonIcon } from "./ButtonIcon";
 import { StrikethroughIcon } from "./StrikethroughIcon";
 import { TransferIcon } from "./TransferIcon";
 import { DoorIcon } from "./DoorIcon";
-
+import { PinIcon } from "./PinIcon";
+import { CollectionIcon } from "./CollectionIcon";
+import { MagicWandIcon } from "./MagicWandIcon";
+import { PaintRollIcon } from "./PaintRollIcon";
+import { ShareIcon } from "./ShareIcon";
+import { CodeIcon } from "./CodeIcon";
+import { CrosshairIcon } from "./CrosshairIcon";
+import { ListIcon } from "./ListIcon";
 
 export interface IColorMap {
   [key: string]: string;
@@ -174,9 +181,12 @@ const Icon = {
   Clip: ClipIcon,
   Clock: ClockIcon,
   Close: CloseIcon,
+  Code: CodeIcon,
   Coin: CoinIcon,
+  Collection: CollectionIcon,
   Copy: CopyIcon,
   CreditCard: CreditCardIcon,
+  Crosshair: CrosshairIcon,
   Device: DeviceIcon,
   Doc: DocIcon,
   Dock: DockIcon,
@@ -208,14 +218,17 @@ const Icon = {
   Italic: ItalicIcon,
   Lock: LockIcon,
   Logout: LogoutIcon,
+  MagicWand: MagicWandIcon,
   Mail: MailIcon,
   MapPin: MapPinIcon,
   Megaphone: MegaphoneIcon,
   Memo: MemoIcon,
   Menu: MenuIcon,
   Minus: MinusIcon,
+  PaintRoll: PaintRollIcon,
   Pause: PauseIcon,
   Phone: PhoneIcon,
+  Pin: PinIcon,
   Play: PlayIcon,
   Plus: PlusIcon,
   Publish: PublishIcon,
@@ -232,6 +245,7 @@ const Icon = {
   SideBar: SideBarIcon,
   SixDot: SixDotIcon,
   Slider: SliderIcon,
+  Social: SocialIcon,
   Strikethrough: StrikethroughIcon,
   Template: TemplateIcon,
   TextAlign: TextAlignIcon,
@@ -246,6 +260,7 @@ const Icon = {
   Youtube: YoutubeIcon,
   ZipDownload: ZipDownloadIcon,
   Link: LinkIcon,
+  List: ListIcon,
   LinkExternal: LinkExternalIcon,
   Window: WindowIcon,
 };
