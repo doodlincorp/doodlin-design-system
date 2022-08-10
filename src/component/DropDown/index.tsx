@@ -42,7 +42,7 @@ const DropDown = React.forwardRef<HTMLDivElement, DropDownProps>(
     const [visibility, setVisibility] = useState<"visible" | "hidden">(
       "hidden"
     );
-    const portalNode = usePortalNode("dropdown-portal");
+    const portalNode = usePortalNode("dds-dropdown-portal");
 
     useOutsideClick(() => {
       setIsDropdownOpen(false);
