@@ -35,7 +35,7 @@ const CustomSelect: <T>(
   const [optionOpen, setOptionOpen] = useToggle(ref, optionsViewRef);
   const [offset, setOffset] = useState({ top: 0, left: 0 });
   const [visibility, setVisibility] = useState<"visible" | "hidden">("hidden");
-  const portalNode = usePortalNode("custom-select-portal");
+  const portalNode = usePortalNode("dds-custom-select-portal");
 
   useEffect(() => {
     setVisibility("hidden");
