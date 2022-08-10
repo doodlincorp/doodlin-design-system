@@ -139,7 +139,7 @@ const Tooltip: React.FC<ITooltipProps> = ({
   usingPortalNode,
   shortcutText,
 }) => {
-  const portalNode = usePortalNode("tooltip-portal");
+  const portalNode = usePortalNode("dds-tooltip-portal");
   const [portal, setPortal] = useState<React.ReactPortal | null>(null);
   const [hovered, setHovered] = useState(false); // portal node에만 영향
   const ref = React.useRef<HTMLDivElement>(null);
